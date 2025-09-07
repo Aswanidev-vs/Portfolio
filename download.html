@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WriteDown - Downloads</title>
+  <style>
+    /* Global Styles (same as portfolio) */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e1e1e, #121212);
+      color: #eaeaea;
+      line-height: 1.6;
+
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #fff;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #00ffe5;
+      border: 1px solid #00ffe5;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      background: #00ffe5;
+      color: #121212;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      flex: 1;
+      text-align: center;
+    }
+
+    .download-section {
+      margin: 2rem 0;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      border: 1px solid #2a2a2a;
+    }
+
+    .download-section h2 {
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+      color: #00ffe5;
+    }
+
+    .download-section p {
+      color: #dcdcdc;
+      margin-bottom: 1.5rem;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      background: #00ffe5;
+      color: #121212;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background: #00ccb7;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid #2a2a2a;
+    }
+
+    footer a {
+      color: #00ffe5;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      nav {
+        display: flex;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Aswanidev VS</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+<main>
+  <div class="download-section">
+    <h2>⬇️ Download WriteDown</h2>
+    <p>Choose your platform below to download the latest release:</p>
+
+    <!-- Windows -->
+    <a href="writedown.exe" class="download-btn">
+      <span class="icon">
+        <!-- Windows SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0 0 50 50">
+<path d="M19.852 7.761l-15 2.25C4.362 10.085 4 10.505 4 11v12c0 .553.448 1 1 1h15c.552 0 1-.447 1-1V8.75c0-.291-.127-.567-.348-.758C20.432 7.803 20.139 7.721 19.852 7.761zM45.652 4.242c-.22-.189-.512-.271-.801-.231l-21 3.15C23.362 7.235 23 7.655 23 8.15V23c0 .553.448 1 1 1h21c.552 0 1-.447 1-1V5C46 4.709 45.873 4.433 45.652 4.242zM20 26H5c-.552 0-1 .447-1 1v12c0 .495.362.915.852.989l15 2.25c.05.007.099.011.148.011.238 0 .47-.085.652-.242C20.873 41.817 21 41.541 21 41.25V27C21 26.447 20.552 26 20 26zM45 26H24c-.552 0-1 .447-1 1v14.85c0 .495.362.915.852.989l21 3.15C44.901 45.996 44.951 46 45 46c.238 0 .47-.085.652-.242C45.873 45.567 46 45.291 46 45V27C46 26.447 45.552 26 45 26z"></path>
+</svg>
+      </span>
+      Windows (.exe)
+    </a>
+    <!-- Android / Termux -->
+  <a href="writedown" 
+   class="download-btn" 
+   id="android-download">
+   <span class="icon">
+     <!-- Android SVG -->
+     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 50 50">
+       <path d="M16.28125 0.03125C16.152344 0.0546875 16.019531 0.078125 15.90625 0.15625C15.449219 0.464844 15.347656 1.105469 15.65625 1.5625L17.8125 4.78125C14.480469 6.546875 11.996094 9.480469 11.1875 13L38.8125 13C38.003906 9.480469 35.519531 6.546875 32.1875 4.78125L34.34375 1.5625C34.652344 1.105469 34.550781 0.464844 34.09375 0.15625C33.632813 -0.152344 32.996094 -0.0195313 32.6875 0.4375L30.3125 3.9375C28.664063 3.335938 26.875 3 25 3C23.125 3 21.335938 3.335938 19.6875 3.9375L17.3125 0.4375C17.082031 0.09375 16.664063 -0.0429688 16.28125 0.03125ZM19.5 8C20.328125 8 21 8.671875 21 9.5C21 10.332031 20.328125 11 19.5 11C18.667969 11 18 10.332031 18 9.5C18 8.671875 18.667969 8 19.5 8ZM30.5 8C31.332031 8 32 8.671875 32 9.5C32 10.332031 31.332031 11 30.5 11C29.671875 11 29 10.332031 29 9.5C29 8.671875 29.671875 8 30.5 8ZM8 15C6.34375 15 5 16.34375 5 18L5 32C5 33.65625 6.34375 35 8 35C8.351563 35 8.6875 34.925781 9 34.8125L9 15.1875C8.6875 15.074219 8.351563 15 8 15ZM11 15L11 37C11 38.652344 12.347656 40 14 40L36 40C37.652344 40 39 38.652344 39 37L39 15ZM42 15C41.648438 15 41.3125 15.074219 41 15.1875L41 34.8125C41.3125 34.921875 41.648438 35 42 35C43.65625 35 45 33.65625 45 32L45 18C45 16.34375 43.65625 15 42 15ZM15 42L15 46C15 48.207031 16.792969 50 19 50C21.207031 50 23 48.207031 23 46L23 42ZM27 42L27 46C27 48.207031 28.792969 50 31 50C33.207031 50 35 48.207031 35 46L35 42Z"></path>
+     </svg>
+   </span>
+   Android / Termux (ARM64)
+</a>
+<script>
+document.getElementById("android-download").addEventListener("click", function(event) {
+  event.preventDefault(); // stop auto download
+  const userConfirm = confirm("⚠️ To run on Android via Termux, you must install Termux from F-Droid or GitHub .There is an issue on running properly when it tries to run on Termux which is download from playstore .After the installation you must give a permission to run the permission command is     (chmod +x Writedown)");
+  if (userConfirm) {
+    window.location.href = this.href; // proceed with download
+  }
+});
+</script>
+
+
+  <div class="download-section">
+    <h2>🔗 Source Code</h2>
+    <p>Want to explore the project or contribute? Visit the GitHub repo:</p>
+    <a href="https://github.com/Aswanidev-vs/writedown" class="download-btn">
+      <span class="icon">
+        <!-- GitHub SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#121212" viewBox="0 0 496 512">
+          <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-2.9 0-5.2-1.6-5.2-3.6 0-2 2.3-3.6 5.2-3.6 2.9 0 5.2 1.6 5.2 3.6zM134.8 393.9c-.7 1.5-2.6 2-4.1 1.2-1.5-.7-2-2.6-1.2-4.1.7-1.5 2.6-2 4.1-1.2 1.5.7 2 2.6 1.2 4.1zm24.3-1.5c-1.4 1.1-3.5.6-4.6-.9-1.1-1.4-.6-3.5.9-4.6 1.4-1.1 3.5-.6 4.6.9 1.1 1.4.6 3.5-.9 4.6zM256 32C114.6 32 0 146.6 0 288c0 113.2 73.3 209.1 175.1 243 12.8 2.3 17.5-5.5 17.5-12.2 0-6.1-.2-26.3-.3-47.6-71.3 15.5-86.4-34.4-86.4-34.4-11.7-29.7-28.5-37.6-28.5-37.6-23.3-15.9 1.8-15.6 1.8-15.6 25.8 1.8 39.3 26.5 39.3 26.5 22.9 39.2 60.1 27.9 74.7 21.3 2.3-16.6 8.9-27.9 16.2-34.3-56.9-6.5-116.6-28.4-116.6-126.2 0-27.9 10-50.8 26.5-68.7-2.7-6.5-11.5-32.7 2.5-68.2 0 0 21.6-6.9 70.8 26.2 20.5-5.7 42.4-8.6 64.2-8.7 21.8.1 43.7 3 64.2 8.7 49.2-33.1 70.8-26.2 70.8-26.2 14 35.5 5.2 61.7 2.5 68.2 16.5 17.9 26.5 40.8 26.5 68.7 0 98-59.8 119.7-116.9 126.1 9.2 8 17.5 23.7 17.5 47.8 0 34.5-.3 62.3-.3 70.8 0 6.7 4.7 14.5 17.6 12.1C422.7 497.1 496 401.2 496 288 496 146.6 381.4 32 256 32z"/>
+        </svg>
+      </span>
+      View on GitHub
+    </a>
+  </div>
+</main>
+   
+  <footer>
+    <p>© 2025 Aswanidev VS · Built with ❤️ and Go | <a href="index.html">Back to Portfolio</a></p>
+  </footer>
+
+</body>
+</html>

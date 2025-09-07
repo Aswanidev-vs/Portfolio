@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Aswanidev VS</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e1e1e, #121212);
+      color: #eaeaea;
+      line-height: 1.6;
+
+      /* Flex layout for sticky footer */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #fff;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #00ffe5;
+      border: 1px solid #00ffe5;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      background: #00ffe5;
+      color: #121212;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      /* Take available space so footer goes down */
+      flex: 1;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 1.2rem;
+      color: #dcdcdc;
+    }
+
+    strong {
+      color: #ffd700;
+    }
+
+    ul {
+      margin: 1rem 0;
+      padding-left: 1.2rem;
+      list-style-type: square;
+      color: #90ee90;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid #2a2a2a;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      nav {
+        display: flex;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Aswanidev VS</h1>
+    <nav>
+      <a href="https://github.com/Aswanidev-vs">GitHub</a>
+      <a href="https://www.linkedin.com/in/aswanidev-vs-88738737a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a>
+      <a href="download.html">Downloads</a>
+    </nav>
+  </header>
+  <section>
+    <p>
+      I'm a self-taught passionate developer, currently learning <strong>Go (backend)</strong> and <strong>Vue.js (frontend)</strong>.  
+      One of my favorite projects is <strong>WriteDown</strong>, a simple terminal-based note-taking app built in Go.
+    </p>
+
+    <p>
+      WriteDown lets you create, edit, list, and delete notes right from the terminal. It’s designed to be fast, lightweight, and cross-platform.
+    </p>
+
+    <aside><strong>Features:</strong></aside>
+    <ul>
+      <li>Add, edit, delete, and list notes</li>
+      <li>Simple CLI menu</li>
+      <li>Cross-platform support</li>
+      <li>Minimal dependencies</li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 Aswanidev VS · Built with ❤️ and Go
+  </footer>
+</body>
+</html>
