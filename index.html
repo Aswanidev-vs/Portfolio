@@ -3,128 +3,499 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | Aswanidev VS</title>
+  <title>Aswanidev VS | Developer Portfolio</title>
   <style>
-    /* Global Styles */
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #1e1e1e, #121212);
-      color: #eaeaea;
-      line-height: 1.6;
-
-      /* Flex layout for sticky footer */
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      padding: 0;
+      box-sizing: border-box;
     }
 
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Animated gradient background */
+    body::before {
+      content: '';
+      position: fixed;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 20% 50%, rgba(0, 255, 229, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.06) 0%, transparent 50%),
+                  radial-gradient(circle at 40% 20%, rgba(138, 43, 226, 0.05) 0%, transparent 50%);
+      animation: bgShift 20s ease infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes bgShift {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      33% { transform: translate(5%, 5%) rotate(120deg); }
+      66% { transform: translate(-5%, 5%) rotate(240deg); }
+    }
+
+    /* Floating particles */
+    .particle {
+      position: fixed;
+      width: 3px;
+      height: 3px;
+      background: rgba(0, 255, 229, 0.4);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Header with glass effect */
     header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      backdrop-filter: blur(20px);
+      background: rgba(10, 10, 10, 0.7);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 1.2rem 3rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.5rem 2rem;
+      z-index: 1000;
+      animation: slideDown 0.6s ease;
     }
 
-    h1 {
-      margin: 0;
-      font-size: 1.8rem;
-      color: #fff;
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #00ffe5, #ffd700);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 3s ease infinite;
+    }
+
+    @keyframes shimmer {
+      0%, 100% { filter: brightness(1); }
+      50% { filter: brightness(1.3); }
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
     }
 
     nav a {
       text-decoration: none;
-      color: #00ffe5;
-      border: 1px solid #00ffe5;
-      padding: 8px 16px;
-      border-radius: 20px;
-      transition: all 0.3s ease;
-      font-size: 0.95rem;
+      color: #e0e0e0;
+      font-weight: 500;
+      padding: 0.6rem 1.5rem;
+      border-radius: 30px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav a::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00ffe5, #8a2be2);
+      transform: translate(-50%, -50%);
+      transition: width 0.5s, height 0.5s;
+      z-index: -1;
     }
 
     nav a:hover {
-      background: #00ffe5;
-      color: #121212;
+      color: #0a0a0a;
+      border-color: transparent;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 255, 229, 0.3);
     }
 
-    section {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 0 1.5rem;
-      /* Take available space so footer goes down */
-      flex: 1;
+    nav a:hover::before {
+      width: 300px;
+      height: 300px;
     }
 
-    p {
-      font-size: 1rem;
-      margin-bottom: 1.2rem;
-      color: #dcdcdc;
-    }
-
-    strong {
-      color: #ffd700;
-    }
-
-    ul {
-      margin: 1rem 0;
-      padding-left: 1.2rem;
-      list-style-type: square;
-      color: #90ee90;
-    }
-
-    footer {
+    /* Hero Section */
+    .hero {
+      position: relative;
+      z-index: 2;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
+      padding: 0 2rem;
+      margin-top: 80px;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      animation: fadeInUp 0.8s ease;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 900;
+      margin-bottom: 1rem;
+      line-height: 1.1;
+      background: linear-gradient(135deg, #ffffff, #00ffe5, #ffd700);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradientText 4s ease infinite;
+      background-size: 200% auto;
+    }
+
+    @keyframes gradientText {
+      0%, 100% { background-position: 0% center; }
+      50% { background-position: 100% center; }
+    }
+
+    .subtitle {
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      color: #b0b0b0;
+      margin-bottom: 2rem;
+      animation: fadeInUp 0.8s ease 0.2s both;
+    }
+
+    .tech-stack {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 3rem 0;
+      animation: fadeInUp 0.8s ease 0.4s both;
+    }
+
+    .tech-badge {
+      padding: 0.7rem 1.5rem;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+
+    .tech-badge:hover {
+      background: rgba(0, 255, 229, 0.1);
+      border-color: #00ffe5;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 10px 30px rgba(0, 255, 229, 0.2);
+    }
+
+    /* Project Card */
+    .project-section {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      text-align: center;
+      margin-bottom: 3rem;
+      background: linear-gradient(135deg, #00ffe5, #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 30px;
+      padding: 3rem;
+      margin-bottom: 3rem;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(0, 255, 229, 0.1), transparent);
+      transition: left 0.5s;
+    }
+
+    .project-card:hover::before {
+      left: 100%;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(0, 255, 229, 0.5);
+      box-shadow: 0 20px 60px rgba(0, 255, 229, 0.2);
+    }
+
+    .project-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #00ffe5, #8a2be2);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .project-title {
+      font-size: 2rem;
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .project-description {
+      font-size: 1.1rem;
+      color: #b0b0b0;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .feature-item {
+      background: rgba(0, 255, 229, 0.05);
+      border: 1px solid rgba(0, 255, 229, 0.2);
+      border-radius: 15px;
+      padding: 1.2rem;
+      transition: all 0.3s ease;
+    }
+
+    .feature-item:hover {
+      background: rgba(0, 255, 229, 0.1);
+      transform: scale(1.05);
+    }
+
+    .feature-item::before {
+      content: '✓';
+      display: inline-block;
+      margin-right: 0.5rem;
+      color: #ffd700;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    /* Footer */
+    footer {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 3rem 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(10, 10, 10, 0.8);
+      backdrop-filter: blur(20px);
+    }
+
+    .footer-content {
+      font-size: 1rem;
       color: #777;
-      border-top: 1px solid #2a2a2a;
+    }
+
+    .heart {
+      color: #ff006e;
+      animation: heartbeat 1.5s ease infinite;
+      display: inline-block;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      25% { transform: scale(1.2); }
     }
 
     /* Responsive */
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       header {
+        padding: 1rem 1.5rem;
         flex-direction: column;
         gap: 1rem;
       }
+
       nav {
-        display: flex;
-        gap: 12px;
+        gap: 0.8rem;
       }
+
+      nav a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+
+      .project-card {
+        padding: 2rem 1.5rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 2rem;
+      animation: bounce 2s infinite;
+      z-index: 10;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(-10px); }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Aswanidev VS</h1>
+    <div class="logo">Aswanidev VS</div>
     <nav>
       <a href="https://github.com/Aswanidev-vs">GitHub</a>
-      <a href="https://www.linkedin.com/in/aswanidev-vs-88738737a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/aswanidev-vs-88738737a">LinkedIn</a>
       <a href="download.html">Downloads</a>
-     
-    
     </nav>
   </header>
-  <section>
-    <p>
-      I'm a self-taught passionate developer, currently learning <strong>Go (backend)</strong> and <strong>Vue.js (frontend)</strong>.  
-      One of my favorite projects is <strong>WriteDown</strong>, a simple terminal-based note-taking app built in Go.
-    </p>
 
-    <p>
-      WriteDown lets you create, edit, list, and delete notes right from the terminal. It’s designed to be fast, lightweight, and cross-platform.
-    </p>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Developer & Creator</h1>
+      <p class="subtitle">Self-taught passionate developer crafting elegant solutions with modern technologies</p>
+      
+      <div class="tech-stack">
+        <span class="tech-badge">Go</span>
+        <span class="tech-badge">Vue.js</span>
+        <span class="tech-badge">Backend</span>
+        <span class="tech-badge">Frontend</span>
+      </div>
+    </div>
+    <div class="scroll-indicator">↓</div>
+  </section>
 
-    <aside><strong>Features:</strong></aside>
-    <ul>
-      <li>Add, edit, delete, and list notes</li>
-      <li>Simple CLI menu</li>
-      <li>Cross-platform support</li>
-      <li>Minimal dependencies</li>
-    </ul>
+  <section class="project-section">
+    <h2 class="section-title">Featured Project</h2>
+    
+    <div class="project-card">
+      <div class="project-header">
+        <div class="project-icon">📝</div>
+        <h3 class="project-title">WriteDown</h3>
+      </div>
+      
+      <p class="project-description">
+        A blazingly fast, lightweight terminal-based note-taking application built with Go. 
+        WriteDown brings simplicity and efficiency to your command line workflow, allowing you to 
+        capture thoughts instantly without leaving your terminal.
+      </p>
+
+      <div class="features-grid">
+        <div class="feature-item">Create & Edit Notes</div>
+        <div class="feature-item">Lightning Fast CLI</div>
+        <div class="feature-item">Cross-Platform</div>
+        <div class="feature-item">Zero Dependencies</div>
+        <div class="feature-item">Simple Menu System</div>
+        <div class="feature-item">Delete & List Notes</div>
+      </div>
+    </div>
   </section>
 
   <footer>
-    © 2025 Aswanidev VS · Built with ❤️ and Go
+    <div class="footer-content">
+      © 2025 Aswanidev VS · Crafted with <span class="heart">❤</span> and Go
+    </div>
   </footer>
+
+  <script>
+    // Create floating particles
+    function createParticles() {
+      const particleCount = 30;
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.animation = `float ${3 + Math.random() * 4}s ease-in-out infinite`;
+        particle.style.animationDelay = Math.random() * 3 + 's';
+        document.body.appendChild(particle);
+      }
+    }
+    createParticles();
+
+    // Hide scroll indicator on scroll
+    window.addEventListener('scroll', () => {
+      const indicator = document.querySelector('.scroll-indicator');
+      if (window.scrollY > 100) {
+        indicator.style.opacity = '0';
+      } else {
+        indicator.style.opacity = '1';
+      }
+    });
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Add parallax effect to hero
+    window.addEventListener('scroll', () => {
+      const hero = document.querySelector('.hero-content');
+      const scrolled = window.scrollY;
+      hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+      hero.style.opacity = 1 - (scrolled / 500);
+    });
+  </script>
 </body>
 </html>
