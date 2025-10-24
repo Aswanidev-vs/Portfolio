@@ -510,7 +510,6 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -538,7 +537,7 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      overflow-x: hidden; /* Prevent horizontal scroll from effects */
+      overflow-x: hidden;
       position: relative;
     }
 
@@ -557,7 +556,7 @@
         z-index: -1;
         animation: pulse 10s infinite alternate;
     }
-    
+
     @keyframes pulse {
         from { opacity: 0.1; }
         to { opacity: 0.15; }
@@ -579,16 +578,16 @@
       border-bottom: 1px solid var(--card-bg);
       position: sticky;
       top: 0;
-      z-index: 100; /* Increased z-index */
-      backdrop-filter: blur(8px); /* Increased blur */
-      background-color: rgba(13, 13, 26, 0.5); /* Semi-transparent background */
+      z-index: 100;
+      backdrop-filter: blur(8px);
+      background-color: rgba(13, 13, 26, 0.7); /* Slightly less transparent */
     }
 
     h1 {
       font-size: 1.8rem;
       color: var(--accent-neon);
       /* Enhanced Glow */
-      text-shadow: 0 0 7px var(--glow-color), 0 0 15px rgba(57, 255, 20, 0.3); 
+      text-shadow: 0 0 7px var(--glow-color), 0 0 15px rgba(57, 255, 20, 0.3);
     }
 
     /* Navigation - Glow on hover */
@@ -597,7 +596,7 @@
       color: var(--text-light);
       padding: 8px 15px;
       border-radius: 4px;
-      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smoother animation curve */
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       font-size: 0.9rem;
       margin-left: 10px;
     }
@@ -605,12 +604,12 @@
     nav a:hover {
       color: var(--accent-neon);
       text-shadow: 0 0 4px var(--glow-color);
-      transform: scale(1.05); /* Added slight scale */
+      transform: scale(1.05);
     }
 
     /* Main Layout */
     main {
-        max-width: 1100px; /* Wider content area */
+        max-width: 1100px;
         margin: 0 auto;
         padding: 0 1.5rem;
         flex: 1;
@@ -618,7 +617,7 @@
     }
 
     section {
-      padding: 5rem 0 3rem 0; /* More vertical space */
+      padding: 5rem 0 3rem 0;
       position: relative;
     }
 
@@ -626,12 +625,12 @@
     #hero {
       text-align: left;
       display: grid;
-      grid-template-columns: 1fr 150px; /* Content on left, avatar on right */
+      grid-template-columns: 1fr 150px;
       gap: 3rem;
       align-items: center;
       padding: 7rem 0 4rem 0;
     }
-    
+
     .hero-content {
         padding-top: 1rem;
     }
@@ -643,12 +642,11 @@
       background: var(--card-bg);
       border: 3px solid var(--accent-neon);
       box-shadow: 0 0 30px var(--glow-color);
-      /* Subtle rotation animation */
       animation: neon-pulse 4s infinite alternate;
       cursor: pointer;
       position: relative;
     }
-    
+
     @keyframes neon-pulse {
         from { box-shadow: 0 0 30px var(--glow-color); }
         to { box-shadow: 0 0 50px var(--glow-color); }
@@ -656,15 +654,15 @@
 
 
     .hero-title {
-        font-size: 3.5rem; /* Bigger title */
+        font-size: 3.5rem;
         line-height: 1.1;
         margin-bottom: 0.5rem;
         font-weight: 800;
     }
-    
+
     .hero-title span {
         color: var(--accent-neon);
-        display: block; /* Force accent to new line for impact */
+        display: block;
     }
 
     .hero-subtitle {
@@ -674,15 +672,15 @@
         margin-bottom: 2rem;
         letter-spacing: 0.1em;
         /* Simulated typing effect */
-        overflow: hidden; 
-        border-right: .15em solid var(--accent-neon); 
-        white-space: nowrap; 
+        overflow: hidden;
+        border-right: .15em solid var(--accent-neon);
+        white-space: nowrap;
         width: 0;
-        animation: 
-          typing 2s steps(40, end) forwards, 
+        animation:
+          typing 2s steps(40, end) forwards,
           blink-caret .75s step-end infinite;
     }
-    
+
     @keyframes typing {
       from { width: 0 }
       to { width: 100% }
@@ -692,7 +690,7 @@
       from, to { border-color: transparent }
       50% { border-color: var(--accent-neon); }
     }
-    
+
     /* Call to Action Button - The Glow Button */
     .glow-button {
         display: inline-block;
@@ -714,14 +712,14 @@
         background: var(--accent-neon);
         color: var(--bg-dark);
         box-shadow: 0 0 20px var(--glow-color), 0 0 40px var(--glow-color);
-        transform: scale(1.05) perspective(1px); /* Scale and slight perspective for depth */
+        transform: scale(1.05) perspective(1px);
     }
 
     /* === Skills & Projects - Refinement === */
     .section-title {
         color: #fff;
-        border-bottom: 2px solid var(--secondary-highlight); 
-        display: inline-block; 
+        border-bottom: 2px solid var(--secondary-highlight);
+        display: inline-block;
         padding-bottom: 5px;
         margin-bottom: 3rem;
         font-size: 2rem;
@@ -749,15 +747,15 @@
     .skill-tag:hover {
         background: var(--accent-neon);
         color: var(--bg-dark);
-        transform: rotate(2deg); /* Added slight rotation */
+        transform: rotate(2deg);
         box-shadow: 0 0 10px var(--glow-color);
     }
-    
+
     /* Project Card - 3D Hover Effect */
     .project-card {
         background: var(--card-bg);
         border: 1px solid rgba(57, 255, 20, 0.2);
-        border-left: 5px solid var(--secondary-highlight); /* Switched accent to secondary */
+        border-left: 5px solid var(--secondary-highlight);
         padding: 2.5rem;
         margin-top: 2rem;
         border-radius: 8px;
@@ -765,55 +763,135 @@
         will-change: transform, box-shadow;
         position: relative;
     }
-    
+
     .project-card:hover {
-        transform: perspective(1000px) rotateX(2deg) translateY(-8px); /* 3D effect */
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 102, 0, 0.4); /* Orange glow */
+        transform: perspective(1000px) rotateX(2deg) translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 102, 0, 0.4);
     }
-    
+
     .project-card h3 {
         color: var(--secondary-highlight);
     }
-    
+
     .project-card ul {
-        list-style-type: '🚀 '; /* Changed bullet to rocket for dynamism */
+        list-style-type: '🚀 ';
         padding-left: 1.5rem;
     }
 
     footer {
       padding: 2rem;
       border-top: 1px solid var(--card-bg);
+      text-align: center; /* Centered footer text for consistency */
     }
 
-    /* Responsive */
+    /* ======================================= */
+    /* === RESPONSIVENESS ADJUSTMENTS === */
+    /* ======================================= */
+
+    /* **TABLET (Max 900px)** */
+    @media (max-width: 900px) {
+        main {
+            padding: 0 1rem; /* Reduced horizontal padding for slightly more space */
+        }
+        #hero {
+            gap: 2rem;
+            padding: 5rem 0 3rem 0;
+        }
+        .hero-title {
+            font-size: 3rem;
+        }
+    }
+
+    /* **MOBILE (Max 768px)** */
     @media (max-width: 768px) {
+
+        /* === Header and Nav === */
+        header {
+            flex-direction: column; /* Stack logo and nav vertically */
+            padding: 1rem 1rem;
+            gap: 1rem;
+        }
+        nav {
+            display: flex;
+            flex-direction: column; /* Stack links vertically */
+            align-items: center;
+            width: 100%;
+            gap: 5px;
+        }
+        nav a {
+            margin: 5px 0; /* Vertical spacing for links */
+            padding: 8px 10px;
+            width: 90%; /* Make links take up most of the width */
+            text-align: center;
+        }
+        /* Remove extra margin on buttons */
+        nav a.glow-button {
+            margin-left: 0 !important; /* Override inline style */
+        }
+
+
+        /* === Hero Section === */
         #hero {
             grid-template-columns: 1fr;
             text-align: center;
+            padding: 4rem 0 2rem 0; /* Less padding for mobile */
         }
+
         .avatar-container {
             margin: 0 auto 1.5rem;
-            order: -1; /* Puts avatar on top in mobile view */
+            order: -1;
         }
+
+        .hero-content {
+            padding-top: 0;
+        }
+
         .hero-title {
             font-size: 2.5rem;
         }
+
         .hero-title span {
-            display: inline;
+            display: inline; /* Keep accent on the same line to save vertical space */
         }
+
         .hero-subtitle {
+            font-size: 1rem;
+            width: 100%; /* Fix typing animation width on center-aligned text */
+            margin: 0 auto 1.5rem;
             text-align: center;
         }
-        nav a {
-            margin: 0 5px;
-            padding: 5px 10px;
+
+        /* Center the main description paragraph */
+        .hero-content p:first-of-type {
+            text-align: center;
         }
+
+        /* Center the CTA button */
+        .hero-content a.glow-button {
+            display: block;
+            width: 80%;
+            margin: 1.5rem auto 0;
+        }
+
+        /* === Other Sections === */
         .section-title {
             display: block;
             text-align: center;
+            margin-bottom: 2rem;
         }
+
         #skills .skill-tags {
             justify-content: center;
+        }
+
+        .project-card {
+            padding: 1.5rem; /* Reduced padding on project card */
+        }
+
+        .project-card:hover {
+            /* Reduce the intensity of the 3D effect on mobile for better touch experience */
+            transform: perspective(1000px) translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 102, 0, 0.3);
         }
     }
   </style>
@@ -825,20 +903,18 @@
       <a href="https://github.com/Aswanidev-vs">GitHub</a>
       <a href="https://www.linkedin.com/in/aswanidev-vs-88738737a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a>
       <a href="resume.html" class="glow-button" style="margin-left: 20px;">View Resume</a>
-    
       <a href="download.html" class="glow-button" style="margin-left: 20px;">Downloads</a>
     </nav>
   </header>
-  
+
   <main>
-    <!-- === HERO SECTION === -->
     <section id="hero">
         <div class="hero-content">
             <h2 class="hero-title">
                 Hello, I'm Aswanidev.<br>
                 <span>Backend Architect.</span>
             </h2>
-            
+
             <p class="hero-subtitle">
                 &gt; Go Developer | Vue.js Explorer
             </p>
@@ -846,16 +922,13 @@
             <p style="max-width: 600px; color: #ccc; margin-bottom: 2rem;">
                 I'm a self-taught, results-driven developer focused on building lightweight, scalable, and cross-platform applications. I specialize in backend efficiency and enjoy diving into modern frontend frameworks.
             </p>
-            
-            <!-- Added a primary Call to Action (CTA) button -->
+
             <a href="#projects" class="glow-button">Explore My Work</a>
         </div>
-        
-        <!-- Avatar Container -->
-        <div class="avatar-container" title="Your Developer Avatar/Photo"></div> 
+
+        <div class="avatar-container" title="Your Developer Avatar/Photo"></div>
     </section>
 
-    <!-- === SKILLS SECTION === -->
     <section id="skills">
         <h2 class="section-title">My Core Technology Stack</h2>
         <div class="skill-tags">
@@ -871,10 +944,9 @@
     </section>
 
 
-    <!-- === PROJECT SECTION (Project Card) === -->
     <section id="projects">
         <h2 class="section-title">Featured Project Showcase</h2>
-        
+
         <div class="project-card">
             <h3>WriteDown - Terminal Note Taker</h3>
             <p style="color: #ccc;">
