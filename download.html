@@ -1,1049 +1,261 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WriteDown - Downloads</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: #0a0a0a;
-      color: #e0e0e0;
-      overflow-x: hidden;
-      position: relative;
-      min-height: 100vh;
-    }
-
-    /* Animated background */
-    body::before {
-      content: '';
-      position: fixed;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle at 30% 50%, rgba(0, 255, 229, 0.08) 0%, transparent 50%),
-                  radial-gradient(circle at 70% 70%, rgba(138, 43, 226, 0.06) 0%, transparent 50%);
-      animation: bgRotate 25s ease infinite;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    @keyframes bgRotate {
-      0%, 100% { transform: rotate(0deg); }
-      50% { transform: rotate(180deg); }
-    }
-
-    /* Header */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      backdrop-filter: blur(20px);
-      background: rgba(10, 10, 10, 0.7);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 1.2rem 3rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      animation: slideDown 0.6s ease;
-    }
-
-    @keyframes slideDown {
-      from { transform: translateY(-100%); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 700;
-      background: linear-gradient(135deg, #00ffe5, #ffd700);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #e0e0e0;
-      font-weight: 500;
-      padding: 0.6rem 1.5rem;
-      border-radius: 30px;
-      position: relative;
-      overflow: hidden;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      display: inline-block;
-    }
-
-    nav a::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #00ffe5, #8a2be2);
-      transform: translate(-50%, -50%);
-      transition: width 0.5s, height 0.5s;
-      z-index: -1;
-    }
-
-    nav a:hover {
-      color: #0a0a0a;
-      border-color: transparent;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(0, 255, 229, 0.3);
-    }
-
-    nav a:hover::before {
-      width: 300px;
-      height: 300px;
-    }
-
-    /* Main content */
-    main {
-      position: relative;
-      z-index: 2;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 120px 2rem 4rem;
-      min-height: 100vh;
-    }
-
-    .page-title {
-      text-align: center;
-      font-size: clamp(2.5rem, 6vw, 4rem);
-      font-weight: 900;
-      margin-bottom: 1rem;
-      background: linear-gradient(135deg, #ffffff, #00ffe5, #ffd700);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: fadeInUp 0.8s ease;
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .page-subtitle {
-      text-align: center;
-      font-size: 1.2rem;
-      color: #b0b0b0;
-      margin-bottom: 4rem;
-      animation: fadeInUp 0.8s ease 0.2s both;
-    }
-
-    /* Download section */
-    .download-section {
-      margin: 3rem 0;
-      padding: 3rem;
-      background: rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 30px;
-      position: relative;
-      overflow: hidden;
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      animation: fadeInUp 0.8s ease 0.4s both;
-    }
-
-    .download-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(0, 255, 229, 0.1), transparent);
-      transition: left 0.8s;
-    }
-
-    .download-section:hover::before {
-      left: 100%;
-    }
-
-    .download-section:hover {
-      transform: translateY(-5px);
-      border-color: rgba(0, 255, 229, 0.3);
-      box-shadow: 0 20px 60px rgba(0, 255, 229, 0.15);
-    }
-
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      justify-content: center;
-    }
-
-    .section-icon {
-      font-size: 3rem;
-      animation: float 3s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-
-    .download-section h2 {
-      font-size: 2rem;
-      color: #ffffff;
-      font-weight: 700;
-    }
-
-    .download-section p {
-      text-align: center;
-      color: #b0b0b0;
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-      line-height: 1.6;
-    }
-
-    /* Download buttons grid */
-    .download-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .download-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.8rem;
-      padding: 1.5rem 2rem;
-      background: rgba(0, 255, 229, 0.1);
-      border: 2px solid rgba(0, 255, 229, 0.3);
-      border-radius: 20px;
-      color: #00ffe5;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .download-btn::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      background: linear-gradient(135deg, #00ffe5, #8a2be2);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
-      z-index: -1;
-    }
-
-    .download-btn:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 15px 40px rgba(0, 255, 229, 0.4);
-      border-color: transparent;
-      color: #0a0a0a;
-    }
-
-    .download-btn:hover::before {
-      width: 400px;
-      height: 400px;
-    }
-
-    .download-btn .icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.3s ease;
-    }
-
-    .download-btn:hover .icon {
-      transform: scale(1.2) rotate(10deg);
-    }
-
-    .download-btn svg,
-    .download-btn img {
-      filter: drop-shadow(0 0 5px currentColor);
-    }
-
-    /* Source code section */
-    .source-btn {
-      background: rgba(138, 43, 226, 0.1);
-      border-color: rgba(138, 43, 226, 0.3);
-      color: #b19cd9;
-    }
-
-    .source-btn::before {
-      background: linear-gradient(135deg, #8a2be2, #00ffe5);
-    }
-
-    .source-btn:hover {
-      box-shadow: 0 15px 40px rgba(138, 43, 226, 0.4);
-    }
-
-    /* Warning badge */
-    .warning-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.8rem 1.2rem;
-      background: rgba(255, 193, 7, 0.1);
-      border: 1px solid rgba(255, 193, 7, 0.3);
-      border-radius: 15px;
-      color: #ffc107;
-      font-size: 0.9rem;
-      margin-top: 1rem;
-      animation: pulse 2s ease infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.7; }
-    }
-
-    /* Footer */
-    footer {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      padding: 3rem 2rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      background: rgba(10, 10, 10, 0.8);
-      backdrop-filter: blur(20px);
-    }
-
-    footer p {
-      color: #777;
-      font-size: 1rem;
-    }
-
-    footer a {
-      color: #00ffe5;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      position: relative;
-    }
-
-    footer a::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: #00ffe5;
-      transition: width 0.3s ease;
-    }
-
-    footer a:hover::after {
-      width: 100%;
-    }
-
-    .heart {
-      color: #ff006e;
-      display: inline-block;
-      animation: heartbeat 1.5s ease infinite;
-    }
-
-    @keyframes heartbeat {
-      0%, 100% { transform: scale(1); }
-      25% { transform: scale(1.2); }
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      header {
-        padding: 1rem 1.5rem;
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      main {
-        padding: 100px 1.5rem 2rem;
-      }
-
-      .download-section {
-        padding: 2rem 1.5rem;
-      }
-
-      .download-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .page-title {
-        font-size: 2rem;
-      }
-    }
-
-    /* Particles */
-    .particle {
-      position: fixed;
-      width: 4px;
-      height: 4px;
-      background: rgba(0, 255, 229, 0.5);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 1;
-      box-shadow: 0 0 10px rgba(0, 255, 229, 0.5);
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="logo">Aswanidev VS</div>
-    <nav>
-      <a href="index.html">← Back to Portfolio</a>
-    </nav>
-  </header>
-
-  <main>
-    <h1 class="page-title">Download WriteDown</h1>
-    <p class="page-subtitle">Lightning-fast terminal note-taking for every platform</p>
-
-    <div class="download-section">
-      <div class="section-header">
-        <span class="section-icon">⬇️</span>
-        <h2>Choose Your Platform</h2>
-      </div>
-      <p>Select the version that matches your operating system and start taking notes instantly</p>
-
-      <div class="download-grid">
-        <a href="writedown.exe" class="download-btn">
-          <span class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50" fill="currentColor">
-              <path d="M19.852 7.761l-15 2.25C4.362 10.085 4 10.505 4 11v12c0 .553.448 1 1 1h15c.552 0 1-.447 1-1V8.75c0-.291-.127-.567-.348-.758C20.432 7.803 20.139 7.721 19.852 7.761zM45.652 4.242c-.22-.189-.512-.271-.801-.231l-21 3.15C23.362 7.235 23 7.655 23 8.15V23c0 .553.448 1 1 1h21c.552 0 1-.447 1-1V5C46 4.709 45.873 4.433 45.652 4.242zM20 26H5c-.552 0-1 .447-1 1v12c0 .495.362.915.852.989l15 2.25c.05.007.099.011.148.011.238 0 .47-.085.652-.242C20.873 41.817 21 41.541 21 41.25V27C21 26.447 20.552 26 20 26zM45 26H24c-.552 0-1 .447-1 1v14.85c0 .495.362.915.852.989l21 3.15C44.901 45.996 44.951 46 45 46c.238 0 .47-.085.652-.242C45.873 45.567 46 45.291 46 45V27C46 26.447 45.552 26 45 26z"/>
-            </svg>
-          </span>
-          Windows (.exe)
-        </a>
-
-        <a href="writedown" class="download-btn" id="android-download">
-          <span class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50" fill="currentColor">
-              <path d="M16.28125 0.03125C16.152344 0.0546875 16.019531 0.078125 15.90625 0.15625C15.449219 0.464844 15.347656 1.105469 15.65625 1.5625L17.8125 4.78125C14.480469 6.546875 11.996094 9.480469 11.1875 13L38.8125 13C38.003906 9.480469 35.519531 6.546875 32.1875 4.78125L34.34375 1.5625C34.652344 1.105469 34.550781 0.464844 34.09375 0.15625C33.632813 -0.152344 32.996094 -0.0195313 32.6875 0.4375L30.3125 3.9375C28.664063 3.335938 26.875 3 25 3C23.125 3 21.335938 3.335938 19.6875 3.9375L17.3125 0.4375C17.082031 0.09375 16.664063 -0.0429688 16.28125 0.03125ZM19.5 8C20.328125 8 21 8.671875 21 9.5C21 10.332031 20.328125 11 19.5 11C18.667969 11 18 10.332031 18 9.5C18 8.671875 18.667969 8 19.5 8ZM30.5 8C31.332031 8 32 8.671875 32 9.5C32 10.332031 31.332031 11 30.5 11C29.671875 11 29 10.332031 29 9.5C29 8.671875 29.671875 8 30.5 8ZM8 15C6.34375 15 5 16.34375 5 18L5 32C5 33.65625 6.34375 35 8 35C8.351563 35 8.6875 34.925781 9 34.8125L9 15.1875C8.6875 15.074219 8.351563 15 8 15ZM11 15L11 37C11 38.652344 12.347656 40 14 40L36 40C37.652344 40 39 38.652344 39 37L39 15ZM42 15C41.648438 15 41.3125 15.074219 41 15.1875L41 34.8125C41.3125 34.921875 41.648438 35 42 35C43.65625 35 45 33.65625 45 32L45 18C45 16.34375 43.65625 15 42 15ZM15 42L15 46C15 48.207031 16.792969 50 19 50C21.207031 50 23 48.207031 23 46L23 42ZM27 42L27 46C27 48.207031 28.792969 50 31 50C33.207031 50 35 48.207031 35 46L35 42Z"/>
-            </svg>
-          </span>
-          Android / Termux (ARM64)
-        </a>
-
-        <a href="linux/Writedown" class="download-btn">
-          <span class="icon">
-            <img src="linux-logo.png" alt="Linux" width="24" height="24" style="filter: brightness(0) invert(1);">
-          </span>
-          Linux (x64)
-        </a>
-      </div>
-
-      <div class="warning-badge">
-        <span>⚠️</span>
-        <span>Android users: Install Termux from F-Droid or GitHub, not Play Store</span>
-      </div>
-    </div>
-
-    <div class="download-section">
-      <div class="section-header">
-        <span class="section-icon">🔗</span>
-        <h2>Source Code</h2>
-      </div>
-      <p>Explore the codebase, contribute, or build it yourself</p>
-
-      <a href="https://github.com/Aswanidev-vs/writedown" class="download-btn source-btn">
-        <span class="icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 496 512" fill="currentColor">
-            <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-2.9 0-5.2-1.6-5.2-3.6 0-2 2.3-3.6 5.2-3.6 2.9 0 5.2 1.6 5.2 3.6zM134.8 393.9c-.7 1.5-2.6 2-4.1 1.2-1.5-.7-2-2.6-1.2-4.1.7-1.5 2.6-2 4.1-1.2 1.5.7 2 2.6 1.2 4.1zm24.3-1.5c-1.4 1.1-3.5.6-4.6-.9-1.1-1.4-.6-3.5.9-4.6 1.4-1.1 3.5-.6 4.6.9 1.1 1.4.6 3.5-.9 4.6zM256 32C114.6 32 0 146.6 0 288c0 113.2 73.3 209.1 175.1 243 12.8 2.3 17.5-5.5 17.5-12.2 0-6.1-.2-26.3-.3-47.6-71.3 15.5-86.4-34.4-86.4-34.4-11.7-29.7-28.5-37.6-28.5-37.6-23.3-15.9 1.8-15.6 1.8-15.6 25.8 1.8 39.3 26.5 39.3 26.5 22.9 39.2 60.1 27.9 74.7 21.3 2.3-16.6 8.9-27.9 16.2-34.3-56.9-6.5-116.6-28.4-116.6-126.2 0-27.9 10-50.8 26.5-68.7-2.7-6.5-11.5-32.7 2.5-68.2 0 0 21.6-6.9 70.8 26.2 20.5-5.7 42.4-8.6 64.2-8.7 21.8.1 43.7 3 64.2 8.7 49.2-33.1 70.8-26.2 70.8-26.2 14 35.5 5.2 61.7 2.5 68.2 16.5 17.9 26.5 40.8 26.5 68.7 0 98-59.8 119.7-116.9 126.1 9.2 8 17.5 23.7 17.5 47.8 0 34.5-.3 62.3-.3 70.8 0 6.7 4.7 14.5 17.6 12.1C422.7 497.1 496 401.2 496 288 496 146.6 381.4 32 256 32z"/>
-          </svg>
-        </span>
-        View on GitHub
-      </a>
-    </div>
-  </main>
-
-  <footer>
-    <p>© 2025 Aswanidev VS · Built with <span class="heart">❤</span> and Go | <a href="index.html">Back to Portfolio</a></p>
-  </footer>
-
-  <script>
-    // Android download warning
-    document.getElementById("android-download").addEventListener("click", function(event) {
-      event.preventDefault();
-      const userConfirm = confirm(
-        "⚠️ IMPORTANT INSTRUCTIONS FOR ANDROID:\n\n" +
-        "1. Install Termux from F-Droid or GitHub (NOT from Play Store)\n" +
-        "2. After downloading WriteDown, run: chmod +x writedown\n" +
-        "3. Then execute: ./writedown\n\n" +
-        "Continue with download?"
-      );
-      if (userConfirm) {
-        window.location.href = this.href;
-      }
-    });
-
-    // Create floating particles
-    function createParticles() {
-      const particleCount = 25;
-      for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = Math.random() * 100 + '%';
-        particle.style.animation = `float ${3 + Math.random() * 4}s ease-in-out infinite`;
-        particle.style.animationDelay = Math.random() * 3 + 's';
-        document.body.appendChild(particle);
-      }
-    }
-    createParticles();
-
-    // Smooth scroll animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.download-section').forEach(section => {
-      section.style.opacity = '0';
-      section.style.transform = 'translateY(30px)';
-      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      observer.observe(section);
-    });
-  </script>
-</body>
-</html> -->
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WriteDown - Downloads | Aswanidev VS</title>
-  <!-- Google Font Import: Fira Code (Developer Vibe) and Montserrat (Clean Headers) -->
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WriteDown – Downloads</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+
   <style>
-    /* === ROOT VARIABLES (From Main Portfolio) === */
     :root {
-      --bg-dark: #07070f; 
-      --text-light: #f0f0f5;
-      --accent-neon: #39FF14; /* Neon Green */
-      --secondary-highlight: #ff6600; /* Orange Accent */
-      --card-bg: #0d0d1a; 
-      --glow-color: rgba(57, 255, 20, 0.7);
+      --bg-main: #0a0a0a;
+      --bg-card: #111111;
+      --bg-card-hover: #161616;
+      --border: #222222;
+      --border-hover: #333333;
+
+      --accent: #3b82f6;
+      --text-main: #ededed;
+      --text-muted: #888888;
+
+      --font-body: 'Manrope', sans-serif;
+      --font-code: 'JetBrains Mono', monospace;
+
+      --radius: 12px;
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Fira Code', monospace; /* Fira Code for body */
-      background: var(--bg-dark);
-      color: var(--text-light);
-      overflow-x: hidden;
-      position: relative;
-      min-height: 100vh;
-      z-index: 1; /* Ensure body is above fixed background */
-    }
-
-    /* Animated background - Refined colors */
-    body::before {
-      content: '';
-      position: fixed;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      /* Adjusted gradients to use portfolio colors */
-      background: radial-gradient(circle at 30% 50%, rgba(57, 255, 20, 0.1) 0%, transparent 50%),
-                  radial-gradient(circle at 70% 70%, rgba(255, 102, 0, 0.08) 0%, transparent 50%);
-      animation: bgRotate 25s ease infinite;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    @keyframes bgRotate {
-      0%, 100% { transform: rotate(0deg); }
-      50% { transform: rotate(180deg); }
-    }
-
-    /* Header */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      backdrop-filter: blur(8px);
-      background: rgba(7, 7, 15, 0.7); /* Use BG Dark color */
-      border-bottom: 1px solid var(--card-bg);
-      padding: 1.2rem 3rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      animation: slideDown 0.6s ease;
-    }
-
-    @keyframes slideDown {
-      from { transform: translateY(-100%); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 800;
-      font-family: 'Montserrat', sans-serif;
-      /* Gradient using portfolio colors */
-      background: linear-gradient(135deg, var(--accent-neon), var(--secondary-highlight));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    /* Nav Link - Matches Portfolio Style */
-    nav a {
-      text-decoration: none;
-      color: var(--text-light);
-      font-weight: 500;
-      padding: 8px 15px;
-      border-radius: 4px;
-      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      border: 1px solid var(--card-bg); /* Subtle border */
-      display: inline-block;
-      position: relative;
-    }
-
-    nav a:hover {
-      color: var(--accent-neon);
-      text-shadow: 0 0 4px var(--glow-color);
-      transform: scale(1.05); 
-      border-color: var(--accent-neon);
-    }
-    
-    /* Removed the complex circular fill-out effect from original nav links */
-
-    /* Main content */
-    main {
-      position: relative;
-      z-index: 2;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 120px 2rem 4rem;
-      min-height: 100vh;
-    }
-
-    .page-title {
-      font-family: 'Montserrat', sans-serif;
-      text-align: center;
-      font-size: clamp(2.5rem, 6vw, 4rem);
-      font-weight: 900;
-      margin-bottom: 1rem;
-      /* Gradient using portfolio colors */
-      background: linear-gradient(135deg, #ffffff, var(--accent-neon), var(--secondary-highlight));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: fadeInUp 0.8s ease;
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .page-subtitle {
-      font-family: 'Fira Code', monospace;
-      text-align: center;
-      font-size: 1.2rem;
-      color: #b0b0b0;
-      margin-bottom: 4rem;
-      animation: fadeInUp 0.8s ease 0.2s both;
-    }
-
-    /* Download section - Matches Project Card Style */
-    .download-section {
-      margin: 3rem 0;
-      padding: 3rem;
-      background: var(--card-bg); /* Use card background */
-      border: 1px solid rgba(57, 255, 20, 0.2); /* Neon border */
-      border-left: 5px solid var(--secondary-highlight); /* Orange accent bar */
-      border-radius: 8px; /* Squared corners like the card */
-      position: relative;
-      overflow: hidden;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      animation: fadeInUp 0.8s ease 0.4s both;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Refined Swipe Effect (subtle sheen on hover) */
-    .download-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      /* Neon Green Sheen */
-      background: linear-gradient(90deg, transparent, rgba(57, 255, 20, 0.15), transparent); 
-      transition: left 0.8s;
-      opacity: 0.5;
-    }
-
-    .download-section:hover::before {
-      left: 100%;
-    }
-
-    .download-section:hover {
-      /* Matches project card 3D lift */
-      transform: perspective(1000px) rotateX(2deg) translateY(-8px);
-      border-color: rgba(57, 255, 20, 0.4);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 30px rgba(57, 255, 20, 0.15);
-    }
-
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      justify-content: center;
-    }
-
-    .section-icon {
-      font-size: 2.5rem; /* Smaller, cleaner icon */
-      color: var(--secondary-highlight); /* Color the icon */
-      animation: none; /* Removed float animation for consistency, but could be kept */
-    }
-
-    .download-section h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.8rem;
-      color: #ffffff;
-      font-weight: 700;
-    }
-
-    .download-section p {
-      text-align: center;
-      color: #c0c0c0;
-      font-size: 1rem;
-      margin-bottom: 2rem;
+      background: var(--bg-main);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      background-image: radial-gradient(#222 1px, transparent 1px);
+      background-size: 32px 32px;
       line-height: 1.6;
     }
 
-    /* Download buttons grid */
-    .download-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
     }
 
-    .download-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.8rem;
-      padding: 1.2rem 2rem; /* Adjusted padding */
-      background: rgba(57, 255, 20, 0.05); /* Lighter accent background */
-      border: 2px solid var(--accent-neon);
-      border-radius: 4px; /* Squared corners */
-      color: var(--accent-neon);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.0rem;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 0 5px rgba(57, 255, 20, 0.3); /* Subtle button glow */
-    }
-
-    .download-btn::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      /* Neon fill effect */
-      background: linear-gradient(135deg, var(--accent-neon), var(--secondary-highlight)); 
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
-      z-index: -1;
-    }
-
-    .download-btn:hover {
-      transform: translateY(-2px); /* Lift slightly */
-      box-shadow: 0 5px 20px var(--glow-color);
-      border-color: transparent;
-      color: var(--bg-dark); /* Dark text on neon hover */
-    }
-
-    .download-btn:hover::before {
-      width: 400px;
-      height: 400px;
-    }
-
-    .download-btn .icon {
-      color: currentColor; /* Ensures SVG/Icon color matches text */
-    }
-
-    /* Source code button - Uses Secondary Orange accent */
-    .source-btn {
-      background: rgba(255, 102, 0, 0.05); /* Orange background */
-      border-color: var(--secondary-highlight);
-      color: var(--secondary-highlight);
-    }
-
-    .source-btn::before {
-      /* Orange/Neon Green fill */
-      background: linear-gradient(135deg, var(--secondary-highlight), var(--accent-neon));
-    }
-
-    .source-btn:hover {
-      box-shadow: 0 5px 20px rgba(255, 102, 0, 0.4);
-      color: var(--bg-dark);
-    }
-
-    /* Warning badge - Consistent yellow/orange warning */
-    .warning-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.8rem 1.2rem;
-      background: rgba(255, 193, 7, 0.1);
-      border: 1px solid rgba(255, 193, 7, 0.3);
-      border-radius: 4px; /* Squared corners */
-      color: #ffc107;
-      font-size: 0.9rem;
-      margin-top: 2rem;
-      animation: pulse 2s ease infinite;
-      text-align: left;
-    }
-    
-    /* Particles & Scroll Animation - Kept from original and should work */
-    .particle {
+    nav {
       position: fixed;
-      width: 3px;
-      height: 3px;
-      background: rgba(57, 255, 20, 0.6); /* Neon green particle color */
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 1;
-      box-shadow: 0 0 8px rgba(57, 255, 20, 0.4);
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(17, 17, 17, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 0.8rem 1.4rem;
+      display: flex;
+      gap: 1.8rem;
+      z-index: 100;
     }
 
-
-    /* Footer */
-    footer {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      padding: 1.5rem 2rem; /* Adjusted padding */
-      border-top: 1px solid var(--card-bg);
-      background: rgba(7, 7, 15, 0.8);
-      backdrop-filter: blur(8px);
-    }
-
-    footer p {
-      color: #777;
+    nav a {
       font-size: 0.9rem;
-      font-family: 'Fira Code', monospace;
-    }
-
-    footer a {
-      color: var(--accent-neon);
-      text-decoration: none;
       font-weight: 600;
-      transition: all 0.3s ease;
+      color: var(--text-muted);
     }
 
-    .heart {
-      color: var(--secondary-highlight);
-      display: inline-block;
-      animation: heartbeat 1.5s ease infinite;
+    nav a:hover { color: var(--text-main); }
+
+    .hero {
+      padding-top: 160px;
+      padding-bottom: 80px;
+      text-align: center;
     }
-    
-    /* Responsive media queries remain the same */
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 800;
+      background: linear-gradient(180deg, #ffffff, #888888);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 100px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: 0.3s var(--ease);
+    }
+
+    .card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+    }
+
+    .card h3 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .card-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .card-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .download-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .download-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: var(--font-code);
+      font-size: 0.85rem;
+      transition: 0.25s var(--ease);
+    }
+
+    .download-item:hover {
+      border-color: var(--border-hover);
+      background: #141414;
+    }
+
+    .download-item span {
+      color: var(--text-muted);
+    }
+
+    .download-item a {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .note {
+      margin-top: 16px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
     @media (max-width: 768px) {
-      header {
-        padding: 1rem 1.5rem;
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      main {
-        padding: 100px 1.5rem 2rem;
-      }
-
-      .download-section {
-        padding: 2rem 1.5rem;
-      }
-
-      .download-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .page-title {
-        font-size: 2rem;
-      }
+      .bento-grid { grid-template-columns: 1fr; }
+      nav { bottom: 20px; top: auto; width: 90%; justify-content: center; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">Aswanidev VS</div>
-    <nav>
-      <a href="index.html">← Back to Portfolio</a>
-    </nav>
-  </header>
 
-  <main>
-    <h1 class="page-title">Download WriteDown</h1>
-    <p class="page-subtitle">Lightning-fast terminal note-taking for every platform</p>
+<nav>
+  <a href="index.html">← Portfolio</a>
+  <a href="https://github.com/Aswanidev-vs/writedown">GitHub</a>
+</nav>
 
-    <div class="download-section">
-      <div class="section-header">
-        <span class="section-icon">💻</span> <!-- Changed icon to be more generic/technical -->
-        <h2>Choose Your Platform</h2>
-      </div>
-      <p>Select the version that matches your operating system and start taking notes instantly. All binaries are compiled for maximum performance.</p>
+<section class="hero container">
+  <h1>WriteDown</h1>
+  <p>Minimal, lightning-fast terminal note taking tool built in Go.</p>
+</section>
 
-      <div class="download-grid">
-        <!-- Windows -->
-        <a href="writedown.exe" class="download-btn">
-          <span class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50" fill="currentColor">
-              <path d="M19.852 7.761l-15 2.25C4.362 10.085 4 10.505 4 11v12c0 .553.448 1 1 1h15c.552 0 1-.447 1-1V8.75c0-.291-.127-.567-.348-.758C20.432 7.803 20.139 7.721 19.852 7.761zM45.652 4.242c-.22-.189-.512-.271-.801-.231l-21 3.15C23.362 7.235 23 7.655 23 8.15V23c0 .553.448 1 1 1h21c.552 0 1-.447 1-1V5C46 4.709 45.873 4.433 45.652 4.242zM20 26H5c-.552 0-1 .447-1 1v12c0 .495.362.915.852.989l15 2.25c.05.007.099.011.148.011.238 0 .47-.085.652-.242C20.873 41.817 21 41.541 21 41.25V27C21 26.447 20.552 26 20 26zM45 26H24c-.552 0-1 .447-1 1v14.85c0 .495.362.915.852.989l21 3.15C44.901 45.996 44.951 46 45 46c.238 0 .47-.085.652-.242C45.873 45.567 46 45.291 46 45V27C46 26.447 45.552 26 45 26z"/>
-            </svg>
-          </span>
-          Windows (x64)
-        </a>
+<section class="container bento-grid">
 
-        <!-- Android/Termux -->
-        <a href="writedown" class="download-btn" id="android-download">
-          <span class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50" fill="currentColor">
-              <path d="M16.28125 0.03125C16.152344 0.0546875 16.019531 0.078125 15.90625 0.15625C15.449219 0.464844 15.347656 1.105469 15.65625 1.5625L17.8125 4.78125C14.480469 6.546875 11.996094 9.480469 11.1875 13L38.8125 13C38.003906 9.480469 35.519531 6.546875 32.1875 4.78125L34.34375 1.5625C34.652344 1.105469 34.550781 0.464844 34.09375 0.15625C33.632813 -0.152344 32.996094 -0.0195313 32.6875 0.4375L30.3125 3.9375C28.664063 3.335938 26.875 3 25 3C23.125 3 21.335938 3.335938 19.6875 3.9375L17.3125 0.4375C17.082031 0.09375 16.664063 -0.0429688 16.28125 0.03125ZM19.5 8C20.328125 8 21 8.671875 21 9.5C21 10.332031 20.328125 11 19.5 11C18.667969 11 18 10.332031 18 9.5C18 8.671875 18.667969 8 19.5 8ZM30.5 8C31.332031 8 32 8.671875 32 9.5C32 10.332031 31.332031 11 30.5 11C29.671875 11 29 10.332031 29 9.5C29 8.671875 29.671875 8 30.5 8ZM8 15C6.34375 15 5 16.34375 5 18L5 32C5 33.65625 6.34375 35 8 35C8.351563 35 8.6875 34.925781 9 34.8125L9 15.1875C8.6875 15.074219 8.351563 15 8 15ZM11 15L11 37C11 38.652344 12.347656 40 14 40L36 40C37.652344 40 39 38.652344 39 37L39 15ZM42 15C41.648438 15 41.3125 15.074219 41 15.1875L41 34.8125C41.3125 34.921875 41.648438 35 42 35C43.65625 35 45 33.65625 45 32L45 18C45 16.34375 43.65625 15 42 15ZM15 42L15 46C15 48.207031 16.792969 50 19 50C21.207031 50 23 48.207031 23 46L23 42ZM27 42L27 46C27 48.207031 28.792969 50 31 50C33.207031 50 35 48.207031 35 46L35 42Z"/>
-            </svg>
-          </span>
-          Android / Termux (ARM64)
-        </a>
+  <div class="card">
+    <h3>Downloads</h3>
+    <div class="card-title">Prebuilt Binaries</div>
+    <div class="card-desc">Choose the build that matches your system.</div>
 
-        <!-- Linux -->
-        <a href="linux/Writedown" class="download-btn">
-          <img src="linux-logo.png" alt="linux-logo" width="24" height="24" style="color: #39FF14;">
-          Linux (x64)
-        </a>
+    <div class="download-list">
+      <div class="download-item">
+        <span>Windows x64</span>
+        <a href="writedown.exe">Download</a>
       </div>
 
-      <div class="warning-badge" style="display: block; text-align: center;">
-        <p style="margin: 0; color: #ffc107;">
-          <span>⚠️</span>
-          **Important:** Android users must install **Termux** from F-Droid or GitHub, not the Play Store.
-        </p>
+      <div class="download-item">
+        <span>Linux x64</span>
+        <a href="linux/writedown">Download</a>
+      </div>
+
+      <div class="download-item">
+        <span>Android (Termux)</span>
+        <a id="android-download" href="writedown">Download</a>
       </div>
     </div>
 
-    <div class="download-section">
-      <div class="section-header">
-        <span class="section-icon">🛠️</span>
-        <h2>Source Code & Contribution</h2>
-      </div>
-      <p>The entire project is open source. Fork it, contribute, or compile the latest version yourself.</p>
-
-      <a href="https://github.com/Aswanidev-vs/writedown" class="download-btn source-btn">
-        <span class="icon">
-          <!-- GitHub Icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 496 512" fill="currentColor">
-            <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-2.9 0-5.2-1.6-5.2-3.6 0-2 2.3-3.6 5.2-3.6 2.9 0 5.2 1.6 5.2 3.6zM134.8 393.9c-.7 1.5-2.6 2-4.1 1.2-1.5-.7-2-2.6-1.2-4.1.7-1.5 2.6-2 4.1-1.2 1.5.7 2 2.6 1.2 4.1zm24.3-1.5c-1.4 1.1-3.5.6-4.6-.9-1.1-1.4-.6-3.5.9-4.6 1.4-1.1 3.5-.6 4.6.9 1.1 1.4.6 3.5-.9 4.6zM256 32C114.6 32 0 146.6 0 288c0 113.2 73.3 209.1 175.1 243 12.8 2.3 17.5-5.5 17.5-12.2 0-6.1-.2-26.3-.3-47.6-71.3 15.5-86.4-34.4-86.4-34.4-11.7-29.7-28.5-37.6-28.5-37.6-23.3-15.9 1.8-15.6 1.8-15.6 25.8 1.8 39.3 26.5 39.3 26.5 22.9 39.2 60.1 27.9 74.7 21.3 2.3-16.6 8.9-27.9 16.2-34.3-56.9-6.5-116.6-28.4-116.6-126.2 0-27.9 10-50.8 26.5-68.7-2.7-6.5-11.5-32.7 2.5-68.2 0 0 21.6-6.9 70.8 26.2 20.5-5.7 42.4-8.6 64.2-8.7 21.8.1 43.7 3 64.2 8.7 49.2-33.1 70.8-26.2 70.8-26.2 14 35.5 5.2 61.7 2.5 68.2 16.5 17.9 26.5 40.8 26.5 68.7 0 98-59.8 119.7-116.9 126.1 9.2 8 17.5 23.7 17.5 47.8 0 34.5-.3 62.3-.3 70.8 0 6.7 4.7 14.5 17.6 12.1C422.7 497.1 496 401.2 496 288 496 146.6 381.4 32 256 32z"/>
-          </svg>
-        </span>
-        View on GitHub
-      </a>
+    <div class="note">
+      Android users must install Termux from F-Droid or GitHub.
     </div>
-  </main>
+  </div>
 
-  <footer>
-    <p>© 2025 Aswanidev VS · Built with <span class="heart">❤</span> and Go | <a href="index.html">Back to Portfolio</a></p>
-  </footer>
+  <div class="card">
+    <h3>Source</h3>
+    <div class="card-title">Open Source</div>
+    <div class="card-desc">
+      Fully open source. Clone, audit, and build it yourself.
+    </div>
 
-  <script>
-    // Android download warning (Kept, but simplified text for alert)
-    document.getElementById("android-download").addEventListener("click", function(event) {
-      event.preventDefault();
-      const userConfirm = confirm(
-        "⚠️ IMPORTANT: Termux must be installed from F-Droid or GitHub, NOT the Play Store.\n\n" +
-        "After downloading:\n" +
-        "1. chmod +x writedown\n" +
-        "2. ./writedown\n\n" +
-        "Continue with download?"
-      );
-      if (userConfirm) {
-        window.location.href = this.href;
-      }
-    });
+    <div class="download-list">
+      <div class="download-item">
+        <span>GitHub Repository</span>
+        <a href="https://github.com/Aswanidev-vs/writedown">View</a>
+      </div>
+    </div>
+  </div>
 
-    // Create floating particles
-    function createParticles() {
-      const particleCount = 25;
-      for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = Math.random() * 100 + '%';
-        particle.style.animation = `float ${3 + Math.random() * 4}s ease-in-out infinite`;
-        particle.style.animationDelay = Math.random() * 3 + 's';
-        document.body.appendChild(particle);
-      }
-    }
-    createParticles();
+</section>
 
-    // Intersection Observer for scroll animations (Keep this for a modern feel)
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
+<footer>
+  © 2025 Aswanidev VS · Built with Go
+</footer>
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-          observer.unobserve(entry.target); // Stop observing once visible
-        }
-      });
-    }, observerOptions);
+<script>
+  document.getElementById("android-download").addEventListener("click", function (e) {
+    e.preventDefault();
+    const ok = confirm(
+      "Android setup:\n\n" +
+      "1. Install Termux from F-Droid or GitHub\n" +
+      "2. chmod +x writedown\n" +
+      "3. ./writedown\n\nContinue?"
+    );
+    if (ok) window.location.href = this.href;
+  });
+</script>
 
-    document.querySelectorAll('.download-section').forEach(section => {
-      section.style.opacity = '0';
-      section.style.transform = 'translateY(30px)';
-      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      observer.observe(section);
-    });
-  </script>
 </body>
 </html>
