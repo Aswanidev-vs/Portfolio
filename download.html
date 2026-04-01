@@ -1,260 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WriteDown – Downloads</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aswanidev VS | Projects</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-main: #0a0a0a;
-      --bg-card: #111111;
-      --bg-card-hover: #161616;
-      --border: #222222;
-      --border-hover: #333333;
-
-      --accent: #3b82f6;
-      --text-main: #ededed;
-      --text-muted: #888888;
-
-      --font-body: 'Manrope', sans-serif;
-      --font-code: 'JetBrains Mono', monospace;
-
-      --radius: 12px;
-      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+      --bg: #0c0c0e;
+      --surface: #141416;
+      --surface-hover: #1c1c1f;
+      --border: #26262b;
+      --border-bright: #363640;
+      --amber: #e5a035;
+      --amber-glow: rgba(229,160,53,0.12);
+      --cream: #f0ece4;
+      --muted: #7a7670;
+      --mono: 'JetBrains Mono', monospace;
+      --sans: 'Manrope', sans-serif;
+      --serif: 'Instrument Serif', serif;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: var(--bg-main);
-      color: var(--text-main);
-      font-family: var(--font-body);
-      background-image: radial-gradient(#222 1px, transparent 1px);
-      background-size: 32px 32px;
-      line-height: 1.6;
+      background: var(--bg);
+      color: var(--cream);
+      font-family: var(--sans);
+      line-height: 1.7;
+      background-image: radial-gradient(rgba(255,255,255,0.022) 1px, transparent 1px);
+      background-size: 28px 28px;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a { color: inherit; text-decoration: none; transition: all .25s; }
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
+    .container { max-width: 1040px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 48px); }
+
+    nav { padding: 28px 0; }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-family: var(--mono); font-weight: 500; font-size: 24px; color: var(--amber); }
+    .nav-links { display: flex; gap: 32px; font-size: 13px; color: var(--muted); }
+    .nav-links a:hover { color: var(--cream); }
+
+    .hero { padding: 100px 0 60px; text-align: center; position: relative; }
+    .hero::before {
+      content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 400px; height: 400px; background: radial-gradient(circle, var(--amber-glow) 0%, transparent 70%);
+      pointer-events: none; z-index: 0;
     }
+    .hero-content { position: relative; z-index: 1; }
+    .hero h1 { font-family: var(--serif); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 400; margin-bottom: 16px; }
+    .hero h1 em { font-style: italic; color: var(--amber); }
+    .hero p { color: var(--muted); max-width: 500px; margin: 0 auto; }
 
-    nav {
-      position: fixed;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(17, 17, 17, 0.85);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      padding: 0.8rem 1.4rem;
-      display: flex;
-      gap: 1.8rem;
-      z-index: 100;
-    }
+    .section-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px; }
+    .section-head h2 { font-family: var(--serif); font-size: 28px; font-weight: 400; }
+    .section-head .line { flex: 1; height: 1px; background: var(--border); }
 
-    nav a {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--text-muted);
-    }
-
-    nav a:hover { color: var(--text-main); }
-
-    .hero {
-      padding-top: 160px;
-      padding-bottom: 80px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
-      font-weight: 800;
-      background: linear-gradient(180deg, #ffffff, #888888);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 12px;
-    }
-
-    .hero p {
-      color: var(--text-muted);
-      max-width: 520px;
-      margin: 0 auto;
-    }
-
-    .bento-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      margin-bottom: 100px;
-    }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 80px; }
 
     .card {
-      background: var(--bg-card);
+      background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px;
-      transition: 0.3s var(--ease);
+      border-radius: 14px;
+      padding: 32px;
+      transition: all .35s cubic-bezier(.22, 1, .36, 1);
+      position: relative;
     }
+    .card:hover { transform: translateY(-5px); border-color: var(--border-bright); box-shadow: 0 24px 64px -12px rgba(0,0,0,0.5); }
 
-    .card:hover {
-      background: var(--bg-card-hover);
-      border-color: var(--border-hover);
-      transform: translateY(-2px);
-    }
+    .card h3 { font-family: var(--mono); font-size: 12px; color: var(--amber); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 20px; }
+    .card-title { font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+    .card-desc { font-size: 14px; color: var(--muted); margin-bottom: 24px; }
 
-    .card h3 {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-    }
-
-    .card-title {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .card-desc {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-    }
-
-    .download-list {
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
+    .download-list { display: flex; flex-direction: column; gap: 12px; }
     .download-item {
-      display: flex;
-      justify-content: space-between;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 14px 18px; background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border); border-radius: 10px;
+      font-family: var(--mono); font-size: 13px;
+    }
+    .download-item span { color: var(--muted); }
+    .download-item a { color: var(--amber); font-weight: 500; }
+    .download-item a:hover { color: var(--cream); }
+
+    .note { margin-top: 24px; font-size: 13px; color: var(--muted); font-style: italic; border-left: 2px solid var(--border); padding-left: 16px; }
+
+    /* Project Card specific styles (from index.html) */
+    .project-card h3 { /* Override generic card h3 for project titles */
+      font-family: var(--mono);
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: var(--amber);
+      text-transform: none; /* Remove uppercase */
+      letter-spacing: normal;
+    }
+    .project-card p { /* Override generic card-desc for project descriptions */
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .project-link {
+      display: inline-flex;
       align-items: center;
-      padding: 12px 14px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-family: var(--font-code);
-      font-size: 0.85rem;
-      transition: 0.25s var(--ease);
+      gap: 6px;
+      margin-top: 18px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      transition: color .25s;
     }
-
-    .download-item:hover {
-      border-color: var(--border-hover);
-      background: #141414;
+    .project-link:hover { color: var(--amber); }
+    .project-link .arrow {
+      transition: transform .25s;
+      display: inline-block;
     }
+    .project-link:hover .arrow { transform: translateX(4px); }
 
-    .download-item span {
-      color: var(--text-muted);
-    }
-
-    .download-item a {
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .note {
-      margin-top: 16px;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
+    /* Loading text for dynamic content */
+    .loading-text {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--muted);
+      grid-column: 1/-1; /* Span full width in grid */
       padding: 40px 0;
       text-align: center;
-      color: var(--text-muted);
-      font-size: 0.9rem;
     }
+    .loading-text::after {
+      content:'';
+      animation:ellipsis 1.5s steps(4) infinite;
+    }
+    @keyframes ellipsis{0%{content:''}25%{content:'.'}50%{content:'..'}75%{content:'...'}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+    footer { padding: 40px 0; border-top: 1px solid var(--border); text-align: center; }
+    footer p { font-family: var(--mono); font-size: 12px; color: var(--muted); }
 
     @media (max-width: 768px) {
-      .bento-grid { grid-template-columns: 1fr; }
-      nav { bottom: 20px; top: auto; width: 90%; justify-content: center; }
+      .hero { padding: 60px 0 40px; }
+      .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-<nav>
-  <a href="index.html">← Portfolio</a>
-  <a href="https://github.com/Aswanidev-vs/writedown">GitHub</a>
-</nav>
-
-<section class="hero container">
-  <h1>WriteDown</h1>
-  <p>Minimal, lightning-fast terminal note taking tool built in Go.</p>
-</section>
-
-<section class="container bento-grid">
-
-  <div class="card">
-    <h3>Downloads</h3>
-    <div class="card-title">Prebuilt Binaries</div>
-    <div class="card-desc">Choose the build that matches your system.</div>
-
-    <div class="download-list">
-      <div class="download-item">
-        <span>Windows x64</span>
-        <a href="writedown.exe">Download</a>
-      </div>
-
-      <div class="download-item">
-        <span>Linux x64</span>
-        <a href="linux/writedown">Download</a>
-      </div>
-
-      <div class="download-item">
-        <span>Android (Termux)</span>
-        <a id="android-download" href="writedown">Download</a>
+<div class="container">
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Aswanidev vs</a>
+      <div class="nav-links">
+        <a href="index.html">← Portfolio</a>
+        <a href="https://github.com/Aswanidev-vs" target="_blank">GitHub</a>
       </div>
     </div>
+  </nav>
 
-    <div class="note">
-      Android users must install Termux from F-Droid or GitHub.
+  <section class="hero">
+    <div class="hero-content">
+      <h1>My <em>Projects</em></h1>
+      <p>Explore my open-source tools and applications.</p>
     </div>
-  </div>
+  </section>
 
-  <div class="card">
-    <h3>Source</h3>
-    <div class="card-title">Open Source</div>
-    <div class="card-desc">
-      Fully open source. Clone, audit, and build it yourself.
+  <div id="dynamic-downloads"></div>
+
+  <section>
+    <div class="section-head">
+      <h2>Other Projects</h2>
+      <span class="line"></span>
     </div>
-
-    <div class="download-list">
-      <div class="download-item">
-        <span>GitHub Repository</span>
-        <a href="https://github.com/Aswanidev-vs/writedown">View</a>
-      </div>
+    <div id="github-projects" class="grid">
+      <p class="loading-text">fetching repositories...</p>
     </div>
-  </div>
-
-</section>
+  </section>
+</div>
 
 <footer>
-  © 2025 Aswanidev VS · Built with Go
+  <div class="container">
+    <p>© 2025 Aswanidev VS · Built with Go & Minimalist CSS</p>
+  </div>
 </footer>
 
 <script>
-  document.getElementById("android-download").addEventListener("click", function (e) {
+  const username = 'Aswanidev-vs';
+
+  // Configuration: Just enter the names of projects you want to show binary downloads for
+  const downloadableRepos = ['WriteDown', 'GitScope'];
+  
+  // Configuration: Names of projects to show in the "Other Projects" grid (standard repo link)
+  const otherRepos = ['Akashic', 'Persona', 'Flowmark'];
+
+  // Global handler for Android download confirmation
+  window.confirmAndroid = (e) => {
     e.preventDefault();
-    const ok = confirm(
-      "Android setup:\n\n" +
-      "1. Install Termux from F-Droid or GitHub\n" +
-      "2. chmod +x writedown\n" +
-      "3. ./writedown\n\nContinue?"
-    );
-    if (ok) window.location.href = this.href;
-  });
+    if (confirm("Android Installation:\n\n1. Ensure Termux is installed via F-Droid\n2. Run 'chmod +x <binary>'\n3. Execute via './<binary>'\n\nContinue download?")) {
+      window.location.href = e.currentTarget.href;
+    }
+  };
+
+  (async function init() {
+    const downloadTarget = document.getElementById('dynamic-downloads');
+    const projectsTarget = document.getElementById('github-projects');
+
+    try {
+      const res = await fetch(`https://api.github.com/users/${username}/repos?per_page=100&sort=updated`);
+      const repos = await res.json();
+
+      // 1. Process Featured Downloadable Projects
+      for (const name of downloadableRepos) {
+        const repo = repos.find(r => r.name === name);
+        if (!repo) continue;
+
+        // Fetch latest release to get binary assets (.exe, etc)
+        const releaseRes = await fetch(`https://api.github.com/repos/${username}/${name}/releases/latest`);
+        const release = releaseRes.ok ? await releaseRes.json() : null;
+        
+        const section = document.createElement('section');
+        section.innerHTML = `
+          <div class="section-head">
+            <h2>${repo.name}</h2>
+            <span class="line"></span>
+          </div>
+          <div class="grid">
+            <div class="card">
+              <h3>Binaries</h3>
+              <p class="card-title">Prebuilt Executables</p>
+              <p class="card-desc">${release ? `Stable Version: ${release.tag_name}` : 'No releases found.'}</p>
+              <div class="download-list">
+                ${release ? release.assets.map(asset => {
+                  const isExe = asset.name.toLowerCase().endsWith('.exe');
+                  const isAndroid = asset.name.toLowerCase().includes('android') || asset.name.toLowerCase().includes('termux');
+                  const typeLabel = isExe ? 'Windows x64' : (isAndroid ? 'Android (Termux)' : 'Linux / Unix');
+                  const attr = isAndroid ? 'onclick="confirmAndroid(event)"' : '';
+                  
+                  return `
+                    <div class="download-item">
+                      <span>${typeLabel}</span>
+                      <a href="${asset.browser_download_url}" ${attr}>Download</a>
+                    </div>
+                  `;
+                }).join('') : '<p class="card-desc">No binary assets found in the latest release.</p>'}
+              </div>
+              ${release && release.assets.some(a => a.name.toLowerCase().includes('android')) ? 
+                '<div class="note">Android: Requires Termux from F-Droid.</div>' : ''}
+            </div>
+            
+            <div class="card">
+              <h3>Source</h3>
+              <p class="card-title">Development</p>
+              <p class="card-desc">Fully open-source codebase for local building.</p>
+              <div class="download-list">
+                <div class="download-item">
+                  <span>Main Branch</span>
+                  <a href="${repo.html_url}" target="_blank">View on GitHub</a>
+                </div>
+              </div>
+              <div class="note" style="font-family: var(--mono); font-size: 11px; margin-top: 30px;">
+                $ go install github.com/${username.toLowerCase()}/${repo.name.toLowerCase()}@latest
+              </div>
+            </div>
+          </div>
+        `;
+        downloadTarget.appendChild(section);
+      }
+
+      // 2. Process Secondary Projects Grid
+      projectsTarget.innerHTML = '';
+      const others = repos.filter(r => otherRepos.includes(r.name));
+      others.forEach((repo, i) => {
+        const card = document.createElement('div');
+        card.className = 'card project-card';
+        card.style.opacity = '0';
+        card.style.animation = `fadeUp .5s ease forwards ${i * 0.1}s`;
+        card.innerHTML = `
+          <h3>${repo.name}</h3>
+          <p>${repo.description || 'No description provided.'}</p>
+          <a class="project-link" href="${repo.html_url}" target="_blank">
+            View repository <span class="arrow">&rarr;</span>
+          </a>
+        `;
+        projectsTarget.appendChild(card);
+      });
+
+    } catch (err) {
+      console.error("Initialization error:", err);
+      projectsTarget.innerHTML = `<p class="loading-text">Error fetching project data.</p>`;
+    }
+  })();
 </script>
 
 </body>
