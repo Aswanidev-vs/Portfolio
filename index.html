@@ -9,140 +9,402 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
 :root {
-  --bg: #0c0c0e;
-  --surface: #141416;
-  --surface-hover: #1c1c1f;
-  --border: #26262b;
-  --border-bright: #363640;
-  --amber: #e5a035;
-  --amber-dim: #b87a1a;
-  --amber-glow: rgba(229,160,53,0.12);
-  --cream: #f0ece4;
-  --muted: #7a7670;
-  --mono: 'JetBrains Mono','Fira Code',monospace;
-  --sans: 'Manrope',system-ui,-apple-system,sans-serif;
-  --serif: 'Instrument Serif',Georgia,'Times New Roman',serif;
+  --bg: #0b0d0b;
+  --surface: #111411;
+  --border: #1c201c;
+  --text: #e2e0d8;
+  --muted: #707568;
+  --accent: #70ba00;
+  --accent-dim: #5a9600;
+  --accent-soft: rgba(112, 186, 0, 0.08);
+  --mono: 'IBM Plex Mono', 'Fira Code', monospace;
+  --sans: 'Manrope', system-ui, -apple-system, sans-serif;
+  --serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
 }
 
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+* { margin: 0; padding: 0; box-sizing: border-box }
+html { scroll-behavior: smooth }
 
 body {
   font-family: var(--sans);
   background: var(--bg);
-  color: var(--cream);
+  color: var(--text);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
-  background-image:radial-  gradient(rgba(255,255,255,0.022) 1px,transparent 1px);
-  background-size:28px 28px;
+  overflow-x: hidden;
 }
 
-a{color:inherit;text-decoration:none}
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+}
+
+a { color: inherit; text-decoration: none }
+
+/* ── Scroll Progress ── */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: var(--accent);
+  width: 0%;
+  z-index: 10000;
+  transition: width 0.1s linear;
+}
 
 /* ── Container ── */
-.container{max-width:1040px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
+.container { max-width: 880px; margin: 0 auto; padding: 0 clamp(24px, 6vw, 56px) }
 
 /* ── Nav ── */
 nav {
-  display:flex;justify-content:space-between;align-items:center;
-  padding:28px 0;position:relative;top:0;z-index:100;
-  background:transparent;transition:background .4s,border-color .4s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: transparent;
+  transition: border-color 0.4s ease;
+  border-bottom: 1px solid transparent;
 }
 nav.scrolled {
-  background:rgba(12,12,14,0.88);
-  -webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);
-  border-bottom:1px solid var(--border);
+  border-bottom-color: var(--border);
+  background: rgba(11, 13, 11, 0.9);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
 }
-.nav-inner{max-width:1040px;margin:0 auto;padding:0 clamp(20px,5vw,48px);display:flex;justify-content:space-between;align-items:center;width:100%}
-.logo{font-family:var(--mono);font-weight:500;font-size:30px;letter-spacing:.06em;color:var(--amber)}
-.nav-links{display:flex;gap:32px}
-.nav-links a{font-size:13px;color:var(--muted);transition:color .25s;letter-spacing:.01em}
-.nav-links a:hover{color:var(--cream)}
+.nav-inner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 6vw, 56px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.logo {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+.nav-links { display: flex; gap: 32px }
+.nav-links a {
+  font-size: 13px;
+  color: var(--muted);
+  transition: color 0.25s ease;
+  letter-spacing: 0.01em;
+}
+.nav-links a:hover { color: var(--text) }
 
 /* ── Hero ── */
-.hero{padding:clamp(80px,12vw,150px) 0 clamp(80px,10vw,130px);position:relative}
-.hero::before{content:'';position:absolute;top:40%;left:20%;width:460px;height:460px;background:radial-gradient(circle,var(--amber-glow) 0%,transparent 70%);pointer-events:none;transform:translate(-30%,-50%);z-index:0}
-.hero-content{position:relative;z-index:1}
-.hero-label{font-family:var(--mono);font-size:12px;color:var(--amber);letter-spacing:.18em;text-transform:uppercase;margin-bottom:24px;opacity:0;animation:fadeUp .7s ease forwards .15s}
-.hero h1{font-family:var(--serif);font-size:clamp(3rem,7.5vw,5.5rem);font-weight:400;line-height:1.05;margin-bottom:28px;opacity:0;animation:fadeUp .7s ease forwards .3s}
-.hero h1 em{font-style:italic;color:var(--amber)}
-.hero-desc{max-width:480px;font-size:16px;line-height:1.85;color:var(--muted);margin-bottom:36px;opacity:0;animation:fadeUp .7s ease forwards .45s}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:fadeUp .7s ease forwards .6s}
-.hero-status{margin-top:44px;font-family:var(--mono);font-size:12px;color:var(--muted);display:flex;align-items:center;gap:10px;opacity:0;animation:fadeUp .7s ease forwards .75s}
-.dot{width:6px;height:6px;border-radius:50%;background:#4ade80;animation:pulse 2.5s ease-in-out infinite}
+.hero {
+  padding: clamp(100px, 14vw, 180px) 0 clamp(80px, 12vw, 160px);
+  position: relative;
+}
+.hero-content { position: relative; z-index: 1 }
+.hero-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.1s;
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(3.2rem, 9vw, 7rem);
+  font-weight: 400;
+  line-height: 0.95;
+  margin-bottom: 32px;
+  letter-spacing: -0.02em;
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.25s;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+.hero-desc {
+  max-width: 440px;
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--muted);
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.4s;
+}
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.55s;
+}
+.hero-status {
+  margin-top: 52px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.7s;
+}
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 2.5s ease-in-out infinite;
+}
 
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px) }
+  to { opacity: 1; transform: translateY(0) }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1 }
+  50% { opacity: 0.3 }
+}
 
 /* ── Buttons ── */
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:10px;font-family:var(--sans);font-size:14px;font-weight:600;cursor:pointer;transition:all .25s ease;border:none;text-decoration:none}
-.btn-primary{background:var(--amber);color:#0c0c0e}
-.btn-primary:hover{background:#f0ab45;transform:translateY(-1px)}
-.btn-ghost{background:transparent;border:1px solid var(--border);color:var(--cream)}
-.btn-ghost:hover{border-color:var(--border-bright);background:var(--surface)}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+  text-decoration: none;
+}
+.btn-primary {
+  background: var(--accent);
+  color: var(--bg);
+}
+.btn-primary:hover {
+  background: #85c91a;
+  transform: translateY(-1px);
+}
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+.btn-ghost:hover {
+  border-color: var(--muted);
+  background: var(--surface);
+}
 
 /* ── Sections ── */
-section.section{margin-bottom:clamp(72px,10vw,120px)}
-.section-head{display:flex;align-items:baseline;gap:16px;margin-bottom:40px}
-.section-head h2{font-family:var(--serif);font-size:clamp(28px,4vw,36px);font-weight:400}
-.section-head .line{flex:1;height:1px;background:var(--border)}
+section.section {
+  margin-bottom: clamp(72px, 10vw, 120px);
+}
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+.section-head h2 {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.5vw, 32px);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+.section-head .line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
 
-/* ── Grid ── */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+/* ── Tech Stack (text line) ── */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 0;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 2.2;
+}
+.tech-stack .tech-item {
+  transition: color 0.25s ease;
+  cursor: default;
+}
+.tech-stack .tech-item:hover {
+  color: var(--text);
+}
+.tech-stack .tech-sep {
+  margin: 0 10px;
+  color: var(--border);
+  user-select: none;
+}
 
-/* ── Cards ── */
-.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:28px;transition:all .35s cubic-bezier(.22,1,.36,1);position:relative;overflow:hidden}
-.card::before{content:'';position:absolute;inset:-1px;border-radius:14px;padding:1px;background:linear-gradient(135deg,rgba(229,160,53,0.25),transparent 50%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .35s;pointer-events:none}
-.card:hover{transform:translateY(-5px);border-color:var(--border-bright);box-shadow:0 24px 64px -12px rgba(0,0,0,0.5)}
-.card:hover::before{opacity:1}
-.card h3{font-size:17px;font-weight:600;margin-bottom:4px}
-.card .card-sub{font-size:13px;color:var(--muted);margin-bottom:16px}
-
-/* ── Pills ── */
-.stack{display:flex;flex-wrap:wrap;gap:7px}
-.pill{font-family:var(--mono);font-size:11.5px;padding:5px 10px;border-radius:5px;background:rgba(255,255,255,0.035);color:var(--muted);border:1px solid rgba(255,255,255,0.04);transition:all .25s;letter-spacing:.01em}
-.pill:hover{color:var(--cream);border-color:var(--border);background:rgba(255,255,255,0.06)}
-
-/* ── Project Cards ── */
-.project-card h3{font-family:var(--mono);font-size:16px;margin-bottom:10px;color:var(--amber)}
-.project-card p{font-size:14px;color:var(--muted);line-height:1.65}
-.project-link{display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-family:var(--mono);font-size:12px;color:var(--muted);transition:color .25s}
-.project-link:hover{color:var(--amber)}
-.project-link .arrow{transition:transform .25s;display:inline-block}
-.project-link:hover .arrow{transform:translateX(4px)}
+/* ── Project List ── */
+.project-list {
+  display: flex;
+  flex-direction: column;
+}
+.project-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border);
+  gap: 24px;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+}
+.project-row::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  transform: translateX(-1px);
+}
+.project-row:hover {
+  background: var(--surface);
+  padding-left: 16px;
+}
+.project-row:hover::before {
+  opacity: 1;
+}
+.project-info {
+  flex: 1;
+  min-width: 0;
+}
+.project-name {
+  font-family: var(--mono);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 6px;
+  letter-spacing: 0.01em;
+}
+.project-desc {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  transition: color 0.25s ease;
+  white-space: nowrap;
+  padding-top: 3px;
+  flex-shrink: 0;
+}
+.project-link:hover { color: var(--accent) }
+.project-link .arrow {
+  transition: transform 0.25s ease;
+  display: inline-block;
+}
+.project-link:hover .arrow { transform: translateX(4px) }
 
 /* ── Loading ── */
-.loading-text{font-family:var(--mono);font-size:13px;color:var(--muted);grid-column:1/-1;padding:40px 0;text-align:center}
-.loading-text::after{content:'';animation:ellipsis 1.5s steps(4) infinite}
-@keyframes ellipsis{0%{content:''}25%{content:'.'}50%{content:'..'}75%{content:'...'}}
+.loading-text {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+  padding: 40px 0;
+  text-align: center;
+}
+.loading-text::after {
+  content: '';
+  animation: ellipsis 1.5s steps(4) infinite;
+}
+@keyframes ellipsis {
+  0% { content: '' }
+  25% { content: '.' }
+  50% { content: '..' }
+  75% { content: '...' }
+}
 
 /* ── Footer ── */
-footer{margin-top:clamp(60px,8vw,100px);padding:40px 0;border-top:1px solid var(--border);text-align:center}
-footer p{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.05em}
-footer p span{color:var(--amber-dim)}
+footer {
+  margin-top: clamp(60px, 8vw, 100px);
+  padding: 40px 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+footer p {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+footer p span { color: var(--accent-dim) }
+
+/* ── Scroll Reveal ── */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* ── Responsive ── */
-@media(max-width:768px){
-  nav.scrolled{position:relative;background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none;border-bottom:none}
-  .nav-links{gap:20px}
-  .hero{padding:72px 0 80px}
-  .hero::before{width:280px;height:280px}
-  .hero-desc{font-size:15px}
-  .grid{grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
-  .card{padding:22px}
+@media (max-width: 768px) {
+  .hero { padding: 80px 0 70px }
+  .hero h1 { font-size: clamp(2.4rem, 8vw, 3.5rem) }
+  .hero-desc { font-size: 15px }
+  .nav-links { gap: 20px }
+  .project-row { flex-direction: column; gap: 10px }
+  .project-link { padding-top: 0 }
+  .project-row:hover { padding-left: 12px }
+  nav.scrolled {
+    position: relative;
+    background: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    border-bottom-color: transparent;
+  }
 }
-@media(max-width:480px){
-  .nav-links{gap:16px}
-  .nav-links a{font-size:12px}
-  .hero h1{font-size:2.6rem}
-  .hero-actions{flex-direction:column}
-  .btn{justify-content:center}
-  .grid{grid-template-columns:1fr;gap:12px}
+@media (max-width: 480px) {
+  .nav-links { gap: 16px }
+  .nav-links a { font-size: 12px }
+  .hero h1 { font-size: 2.4rem }
+  .hero-actions { flex-direction: column }
+  .btn { justify-content: center }
+  .tech-stack { font-size: 12px }
+  .tech-stack .tech-sep { margin: 0 7px }
 }
 
 </style>
@@ -150,15 +412,17 @@ footer p span{color:var(--amber-dim)}
 
 <body>
 
+<div class="scroll-progress"></div>
+
 <nav>
   <div class="nav-inner">
-    <a href="#" class="logo">Aswanidev vs</a>
-    <!--<div class="nav-links">
+    <a href="#" class="logo">Aswanidevvs</a>
+    <div class="nav-links">
       <a href="https://github.com/Aswanidev-vs" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/dnsjss-88738737a/" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/aswanidev-vs-88738737a/" target="_blank">LinkedIn</a>
       <a href="download.html">Projects</a>
     </div>
-  </div>-->
+  </div>
 </nav>
 
 <div class="container">
@@ -172,79 +436,50 @@ footer p span{color:var(--amber-dim)}
         Focused on speed, minimalism, and software that actually works.
       </p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="https://github.com/Aswanidev-vs">
+        <a class="btn btn-primary" href="https://github.com/Aswanidev-vs" target="_blank">
           View GitHub
         </a>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/aswanidev-vs-88738737a/">
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/aswanidev-vs-88738737a/" target="_blank">
           LinkedIn
         </a>
         <a class="btn btn-ghost" href="download.html">
           Projects
         </a>
       </div>
-      <div class="hero-status">
-        <span class="dot"></span>
-        <span>online &mdash; currently building</span>
-      </div>
+      
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" data-reveal>
     <div class="section-head">
       <h2>Tech Stack</h2>
       <span class="line"></span>
     </div>
-    <div class="grid">
-
-      <div class="card">
-        <h3>Languages</h3>
-        <div class="stack">
-          <span class="pill">Go</span>
-          <span class="pill">C</span>
-          <span class="pill">C++</span>
-          <span class="pill">Java</span>
-          <span class="pill">PHP</span>
-          <span class="pill">JavaScript</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Frontend</h3>
-        <div class="stack">
-          <span class="pill">HTML</span>
-          <span class="pill">CSS</span>
-          <span class="pill">Vue</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Frameworks</h3>
-        <div class="card-sub">Desktop &amp; GUI</div>
-        <div class="stack">
-          <span class="pill">Wails</span>
-          <span class="pill">Fyne</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Tools</h3>
-        <div class="stack">
-          <span class="pill">Git</span>
-          <span class="pill">Docker</span>
-          <span class="pill">Linux</span>
-          <span class="pill">Neovim</span>
-        </div>
-      </div>
-
+    <div class="tech-stack">
+      <span class="tech-item">Go</span><span class="tech-sep">&middot;</span>
+      <span class="tech-item">C</span><span class="tech-sep">&middot;</span>
+      <span class="tech-item">C++</span><span class="tech-sep">&middot;</span>
+      <span class="tech-item">Java</span><span class="tech-sep">&middot;</span>
+      <span class="tech-item">PHP</span><span class="tech-sep">&middot;</span>
+      <span class="tech-item">JavaScript</span><span class="tech-sep">&middot;</span>
+      <span class="tech-item">HTML</span><span class="tech-sep">&middot;</span>
+      <span class="tech-item">CSS</span><span class="tech-sep">&middot;</span>
+      <!-- <span class="tech-item">Vue</span><span class="tech-sep">&middot;</span> -->
+      <span class="tech-item">Wails</span><span class="tech-sep">&middot;</span>
+      <span class="tech-item">Fyne</span><span class="tech-sep">&middot;</span>
+      <span class="tech-item">Git</span><span class="tech-sep">&middot;</span>
+      <span class="tech-item">Docker</span><span class="tech-sep">&middot;</span>
+      <span class="tech-item">Linux</span><span class="tech-sep">&middot;</span>
+      <!-- <span class="tech-item">Neovim</span> -->
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" data-reveal>
     <div class="section-head">
       <h2>Projects</h2>
       <span class="line"></span>
     </div>
-    <div id="github-projects" class="grid">
+    <div id="github-projects" class="project-list">
       <p class="loading-text">fetching repos</p>
     </div>
   </section>
@@ -258,48 +493,70 @@ footer p span{color:var(--amber-dim)}
 </footer>
 
 <script>
-// ── Scroll-aware nav ──
-window.addEventListener('scroll', () => {
-  document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 50);
-}, { passive: true });
+(function() {
+  var progress = document.querySelector('.scroll-progress');
 
-// ── Load GitHub repos ──
-(async () => {
-  const username = 'Aswanidev-vs';
-  const allowed = ['gitscope','Akashic','Mana','Writedown','Persona','Flowmark',
-    ];
-  const container = document.getElementById('github-projects');
+  window.addEventListener('scroll', function() {
+    var scrollTop = window.scrollY;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progress.style.width = scrollPercent + '%';
 
-  try {
-    const res = await fetch(`https://api.github.com/users/${username}/repos?per_page=100&sort=updated`);
-    if (!res.ok) throw new Error(res.status);
-    const repos = await res.json();
+    document.querySelector('nav').classList.toggle('scrolled', scrollTop > 50);
+  }, { passive: true });
 
-    const filtered = repos
-      .filter(r => allowed.includes(r.name))
-      .sort((a, b) => allowed.indexOf(a.name) - allowed.indexOf(b.name));
-
-    if (!filtered.length) throw new Error('empty');
-
-    container.innerHTML = '';
-
-    filtered.forEach((repo, i) => {
-      const card = document.createElement('div');
-      card.className = 'card project-card';
-      card.style.opacity = '0';
-      card.style.animation = `fadeUp .5s ease forwards ${i * 0.1}s`;
-      card.innerHTML = `
-        <h3>${repo.name}</h3>
-        <p>${repo.description || 'No description provided.'}</p>
-        <a class="project-link" href="${repo.html_url}" target="_blank">
-          View repository <span class="arrow">&rarr;</span>
-        </a>
-      `;
-      container.appendChild(card);
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
     });
-  } catch {
-    container.innerHTML = `<p class="loading-text">Unable to load repositories</p>`;
-  }
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('[data-reveal]').forEach(function(el) {
+    observer.observe(el);
+  });
+
+  (function() {
+    var username = 'Aswanidev-vs';
+    var allowed = ['GitScope', 'Akashic', 'Mana', 'Writedown', 'Persona', 'Flowmark'];
+    var container = document.getElementById('github-projects');
+
+    fetch('https://api.github.com/users/' + username + '/repos?per_page=100&sort=updated')
+      .then(function(res) {
+        if (!res.ok) throw new Error(res.status);
+        return res.json();
+      })
+      .then(function(repos) {
+        var filtered = repos
+          .filter(function(r) { return allowed.indexOf(r.name) !== -1; })
+          .sort(function(a, b) { return allowed.indexOf(a.name) - allowed.indexOf(b.name); });
+
+        if (!filtered.length) throw new Error('empty');
+
+        container.innerHTML = '';
+
+        filtered.forEach(function(repo, i) {
+          var row = document.createElement('div');
+          row.className = 'project-row';
+          row.style.opacity = '0';
+          row.style.animation = 'fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards ' + (i * 0.08) + 's';
+          row.innerHTML =
+            '<div class="project-info">' +
+              '<div class="project-name">' + repo.name + '</div>' +
+              '<div class="project-desc">' + (repo.description || 'No description provided.') + '</div>' +
+            '</div>' +
+            '<a class="project-link" href="' + repo.html_url + '" target="_blank">' +
+              'View repo <span class="arrow">&rarr;</span>' +
+            '</a>';
+          container.appendChild(row);
+        });
+      })
+      .catch(function() {
+        container.innerHTML = '<p class="loading-text">Unable to load repositories</p>';
+      });
+  })();
 })();
 </script>
 
