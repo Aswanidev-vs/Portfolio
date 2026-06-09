@@ -232,42 +232,7 @@ section.section { margin-bottom: clamp(64px, 9vw, 100px) }
   transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .lang-pct { font-family: var(--mono); font-size: 11.5px; color: var(--muted); text-align: right }
-.activity-list { display: flex; flex-direction: column; gap: 0 }
-.activity-item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 14px 0;
-  border-bottom: 1px solid rgba(26, 30, 26, 0.5);
-}
-.activity-item:last-child { border-bottom: none }
-.activity-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  background: var(--accent);
-  opacity: 0.6;
-}
-.activity-dot.pushed { background: var(--accent) }
-.activity-dot.created { background: var(--blue) }
-.activity-dot.starred { background: var(--yellow) }
-.activity-repo {
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--text);
-  font-weight: 500;
-  min-width: 100px;
-}
-.activity-msg {
-  font-size: 13px;
-  color: var(--muted);
-  flex: 1;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.activity-time { font-family: var(--mono); font-size: 11px; color: var(--muted); flex-shrink: 0; opacity: 0.6 }
+
 .project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 14px }
 .project-card {
   background: var(--surface);
@@ -488,7 +453,6 @@ footer p span { color: var(--accent-dim) }
     <div class="nav-links">
       <a href="#stack">stack</a>
       <a href="#projects">projects</a>
-      <a href="#activity">activity</a>
       <a href="https://github.com/Aswanidev-vs" target="_blank">GitHub</a>
     </div>
   </div>
@@ -546,15 +510,7 @@ footer p span { color: var(--accent-dim) }
       <p class="loading-text">checking releases</p>
     </div>
   </section>
-  <section class="section" id="activity" data-reveal>
-    <div class="section-head">
-      <h2>Recent Activity</h2>
-      <span class="line"></span>
-    </div>
-    <div id="activity-list" class="activity-list">
-      <p class="loading-text">loading activity</p>
-    </div>
-  </section>
+
 </div>
 <footer>
   <div class="container">
@@ -676,7 +632,7 @@ footer p span { color: var(--accent-dim) }
       var remaining = res.headers.get('X-RateLimit-Remaining');
       if (remaining !== null) {
         var s = document.getElementById('hero-gh-status');
-        if (s) s.innerHTML = (s.getAttribute('data-base')||s.textContent) + ' <span style="font-size:9px;opacity:0.5"><span style="color:'+(parseInt(remaining)>10?'var(--accent)':'#e06c75')+'">●</span> ' + remaining + '/' + res.headers.get('X-RateLimit-Limit') + '</span>';
+        // if (s) s.innerHTML = (s.getAttribute('data-base')||s.textContent) + ' <span style="font-size:9px;opacity:0.5"><span style="color:'+(parseInt(remaining)>10?'var(--accent)':'#e06c75')+'">●</span> ' + remaining + '/' + res.headers.get('X-RateLimit-Limit') + '</span>';
       }
       return res.json();
     }).catch(function() { return null; });
@@ -684,14 +640,14 @@ footer p span { color: var(--accent-dim) }
 
   function renderRateLimited() {
     document.getElementById('hero-gh-status').textContent = 'rate limited';
-    ['profile-card', 'hero-stats', 'lang-chart', 'project-grid', 'release-list', 'activity-list'].forEach(function(id) {
+    ['profile-card', 'hero-stats', 'lang-chart', 'project-grid', 'release-list'].forEach(function(id) {
       var c = document.getElementById(id);
       if (c && c.querySelector('.loading-text')) c.innerHTML = '<p class="loading-text">Rate limited. Add PAT in footer for 5,000 req/hr.</p>';
     });
   }
   function renderOffline() {
     document.getElementById('hero-gh-status').textContent = 'offline';
-    ['profile-card', 'hero-stats', 'lang-chart', 'project-grid', 'release-list', 'activity-list'].forEach(function(id) {
+    ['profile-card', 'hero-stats', 'lang-chart', 'project-grid', 'release-list'].forEach(function(id) {
       var c = document.getElementById(id);
       if (c && c.querySelector('.loading-text')) c.innerHTML = '<p class="loading-text">Could not load data.</p>';
     });
@@ -805,7 +761,7 @@ footer p span { color: var(--accent-dim) }
       var langName = repo.primaryLanguage ? repo.primaryLanguage.name : (repo.language || null);
       var lc = LANG_COLORS[langName] || '#707568';
       var card = el('div', 'project-card');
-      card.style.opacity = '0'; card.style.animation = 'fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards ' + (i*0.04) + 's';
+      card.style.opacity = '0'; card.style.animation = 'fadeUp 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards ' + (i*0.025) + 's';
       card.innerHTML =
         '<div class="project-card-head"><span class="project-card-name">' + repo.name + '</span>' +
         (langName ? '<span class="project-card-lang" style="border-color:'+lc+';color:'+lc+'">' + langName + '</span>' : '') + '</div>' +
@@ -830,8 +786,8 @@ footer p span { color: var(--accent-dim) }
   function renderFromGQL(data) {
     var u = data.user;
     if (!u || !u.repositories) return false;
-var repos = u.repositories.nodes.filter(function(r) { return !r.isFork; });
-     var totalCount = repos.length;
+    var repos = u.repositories.nodes.filter(function(r) { return !r.isFork; });
+    var totalCount = u.repositories.totalCount;
 
      renderProfile({ login: u.login, name: u.name, avatar_url: u.avatarUrl, bio: u.bio, public_repos: totalCount, followers: u.followers ? u.followers.totalCount : 0, public_gists: 0 });
 
@@ -944,45 +900,30 @@ var repos = u.repositories.nodes.filter(function(r) { return !r.isFork; });
     if (!data || !data.user || !data.repos) return;
     var user = data.user;
     var repos = data.repos.filter(function(r) { return !r.fork; });
-    // Pass filtered repo count instead of user.public_repos (which includes forks)
-    renderProfile({
-      avatar_url: user.avatar_url,
-      login: user.login,
-      name: user.name,
-      bio: user.bio,
-      public_repos: repos.length,
-      followers: user.followers,
-      public_gists: user.public_gists || 0
-    });
+     var repoCount = user.public_repos || repos.length;
+     renderProfile({
+       avatar_url: user.avatar_url,
+       login: user.login,
+       name: user.name,
+       bio: user.bio,
+       public_repos: repoCount,
+       followers: user.followers,
+       public_gists: user.public_gists || 0
+     });
 
     var totalStars = repos.reduce(function(s, r) { return s + (r.stargazers_count||0); }, 0);
     var totalForks = repos.reduce(function(s, r) { return s + (r.forks_count||0); }, 0);
     var langCounts = {}; repos.forEach(function(r) { if (r.language) langCounts[r.language] = (langCounts[r.language]||0) + 1; });
     var topLang = Object.keys(langCounts).sort(function(a,b) { return langCounts[b]-langCounts[a]; })[0] || null;
     var hs = document.getElementById('hero-stats');
-    if (hs) hs.innerHTML = '<span class="stat-badge"><span class="stat-icon">★</span> <span class="stat-val">' + shortNum(totalStars) + '</span> stars</span><span class="stat-badge"><span class="stat-icon">⑂</span> <span class="stat-val">' + shortNum(totalForks) + '</span> forks</span><span class="stat-badge"><span class="stat-icon">◇</span> <span class="stat-val">' + repos.length + '</span> repos</span>' + (topLang ? '<span class="stat-badge"><span class="stat-icon">●</span> <span class="stat-val">' + topLang + '</span></span>' : '');
-    document.getElementById('hero-gh-status').textContent = (user.location || 'GitHub') + ' · ' + repos.length + ' public repos';
+    if (hs) hs.innerHTML = '<span class="stat-badge"><span class="stat-icon">★</span> <span class="stat-val">' + shortNum(totalStars) + '</span> stars</span><span class="stat-badge"><span class="stat-icon">⑂</span> <span class="stat-val">' + shortNum(totalForks) + '</span> forks</span><span class="stat-badge"><span class="stat-icon">◇</span> <span class="stat-val">' + repoCount + '</span> repos</span>' + (topLang ? '<span class="stat-badge"><span class="stat-icon">●</span> <span class="stat-val">' + topLang + '</span></span>' : '');
+     document.getElementById('hero-gh-status').textContent = (user.location || 'GitHub') + ' · ' + repoCount + ' public repos';
 
     renderLangChart(Object.keys(langCounts).map(function(l) { return { name: l, bytes: langCounts[l] }; }));
     renderProjects(repos);
 
     // Releases — fetch for recently active featured repos (cached separately)
     renderReleasesREST(repos);
-
-    // Activity from repo push dates
-    var act = document.getElementById('activity-list');
-    if (act) {
-      act.innerHTML = '';
-      repos.slice(0, 20).forEach(function(r, i) {
-        var msg = r.description ? r.description.substring(0, 60) : 'updated';
-        if (msg.length >= 60) msg += '…';
-        var dot = (new Date(r.pushed_at||r.pushedAt) - new Date(r.created_at||r.createdAt) < 86400000) ? 'created' : 'pushed';
-        var item = el('div', 'activity-item');
-        item.style.opacity = '0'; item.style.animation = 'fadeUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards ' + (i*0.04) + 's';
-        item.innerHTML = '<span class="activity-dot ' + dot + '"></span><span class="activity-repo">' + r.name + '</span><span class="activity-msg">' + msg + '</span><span class="activity-time">' + timeAgo(r.pushed_at||r.pushedAt) + '</span>';
-        act.appendChild(item);
-      });
-    }
   }
 
   /* ═══════════════════════════════════════════════
@@ -1003,7 +944,7 @@ var repos = u.repositories.nodes.filter(function(r) { return !r.isFork; });
       function(data) { if (!data || !data.user || !renderFromGQL(data)) renderOffline(); }
     );
   } else {
-    // Without PAT: single REST fetch (user + repos), activity from push dates
+    // Without PAT: single REST fetch (user + repos)
     loadOnce('rest_' + USER,
       function() {
         return Promise.all([
