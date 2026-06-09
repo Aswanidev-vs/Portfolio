@@ -1161,20 +1161,20 @@ footer p span { color: var(--accent-dim) }
     st.onclick = function() { if (confirm('Clear cache and refresh?')) { clearAllCache(); location.reload(); } };
     ftr.appendChild(st);
   }
-  (function updateCS() {
-    var el = document.getElementById('cache-status');
-    if (!el) return;
-    var t = getToken();
-    var entries = 0;
-    try { for (var i = 0; i < localStorage.length; i++) { if (localStorage.key(i).indexOf('pf_') === 0) entries++; } } catch(e) {}
-    el.innerHTML = '<span class="' + (t ? 'dot-on' : 'dot-off') + '">●</span> ' +
-      'API: <span class="badge">' + (t ? 'GQL v4' : 'REST v3') + '</span> ' +
-      'Cache: <span class="badge">' + entries + ' entries</span> ' +
-      'Fetches: <span class="badge">' + cacheStats.fetches + '</span> ' +
-      'Hits: <span class="badge">' + cacheStats.hits + '</span> ' +
-      '<span style="opacity:0.4">[click to clear]</span>';
-    setTimeout(updateCS, 5000);
-  })();
+  // (function updateCS() {
+  //   var el = document.getElementById('cache-status');
+  //   if (!el) return;
+  //   var t = getToken();
+  //   var entries = 0;
+  //   try { for (var i = 0; i < localStorage.length; i++) { if (localStorage.key(i).indexOf('pf_') === 0) entries++; } } catch(e) {}
+  //   el.innerHTML = '<span class="' + (t ? 'dot-on' : 'dot-off') + '">●</span> ' +
+  //     'API: <span class="badge">' + (t ? 'GQL v4' : 'REST v3') + '</span> ' +
+  //     'Cache: <span class="badge">' + entries + ' entries</span> ' +
+  //     'Fetches: <span class="badge">' + cacheStats.fetches + '</span> ' +
+  //     'Hits: <span class="badge">' + cacheStats.hits + '</span> ' +
+  //     '<span style="opacity:0.4">[click to clear]</span>';
+  //   setTimeout(updateCS, 5000);
+  // })();
 
 })();
 </script>
