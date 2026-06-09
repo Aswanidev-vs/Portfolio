@@ -348,6 +348,58 @@ section.section { margin-bottom: clamp(64px, 9vw, 100px) }
   gap: 4px;
 }
 .release-dl:hover { color: var(--accent) }
+.activity-list { display: flex; flex-direction: column; gap: 0; margin-top: 16px }
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(26, 30, 26, 0.5);
+}
+.activity-item:last-child { border-bottom: none }
+.activity-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--accent);
+  opacity: 0.6;
+}
+.activity-dot.pushed { background: var(--accent) }
+.activity-dot.created { background: var(--blue) }
+.activity-dot.starred { background: var(--yellow) }
+.activity-dot.forked { background: var(--yellow) }
+.activity-repo {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text);
+  font-weight: 500;
+  min-width: 110px;
+}
+.activity-msg {
+  font-size: 13px;
+  color: var(--muted);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.activity-time { font-family: var(--mono); font-size: 11px; color: var(--muted); flex-shrink: 0; opacity: 0.6 }
+.activity-pagination { display: flex; justify-content: center; align-items: center; gap: 12px; margin-top: 24px }
+.activity-page-btn {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 7px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.activity-page-btn:hover:not(:disabled) { border-color: var(--accent-dim); color: var(--accent); transform: translateY(-1px) }
+.activity-page-btn:disabled { opacity: 0.35; cursor: not-allowed }
+.activity-page-hint { font-family: var(--mono); font-size: 11px; color: var(--muted) }
 .profile-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -453,6 +505,7 @@ footer p span { color: var(--accent-dim) }
     <div class="nav-links">
       <a href="#stack">stack</a>
       <a href="#projects">projects</a>
+      <a href="#activity">activity</a>
       <a href="https://github.com/Aswanidev-vs" target="_blank">GitHub</a>
     </div>
   </div>
@@ -511,6 +564,16 @@ footer p span { color: var(--accent-dim) }
     </div>
   </section>
 
+  <section class="section" id="activity" data-reveal>
+    <div class="section-head">
+      <h2>Recent Activity</h2>
+      <span class="line"></span>
+    </div>
+    <div id="activity-list" class="activity-list">
+      <p class="loading-text">loading activity</p>
+    </div>
+    <div id="activity-pagination" class="activity-pagination"></div>
+  </section>
 </div>
 <footer>
   <div class="container">
@@ -527,7 +590,9 @@ footer p span { color: var(--accent-dim) }
      CONFIG
      ═══════════════════════════════════════════════ */
   var USER = 'Aswanidev-vs';
-  var FEATURED = ['Gocut','GitScope', 'Akashic', 'Mana', 'Writedown', 'Persona'];
+  var FEATURED = ['Gocut','GitScope', 'Akashic', 'Mana','Persona'];
+  var ACTIVITY_PER_PAGE = 8;
+  var activityState = { page: 1, loading: false };
   var GQL_URL = 'https://api.github.com/graphql';
   var REST_URL = 'https://api.github.com';
 
@@ -640,17 +705,21 @@ footer p span { color: var(--accent-dim) }
 
   function renderRateLimited() {
     document.getElementById('hero-gh-status').textContent = 'rate limited';
-    ['profile-card', 'hero-stats', 'lang-chart', 'project-grid', 'release-list'].forEach(function(id) {
+    ['profile-card', 'hero-stats', 'lang-chart', 'project-grid', 'release-list', 'activity-list'].forEach(function(id) {
       var c = document.getElementById(id);
       if (c && c.querySelector('.loading-text')) c.innerHTML = '<p class="loading-text">Rate limited. Add PAT in footer for 5,000 req/hr.</p>';
     });
+    var ap = document.getElementById('activity-pagination');
+    if (ap) ap.innerHTML = '';
   }
   function renderOffline() {
     document.getElementById('hero-gh-status').textContent = 'offline';
-    ['profile-card', 'hero-stats', 'lang-chart', 'project-grid', 'release-list'].forEach(function(id) {
+    ['profile-card', 'hero-stats', 'lang-chart', 'project-grid', 'release-list', 'activity-list'].forEach(function(id) {
       var c = document.getElementById(id);
       if (c && c.querySelector('.loading-text')) c.innerHTML = '<p class="loading-text">Could not load data.</p>';
     });
+    var ap = document.getElementById('activity-pagination');
+    if (ap) ap.innerHTML = '';
   }
 
   /* ═══════════════════════════════════════════════
@@ -777,6 +846,143 @@ footer p span { color: var(--accent-dim) }
           (repo.homepageUrl || repo.homepage ? '<a class="project-card-link" href="' + (repo.homepageUrl||repo.homepage) + '" target="_blank">Live Demo <span class="arrow">&rarr;</span></a>' : '') +
         '</div>';
       container.appendChild(card);
+    });
+  }
+
+  function fetchActivityPage(page) {
+    var cacheKey = 'activity_' + USER + '_' + page;
+    var cached = getCached(cacheKey);
+    if (cached && cached.items) return Promise.resolve(cached);
+
+    var token = getToken();
+    var headers = { 'Accept': 'application/vnd.github.v3+json' };
+    if (token) headers['Authorization'] = 'token ' + token;
+    cacheStats.fetches++;
+
+    return fetch(REST_URL + '/users/' + USER + '/events/public?per_page=' + ACTIVITY_PER_PAGE + '&page=' + page, { headers: headers })
+      .then(function(res) {
+        if (!res.ok) { if (res.status === 403) renderRateLimited(); return { items: [], hasMore: false, error: true }; }
+        var hasMore = /rel="next"/.test(res.headers.get('Link') || '');
+        return res.json().then(function(events) {
+          var data = { items: events || [], hasMore: hasMore, fetchedAt: Date.now() };
+          setCache(cacheKey, data, 300000);
+          return data;
+        });
+      })
+      .catch(function() { return { items: [], hasMore: false, error: true }; });
+  }
+
+  function renderActivityPage(data, page) {
+    var list = document.getElementById('activity-list');
+    var pagination = document.getElementById('activity-pagination');
+    if (!list || !pagination) return;
+
+    var events = data.items || [];
+    list.innerHTML = '';
+    if (!events.length) {
+      list.innerHTML = '<p class="loading-text">no recent public activity</p>';
+      pagination.innerHTML = '';
+      return;
+    }
+
+    events.forEach(function(event, i) {
+      list.appendChild(renderActivityItem(event, i));
+    });
+    renderActivityPagination(data.hasMore, page);
+  }
+
+  function renderActivityItem(event, i) {
+    var info = getActivityInfo(event);
+    var item = el('div', 'activity-item');
+    item.style.opacity = '0';
+    item.style.animation = 'fadeUp 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards ' + (i*0.035) + 's';
+    item.innerHTML =
+      '<span class="activity-dot ' + info.dot + '"></span>' +
+      '<span class="activity-repo">' + escapeHTML(info.repo || 'GitHub') + '</span>' +
+      '<span class="activity-msg">' + escapeHTML(info.msg) + '</span>' +
+      '<span class="activity-time">' + escapeHTML(timeAgo(event.created_at)) + '</span>';
+    return item;
+  }
+
+  function getActivityInfo(event) {
+    var payload = event.payload || {};
+    var repo = repoShortName(event.repo && event.repo.name);
+    switch (event.type) {
+      case 'PushEvent':
+        var commits = payload.commits ? payload.commits.length : 0;
+        return { repo: repo, msg: commits ? commits + ' commit' + (commits === 1 ? '' : 's') + ' pushed' : 'pushed updates', dot: 'pushed' };
+      case 'CreateEvent':
+        return { repo: repo, msg: 'created ' + (payload.ref_type || 'repository'), dot: 'created' };
+      case 'WatchEvent':
+        return { repo: repo, msg: 'starred a repository', dot: 'starred' };
+      case 'ForkEvent':
+        return { repo: repo, msg: 'forked a repository', dot: 'forked' };
+      case 'IssuesEvent':
+        return { repo: repo, msg: (payload.action || 'updated') + ' an issue', dot: 'pushed' };
+      case 'PullRequestEvent':
+        return { repo: repo, msg: (payload.action || 'updated') + ' a pull request', dot: 'pushed' };
+      case 'ReleaseEvent':
+        return { repo: repo, msg: 'published a release', dot: 'created' };
+      default:
+        return { repo: repo, msg: event.type.replace('Event', '').replace(/([a-z])([A-Z])/g, '$1 $2').toLowerCase(), dot: 'pushed' };
+    }
+  }
+
+  function repoShortName(name) {
+    if (!name) return '';
+    return name.indexOf(USER + '/') === 0 ? name.substring(USER.length + 1) : name;
+  }
+
+  function escapeHTML(str) {
+    return String(str || '').replace(/[&<>"']/g, function(m) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m];
+    });
+  }
+
+  function renderActivityPagination(hasMore, page) {
+    var pagination = document.getElementById('activity-pagination');
+    if (!pagination) return;
+    pagination.innerHTML = '';
+    if (!hasMore && page === 1) return;
+
+    var prev = document.createElement('button');
+    prev.type = 'button';
+    prev.className = 'activity-page-btn';
+    prev.textContent = 'Previous';
+    prev.disabled = page === 1;
+    prev.onclick = function() { loadActivityPage(page - 1); };
+
+    var hint = el('span', 'activity-page-hint');
+    hint.textContent = 'page ' + page;
+
+    var next = document.createElement('button');
+    next.type = 'button';
+    next.className = 'activity-page-btn';
+    next.textContent = 'Load more';
+    next.disabled = !hasMore;
+    next.onclick = function() { loadActivityPage(page + 1); };
+
+    pagination.appendChild(prev);
+    pagination.appendChild(hint);
+    pagination.appendChild(next);
+  }
+
+  function loadActivityPage(page) {
+    if (activityState.loading) return;
+    activityState.loading = true;
+    activityState.page = page;
+
+    var list = document.getElementById('activity-list');
+    if (list) list.innerHTML = '<p class="loading-text">' + (page === 1 ? 'loading activity' : 'loading page ' + page) + '</p>';
+
+    fetchActivityPage(page).then(function(data) {
+      activityState.loading = false;
+      if (!data || data.error) {
+        if (list) list.innerHTML = '<p class="loading-text">Could not load activity.</p>';
+        renderActivityPagination(false, page);
+        return;
+      }
+      renderActivityPage(data, page);
     });
   }
 
@@ -935,6 +1141,7 @@ footer p span { color: var(--accent-dim) }
     if (t && t.length > 5) { setToken(t); if (window.history.replaceState) window.history.replaceState({}, document.title, window.location.origin + window.location.pathname); }
   })();
   initPatUI();
+  loadActivityPage(1);
 
   var token = getToken();
   if (token) {
