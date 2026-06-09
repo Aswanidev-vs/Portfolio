@@ -477,6 +477,16 @@ footer p span { color: var(--accent-dim) }
 }
 [data-reveal].revealed { opacity: 1; transform: translateY(0) }
 @media (max-width: 768px) {
+  .nav-inner {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
   .hero-grid { grid-template-columns: 1fr; gap: 24px }
   .profile-card { width: 100%; max-width: 280px; margin: 0 auto }
   .hero { padding: 70px 0 50px }
@@ -490,10 +500,12 @@ footer p span { color: var(--accent-dim) }
   .section-head h2 { white-space: normal }
 }
 @media (max-width: 480px) {
-  .nav-links { gap: 12px }
+  .nav-links { gap: 8px }
   .nav-links a { font-size: 11px }
   .hero h1 { font-size: 2rem }
-  .hero-actions { flex-direction: column }
+  .hero-desc { max-width: 100% }
+  .hero-actions { flex-direction: column; width: 100% }
+  .hero-actions .btn { width: 100%; justify-content: center }
   .btn { justify-content: center }
   .stat-badge { font-size: 10px; padding: 4px 10px }
   .lang-row { grid-template-columns: 70px 1fr 35px; gap: 8px }
@@ -845,7 +857,7 @@ footer p span { color: var(--accent-dim) }
           (repo.licenseInfo ? '<span><span class="meta-icon">©</span> ' + repo.licenseInfo.spdxId + '</span>' : (repo.license ? '<span><span class="meta-icon">©</span> ' + repo.license.spdx_id + '</span>' : '')) +
         '</div>' +
         '<div class="project-card-actions">' +
-          '<a class="project-card-link" href="' + (repo.url || repo.html_url || '#') + '" target="_blank">View on GitHub <span class="arrow">&rarr;</span></a>' +
+          '<a class="project-card-link" href="' + (repo.html_url || repo.url || '#') + '" target="_blank">View on GitHub <span class="arrow">&rarr;</span></a>' +
           (repo.homepageUrl || repo.homepage ? '<a class="project-card-link" href="' + (repo.homepageUrl||repo.homepage) + '" target="_blank">Live Demo <span class="arrow">&rarr;</span></a>' : '') +
         '</div>';
       container.appendChild(card);
