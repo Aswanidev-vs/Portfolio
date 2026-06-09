@@ -559,11 +559,6 @@ footer p span { color: var(--accent-dim) }
 <footer>
   <div class="container">
     <p>&copy; 2026 <span>Aswanidev VS</span> &mdash; Code Build Learn Repeat</p>
-    <div style="margin-top:10px;font-family:var(--mono);font-size:10px;color:var(--muted);opacity:0.4;transition:opacity 0.3s;text-align:center" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.4">
-      <span id="pat-indicator">●</span>
-      <input id="pat-input" type="password" placeholder="paste GitHub PAT here" style="background:var(--surface);border:1px solid var(--border);color:var(--text);font-family:var(--mono);font-size:10px;padding:3px 8px;border-radius:4px;width:170px;outline:none;margin:0 4px" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'">
-      <button id="pat-btn" style="background:var(--accent);color:var(--bg);border:none;border-radius:3px;padding:3px 10px;font-family:var(--mono);font-size:10px;cursor:pointer">Set</button>
-    </div>
   </div>
 </footer>
 <script>
@@ -576,7 +571,7 @@ footer p span { color: var(--accent-dim) }
      CONFIG
      ═══════════════════════════════════════════════ */
   var USER = 'Aswanidev-vs';
-  var FEATURED = ['GitScope', 'Akashic', 'Mana', 'Writedown', 'Persona', 'Flowmark'];
+  var FEATURED = ['Gocut','GitScope', 'Akashic', 'Mana', 'Writedown', 'Persona'];
   var GQL_URL = 'https://api.github.com/graphql';
   var REST_URL = 'https://api.github.com';
 
@@ -835,10 +830,10 @@ footer p span { color: var(--accent-dim) }
   function renderFromGQL(data) {
     var u = data.user;
     if (!u || !u.repositories) return false;
-    var repos = u.repositories.nodes.filter(function(r) { return !r.isFork; });
-    var totalCount = u.repositories.totalCount;
+var repos = u.repositories.nodes.filter(function(r) { return !r.isFork; });
+     var totalCount = repos.length;
 
-    renderProfile({ login: u.login, name: u.name, avatar_url: u.avatarUrl, bio: u.bio, public_repos: totalCount, followers: u.followers ? u.followers.totalCount : 0, public_gists: 0 });
+     renderProfile({ login: u.login, name: u.name, avatar_url: u.avatarUrl, bio: u.bio, public_repos: totalCount, followers: u.followers ? u.followers.totalCount : 0, public_gists: 0 });
 
     var totalStars = repos.reduce(function(s, r) { return s + (r.stargazerCount||0); }, 0);
     var totalForks = repos.reduce(function(s, r) { return s + (r.forkCount||0); }, 0);
@@ -880,13 +875,85 @@ footer p span { color: var(--accent-dim) }
   }
 
   /* ═══════════════════════════════════════════════
+     RELEASES RENDER (for REST path — cached separately)
+     ═══════════════════════════════════════════════ */
+  function renderReleasesREST(repos) {
+    var rl = document.getElementById('release-list');
+    if (!rl) return;
+
+    var featured = repos.filter(function(r) { return FEATURED.indexOf(r.name) !== -1; });
+    if (!featured.length) { rl.innerHTML = '<p class="loading-text">no release data</p>'; return; }
+
+    // Try cached releases first
+    var cached = getCached('releases');
+    if (cached) {
+      renderReleaseRows(cached);
+    } else {
+      rl.innerHTML = '<p class="loading-text">checking releases</p>';
+    }
+
+    // Fetch releases for ALL featured repos (cached 30 min)
+    var allReleases = [], fetched = 0;
+    var totalToFetch = featured.length;
+    featured.forEach(function(repo) {
+      restFetch(REST_URL + '/repos/' + USER + '/' + repo.name + '/releases/latest')
+        .then(function(r) {
+          if (r && r.tag_name) {
+            allReleases.push({
+              name: repo.name,
+              tag: r.tag_name,
+              date: r.published_at || r.created_at,
+              url: r.html_url
+            });
+          }
+          fetched++;
+          if (fetched === totalToFetch) {
+            allReleases.sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
+            setCache('releases', allReleases, 1800000);
+            renderReleaseRows(allReleases);
+          }
+        })
+        .catch(function() {
+          fetched++;
+          if (fetched === totalToFetch) {
+            if (allReleases.length) {
+              setCache('releases', allReleases, 1800000);
+            }
+            renderReleaseRows(allReleases);
+          }
+        });
+    });
+  }
+
+  function renderReleaseRows(releases) {
+    var rl = document.getElementById('release-list');
+    if (!rl) return;
+    if (!releases.length) { rl.innerHTML = '<p class="loading-text">no recent releases</p>'; return; }
+    rl.innerHTML = '';
+    releases.forEach(function(r) {
+      var row = el('div', 'release-row');
+      row.innerHTML = '<span class="release-name">' + r.name + '</span><span class="release-tag">' + r.tag + '</span><span class="release-date">' + timeAgo(r.date) + '</span><a class="release-dl" href="' + r.url + '" target="_blank">View <span class="arrow">&rarr;</span></a>';
+      rl.appendChild(row);
+    });
+  }
+
+  /* ═══════════════════════════════════════════════
      REST RENDER (single pass, no double fetch)
      ═══════════════════════════════════════════════ */
   function renderFromREST(data) {
     if (!data || !data.user || !data.repos) return;
     var user = data.user;
     var repos = data.repos.filter(function(r) { return !r.fork; });
-    renderProfile(user);
+    // Pass filtered repo count instead of user.public_repos (which includes forks)
+    renderProfile({
+      avatar_url: user.avatar_url,
+      login: user.login,
+      name: user.name,
+      bio: user.bio,
+      public_repos: repos.length,
+      followers: user.followers,
+      public_gists: user.public_gists || 0
+    });
 
     var totalStars = repos.reduce(function(s, r) { return s + (r.stargazers_count||0); }, 0);
     var totalForks = repos.reduce(function(s, r) { return s + (r.forks_count||0); }, 0);
@@ -898,6 +965,9 @@ footer p span { color: var(--accent-dim) }
 
     renderLangChart(Object.keys(langCounts).map(function(l) { return { name: l, bytes: langCounts[l] }; }));
     renderProjects(repos);
+
+    // Releases — fetch for recently active featured repos (cached separately)
+    renderReleasesREST(repos);
 
     // Activity from repo push dates
     var act = document.getElementById('activity-list');
@@ -945,15 +1015,15 @@ footer p span { color: var(--accent-dim) }
     );
   }
 
-  /* ── Cache status UI ── */
-  var ftr = document.querySelector('footer .container');
-  if (ftr) {
-    var st = document.createElement('div');
-    st.id = 'cache-status'; st.className = 'cache-status';
-    st.title = 'Click to clear cache and refresh';
-    st.onclick = function() { if (confirm('Clear cache and refresh?')) { clearAllCache(); location.reload(); } };
-    ftr.appendChild(st);
-  }
+  // /* ── Cache status UI ── */
+  // var ftr = document.querySelector('footer .container');
+  // if (ftr) {
+  //   var st = document.createElement('div');
+  //   st.id = 'cache-status'; st.className = 'cache-status';
+  //   st.title = 'Click to clear cache and refresh';
+  //   st.onclick = function() { if (confirm('Clear cache and refresh?')) { clearAllCache(); location.reload(); } };
+  //   ftr.appendChild(st);
+  // }
 
 })();
 </script>
