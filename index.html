@@ -559,35 +559,32 @@ footer p span { color: var(--accent-dim) }
 <footer>
   <div class="container">
     <p>&copy; 2026 <span>Aswanidev VS</span> &mdash; Code Build Learn Repeat</p>
+    <div style="margin-top:10px;font-family:var(--mono);font-size:10px;color:var(--muted);opacity:0.4;transition:opacity 0.3s;text-align:center" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.4">
+      <span id="pat-indicator">●</span>
+      <input id="pat-input" type="password" placeholder="paste GitHub PAT here" style="background:var(--surface);border:1px solid var(--border);color:var(--text);font-family:var(--mono);font-size:10px;padding:3px 8px;border-radius:4px;width:170px;outline:none;margin:0 4px" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'">
+      <button id="pat-btn" style="background:var(--accent);color:var(--bg);border:none;border-radius:3px;padding:3px 10px;font-family:var(--mono);font-size:10px;cursor:pointer">Set</button>
+    </div>
   </div>
 </footer>
 <script>
 (function() {
   'use strict';
 
-  // ── DIAGNOSTIC: log startup ──
   console.log('[Portfolio] Script starting…');
 
   /* ═══════════════════════════════════════════════
-     CONFIGURATION
+     CONFIG
      ═══════════════════════════════════════════════ */
   var USER = 'Aswanidev-vs';
   var FEATURED = ['GitScope', 'Akashic', 'Mana', 'Writedown', 'Persona', 'Flowmark'];
-  var API_BASE = 'https://api.github.com';
+  var GQL_URL = 'https://api.github.com/graphql';
+  var REST_URL = 'https://api.github.com';
   var CACHE_TTL = {
-    user: 3600000,       // 1 hour
-    repos: 1800000,      // 30 min
-    languages: 3600000,  // 1 hour
-    releases: 1800000,   // 30 min
-    events: 600000       // 10 min
+    gql_data: 300000,    // 5 min — short TTL keeps data fresh
+    events: 120000       // 2 min
   };
-  var DB_NAME = 'PortfolioCache';
-  var DB_VERSION = 2;     // bumped for GC support
-  var STORE_NAME = 'apiCache';
 
-  // ── Dynamic Cache Stats ──
-  var cacheStats = { hits: 0, misses: 0, saves: 0 };
-
+  var cacheStats = { hits: 0, fetches: 0 };
   var LANG_COLORS = {
     Go: '#70ba00', JavaScript: '#dbc074', TypeScript: '#6db3f2',
     C: '#e06c75', 'C++': '#b488e0', Java: '#e5a06c',
@@ -597,297 +594,148 @@ footer p span { color: var(--accent-dim) }
     Swift: '#f05138', Kotlin: '#a97bff'
   };
 
-  // ── Detect if running from file:// — IndexedDB is unreliable here ──
-  var isFileProtocol = window.location.protocol === 'file:';
-  if (isFileProtocol) {
-    console.log('[Portfolio] file:// detected — using localStorage cache (IndexedDB blocked on local files)');
-  }
-  var dbPromise = null;
+  var isFile = window.location.protocol === 'file:';
+  if (isFile) console.log('[Portfolio] file:// mode');
 
   /* ═══════════════════════════════════════════════
-     CACHE ABSTRACTION — localStorage for file://, IndexedDB otherwise
-     ═══════════════════════════════════════════════ */
+     DYNAMIC CACHE — always-refresh pattern
+     ═══════════════════════════════════════════════
+     This cache always returns cached data immediately,
+     then triggers a background refresh. UI updates when
+     fresh data arrives. No more stale displays.  */
   function getCached(key) {
-    if (isFileProtocol) {
-      // localStorage fallback for file:// protocol
-      try {
-        var raw = localStorage.getItem(key);
-        if (!raw) return null;
-        var data = JSON.parse(raw);
-        if (Date.now() > data.expires) {
-          localStorage.removeItem(key);
-          return null;
-        }
-        cacheStats.hits++;
-        return { value: data.value, stale: false, age: Date.now() - data.cachedAt };
-      } catch(e) { return null; }
-    }
-    return getCachedIDB(key);
+    try {
+      var raw = localStorage.getItem('pf_' + key);
+      if (!raw) return null;
+      var d = JSON.parse(raw);
+      if (Date.now() > d.expires) { localStorage.removeItem('pf_' + key); return null; }
+      cacheStats.hits++;
+      return d.value;
+    } catch(e) { return null; }
   }
 
   function setCache(key, value, ttl) {
-    if (isFileProtocol) {
-      try {
-        localStorage.setItem(key, JSON.stringify({
-          value: value,
-          expires: Date.now() + (ttl || 1800000),
-          cachedAt: Date.now()
-        }));
-        cacheStats.saves++;
-      } catch(e) {}
-      return Promise.resolve();
-    }
-    return setCacheIDB(key, value, ttl);
-  }
-
-  function clearCache() {
-    if (isFileProtocol) {
-      try {
-        Object.keys(localStorage).forEach(function(k) { if (k.indexOf('gh:') === 0) localStorage.removeItem(k); });
-      } catch(e) {}
-      cacheStats = { hits: 0, misses: 0, saves: 0 };
-      return Promise.resolve();
-    }
-    return clearCacheIDB();
-  }
-
-  function countCacheEntries() {
-    if (isFileProtocol) {
-      try {
-        var count = 0;
-        for (var i = 0; i < localStorage.length; i++) {
-          if (localStorage.key(i).indexOf('gh:') === 0) count++;
-        }
-        return Promise.resolve(count);
-      } catch(e) { return Promise.resolve(0); }
-    }
-    return countCacheEntriesIDB();
-  }
-
-  function garbageCollect() {
-    if (isFileProtocol) {
-      // localStorage GC happens lazily in getCached
-      try {
-        var now = Date.now();
-        Object.keys(localStorage).forEach(function(k) {
-          if (k.indexOf('gh:') === 0) {
-            try {
-              var raw = localStorage.getItem(k);
-              if (raw) {
-                var data = JSON.parse(raw);
-                if (now > data.expires) localStorage.removeItem(k);
-              }
-            } catch(e) { localStorage.removeItem(k); }
-          }
-        });
-      } catch(e) {}
-      return;
-    }
-    garbageCollectIDB();
-  }
-
-  /* ═══════════════════════════════════════════════
-     INDEXEDDB (only used when not file://)
-     ═══════════════════════════════════════════════ */
-  function openDB() {
-    if (dbPromise) return dbPromise;
-    dbPromise = new Promise(function(resolve, reject) {
-      var timeout = setTimeout(function() { reject(new Error('IDB timeout')); }, 2000);
-      try {
-        var req = indexedDB.open(DB_NAME, DB_VERSION);
-        req.onupgradeneeded = function(ev) {
-          var db = req.result;
-          if (!db) return;
-          try {
-            if (ev.oldVersion < 1) {
-              var store = db.createObjectStore(STORE_NAME, { keyPath: 'key' });
-              store.createIndex('expires', 'expires', { unique: false });
-            }
-            if (ev.oldVersion < 2 && req.transaction) {
-              var s = req.transaction.objectStore(STORE_NAME);
-              if (s && s.indexNames && !s.indexNames.contains('storedAt')) {
-                s.createIndex('storedAt', 'cachedAt', { unique: false });
-              }
-            }
-          } catch(e) {}
-        };
-        req.onsuccess = function() { clearTimeout(timeout); resolve(req.result); };
-        req.onerror = function() { clearTimeout(timeout); reject(req.error); };
-        req.onblocked = function() { clearTimeout(timeout); reject(new Error('IDB blocked')); };
-      } catch(e) { clearTimeout(timeout); reject(e); }
-    }).catch(function() {
-      // Reset dbPromise so future calls can retry (e.g. after page refresh)
-      dbPromise = null;
-      return null;
-    });
-    return dbPromise;
-  }
-
-  function getCachedIDB(key) {
-    return openDB().then(function(db) {
-      if (!db) return null;
-      return new Promise(function(resolve) {
-        try {
-          var tx = db.transaction(STORE_NAME, 'readonly');
-          var store = tx.objectStore(STORE_NAME);
-          var req = store.get(key);
-          req.onsuccess = function() {
-            var data = req.result;
-            if (!data || Date.now() > data.expires) {
-              resolve(data ? { value: data.value, stale: true } : null);
-            } else {
-              cacheStats.hits++;
-              resolve({ value: data.value, stale: false, age: Date.now() - data.cachedAt });
-            }
-          };
-          req.onerror = function() { resolve(null); };
-        } catch(e) { resolve(null); }
-      });
-    }).catch(function() { return null; });
-  }
-
-  function setCacheIDB(key, value, ttl) {
-    return openDB().then(function(db) {
-      if (!db) return;
-      return new Promise(function(resolve, reject) {
-        try {
-          var tx = db.transaction(STORE_NAME, 'readwrite');
-          var store = tx.objectStore(STORE_NAME);
-          store.put({ key: key, value: value, expires: Date.now() + (ttl || 1800000), cachedAt: Date.now() });
-          tx.oncomplete = function() { cacheStats.saves++; resolve(); };
-          tx.onerror = reject;
-        } catch(e) { resolve(); }
-      });
-    }).catch(function() {});
-  }
-
-  function clearCacheIDB() {
-    return openDB().then(function(db) {
-      if (!db) return;
-      return new Promise(function(resolve) {
-        try {
-          var tx = db.transaction(STORE_NAME, 'readwrite');
-          tx.objectStore(STORE_NAME).clear();
-          tx.oncomplete = function() { cacheStats = { hits: 0, misses: 0, saves: 0 }; resolve(); };
-          tx.onerror = function() { resolve(); };
-        } catch(e) { resolve(); }
-      });
-    }).catch(function() {});
-  }
-
-  function countCacheEntriesIDB() {
-    return openDB().then(function(db) {
-      if (!db) return 0;
-      return new Promise(function(resolve) {
-        try {
-          var tx = db.transaction(STORE_NAME, 'readonly');
-          var req = tx.objectStore(STORE_NAME).count();
-          req.onsuccess = function() { resolve(req.result); };
-          req.onerror = function() { resolve(0); };
-        } catch(e) { resolve(0); }
-      });
-    }).catch(function() { return 0; });
-  }
-
-  function garbageCollectIDB() {
     try {
-      if (typeof IDBKeyRange === 'undefined') return;
-    } catch(e) { return; }
-    openDB().then(function(db) {
-      if (!db) return;
-      try {
-        var tx = db.transaction(STORE_NAME, 'readwrite');
-        var store = tx.objectStore(STORE_NAME);
-        var range = IDBKeyRange.upperBound(Date.now());
-        var idx = store.index('expires');
-        var req = idx.openCursor(range);
-        var removed = 0;
-        req.onsuccess = function(ev) {
-          var cursor = ev.target.result;
-          if (cursor) { store.delete(cursor.primaryKey); removed++; cursor.continue(); }
-          else if (removed > 0) console.log('[Cache] GC removed ' + removed + ' expired entries');
-        };
-      } catch(e) {}
-    }).catch(function() {});
+      localStorage.setItem('pf_' + key, JSON.stringify({ value: value, expires: Date.now() + ttl }));
+    } catch(e) {}
+  }
+
+  function clearAllCache() {
+    try {
+      Object.keys(localStorage).forEach(function(k) { if (k.indexOf('pf_') === 0) localStorage.removeItem(k); });
+    } catch(e) {}
+    cacheStats = { hits: 0, fetches: 0 };
   }
 
   /* ═══════════════════════════════════════════════
-     FETCH WITH CACHE & RETRY
+     GITHUB API HELPERS
      ═══════════════════════════════════════════════ */
   function getToken() {
     try { return localStorage.getItem('gh_pat') || ''; } catch(e) { return ''; }
   }
 
-  function setToken(token) {
-    try {
-      if (token && token.length > 5) {
-        localStorage.setItem('gh_pat', token);
-        return true;
-      }
-      localStorage.removeItem('gh_pat');
-      return false;
-    } catch(e) { return false; }
+  function setToken(t) {
+    try { if (t && t.length > 5) { localStorage.setItem('gh_pat', t); return true; } localStorage.removeItem('gh_pat'); return false; } catch(e) { return false; }
   }
 
-  /* ── Cache-first, with background refresh on stale ── */
-  function ghFetch(url, ttl, forceFresh) {
-    var cacheKey = 'gh:' + url;
-    ttl = ttl || 1800000;
+  /* ── GraphQL Query ── */
+  var GQL_QUERY = [
+    'query($login: String!) {',
+    '  user(login: $login) {',
+    '    login name avatarUrl bio location',
+    '    followers { totalCount }',
+    '    repositories(first: 100, privacy: PUBLIC, orderBy: {field: UPDATED_AT, direction: DESC}, ownerAffiliations: OWNER) {',
+    '      totalCount',
+    '      nodes {',
+    '        name description url homepageUrl pushedAt createdAt',
+    '        stargazerCount forkCount isFork',
+    '        primaryLanguage { name color }',
+    '        languages(first: 10) { edges { size node { name } } }',
+    '        licenseInfo { spdxId }',
+    '        releases(first: 1, orderBy: {field: CREATED_AT, direction: DESC}) {',
+    '          nodes { tagName publishedAt createdAt url }',
+    '        }',
+    '      }',
+    '    }',
+    '  }',
+    '}'
+  ].join('\n');
 
-    function doFetch() {
-      cacheStats.misses++;
-      return rawFetch(url).then(function(data) {
-        if (data) setCache(cacheKey, data, ttl);
-        return data;
-      });
+  function graphQLFetch(query, vars) {
+    var token = getToken();
+    if (!token) {
+      // No PAT — fall back to REST (faster than unauthenticated GQL)
+      return null;
     }
-
-    return getCached(cacheKey).then(function(cached) {
-      if (cached && !forceFresh) {
-        // Found cached — return immediately
-        if (cached.stale) {
-          // Stale-while-revalidate: return stale, refresh bg
-          setTimeout(function() {
-            rawFetch(url).then(function(data) {
-              if (data) setCache(cacheKey, data, ttl);
-            }).catch(function() {});
-          }, 50);
-        }
-        return cached.value;
-      }
-      return doFetch();
-    });
+    cacheStats.fetches++;
+    return fetch(GQL_URL, {
+      method: 'POST',
+      headers: { 'Authorization': 'token ' + token, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query: query, variables: vars })
+    }).then(function(res) {
+      if (!res.ok) return null;
+      return res.json().then(function(json) {
+        if (json.errors) { console.warn('[GQL] Errors:', json.errors); return null; }
+        return json.data;
+      });
+    }).catch(function() { return null; });
   }
 
-  function rawFetch(url, retries) {
-    if (retries === undefined) retries = 2;
+  /* ── REST Fallback ── */
+  function restFetch(url) {
     var headers = { 'Accept': 'application/vnd.github.v3+json' };
     var token = getToken();
     if (token) headers['Authorization'] = 'token ' + token;
-
+    cacheStats.fetches++;
     return fetch(url, { headers: headers }).then(function(res) {
-      if (!res.ok) {
-        if (res.status === 403 && retries > 0) {
-          return new Promise(function(resolve) {
-            setTimeout(function() { resolve(rawFetch(url, retries - 1)); }, 2000);
-          });
-        }
-        if (res.status === 404) return null;
-        throw new Error('GitHub API error: ' + res.status);
-      }
-      // Read X-RateLimit headers for display
+      if (!res.ok) return null;
       var remaining = res.headers.get('X-RateLimit-Remaining');
-      if (remaining !== null) {
-        updateRateLimit(parseInt(remaining), parseInt(res.headers.get('X-RateLimit-Limit')));
-      }
+      if (remaining !== null) updateRateLimit(parseInt(remaining), parseInt(res.headers.get('X-RateLimit-Limit')));
       return res.json();
+    }).catch(function() { return null; });
+  }
+
+  /* ═══════════════════════════════════════════════
+     CACHE-AND-REFRESH PATTERN
+     ── Shows cached data instantly, refreshes in bg
+     ═══════════════════════════════════════════════ */
+  function loadWithRefresh(cacheKey, ttl, fetchFn, renderFn) {
+    // 1. Show cached immediately
+    var cached = getCached(cacheKey);
+    if (cached) {
+      renderFn(cached);
+      document.getElementById('hero-gh-status').setAttribute('data-base', 'refreshing…');
+    }
+
+    // 2. Always fetch fresh data (bypasses cache)
+    fetchFn().then(function(fresh) {
+      if (!fresh) return;
+      setCache(cacheKey, fresh, ttl);
+      renderFn(fresh);
+      // Update status text to show it's live
+      var status = document.getElementById('hero-gh-status');
+      var base = status.getAttribute('data-base');
+      if (base && base.indexOf('refreshing') !== -1) {
+        status.removeAttribute('data-base');
+      }
     });
   }
 
   /* ═══════════════════════════════════════════════
-     UTILITIES
+     UI UPDATES
      ═══════════════════════════════════════════════ */
+  function updateRateLimit(remaining, limit) {
+    var s = document.getElementById('hero-gh-status');
+    if (!s) return;
+    var base = s.getAttribute('data-base') || s.textContent;
+    if (!s.getAttribute('data-base')) s.setAttribute('data-base', base);
+    var pct = limit > 0 ? Math.round(remaining / limit * 100) : 0;
+    var color = pct > 20 ? 'var(--accent)' : (pct > 5 ? 'var(--yellow)' : '#e06c75');
+    s.innerHTML = base + ' <span style="font-size:9px;opacity:0.5"><span style="color:' + color + '">●</span> ' + remaining + '/' + limit + '</span>';
+  }
+
   function timeAgo(dateStr) {
+    if (!dateStr) return '';
     var diff = (Date.now() - new Date(dateStr).getTime()) / 1000;
     if (diff < 60) return 'just now';
     if (diff < 3600) return Math.floor(diff / 60) + 'm ago';
@@ -895,12 +743,10 @@ footer p span { color: var(--accent-dim) }
     if (diff < 2592000) return Math.floor(diff / 86400) + 'd ago';
     return Math.floor(diff / 2592000) + 'mo ago';
   }
-
   function shortNum(n) {
     if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
     return n;
   }
-
   function el(tag, cls, html) {
     var e = document.createElement(tag);
     if (cls) e.className = cls;
@@ -908,126 +754,111 @@ footer p span { color: var(--accent-dim) }
     return e;
   }
 
-  function getTopLanguage(repos) {
-    var langCounts = {};
-    repos.forEach(function(r) { if (r.language) langCounts[r.language] = (langCounts[r.language] || 0) + 1; });
-    var sorted = Object.keys(langCounts).sort(function(a, b) { return langCounts[b] - langCounts[a] });
-    return sorted[0] || null;
-  }
-
   /* ═══════════════════════════════════════════════
-     CACHE STATUS UI
-     ═══════════════════════════════════════════════ */
-  function updateRateLimit(remaining, limit) {
-    var status = document.getElementById('hero-gh-status');
-    if (!status) return;
-    // Preserve main text, append rate info
-    var base = status.getAttribute('data-base') || status.textContent;
-    if (!status.getAttribute('data-base')) status.setAttribute('data-base', base);
-    var pct = limit > 0 ? Math.round(remaining / limit * 100) : 0;
-    var color = pct > 20 ? 'var(--accent)' : (pct > 5 ? 'var(--yellow)' : 'var(--red, #e06c75)');
-    var dot = '<span style="color:' + color + '">●</span>';
-    status.innerHTML = base + ' <span style="font-size:9px;opacity:0.5">' + dot + ' ' + remaining + '/' + limit + '</span>';
-  }
-
-  function updateCacheStatus() {
-    var el = document.getElementById('cache-status');
-    if (!el) return;
-    var token = getToken();
-    countCacheEntries().then(function(count) {
-      el.innerHTML =
-        '<span class="' + (token ? 'dot-on' : 'dot-off') + '">●</span> ' +
-        'API: <span class="badge">' + (token ? 'PAT ' + token.substring(0, 4) + '…' : 'public') + '</span> ' +
-        'Cache: <span class="badge">' + count + ' entries</span> ' +
-        'Hits: <span class="badge">' + cacheStats.hits + '</span> ' +
-        'Saves: <span class="badge">' + cacheStats.saves + '</span> ' +
-        '<span style="opacity:0.4">[click to clear]</span>';
-    });
-  }
-
-  /* ═══════════════════════════════════════════════
-     SCROLL & REVEAL
+     SCROLL
      ═══════════════════════════════════════════════ */
   var progress = document.querySelector('.scroll-progress');
   window.addEventListener('scroll', function() {
-    var st = window.scrollY;
-    var dh = document.documentElement.scrollHeight - window.innerHeight;
+    var st = window.scrollY, dh = document.documentElement.scrollHeight - window.innerHeight;
     progress.style.width = (dh > 0 ? (st / dh) * 100 : 0) + '%';
     document.querySelector('nav').classList.toggle('scrolled', st > 50);
   }, { passive: true });
 
   var revealObserver = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) {
-      if (e.isIntersecting) { e.target.classList.add('revealed'); revealObserver.unobserve(e.target); }
-    });
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('revealed'); revealObserver.unobserve(e.target); } });
   }, { threshold: 0.12 });
   document.querySelectorAll('[data-reveal]').forEach(function(el) { revealObserver.observe(el); });
 
   /* ═══════════════════════════════════════════════
-     PAT SETUP — URL param + dynamic input
+     PAT UI
      ═══════════════════════════════════════════════ */
-  (function() {
-    var params = new URLSearchParams(window.location.search);
-    var urlToken = params.get('token') || params.get('pat');
-    if (urlToken && urlToken.length > 5) {
-      setToken(urlToken);
-      if (window.history.replaceState) {
-        window.history.replaceState({}, document.title, window.location.origin + window.location.pathname);
-      }
+  function initPatUI() {
+    var input = document.getElementById('pat-input'), btn = document.getElementById('pat-btn'), ind = document.getElementById('pat-indicator');
+    if (!input || !btn || !ind) return;
+    function update() {
+      var t = getToken();
+      if (t) { ind.innerHTML = '●'; ind.style.color = 'var(--accent)'; input.value = t.substring(0,8)+'…'; input.style.opacity='0.5'; btn.textContent='Clear'; }
+      else { ind.innerHTML = '○'; ind.style.color = 'var(--muted)'; input.value=''; input.style.opacity='1'; btn.textContent='Set'; }
     }
-    // Log status
-    var saved = getToken();
-    if (saved) {
-      console.log('[Portfolio] GitHub PAT active — 5000 req/hr (token: ' + saved.substring(0, 8) + '…)');
-    }
-  })();
-
-  /* ═══════════════════════════════════════════════
-     MAIN DATA FETCH
-     ═══════════════════════════════════════════════ */
-  // Run GC first
-  garbageCollect();
-
-  var userPromise = ghFetch(API_BASE + '/users/' + USER, CACHE_TTL.user);
-  var reposPromise = ghFetch(API_BASE + '/users/' + USER + '/repos?per_page=100&sort=updated&type=owner', CACHE_TTL.repos);
-
-  Promise.all([userPromise, reposPromise])
-    .then(function(results) {
-      var user = results[0];
-      var repos = (results[1] || []).filter(function(r) { return !r.fork; });
-
-      if (!user) {
-        document.getElementById('hero-gh-status').textContent = 'unable to load profile';
-        showOfflineFallback();
-        return;
-      }
-
-      renderProfile(user);
-      renderHeroStats(user, repos);
-      renderLanguages(repos);
-      renderProjects(repos);
-      renderReleases(repos);
-      renderActivity(repos);
-
-      document.getElementById('hero-gh-status').textContent =
-        (user.location || 'Remote') + ' · ' + user.public_repos + ' public repos';
-    })
-    .catch(function(err) {
-      console.error('[Portfolio] Failed to load:', err);
-      document.getElementById('hero-gh-status').textContent = 'connection issue — cached data shown';
-      // Already showing cached data if available (stale-while-revalidate)
-    });
-
-  /* ═══════════════════════════════════════════════
-     RENDER FUNCTIONS (same as before)
-     ═══════════════════════════════════════════════ */
-  function showOfflineFallback() {
-    ['profile-card', 'hero-stats', 'lang-chart', 'project-grid', 'release-list', 'activity-list'].forEach(function(id) {
-      var c = document.getElementById(id);
-      if (c && c.querySelector('.loading-text')) c.innerHTML = '<p class="loading-text">unable to load data</p>';
-    });
+    btn.onclick = function() {
+      if (btn.textContent === 'Clear') { setToken(''); update(); location.reload(); return; }
+      var v = input.value.trim();
+      if (v.length > 5) { setToken(v); update(); location.reload(); }
+      else { input.focus(); input.select(); }
+    };
+    input.onkeydown = function(e) { if (e.key === 'Enter') btn.onclick(); };
+    update();
   }
 
+  /* ═══════════════════════════════════════════════
+     PARSE GQL DATA → RENDER
+     ═══════════════════════════════════════════════ */
+  function renderFromGQL(gqlData) {
+    var u = gqlData.user;
+    if (!u || !u.repositories) return false;
+
+    var repos = u.repositories.nodes.filter(function(r) { return !r.isFork; });
+    var totalCount = u.repositories.totalCount;  // GQL totalCount = all public repos
+
+    // Profile
+    renderProfile({
+      login: u.login, name: u.name, avatar_url: u.avatarUrl, bio: u.bio,
+      public_repos: totalCount,
+      followers: u.followers ? u.followers.totalCount : 0,
+      public_gists: 0
+    });
+
+    // Hero stats — use totalCount for accuracy
+    var totalStars = repos.reduce(function(s, r) { return s + (r.stargazerCount || 0); }, 0);
+    var totalForks = repos.reduce(function(s, r) { return s + (r.forkCount || 0); }, 0);
+    var topLang = getTopLang(repos);
+    var hs = document.getElementById('hero-stats');
+    if (hs) hs.innerHTML =
+      '<span class="stat-badge"><span class="stat-icon">★</span> <span class="stat-val">' + shortNum(totalStars) + '</span> stars</span>' +
+      '<span class="stat-badge"><span class="stat-icon">⑂</span> <span class="stat-val">' + shortNum(totalForks) + '</span> forks</span>' +
+      '<span class="stat-badge"><span class="stat-icon">◇</span> <span class="stat-val">' + totalCount + '</span> repos</span>' +
+      (topLang ? '<span class="stat-badge"><span class="stat-icon">●</span> <span class="stat-val">' + topLang + '</span></span>' : '');
+
+    // Languages — from GQL languages.edges
+    renderLangChart(buildLangBytes(repos));
+
+    // Projects
+    renderProjects(repos);
+
+    // Releases
+    renderReleasesFromGQL(repos);
+
+    // Status
+    document.getElementById('hero-gh-status').textContent =
+      (u.location || 'GitHub') + ' · ' + totalCount + ' public repos';
+
+    return true;
+  }
+
+  function getTopLang(repos) {
+    var counts = {};
+    repos.forEach(function(r) { if (r.primaryLanguage) counts[r.primaryLanguage.name] = (counts[r.primaryLanguage.name] || 0) + 1; });
+    var sorted = Object.keys(counts).sort(function(a, b) { return counts[b] - counts[a]; });
+    return sorted[0] || null;
+  }
+
+  function buildLangBytes(repos) {
+    var bytes = {};
+    repos.forEach(function(r) {
+      if (r.languages && r.languages.edges) {
+        r.languages.edges.forEach(function(e) {
+          bytes[e.node.name] = (bytes[e.node.name] || 0) + e.size;
+        });
+      } else if (r.primaryLanguage) {
+        bytes[r.primaryLanguage.name] = (bytes[r.primaryLanguage.name] || 0) + 1;
+      }
+    });
+    return Object.keys(bytes).map(function(l) { return { name: l, bytes: bytes[l] }; });
+  }
+
+  /* ═══════════════════════════════════════════════
+     RENDER FUNCTIONS
+     ═══════════════════════════════════════════════ */
   function renderProfile(user) {
     var card = document.getElementById('profile-card');
     if (!card) return;
@@ -1035,47 +866,12 @@ footer p span { color: var(--accent-dim) }
       '<img class="profile-avatar" src="' + (user.avatar_url || '') + '" alt="' + user.login + '" loading="lazy">' +
       '<div class="profile-name">' + (user.name || user.login) + '</div>' +
       '<div class="profile-handle">@' + user.login + '</div>' +
-      '<div class="profile-bio">' + (user.bio || 'Go developer building developer tools.') + '</div>' +
+      '<div class="profile-bio">' + (user.bio || 'Go developer.') + '</div>' +
       '<div class="profile-stats">' +
         '<div class="profile-stat"><div class="profile-stat-num">' + shortNum(user.public_repos) + '</div><div class="profile-stat-label">Repos</div></div>' +
         '<div class="profile-stat"><div class="profile-stat-num">' + shortNum(user.followers) + '</div><div class="profile-stat-label">Followers</div></div>' +
         '<div class="profile-stat"><div class="profile-stat-num">' + shortNum(user.public_gists || 0) + '</div><div class="profile-stat-label">Gists</div></div>' +
       '</div>';
-  }
-
-  function renderHeroStats(user, repos) {
-    var totalStars = repos.reduce(function(s, r) { return s + (r.stargazers_count || 0); }, 0);
-    var totalForks = repos.reduce(function(s, r) { return s + (r.forks_count || 0); }, 0);
-    var topLang = getTopLanguage(repos);
-    var container = document.getElementById('hero-stats');
-    if (!container) return;
-    container.innerHTML =
-      '<span class="stat-badge"><span class="stat-icon">★</span> <span class="stat-val">' + shortNum(totalStars) + '</span> stars</span>' +
-      '<span class="stat-badge"><span class="stat-icon">⑂</span> <span class="stat-val">' + shortNum(totalForks) + '</span> forks</span>' +
-      '<span class="stat-badge"><span class="stat-icon">◇</span> <span class="stat-val">' + shortNum(repos.length) + '</span> repos</span>' +
-      (topLang ? '<span class="stat-badge"><span class="stat-icon">●</span> <span class="stat-val">' + topLang + '</span></span>' : '');
-  }
-
-  function renderLanguages(repos) {
-    var langBytes = {};
-    var container = document.getElementById('lang-chart');
-    if (!container) return;
-
-    repos.forEach(function(r) { if (r.language) langBytes[r.language] = langBytes[r.language] || 0; });
-
-    var langPromises = [];
-    repos.forEach(function(r) {
-      if (!r.language) return;
-      var p = ghFetch(r.languages_url, CACHE_TTL.languages).then(function(data) {
-        if (data) { Object.keys(data).forEach(function(l) { langBytes[l] = (langBytes[l] || 0) + data[l]; }); }
-      }).catch(function() {});
-      langPromises.push(p);
-    });
-
-    renderLangChart(Object.keys(langBytes).map(function(l) { return { name: l, bytes: langBytes[l] || 1 }; }));
-    Promise.all(langPromises).then(function() {
-      renderLangChart(Object.keys(langBytes).sort(function(a, b) { return langBytes[b] - langBytes[a]; }).map(function(l) { return { name: l, bytes: langBytes[l] }; }));
-    });
   }
 
   function renderLangChart(langArray) {
@@ -1084,7 +880,6 @@ footer p span { color: var(--accent-dim) }
     var total = langArray.reduce(function(a, b) { return a + b.bytes; }, 0);
     var sorted = langArray.sort(function(a, b) { return b.bytes - a.bytes; }).slice(0, 12);
     if (!sorted.length) { container.innerHTML = '<p class="loading-text">no language data</p>'; return; }
-
     container.innerHTML = '';
     sorted.forEach(function(lang) {
       var pct = total > 0 ? (lang.bytes / total * 100) : 0;
@@ -1093,38 +888,184 @@ footer p span { color: var(--accent-dim) }
       row.innerHTML = '<span class="lang-name">' + lang.name + '</span><div class="lang-bar-track"><div class="lang-bar-fill" style="background:' + color + ';width:0%" data-pct="' + pct + '"></div></div><span class="lang-pct">' + pct.toFixed(1) + '%</span>';
       container.appendChild(row);
     });
-
-    var langObserver = new IntersectionObserver(function(entries) {
+    var lo = new IntersectionObserver(function(entries) {
       entries.forEach(function(e) {
         if (e.isIntersecting) {
-          e.target.querySelectorAll('.lang-bar-fill').forEach(function(bar) { bar.style.width = bar.getAttribute('data-pct') + '%'; });
-          langObserver.unobserve(e.target);
+          e.target.querySelectorAll('.lang-bar-fill').forEach(function(b) { b.style.width = b.getAttribute('data-pct') + '%'; });
+          lo.unobserve(e.target);
         }
       });
     }, { threshold: 0.3 });
-    langObserver.observe(container);
+    lo.observe(container);
   }
 
   function renderProjects(repos) {
     var container = document.getElementById('project-grid');
     if (!container) return;
     var sorted = repos.slice().sort(function(a, b) {
-      var aIdx = FEATURED.indexOf(a.name), bIdx = FEATURED.indexOf(b.name);
-      if (aIdx !== -1 && bIdx !== -1) return aIdx - bIdx;
-      if (aIdx !== -1) return -1;
-      if (bIdx !== -1) return 1;
-      return (b.stargazers_count || 0) - (a.stargazers_count || 0);
+      var ai = FEATURED.indexOf(a.name), bi = FEATURED.indexOf(b.name);
+      if (ai !== -1 && bi !== -1) return ai - bi;
+      if (ai !== -1) return -1; if (bi !== -1) return 1;
+      return (b.stargazerCount || 0) - (a.stargazerCount || 0);
     });
-    if (!sorted.length) { container.innerHTML = '<p class="loading-text">no projects found</p>'; return; }
-
+    if (!sorted.length) { container.innerHTML = '<p class="loading-text">no projects</p>'; return; }
     container.innerHTML = '';
     sorted.forEach(function(repo, i) {
-      var langColor = LANG_COLORS[repo.language] || '#707568';
+      var lc = LANG_COLORS[(repo.primaryLanguage || {}).name] || '#707568';
       var card = el('div', 'project-card');
       card.style.opacity = '0';
       card.style.animation = 'fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards ' + (i * 0.04) + 's';
       card.innerHTML =
-        '<div class="project-card-head"><span class="project-card-name">' + repo.name + '</span>' + (repo.language ? '<span class="project-card-lang" style="border-color:' + langColor + ';color:' + langColor + '">' + repo.language + '</span>' : '') + '</div>' +
+        '<div class="project-card-head"><span class="project-card-name">' + repo.name + '</span>' +
+        (repo.primaryLanguage ? '<span class="project-card-lang" style="border-color:' + lc + ';color:' + lc + '">' + repo.primaryLanguage.name + '</span>' : '') + '</div>' +
+        '<div class="project-card-desc">' + (repo.description || 'No description') + '</div>' +
+        '<div class="project-card-meta">' +
+          '<span><span class="meta-icon">★</span> ' + shortNum(repo.stargazerCount || 0) + '</span>' +
+          '<span><span class="meta-icon">⑂</span> ' + shortNum(repo.forkCount || 0) + '</span>' +
+          '<span><span class="meta-icon">◷</span> ' + timeAgo(repo.pushedAt) + '</span>' +
+          (repo.licenseInfo ? '<span><span class="meta-icon">©</span> ' + repo.licenseInfo.spdxId + '</span>' : '') +
+        '</div>' +
+        '<div class="project-card-actions">' +
+          '<a class="project-card-link" href="' + (repo.url || '#') + '" target="_blank">View on GitHub <span class="arrow">&rarr;</span></a>' +
+          (repo.homepageUrl ? '<a class="project-card-link" href="' + repo.homepageUrl + '" target="_blank">Live Demo <span class="arrow">&rarr;</span></a>' : '') +
+        '</div>';
+      container.appendChild(card);
+    });
+  }
+
+  function renderReleasesFromGQL(repos) {
+    var container = document.getElementById('release-list');
+    if (!container) return;
+    var releases = [];
+    repos.forEach(function(r) {
+      if (r.releases && r.releases.nodes && r.releases.nodes[0]) {
+        releases.push({ name: r.name, tag: r.releases.nodes[0].tagName, date: r.releases.nodes[0].publishedAt || r.releases.nodes[0].createdAt, url: r.releases.nodes[0].url || r.url });
+      }
+    });
+    if (!releases.length) { container.innerHTML = '<p class="loading-text">no recent releases</p>'; return; }
+    releases.sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
+    container.innerHTML = '';
+    releases.forEach(function(r) {
+      var row = el('div', 'release-row');
+      row.innerHTML = '<span class="release-name">' + r.name + '</span><span class="release-tag">' + r.tag + '</span><span class="release-date">' + timeAgo(r.date) + '</span><a class="release-dl" href="' + r.url + '" target="_blank">View <span class="arrow">&rarr;</span></a>';
+      container.appendChild(row);
+    });
+  }
+
+  /* ═══════════════════════════════════════════════
+     ACTIVITY — REST (events not in GQL)
+     ═══════════════════════════════════════════════ */
+  function renderActivity(repos) {
+    var container = document.getElementById('activity-list');
+    if (!container) return;
+
+    restFetch(REST_URL + '/users/' + USER + '/events?per_page=30')
+      .then(function(events) {
+        if (!events || !events.length) throw new Error('no events');
+        container.innerHTML = '';
+        var shown = 0;
+        events.forEach(function(ev) {
+          if (shown >= 20) return;
+          var type = ev.type, name = ev.repo ? ev.repo.name.replace(USER + '/', '') : 'unknown', msg = '', dot = 'pushed';
+          if (type === 'PushEvent') { msg = (ev.payload.commits || []).length + ' commit(s)'; }
+          else if (type === 'CreateEvent') { msg = 'created ' + (ev.payload.ref_type || 'ref'); dot = 'created'; }
+          else if (type === 'IssuesEvent') { msg = (ev.payload.action || '') + ' issue'; dot = 'starred'; }
+          else if (type === 'WatchEvent') { msg = 'starred'; dot = 'starred'; }
+          else if (type === 'ForkEvent') { msg = 'forked'; dot = 'created'; }
+          else if (type === 'ReleaseEvent') { msg = 'published ' + (ev.payload.release ? ev.payload.release.tag_name : 'release'); dot = 'created'; }
+          else return;
+          shown++;
+          var item = el('div', 'activity-item');
+          item.style.opacity = '0'; item.style.animation = 'fadeUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards ' + (shown * 0.04) + 's';
+          item.innerHTML = '<span class="activity-dot ' + dot + '"></span><span class="activity-repo">' + name + '</span><span class="activity-msg">' + msg + '</span><span class="activity-time">' + timeAgo(ev.created_at) + '</span>';
+          container.appendChild(item);
+        });
+        if (!shown) renderRepoActivityFallback(repos);
+      })
+      .catch(function() { renderRepoActivityFallback(repos); });
+  }
+
+  function renderRepoActivityFallback(repos) {
+    var container = document.getElementById('activity-list');
+    if (!container) return;
+    var recent = repos.slice(0, 20);
+    container.innerHTML = '';
+    recent.forEach(function(r, i) {
+      var msg = r.description ? r.description.substring(0, 60) : 'updated';
+      if (msg.length >= 60) msg += '…';
+      var dot = (new Date(r.pushedAt) - new Date(r.createdAt) < 86400000) ? 'created' : 'pushed';
+      var item = el('div', 'activity-item');
+      item.style.opacity = '0'; item.style.animation = 'fadeUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards ' + (i * 0.04) + 's';
+      item.innerHTML = '<span class="activity-dot ' + dot + '"></span><span class="activity-repo">' + r.name + '</span><span class="activity-msg">' + msg + '</span><span class="activity-time">' + timeAgo(r.pushedAt) + '</span>';
+      container.appendChild(item);
+    });
+  }
+
+  /* ═══════════════════════════════════════════════
+     REST FALLBACK — if no PAT / GQL fails
+     ═══════════════════════════════════════════════ */
+  function renderFromREST() {
+    restFetch(REST_URL + '/users/' + USER).then(function(user) {
+      if (!user) { document.getElementById('hero-gh-status').textContent = 'offline'; return; }
+      renderProfile(user);
+
+      restFetch(REST_URL + '/users/' + USER + '/repos?per_page=100&sort=updated&type=owner').then(function(repos) {
+        if (!repos) return;
+        // Filter out forks for accuracy
+        var realRepos = repos.filter(function(r) { return !r.fork; });
+        var totalStars = realRepos.reduce(function(s, r) { return s + (r.stargazers_count || 0); }, 0);
+        var totalForks = realRepos.reduce(function(s, r) { return s + (r.forks_count || 0); }, 0);
+        var topLang = getTopLangREST(realRepos);
+        var hs = document.getElementById('hero-stats');
+        if (hs) hs.innerHTML =
+          '<span class="stat-badge"><span class="stat-icon">★</span> <span class="stat-val">' + shortNum(totalStars) + '</span> stars</span>' +
+          '<span class="stat-badge"><span class="stat-icon">⑂</span> <span class="stat-val">' + shortNum(totalForks) + '</span> forks</span>' +
+          '<span class="stat-badge"><span class="stat-icon">◇</span> <span class="stat-val">' + realRepos.length + '</span> repos</span>' +
+          (topLang ? '<span class="stat-badge"><span class="stat-icon">●</span> <span class="stat-val">' + topLang + '</span></span>' : '');
+
+        document.getElementById('hero-gh-status').textContent =
+          (user.location || 'GitHub') + ' · ' + realRepos.length + ' public repos';
+
+        // Languages via REST (batch)
+        renderLangChartREST(realRepos);
+        renderProjectsREST(realRepos);
+        renderReleasesREST(realRepos);
+        renderActivity(realRepos);
+      });
+    });
+  }
+
+  function getTopLangREST(repos) {
+    var c = {}; repos.forEach(function(r) { if (r.language) c[r.language] = (c[r.language] || 0) + 1; });
+    return Object.keys(c).sort(function(a, b) { return c[b] - c[a]; })[0] || null;
+  }
+
+  function renderLangChartREST(repos) {
+    var container = document.getElementById('lang-chart');
+    if (!container) return;
+    var langBytes = {};
+    repos.forEach(function(r) { if (r.language) langBytes[r.language] = (langBytes[r.language] || 0) + 1; });
+    renderLangChart(Object.keys(langBytes).map(function(l) { return { name: l, bytes: langBytes[l] }; }));
+  }
+
+  function renderProjectsREST(repos) {
+    var container = document.getElementById('project-grid');
+    if (!container) return;
+    var sorted = repos.slice().sort(function(a, b) {
+      var ai = FEATURED.indexOf(a.name), bi = FEATURED.indexOf(b.name);
+      if (ai !== -1 && bi !== -1) return ai - bi;
+      if (ai !== -1) return -1; if (bi !== -1) return 1;
+      return (b.stargazers_count || 0) - (a.stargazers_count || 0);
+    });
+    if (!sorted.length) { container.innerHTML = '<p class="loading-text">no projects</p>'; return; }
+    container.innerHTML = '';
+    sorted.forEach(function(repo, i) {
+      var lc = LANG_COLORS[repo.language] || '#707568';
+      var card = el('div', 'project-card');
+      card.style.opacity = '0'; card.style.animation = 'fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards ' + (i * 0.04) + 's';
+      card.innerHTML =
+        '<div class="project-card-head"><span class="project-card-name">' + repo.name + '</span>' +
+        (repo.language ? '<span class="project-card-lang" style="border-color:' + lc + ';color:' + lc + '">' + repo.language + '</span>' : '') + '</div>' +
         '<div class="project-card-desc">' + (repo.description || 'No description') + '</div>' +
         '<div class="project-card-meta">' +
           '<span><span class="meta-icon">★</span> ' + shortNum(repo.stargazers_count || 0) + '</span>' +
@@ -1140,114 +1081,100 @@ footer p span { color: var(--accent-dim) }
     });
   }
 
-  function renderReleases(repos) {
+  function renderReleasesREST(repos) {
     var container = document.getElementById('release-list');
     if (!container) return;
-    var featuredRepos = repos.filter(function(r) { return FEATURED.indexOf(r.name) !== -1; });
-    if (!featuredRepos.length) { container.innerHTML = '<p class="loading-text">no release data</p>'; return; }
-
-    var allReleases = [], fetched = 0;
-    featuredRepos.forEach(function(repo) {
-      ghFetch(API_BASE + '/repos/' + USER + '/' + repo.name + '/releases/latest', CACHE_TTL.releases)
-        .then(function(release) {
-          if (release && release.tag_name) { allReleases.push({ name: repo.name, tag: release.tag_name, date: release.published_at || release.created_at, url: release.html_url, assets: release.assets ? release.assets.length : 0 }); }
-          if (++fetched === featuredRepos.length) renderReleaseList(allReleases);
+    var featured = repos.filter(function(r) { return FEATURED.indexOf(r.name) !== -1; });
+    if (!featured.length) { container.innerHTML = '<p class="loading-text">no release data</p>'; return; }
+    var all = [], fetched = 0;
+    featured.forEach(function(repo) {
+      restFetch(REST_URL + '/repos/' + USER + '/' + repo.name + '/releases/latest')
+        .then(function(r) {
+          if (r && r.tag_name) all.push({ name: repo.name, tag: r.tag_name, date: r.published_at || r.created_at, url: r.html_url });
+          if (++fetched === featured.length) renderReleaseList(all);
         })
-        .catch(function() { if (++fetched === featuredRepos.length) renderReleaseList(allReleases); });
+        .catch(function() { if (++fetched === featured.length) renderReleaseList(all); });
     });
-
-    function renderReleaseList(releases) {
-      if (!releases.length) { container.innerHTML = '<p class="loading-text">no recent releases</p>'; return; }
-      releases.sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
+    function renderReleaseList(rls) {
+      if (!rls.length) { container.innerHTML = '<p class="loading-text">no recent releases</p>'; return; }
+      rls.sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
       container.innerHTML = '';
-      releases.forEach(function(r) {
+      rls.forEach(function(r) {
         var row = el('div', 'release-row');
-        row.innerHTML = '<span class="release-name">' + r.name + '</span><span class="release-tag">' + r.tag + '</span><span class="release-date">' + timeAgo(r.date) + (r.assets ? ' · ' + r.assets + ' assets' : '') + '</span><a class="release-dl" href="' + r.url + '" target="_blank">View <span class="arrow">&rarr;</span></a>';
+        row.innerHTML = '<span class="release-name">' + r.name + '</span><span class="release-tag">' + r.tag + '</span><span class="release-date">' + timeAgo(r.date) + '</span><a class="release-dl" href="' + r.url + '" target="_blank">View <span class="arrow">&rarr;</span></a>';
         container.appendChild(row);
       });
     }
   }
 
-  function renderActivity(repos) {
-    var container = document.getElementById('activity-list');
-    if (!container) return;
-
-    ghFetch(API_BASE + '/users/' + USER + '/events?per_page=30', CACHE_TTL.events)
-      .then(function(events) {
-        if (!events || !events.length) throw new Error('no events');
-        renderEventActivity(events);
-      })
-      .catch(function() { renderRepoActivity(repos); });
-
-    function renderEventActivity(events) {
-      container.innerHTML = '';
-      var shown = 0;
-      events.forEach(function(event) {
-        if (shown >= 20) return;
-        var type = event.type, repoName = event.repo ? event.repo.name.replace(USER + '/', '') : 'unknown', msg = '', dotType = 'pushed';
-        if (type === 'PushEvent') { msg = (event.payload.commits || []).length + ' commit(s)'; dotType = 'pushed'; }
-        else if (type === 'CreateEvent') { msg = 'created ' + (event.payload.ref_type || 'ref'); dotType = 'created'; }
-        else if (type === 'IssuesEvent') { msg = (event.payload.action || '') + ' issue'; dotType = 'starred'; }
-        else if (type === 'WatchEvent') { msg = 'starred'; dotType = 'starred'; }
-        else if (type === 'ForkEvent') { msg = 'forked'; dotType = 'created'; }
-        else if (type === 'ReleaseEvent') { msg = 'published ' + (event.payload.release ? event.payload.release.tag_name : 'release'); dotType = 'created'; }
-        else return;
-        shown++;
-        var item = el('div', 'activity-item');
-        item.style.opacity = '0'; item.style.animation = 'fadeUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards ' + (shown * 0.04) + 's';
-        item.innerHTML = '<span class="activity-dot ' + dotType + '"></span><span class="activity-repo">' + repoName + '</span><span class="activity-msg">' + msg + '</span><span class="activity-time">' + timeAgo(event.created_at) + '</span>';
-        container.appendChild(item);
-      });
-      if (!shown) renderRepoActivity(repos);
-    }
-
-    function renderRepoActivity(repos) {
-      var recent = repos.slice(0, 20);
-      container.innerHTML = '';
-      recent.forEach(function(repo, i) {
-        var msg = repo.description ? repo.description.substring(0, 60) : 'updated';
-        if (msg.length >= 60) msg += '…';
-        var type = (new Date(repo.pushed_at) - new Date(repo.created_at) < 86400000) ? 'created' : 'pushed';
-        var item = el('div', 'activity-item');
-        item.style.opacity = '0'; item.style.animation = 'fadeUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards ' + (i * 0.04) + 's';
-        item.innerHTML = '<span class="activity-dot ' + type + '"></span><span class="activity-repo">' + repo.name + '</span><span class="activity-msg">' + msg + '</span><span class="activity-time">' + timeAgo(repo.pushed_at) + '</span>';
-        container.appendChild(item);
-      });
-    }
-  }
-
   /* ═══════════════════════════════════════════════
-     DYNAMIC CACHE STATUS — update periodically
+     MAIN ENTRY
      ═══════════════════════════════════════════════ */
-  // Add status bar after footer
-  var footer = document.querySelector('footer .container');
-  if (footer) {
-    var status = document.createElement('div');
-    status.id = 'cache-status';
-    status.className = 'cache-status';
-    status.title = 'Click to clear cache and refresh';
-    status.onclick = function() {
-      if (confirm('Clear all cached data and refresh?')) {
-        clearCache().then(function() { window.location.reload(); });
+  // URL param token
+  (function() {
+    var p = new URLSearchParams(window.location.search);
+    var t = p.get('token') || p.get('pat');
+    if (t && t.length > 5) { setToken(t); if (window.history.replaceState) window.history.replaceState({}, document.title, window.location.origin + window.location.pathname); }
+  })();
+
+  initPatUI();
+
+  // Strategy: Try GQL first (requires PAT). Fall back to REST.
+  var token = getToken();
+  if (token) {
+    var cacheKey = 'gql_' + USER;
+    loadWithRefresh(cacheKey, CACHE_TTL.gql_data,
+      function() { return graphQLFetch(GQL_QUERY, { login: USER }); },
+      function(data) {
+        if (data && data.user) {
+          if (!renderFromGQL(data)) renderFromREST();
+        } else {
+          renderFromREST();
+        }
       }
-    };
-    footer.appendChild(status);
+    );
+  } else {
+    // No PAT: use REST with localStorage caching (still always-refresh on load)
+    var restCacheKey = 'rest_' + USER;
+    loadWithRefresh(restCacheKey, CACHE_TTL.gql_data,
+      function() {
+        return Promise.all([
+          restFetch(REST_URL + '/users/' + USER),
+          restFetch(REST_URL + '/users/' + USER + '/repos?per_page=100&sort=updated&type=owner')
+        ]).then(function(results) { return { user: results[0], repos: results[1] }; });
+      },
+      function(data) {
+        if (!data || !data.user) return;
+        // Cache the raw data for offline, but renderFromREST handles everything
+        renderFromREST();  // This re-fetches but uses the browsers HTTP cache
+      }
+    );
   }
 
-  // Update cache status every 5 seconds
-  updateCacheStatus();
-  setInterval(updateCacheStatus, 5000);
-
-  // On Ctrl+Shift+R: clear cache then reload
-  document.addEventListener('keydown', function(e) {
-    if (e.ctrlKey && e.shiftKey && e.key === 'r') {
-      e.preventDefault();
-      clearCache().then(function() {
-        console.log('[Cache] Cleared, reloading…');
-        window.location.reload();
-      });
-    }
-  });
+  /* ── Cache status UI ── */
+  var ftr = document.querySelector('footer .container');
+  if (ftr) {
+    var st = document.createElement('div');
+    st.id = 'cache-status';
+    st.className = 'cache-status';
+    st.title = 'Click to clear cache and refresh';
+    st.onclick = function() { if (confirm('Clear cache and refresh?')) { clearAllCache(); location.reload(); } };
+    ftr.appendChild(st);
+  }
+  (function updateCS() {
+    var el = document.getElementById('cache-status');
+    if (!el) return;
+    var t = getToken();
+    var entries = 0;
+    try { for (var i = 0; i < localStorage.length; i++) { if (localStorage.key(i).indexOf('pf_') === 0) entries++; } } catch(e) {}
+    el.innerHTML = '<span class="' + (t ? 'dot-on' : 'dot-off') + '">●</span> ' +
+      'API: <span class="badge">' + (t ? 'GQL v4' : 'REST v3') + '</span> ' +
+      'Cache: <span class="badge">' + entries + ' entries</span> ' +
+      'Fetches: <span class="badge">' + cacheStats.fetches + '</span> ' +
+      'Hits: <span class="badge">' + cacheStats.hits + '</span> ' +
+      '<span style="opacity:0.4">[click to clear]</span>';
+    setTimeout(updateCS, 5000);
+  })();
 
 })();
 </script>
