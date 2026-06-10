@@ -712,6 +712,9 @@ footer p span { color: var(--accent-dim) }
     '        releases(first: 1, orderBy: {field: CREATED_AT, direction: DESC}) { nodes { tagName publishedAt createdAt url } }',
     '      }',
     '    }',
+    '    forkedRepositories: repositories(first: 1, privacy: PUBLIC, isFork: true, ownerAffiliations: OWNER) {',
+    '      totalCount',
+    '    }',
     '  }',
     '}'
   ].join('\n');
@@ -885,15 +888,19 @@ footer p span { color: var(--accent-dim) }
   function renderProfile(user) {
     var card = document.getElementById('profile-card');
     if (!card) return;
+    var publicRepos = user.public_repos || 0;
+    var forkedRepos = user.forked_repos || 0;
+    var totalRepos = user.total_repos || publicRepos + forkedRepos;
     card.innerHTML =
       '<img class="profile-avatar" src="' + (user.avatar_url || '') + '" alt="' + user.login + '" loading="lazy">' +
       '<div class="profile-name">' + (user.name || user.login) + '</div>' +
       '<div class="profile-handle">@' + user.login + '</div>' +
       '<div class="profile-bio">' + (user.bio || 'Go developer.') + '</div>' +
       '<div class="profile-stats">' +
-        '<div class="profile-stat"><div class="profile-stat-num">' + shortNum(user.public_repos) + '</div><div class="profile-stat-label">Repos</div></div>' +
+        '<div class="profile-stat"><div class="profile-stat-num">' + shortNum(totalRepos) + '</div><div class="profile-stat-label">Total</div></div>' +
+        '<div class="profile-stat"><div class="profile-stat-num">' + shortNum(forkedRepos) + '</div><div class="profile-stat-label">Forked</div></div>' +
+        '<div class="profile-stat"><div class="profile-stat-num">' + shortNum(publicRepos) + '</div><div class="profile-stat-label">Repos</div></div>' +
         '<div class="profile-stat"><div class="profile-stat-num">' + shortNum(user.followers) + '</div><div class="profile-stat-label">Followers</div></div>' +
-        '<div class="profile-stat"><div class="profile-stat-num">' + shortNum(user.public_gists || 0) + '</div><div class="profile-stat-label">Gists</div></div>' +
       '</div>';
   }
 
@@ -1174,9 +1181,11 @@ footer p span { color: var(--accent-dim) }
     var u = data.user;
     if (!u || !u.repositories) return false;
     var repos = u.repositories.nodes.filter(function(r) { return !r.isFork; });
-    var totalCount = u.repositories.totalCount;
+    var projectCount = u.repositories.totalCount;
+    var forkedCount = u.forkedRepositories ? u.forkedRepositories.totalCount : 0;
+    var totalRepos = projectCount + forkedCount;
 
-    renderProfile({ login: u.login, name: u.name, avatar_url: u.avatarUrl, bio: u.bio, public_repos: totalCount, followers: u.followers ? u.followers.totalCount : 0, public_gists: 0 });
+    renderProfile({ login: u.login, name: u.name, avatar_url: u.avatarUrl, bio: u.bio, public_repos: projectCount, forked_repos: forkedCount, total_repos: totalRepos, followers: u.followers ? u.followers.totalCount : 0, public_gists: 0 });
 
     var totalStars = repos.reduce(function(s, r) { return s + (r.stargazerCount || 0); }, 0);
     var projectCount = repos.length;
@@ -1207,7 +1216,7 @@ footer p span { color: var(--accent-dim) }
       if (releases.length) { releases.sort(function(a, b) { return new Date(b.date) - new Date(a.date); }); renderReleaseRows(releases); }
       else rl.innerHTML = '<p class="loading-text">no recent releases</p>';
     }
-    document.getElementById('hero-gh-status').textContent = (u.location || 'GitHub') + ' · ' + totalCount + ' public repos';
+    document.getElementById('hero-gh-status').textContent = (u.location || 'GitHub') + ' · ' + totalRepos + ' repos';
     return true;
   }
 
@@ -1217,16 +1226,19 @@ footer p span { color: var(--accent-dim) }
   function renderFromREST(data) {
     if (!data || !data.user || !data.repos) return;
     var user = data.user;
-    var repos = data.repos.filter(function(r) { return !r.fork; });
-    var repoCount = user.public_repos || repos.length;
-    renderProfile({ avatar_url: user.avatar_url, login: user.login, name: user.name, bio: user.bio, public_repos: repoCount, followers: user.followers, public_gists: user.public_gists || 0 });
+    var allRepos = data.repos || [];
+    var repos = allRepos.filter(function(r) { return !r.fork; });
+    var forkedRepos = allRepos.filter(function(r) { return r.fork; }).length;
+    var repoCount = repos.length;
+    var totalRepos = repoCount + forkedRepos;
+    renderProfile({ avatar_url: user.avatar_url, login: user.login, name: user.name, bio: user.bio, public_repos: repoCount, forked_repos: forkedRepos, total_repos: totalRepos, followers: user.followers, public_gists: user.public_gists || 0 });
 
     var totalStars = repos.reduce(function(s, r) { return s + (r.stargazers_count || 0); }, 0);
     var projectCount = repos.length;
     var langCounts = {};
     repos.forEach(function(r) { if (r.language) langCounts[r.language] = (langCounts[r.language] || 0) + 1; });
     var topLang = Object.keys(langCounts).sort(function(a, b) { return langCounts[b] - langCounts[a]; })[0] || null;
-    document.getElementById('hero-gh-status').textContent = (user.location || 'GitHub') + ' · ' + repoCount + ' public repos';
+    document.getElementById('hero-gh-status').textContent = (user.location || 'GitHub') + ' · ' + totalRepos + ' repos';
     renderLangChart(Object.keys(langCounts).map(function(l) { return { name: l, bytes: langCounts[l] }; }));
     renderProjects(repos);
     renderReleasesREST(repos);
