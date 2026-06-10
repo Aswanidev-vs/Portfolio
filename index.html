@@ -655,6 +655,26 @@ footer p span { color: var(--accent-dim) }
   var LANGUAGE_COLORS = {};
   var languageColorsPromise = null;
   var LANGUAGE_COLORS_FALLBACK = '#707568';
+  var LANGUAGE_COLORS_FALLBACK_MAP = {
+    'go': '#00ADD8',
+    'html': '#e34c26',
+    'javascript': '#f1e05a',
+    'vue': '#41b883',
+    'go template': '#d46122',
+    'lua': '#000080',
+    'php': '#4F5D95',
+    'css': '#563d7c',
+    'typescript': '#3178c6',
+    'python': '#3572A5',
+    'shell': '#89e051',
+    'dockerfile': '#384d54',
+    'makefile': '#427819',
+    'markdown': '#083fa1',
+    'json': '#292929',
+    'scss': '#c6538c',
+    'sass': '#a53b70',
+    'yaml': '#cb171e'
+  };
 
   /* ═══════════════════════════════════════════════
      CACHE
@@ -746,16 +766,20 @@ footer p span { color: var(--accent-dim) }
   }
 
   function getLanguageColor(name, preferredColor) {
-    return preferredColor || LANGUAGE_COLORS[name] || LANGUAGE_COLORS_FALLBACK;
+    var langName = String(name || '');
+    return preferredColor || LANGUAGE_COLORS[langName] || LANGUAGE_COLORS_FALLBACK_MAP[langName.toLowerCase()] || LANGUAGE_COLORS_FALLBACK;
   }
 
   function loadLanguageColors() {
     if (languageColorsPromise) return languageColorsPromise;
 
     var cached = getCached('language_colors');
-    if (cached) {
+    if (cached && Object.keys(cached).length) {
       LANGUAGE_COLORS = cached;
       return Promise.resolve(cached);
+    }
+    if (cached) {
+      try { localStorage.removeItem('pf_language_colors'); } catch(e) {}
     }
 
     languageColorsPromise = restFetch(REST_URL + '/languages').then(function(languages) {
@@ -770,7 +794,7 @@ footer p span { color: var(--accent-dim) }
         });
       }
       LANGUAGE_COLORS = map;
-      setCache('language_colors', map, 604800000);
+      if (Object.keys(map).length) setCache('language_colors', map, 604800000);
       return map;
     }).catch(function() {
       LANGUAGE_COLORS = {};
