@@ -47,6 +47,7 @@ body::after {
   background-size: 180px 180px;
 }
 a { color: inherit; text-decoration: none }
+img, svg { max-width: 100%; height: auto }
 .scroll-progress {
   position: fixed;
   top: 0;
@@ -140,29 +141,6 @@ nav.scrolled {
   opacity: 0;
   animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.55s;
 }
-.hero-stats {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-top: 28px;
-  opacity: 0;
-  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.65s;
-}
-.stat-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-family: var(--mono);
-  font-size: 11px;
-  padding: 6px 12px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  color: var(--muted);
-  letter-spacing: 0.02em;
-  background: var(--surface);
-}
-.stat-badge .stat-val { color: var(--text); font-weight: 500 }
-.stat-badge .stat-icon { font-size: 13px; line-height: 1 }
 .hero-status {
   margin-top: 24px;
   font-family: var(--mono);
@@ -215,6 +193,12 @@ section.section { margin-bottom: clamp(64px, 9vw, 100px) }
   white-space: nowrap;
 }
 .section-head .line { flex: 1; height: 1px; background: var(--border) }
+.section-head .section-count {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+}
 .lang-chart { display: flex; flex-direction: column; gap: 10px }
 .lang-row {
   display: grid;
@@ -234,8 +218,7 @@ section.section { margin-bottom: clamp(64px, 9vw, 100px) }
 .lang-pct { font-family: var(--mono); font-size: 11.5px; color: var(--muted); text-align: right }
 
 #projects { max-width: none; width: 100%; margin: 0; padding: 0 }
-.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px }
-.project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px }
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px }
 .project-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -314,6 +297,53 @@ section.section { margin-bottom: clamp(64px, 9vw, 100px) }
 .project-card-link:hover { color: var(--accent) }
 .project-card-link .arrow { transition: transform 0.25s ease; display: inline-block }
 .project-card-link:hover .arrow { transform: translateX(4px) }
+
+/* ── Pagination (shared by projects & activity) ── */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+.page-btn {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 7px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+.page-btn:hover:not(:disabled):not(.active) {
+  border-color: var(--accent-dim);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+.page-btn:disabled { opacity: 0.35; cursor: not-allowed }
+.page-btn.active {
+  background: var(--accent-soft);
+  border-color: var(--accent-dim);
+  color: var(--accent);
+  cursor: default;
+}
+.page-ellipsis {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  padding: 7px 4px;
+  line-height: 1;
+}
+.page-hint {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+
 .release-list { display: flex; flex-direction: column; gap: 0 }
 .release-row {
   display: flex;
@@ -322,6 +352,7 @@ section.section { margin-bottom: clamp(64px, 9vw, 100px) }
   padding: 16px 0;
   border-bottom: 1px solid var(--border);
   gap: 16px;
+  flex-wrap: wrap;
 }
 .release-row:last-child { border-bottom: none }
 .release-name {
@@ -357,6 +388,7 @@ section.section { margin-bottom: clamp(64px, 9vw, 100px) }
   gap: 14px;
   padding: 14px 0;
   border-bottom: 1px solid rgba(26, 30, 26, 0.5);
+  flex-wrap: wrap;
 }
 .activity-item:last-child { border-bottom: none }
 .activity-dot {
@@ -376,38 +408,25 @@ section.section { margin-bottom: clamp(64px, 9vw, 100px) }
   font-size: 13px;
   color: var(--text);
   font-weight: 500;
-  min-width: 110px;
+  min-width: 0;
+  flex: 1 1 110px;
 }
 .activity-msg {
   font-size: 13px;
   color: var(--muted);
-  flex: 1;
+  flex: 1 1 180px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 .activity-time { font-family: var(--mono); font-size: 11px; color: var(--muted); flex-shrink: 0; opacity: 0.6 }
-.activity-pagination { display: flex; justify-content: center; align-items: center; gap: 12px; margin-top: 24px }
-.activity-page-btn {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--text);
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 7px 12px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.activity-page-btn:hover:not(:disabled) { border-color: var(--accent-dim); color: var(--accent); transform: translateY(-1px) }
-.activity-page-btn:disabled { opacity: 0.35; cursor: not-allowed }
-.activity-page-hint { font-family: var(--mono); font-size: 11px; color: var(--muted) }
 .profile-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 24px;
   width: clamp(220px, 22vw, 260px);
+  max-width: 100%;
   text-align: center;
   opacity: 0;
   animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.35s;
@@ -440,27 +459,6 @@ section.section { margin-bottom: clamp(64px, 9vw, 100px) }
   letter-spacing: 0.1em;
 }
 .loading-text { font-family: var(--mono); font-size: 12.5px; color: var(--muted); padding: 40px 0; text-align: center }
-.cache-status {
-  font-family: var(--mono);
-  font-size: 10px;
-  color: var(--muted);
-  opacity: 0.5;
-  text-align: center;
-  margin-top: 12px;
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-  user-select: none;
-}
-.cache-status:hover { opacity: 1 }
-.cache-status .dot-on { color: var(--accent) }
-.cache-status .dot-off { color: var(--red, #e06c75) }
-.cache-status .badge { 
-  display: inline-block;
-  padding: 1px 6px;
-  border-radius: 3px;
-  background: var(--accent-soft);
-  margin: 0 2px;
-}
 footer {
   margin-top: clamp(60px, 8vw, 100px);
   padding: 36px 0;
@@ -476,17 +474,19 @@ footer p span { color: var(--accent-dim) }
               transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 [data-reveal].revealed { opacity: 1; transform: translateY(0) }
+@media (max-width: 1024px) {
+  .container,
+  .nav-inner { max-width: min(1180px, calc(100% - 32px)); padding: 0 16px }
+  .hero-grid { gap: 36px }
+  .hero-desc { max-width: 560px }
+  .project-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)) }
+  .release-name { min-width: 90px }
+  .activity-repo { flex-basis: 100px }
+}
+
 @media (max-width: 768px) {
-  .nav-inner {
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
-  }
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
+  .nav-inner { flex-direction: column; gap: 12px; align-items: center }
+  .nav-links { flex-wrap: wrap; justify-content: center; gap: 10px }
   .hero-grid { grid-template-columns: 1fr; gap: 24px }
   .profile-card { width: 100%; max-width: 280px; margin: 0 auto }
   .hero { padding: 70px 0 50px }
@@ -496,19 +496,49 @@ footer p span { color: var(--accent-dim) }
   .project-grid { grid-template-columns: 1fr }
   .lang-row { grid-template-columns: 80px 1fr 40px; gap: 10px }
   .lang-name { font-size: 11px }
-  .release-row { flex-wrap: wrap }
   .section-head h2 { white-space: normal }
 }
+
+@media (max-width: 640px) {
+  .section-head { align-items: flex-start; flex-direction: column; gap: 8px; margin-bottom: 24px }
+  .section-head .line { width: 100%; }
+  .section-head .section-count { align-self: flex-start }
+  .lang-row { grid-template-columns: 78px 1fr 38px }
+  .release-row { align-items: flex-start; flex-direction: column; gap: 8px; padding: 14px 0 }
+  .release-date { text-align: left }
+  .activity-item { gap: 7px 10px }
+  .activity-repo { flex: 1 1 calc(100% - 24px) }
+  .activity-msg { flex-basis: 100%; white-space: normal; line-height: 1.55 }
+  .activity-time { margin-left: auto }
+  .profile-stats { gap: 12px 18px }
+}
+
 @media (max-width: 480px) {
+  .container,
+  .nav-inner { max-width: calc(100% - 24px); padding: 0 12px }
   .nav-links { gap: 8px }
   .nav-links a { font-size: 11px }
   .hero h1 { font-size: 2rem }
-  .hero-desc { max-width: 100% }
+  .hero-desc { max-width: 100%; }
   .hero-actions { flex-direction: column; width: 100% }
   .hero-actions .btn { width: 100%; justify-content: center }
   .btn { justify-content: center }
-  .stat-badge { font-size: 10px; padding: 4px 10px }
+  .hero-status { font-size: 10.5px }
   .lang-row { grid-template-columns: 70px 1fr 35px; gap: 8px }
+  .project-card { padding: 20px }
+  .project-card-actions { flex-direction: column; gap: 8px }
+  .project-card-link { width: max-content; max-width: 100% }
+  .pagination { gap: 4px }
+  .page-btn { padding: 6px 9px }
+}
+
+@media (max-width: 360px) {
+  .hero h1 { font-size: 1.85rem }
+  .hero-label { font-size: 10px; letter-spacing: 0.18em }
+  .nav-links a { font-size: 10px }
+  .profile-card { padding: 20px }
+  .profile-stats { gap: 10px 14px }
+  .page-btn { padding: 6px 8px; font-size: 10px }
 }
 </style>
 </head>
@@ -540,9 +570,7 @@ footer p span { color: var(--accent-dim) }
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/aswanidev-vs-88738737a/" target="_blank">LinkedIn</a>
           <a class="btn btn-ghost" href="#projects">Projects</a>
         </div>
-        <div id="hero-stats" class="hero-stats"></div>
         <div class="hero-status">
-          <span class="dot"></span>
           <span id="hero-gh-status">loading profile...</span>
         </div>
       </div>
@@ -551,6 +579,7 @@ footer p span { color: var(--accent-dim) }
       </div>
     </div>
   </section>
+
   <section class="section" id="stack" data-reveal>
     <div class="section-head">
       <h2>Language Distribution</h2>
@@ -560,15 +589,19 @@ footer p span { color: var(--accent-dim) }
       <p class="loading-text">analyzing repos</p>
     </div>
   </section>
+
   <section class="section" id="projects" data-reveal>
     <div class="section-head">
       <h2>Projects</h2>
       <span class="line"></span>
+      <span class="section-count" id="project-count"></span>
     </div>
     <div id="project-grid" class="project-grid">
       <p class="loading-text">fetching repos</p>
     </div>
+    <div id="project-pagination" class="pagination"></div>
   </section>
+
   <section class="section" id="releases" data-reveal>
     <div class="section-head">
       <h2>Latest Releases</h2>
@@ -583,49 +616,43 @@ footer p span { color: var(--accent-dim) }
     <div class="section-head">
       <h2>Recent Activity</h2>
       <span class="line"></span>
+      <span class="section-count" id="activity-count"></span>
     </div>
     <div id="activity-list" class="activity-list">
       <p class="loading-text">loading activity</p>
     </div>
-    <div id="activity-pagination" class="activity-pagination"></div>
+    <div id="activity-pagination" class="pagination"></div>
   </section>
 </div>
+
 <footer>
   <div class="container">
     <p>&copy; 2026 <span>Aswanidev VS</span> &mdash; Code Build Learn Repeat</p>
   </div>
 </footer>
+
 <script>
 (function() {
   'use strict';
-
-  console.log('[Portfolio] Script starting…');
 
   /* ═══════════════════════════════════════════════
      CONFIG
      ═══════════════════════════════════════════════ */
   var USER = 'Aswanidev-vs';
-  var FEATURED = ['Gocut','GitScope', 'Akashic', 'Mana','Persona'];
+  var FEATURED = ['Gocut', 'GitScope', 'Akashic', 'Mana', 'Persona'];
+  var PROJECTS_PER_PAGE = 3;
   var ACTIVITY_PER_PAGE = 8;
-  var activityState = { page: 1, loading: false };
   var GQL_URL = 'https://api.github.com/graphql';
   var REST_URL = 'https://api.github.com';
 
-  var cacheStats = { hits: 0, fetches: 0 };
-  var LANG_COLORS = {
-    Go: '#70ba00', JavaScript: '#dbc074', TypeScript: '#6db3f2',
-    C: '#e06c75', 'C++': '#b488e0', Java: '#e5a06c',
-    PHP: '#8892be', HTML: '#e34c26', CSS: '#56b6c2',
-    Python: '#3572a5', Rust: '#dea584', Shell: '#89e051',
-    Dockerfile: '#384d54', Makefile: '#427819', Vue: '#41b883',
-    Swift: '#f05138', Kotlin: '#a97bff'
-  };
-
-  var isFile = window.location.protocol === 'file:';
-  if (isFile) console.log('[Portfolio] file:// mode');
+  var projectState = { page: 1, allRepos: [] };
+  var activityState = { page: 1, loading: false };
+  var LANGUAGE_COLORS = {};
+  var languageColorsPromise = null;
+  var LANGUAGE_COLORS_FALLBACK = '#707568';
 
   /* ═══════════════════════════════════════════════
-     CACHE (localStorage, always fresh on load)
+     CACHE
      ═══════════════════════════════════════════════ */
   function getCached(key) {
     try {
@@ -633,15 +660,11 @@ footer p span { color: var(--accent-dim) }
       if (!raw) return null;
       var d = JSON.parse(raw);
       if (Date.now() > d.expires) { localStorage.removeItem('pf_' + key); return null; }
-      cacheStats.hits++; return d.value;
+      return d.value;
     } catch(e) { return null; }
   }
   function setCache(key, value, ttl) {
-    try { localStorage.setItem('pf_' + key, JSON.stringify({ value: value, expires: Date.now() + (ttl||300000) })); } catch(e) {}
-  }
-  function clearAllCache() {
-    try { Object.keys(localStorage).forEach(function(k) { if (k.indexOf('pf_') === 0) localStorage.removeItem(k); }); } catch(e) {}
-    cacheStats = { hits: 0, fetches: 0 };
+    try { localStorage.setItem('pf_' + key, JSON.stringify({ value: value, expires: Date.now() + (ttl || 300000) })); } catch(e) {}
   }
 
   /* ═══════════════════════════════════════════════
@@ -649,7 +672,7 @@ footer p span { color: var(--accent-dim) }
      ═══════════════════════════════════════════════ */
   function loadOnce(cacheKey, fetchFn, renderFn) {
     var cached = getCached(cacheKey);
-    if (cached) { renderFn(cached); }
+    if (cached) renderFn(cached);
     fetchFn().then(function(fresh) {
       if (!fresh) { if (!cached) renderOffline(); return; }
       setCache(cacheKey, fresh, 300000);
@@ -660,23 +683,18 @@ footer p span { color: var(--accent-dim) }
   /* ═══════════════════════════════════════════════
      GITHUB API HELPERS
      ═══════════════════════════════════════════════ */
-  function getToken() {
-    try { return localStorage.getItem('gh_pat') || ''; } catch(e) { return ''; }
-  }
-  function setToken(t) {
-    try { if (t && t.length > 5) { localStorage.setItem('gh_pat', t); return true; } localStorage.removeItem('gh_pat'); return false; } catch(e) { return false; }
-  }
+  function getToken() { try { return localStorage.getItem('gh_pat') || ''; } catch(e) { return ''; } }
 
   var GQL_QUERY = [
     'query($login: String!) {',
     '  user(login: $login) { login name avatarUrl bio location',
     '    followers { totalCount }',
-    '    repositories(first: 100, privacy: PUBLIC, orderBy: {field: UPDATED_AT, direction: DESC}, ownerAffiliations: OWNER) {',
+    '    repositories(first: 100, privacy: PUBLIC, isFork: false, orderBy: {field: UPDATED_AT, direction: DESC}, ownerAffiliations: OWNER) {',
     '      totalCount',
     '      nodes { name description url homepageUrl pushedAt createdAt',
     '        stargazerCount forkCount isFork',
     '        primaryLanguage { name color }',
-    '        languages(first: 10) { edges { size node { name } } }',
+    '        languages(first: 10) { edges { size node { name color } } }',
     '        licenseInfo { spdxId }',
     '        releases(first: 1, orderBy: {field: CREATED_AT, direction: DESC}) { nodes { tagName publishedAt createdAt url } }',
     '      }',
@@ -687,8 +705,7 @@ footer p span { color: var(--accent-dim) }
 
   function graphQLFetch(query, vars) {
     var token = getToken();
-    if (!token) return null;
-    cacheStats.fetches++;
+    if (!token) return Promise.resolve(null);
     return fetch(GQL_URL, {
       method: 'POST',
       headers: { 'Authorization': 'token ' + token, 'Content-Type': 'application/json' },
@@ -706,35 +723,59 @@ footer p span { color: var(--accent-dim) }
     var headers = { 'Accept': 'application/vnd.github.v3+json' };
     var token = getToken();
     if (token) headers['Authorization'] = 'token ' + token;
-    cacheStats.fetches++;
     return fetch(url, { headers: headers }).then(function(res) {
-      if (!res.ok) { if (res.status === 403) { renderRateLimited(); return null; } return null; }
-      var remaining = res.headers.get('X-RateLimit-Remaining');
-      if (remaining !== null) {
-        var s = document.getElementById('hero-gh-status');
-        // if (s) s.innerHTML = (s.getAttribute('data-base')||s.textContent) + ' <span style="font-size:9px;opacity:0.5"><span style="color:'+(parseInt(remaining)>10?'var(--accent)':'#e06c75')+'">●</span> ' + remaining + '/' + res.headers.get('X-RateLimit-Limit') + '</span>';
-      }
+      if (!res.ok) { if (res.status === 403) renderRateLimited(); return null; }
       return res.json();
     }).catch(function() { return null; });
   }
 
+  function getLanguageColor(name, preferredColor) {
+    return preferredColor || LANGUAGE_COLORS[name] || LANGUAGE_COLORS_FALLBACK;
+  }
+
+  function loadLanguageColors() {
+    if (languageColorsPromise) return languageColorsPromise;
+
+    var cached = getCached('language_colors');
+    if (cached) {
+      LANGUAGE_COLORS = cached;
+      return Promise.resolve(cached);
+    }
+
+    languageColorsPromise = restFetch(REST_URL + '/languages').then(function(languages) {
+      var map = {};
+      if (Array.isArray(languages)) {
+        languages.forEach(function(lang) {
+          if (lang && lang.name && lang.color) map[lang.name] = lang.color;
+        });
+      } else if (languages) {
+        Object.keys(languages).forEach(function(name) {
+          if (languages[name] && languages[name].color) map[name] = languages[name].color;
+        });
+      }
+      LANGUAGE_COLORS = map;
+      setCache('language_colors', map, 604800000);
+      return map;
+    }).catch(function() {
+      LANGUAGE_COLORS = {};
+      return {};
+    });
+    return languageColorsPromise;
+  }
+
   function renderRateLimited() {
     document.getElementById('hero-gh-status').textContent = 'rate limited';
-    ['profile-card', 'hero-stats', 'lang-chart', 'project-grid', 'release-list', 'activity-list'].forEach(function(id) {
+    ['profile-card', 'lang-chart', 'project-grid', 'release-list', 'activity-list'].forEach(function(id) {
       var c = document.getElementById(id);
-      if (c && c.querySelector('.loading-text')) c.innerHTML = '<p class="loading-text">Rate limited. Add PAT in footer for 5,000 req/hr.</p>';
+      if (c && c.querySelector('.loading-text')) c.innerHTML = '<p class="loading-text">Rate limited. Add a GitHub PAT for 5,000 req/hr.</p>';
     });
-    var ap = document.getElementById('activity-pagination');
-    if (ap) ap.innerHTML = '';
   }
   function renderOffline() {
     document.getElementById('hero-gh-status').textContent = 'offline';
-    ['profile-card', 'hero-stats', 'lang-chart', 'project-grid', 'release-list', 'activity-list'].forEach(function(id) {
+    ['profile-card', 'lang-chart', 'project-grid', 'release-list', 'activity-list'].forEach(function(id) {
       var c = document.getElementById(id);
       if (c && c.querySelector('.loading-text')) c.innerHTML = '<p class="loading-text">Could not load data.</p>';
     });
-    var ap = document.getElementById('activity-pagination');
-    if (ap) ap.innerHTML = '';
   }
 
   /* ═══════════════════════════════════════════════
@@ -744,13 +785,18 @@ footer p span { color: var(--accent-dim) }
     if (!d) return '';
     var diff = (Date.now() - new Date(d).getTime()) / 1000;
     if (diff < 60) return 'just now';
-    if (diff < 3600) return Math.floor(diff/60)+'m ago';
-    if (diff < 86400) return Math.floor(diff/3600)+'h ago';
-    if (diff < 2592000) return Math.floor(diff/86400)+'d ago';
-    return Math.floor(diff/2592000)+'mo ago';
+    if (diff < 3600) return Math.floor(diff / 60) + 'm ago';
+    if (diff < 86400) return Math.floor(diff / 3600) + 'h ago';
+    if (diff < 2592000) return Math.floor(diff / 86400) + 'd ago';
+    return Math.floor(diff / 2592000) + 'mo ago';
   }
-  function shortNum(n) { if (n >= 1000) return (n/1000).toFixed(1).replace(/\.0$/,'')+'k'; return n; }
+  function shortNum(n) { if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k'; return n; }
   function el(t, c, h) { var e = document.createElement(t); if (c) e.className = c; if (h) e.innerHTML = h; return e; }
+  function escapeHTML(str) {
+    return String(str || '').replace(/[&<>"']/g, function(m) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m];
+    });
+  }
 
   /* ═══════════════════════════════════════════════
      SCROLL
@@ -764,31 +810,64 @@ footer p span { color: var(--accent-dim) }
   var revealObserver = new IntersectionObserver(function(entries) {
     entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('revealed'); revealObserver.unobserve(e.target); } });
   }, { threshold: 0.12 });
-  document.querySelectorAll('[data-reveal]').forEach(function(el) { revealObserver.observe(el); });
+  document.querySelectorAll('[data-reveal]').forEach(function(elem) { revealObserver.observe(elem); });
 
   /* ═══════════════════════════════════════════════
-     PAT UI
+     SHARED PAGINATION RENDERER
+     Builds numbered pages with prev/next + ellipsis
      ═══════════════════════════════════════════════ */
-  function initPatUI() {
-    var input = document.getElementById('pat-input'), btn = document.getElementById('pat-btn'), ind = document.getElementById('pat-indicator');
-    if (!input || !btn || !ind) return;
-    function update() {
-      var t = getToken();
-      if (t) { ind.innerHTML = '●'; ind.style.color = 'var(--accent)'; input.value = t.substring(0,8)+'…'; input.style.opacity='0.5'; btn.textContent='Clear'; }
-      else { ind.innerHTML = '○'; ind.style.color = 'var(--muted)'; input.value=''; input.style.opacity='1'; btn.textContent='Set'; }
+  function renderPagination(containerId, currentPage, totalPages, onPageChange) {
+    var container = document.getElementById(containerId);
+    if (!container) return;
+    container.innerHTML = '';
+    if (totalPages <= 1) return;
+
+    function makeBtn(label, page, isActive, isDisabled) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'page-btn' + (isActive ? ' active' : '');
+      btn.textContent = label;
+      btn.disabled = isDisabled || isActive;
+      if (!isDisabled && !isActive) {
+        btn.onclick = function() { onPageChange(page); };
+      }
+      return btn;
     }
-    btn.onclick = function() {
-      if (btn.textContent === 'Clear') { setToken(''); update(); location.reload(); return; }
-      var v = input.value.trim();
-      if (v.length > 5) { setToken(v); update(); location.reload(); }
-      else { input.focus(); input.select(); }
-    };
-    input.onkeydown = function(e) { if (e.key === 'Enter') btn.onclick(); };
-    update();
+
+    // Prev arrow
+    container.appendChild(makeBtn('←', currentPage - 1, false, currentPage === 1));
+
+    // Page numbers with ellipsis logic
+    var pages = [];
+    if (totalPages <= 7) {
+      for (var i = 1; i <= totalPages; i++) pages.push(i);
+    } else {
+      pages.push(1);
+      if (currentPage > 3) pages.push('…');
+      var start = Math.max(2, currentPage - 1);
+      var end = Math.min(totalPages - 1, currentPage + 1);
+      for (var j = start; j <= end; j++) pages.push(j);
+      if (currentPage < totalPages - 2) pages.push('…');
+      pages.push(totalPages);
+    }
+
+    pages.forEach(function(p) {
+      if (p === '…') {
+        var span = document.createElement('span');
+        span.className = 'page-ellipsis';
+        span.textContent = '…';
+        container.appendChild(span);
+      } else {
+        container.appendChild(makeBtn(p, p, p === currentPage, false));
+      }
+    });
+
+    // Next arrow
+    container.appendChild(makeBtn('→', currentPage + 1, false, currentPage === totalPages));
   }
 
   /* ═══════════════════════════════════════════════
-     RENDER FUNCTIONS (GQL)
+     PROFILE RENDER
      ═══════════════════════════════════════════════ */
   function renderProfile(user) {
     var card = document.getElementById('profile-card');
@@ -805,81 +884,174 @@ footer p span { color: var(--accent-dim) }
       '</div>';
   }
 
+  /* ═══════════════════════════════════════════════
+     LANG CHART
+     ═══════════════════════════════════════════════ */
   function renderLangChart(langArray) {
     var container = document.getElementById('lang-chart');
     if (!container) return;
-    var total = langArray.reduce(function(a, b) { return a + b.bytes; }, 0);
-    var sorted = langArray.sort(function(a, b) { return b.bytes - a.bytes; }).slice(0, 12);
-    if (!sorted.length) { container.innerHTML = '<p class="loading-text">no language data</p>'; return; }
-    container.innerHTML = '';
-    sorted.forEach(function(lang) {
-      var pct = total > 0 ? (lang.bytes / total * 100) : 0;
-      var color = LANG_COLORS[lang.name] || '#707568';
-      var row = el('div', 'lang-row');
-      row.innerHTML = '<span class="lang-name">' + lang.name + '</span><div class="lang-bar-track"><div class="lang-bar-fill" style="background:' + color + ';width:0%" data-pct="' + pct + '"></div></div><span class="lang-pct">' + pct.toFixed(1) + '%</span>';
-      container.appendChild(row);
-    });
-    var lo = new IntersectionObserver(function(entries) {
-      entries.forEach(function(e) {
-        if (e.isIntersecting) {
-          e.target.querySelectorAll('.lang-bar-fill').forEach(function(b) { b.style.width = b.getAttribute('data-pct') + '%'; });
-          lo.unobserve(e.target);
-        }
+    if (!langArray.length) { container.innerHTML = '<p class="loading-text">no language data</p>'; return; }
+
+    container.innerHTML = '<p class="loading-text">loading language colors</p>';
+    loadLanguageColors().then(function() {
+      var total = langArray.reduce(function(a, b) { return a + b.bytes; }, 0);
+      var sorted = langArray.slice().sort(function(a, b) { return b.bytes - a.bytes; }).slice(0, 12);
+      if (!sorted.length) { container.innerHTML = '<p class="loading-text">no language data</p>'; return; }
+      container.innerHTML = '';
+      sorted.forEach(function(lang) {
+        var pct = total > 0 ? (lang.bytes / total * 100) : 0;
+        var color = getLanguageColor(lang.name, lang.color);
+        var row = el('div', 'lang-row');
+        row.innerHTML = '<span class="lang-name">' + escapeHTML(lang.name) + '</span><div class="lang-bar-track"><div class="lang-bar-fill" style="background:' + color + ';width:0%" data-pct="' + pct + '"></div></div><span class="lang-pct">' + pct.toFixed(1) + '%</span>';
+        container.appendChild(row);
       });
-    }, { threshold: 0.3 });
-    lo.observe(container);
+      var lo = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) {
+            e.target.querySelectorAll('.lang-bar-fill').forEach(function(b) { b.style.width = b.getAttribute('data-pct') + '%'; });
+            lo.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      lo.observe(container);
+    });
   }
 
-  function renderProjects(repos) {
-    var container = document.getElementById('project-grid');
-    if (!container) return;
-    var sorted = repos.slice().sort(function(a, b) {
+  /* ═══════════════════════════════════════════════
+     PROJECTS — paginated client-side
+     ═══════════════════════════════════════════════ */
+  function sortRepos(repos) {
+    return repos.slice().sort(function(a, b) {
       var ai = FEATURED.indexOf(a.name), bi = FEATURED.indexOf(b.name);
       if (ai !== -1 && bi !== -1) return ai - bi;
-      if (ai !== -1) return -1; if (bi !== -1) return 1;
+      if (ai !== -1) return -1;
+      if (bi !== -1) return 1;
       return (b.stargazerCount || b.stargazers_count || 0) - (a.stargazerCount || a.stargazers_count || 0);
     });
-    if (!sorted.length) { container.innerHTML = '<p class="loading-text">no projects</p>'; return; }
+  }
+
+  function renderProjectPage(page) {
+    var repos = projectState.allRepos;
+    if (!repos.length) return;
+    var totalPages = Math.ceil(repos.length / PROJECTS_PER_PAGE);
+    page = Math.max(1, Math.min(page, totalPages));
+    projectState.page = page;
+
+    var start = (page - 1) * PROJECTS_PER_PAGE;
+    var slice = repos.slice(start, start + PROJECTS_PER_PAGE);
+
+    var container = document.getElementById('project-grid');
+    if (!container) return;
     container.innerHTML = '';
-    sorted.forEach(function(repo, i) {
+
+    slice.forEach(function(repo, i) {
       var langName = repo.primaryLanguage ? repo.primaryLanguage.name : (repo.language || null);
-      var lc = LANG_COLORS[langName] || '#707568';
+      var lc = getLanguageColor(langName, repo.primaryLanguage ? repo.primaryLanguage.color : null);
       var card = el('div', 'project-card');
-      card.style.opacity = '0'; card.style.animation = 'fadeUp 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards ' + (i*0.025) + 's';
+      card.style.opacity = '0';
+      card.style.animation = 'fadeUp 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards ' + (i * 0.03) + 's';
       card.innerHTML =
-        '<div class="project-card-head"><span class="project-card-name">' + repo.name + '</span>' +
-        (langName ? '<span class="project-card-lang" style="border-color:'+lc+';color:'+lc+'">' + langName + '</span>' : '') + '</div>' +
-        '<div class="project-card-desc">' + (repo.description || 'No description') + '</div>' +
+        '<div class="project-card-head"><span class="project-card-name">' + escapeHTML(repo.name) + '</span>' +
+        (langName ? '<span class="project-card-lang" style="border-color:' + lc + ';color:' + lc + '">' + escapeHTML(langName) + '</span>' : '') + '</div>' +
+        '<div class="project-card-desc">' + escapeHTML(repo.description || 'No description') + '</div>' +
         '<div class="project-card-meta">' +
           '<span><span class="meta-icon">★</span> ' + shortNum(repo.stargazerCount || repo.stargazers_count || 0) + '</span>' +
           '<span><span class="meta-icon">⑂</span> ' + shortNum(repo.forkCount || repo.forks_count || 0) + '</span>' +
           '<span><span class="meta-icon">◷</span> ' + timeAgo(repo.pushedAt || repo.pushed_at) + '</span>' +
-          (repo.licenseInfo ? '<span><span class="meta-icon">©</span> ' + repo.licenseInfo.spdxId + '</span>' : (repo.license ? '<span><span class="meta-icon">©</span> ' + repo.license.spdx_id + '</span>' : '')) +
+          (repo.licenseInfo ? '<span><span class="meta-icon">©</span> ' + escapeHTML(repo.licenseInfo.spdxId) + '</span>' : (repo.license ? '<span><span class="meta-icon">©</span> ' + escapeHTML(repo.license.spdx_id) + '</span>' : '')) +
         '</div>' +
         '<div class="project-card-actions">' +
           '<a class="project-card-link" href="' + (repo.html_url || repo.url || '#') + '" target="_blank">View on GitHub <span class="arrow">&rarr;</span></a>' +
-          (repo.homepageUrl || repo.homepage ? '<a class="project-card-link" href="' + (repo.homepageUrl||repo.homepage) + '" target="_blank">Live Demo <span class="arrow">&rarr;</span></a>' : '') +
+          (repo.homepageUrl || repo.homepage ? '<a class="project-card-link" href="' + (repo.homepageUrl || repo.homepage) + '" target="_blank">Live Demo <span class="arrow">&rarr;</span></a>' : '') +
         '</div>';
       container.appendChild(card);
     });
+
+    // Update count label
+    var countEl = document.getElementById('project-count');
+    if (countEl) countEl.textContent = page + ' / ' + totalPages + ' · ' + repos.length + ' repos';
+
+    renderPagination('project-pagination', page, totalPages, function(p) {
+      renderProjectPage(p);
+      // Smooth scroll to top of section
+      var sec = document.getElementById('projects');
+      if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
   }
 
+  function renderProjects(repos) {
+    projectState.allRepos = sortRepos(repos);
+    if (!projectState.allRepos.length) {
+      var container = document.getElementById('project-grid');
+      if (container) container.innerHTML = '<p class="loading-text">no projects</p>';
+      return;
+    }
+    renderProjectPage(1);
+  }
+
+  /* ═══════════════════════════════════════════════
+     RELEASES
+     ═══════════════════════════════════════════════ */
+  function renderReleaseRows(releases) {
+    var rl = document.getElementById('release-list');
+    if (!rl) return;
+    if (!releases.length) { rl.innerHTML = '<p class="loading-text">no recent releases</p>'; return; }
+    rl.innerHTML = '';
+    releases.forEach(function(r) {
+      var row = el('div', 'release-row');
+      row.innerHTML = '<span class="release-name">' + escapeHTML(r.name) + '</span><span class="release-tag">' + escapeHTML(r.tag) + '</span><span class="release-date">' + timeAgo(r.date) + '</span><a class="release-dl" href="' + r.url + '" target="_blank">View <span class="arrow">&rarr;</span></a>';
+      rl.appendChild(row);
+    });
+  }
+
+  function renderReleasesREST(repos) {
+    var rl = document.getElementById('release-list');
+    if (!rl) return;
+    var featured = repos.filter(function(r) { return FEATURED.indexOf(r.name) !== -1; });
+    if (!featured.length) { rl.innerHTML = '<p class="loading-text">no release data</p>'; return; }
+    var cached = getCached('releases');
+    if (cached) renderReleaseRows(cached);
+    else rl.innerHTML = '<p class="loading-text">checking releases</p>';
+    var allReleases = [], fetched = 0;
+    featured.forEach(function(repo) {
+      restFetch(REST_URL + '/repos/' + USER + '/' + repo.name + '/releases/latest')
+        .then(function(r) {
+          if (r && r.tag_name) allReleases.push({ name: repo.name, tag: r.tag_name, date: r.published_at || r.created_at, url: r.html_url });
+          fetched++;
+          if (fetched === featured.length) {
+            allReleases.sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
+            setCache('releases', allReleases, 1800000);
+            renderReleaseRows(allReleases);
+          }
+        })
+        .catch(function() {
+          fetched++;
+          if (fetched === featured.length) { setCache('releases', allReleases, 1800000); renderReleaseRows(allReleases); }
+        });
+    });
+  }
+
+  /* ═══════════════════════════════════════════════
+     ACTIVITY — paginated via GitHub REST API
+     ═══════════════════════════════════════════════ */
   function fetchActivityPage(page) {
     var cacheKey = 'activity_' + USER + '_' + page;
     var cached = getCached(cacheKey);
     if (cached && cached.items) return Promise.resolve(cached);
-
     var token = getToken();
     var headers = { 'Accept': 'application/vnd.github.v3+json' };
     if (token) headers['Authorization'] = 'token ' + token;
-    cacheStats.fetches++;
-
     return fetch(REST_URL + '/users/' + USER + '/events/public?per_page=' + ACTIVITY_PER_PAGE + '&page=' + page, { headers: headers })
       .then(function(res) {
         if (!res.ok) { if (res.status === 403) renderRateLimited(); return { items: [], hasMore: false, error: true }; }
-        var hasMore = /rel="next"/.test(res.headers.get('Link') || '');
+        var link = res.headers.get('Link') || '';
+        var hasMore = /rel="next"/.test(link);
+        var totalFromHeader = null;
+        // GitHub caps public events at ~300; estimate total pages from Link header last page
+        var lastMatch = link.match(/page=(\d+)>;\s*rel="last"/);
+        if (lastMatch) totalFromHeader = parseInt(lastMatch[1]);
         return res.json().then(function(events) {
-          var data = { items: events || [], hasMore: hasMore, fetchedAt: Date.now() };
+          var data = { items: events || [], hasMore: hasMore, totalPages: totalFromHeader, fetchedAt: Date.now() };
           setCache(cacheKey, data, 300000);
           return data;
         });
@@ -887,30 +1059,11 @@ footer p span { color: var(--accent-dim) }
       .catch(function() { return { items: [], hasMore: false, error: true }; });
   }
 
-  function renderActivityPage(data, page) {
-    var list = document.getElementById('activity-list');
-    var pagination = document.getElementById('activity-pagination');
-    if (!list || !pagination) return;
-
-    var events = data.items || [];
-    list.innerHTML = '';
-    if (!events.length) {
-      list.innerHTML = '<p class="loading-text">no recent public activity</p>';
-      pagination.innerHTML = '';
-      return;
-    }
-
-    events.forEach(function(event, i) {
-      list.appendChild(renderActivityItem(event, i));
-    });
-    renderActivityPagination(data.hasMore, page);
-  }
-
   function renderActivityItem(event, i) {
     var info = getActivityInfo(event);
     var item = el('div', 'activity-item');
     item.style.opacity = '0';
-    item.style.animation = 'fadeUp 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards ' + (i*0.035) + 's';
+    item.style.animation = 'fadeUp 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards ' + (i * 0.035) + 's';
     item.innerHTML =
       '<span class="activity-dot ' + info.dot + '"></span>' +
       '<span class="activity-repo">' + escapeHTML(info.repo || 'GitHub') + '</span>' +
@@ -948,56 +1101,56 @@ footer p span { color: var(--accent-dim) }
     return name.indexOf(USER + '/') === 0 ? name.substring(USER.length + 1) : name;
   }
 
-  function escapeHTML(str) {
-    return String(str || '').replace(/[&<>"']/g, function(m) {
-      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m];
+  function renderActivityPageData(data, page) {
+    var list = document.getElementById('activity-list');
+    var paginationEl = document.getElementById('activity-pagination');
+    if (!list) return;
+
+    var events = data.items || [];
+    list.innerHTML = '';
+
+    if (!events.length) {
+      list.innerHTML = '<p class="loading-text">no recent public activity</p>';
+      if (paginationEl) paginationEl.innerHTML = '';
+      return;
+    }
+
+    events.forEach(function(event, i) { list.appendChild(renderActivityItem(event, i)); });
+
+    // Update count label
+    var countEl = document.getElementById('activity-count');
+    if (countEl) countEl.textContent = 'page ' + page;
+
+    // For activity, GitHub doesn't expose total count easily.
+    // We use hasMore flag: if there's a next page, show numbered pages up to
+    // what we know, with a dynamic "+ more" next button.
+    var knownMax = data.totalPages || (data.hasMore ? page + 1 : page);
+    // Clamp to reasonable max (GitHub caps public events at ~10 pages)
+    knownMax = Math.min(knownMax, page + (data.hasMore ? 5 : 0));
+
+    renderPagination('activity-pagination', page, knownMax, function(p) {
+      loadActivityPage(p);
+      var sec = document.getElementById('activity');
+      if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
-  }
 
-  function renderActivityPagination(hasMore, page) {
-    var pagination = document.getElementById('activity-pagination');
-    if (!pagination) return;
-    pagination.innerHTML = '';
-    if (!hasMore && page === 1) return;
-
-    var prev = document.createElement('button');
-    prev.type = 'button';
-    prev.className = 'activity-page-btn';
-    prev.textContent = 'Previous';
-    prev.disabled = page === 1;
-    prev.onclick = function() { loadActivityPage(page - 1); };
-
-    var hint = el('span', 'activity-page-hint');
-    hint.textContent = 'page ' + page;
-
-    var next = document.createElement('button');
-    next.type = 'button';
-    next.className = 'activity-page-btn';
-    next.textContent = 'Load more';
-    next.disabled = !hasMore;
-    next.onclick = function() { loadActivityPage(page + 1); };
-
-    pagination.appendChild(prev);
-    pagination.appendChild(hint);
-    pagination.appendChild(next);
+    // If hasMore but we only know up to page+1, also make sure next btn is enabled
+    // (renderPagination handles this since knownMax >= page+1)
   }
 
   function loadActivityPage(page) {
     if (activityState.loading) return;
     activityState.loading = true;
     activityState.page = page;
-
     var list = document.getElementById('activity-list');
-    if (list) list.innerHTML = '<p class="loading-text">' + (page === 1 ? 'loading activity' : 'loading page ' + page) + '</p>';
-
+    if (list) list.innerHTML = '<p class="loading-text">' + (page === 1 ? 'loading activity' : 'loading page ' + page + '…') + '</p>';
     fetchActivityPage(page).then(function(data) {
       activityState.loading = false;
       if (!data || data.error) {
         if (list) list.innerHTML = '<p class="loading-text">Could not load activity.</p>';
-        renderActivityPagination(false, page);
         return;
       }
-      renderActivityPage(data, page);
+      renderActivityPageData(data, page);
     });
   }
 
@@ -1010,163 +1163,83 @@ footer p span { color: var(--accent-dim) }
     var repos = u.repositories.nodes.filter(function(r) { return !r.isFork; });
     var totalCount = u.repositories.totalCount;
 
-     renderProfile({ login: u.login, name: u.name, avatar_url: u.avatarUrl, bio: u.bio, public_repos: totalCount, followers: u.followers ? u.followers.totalCount : 0, public_gists: 0 });
+    renderProfile({ login: u.login, name: u.name, avatar_url: u.avatarUrl, bio: u.bio, public_repos: totalCount, followers: u.followers ? u.followers.totalCount : 0, public_gists: 0 });
 
-    var totalStars = repos.reduce(function(s, r) { return s + (r.stargazerCount||0); }, 0);
-    var totalForks = repos.reduce(function(s, r) { return s + (r.forkCount||0); }, 0);
-    var langCounts = {}; repos.forEach(function(r) { if (r.primaryLanguage) langCounts[r.primaryLanguage.name] = (langCounts[r.primaryLanguage.name]||0) + 1; });
-    var topLang = Object.keys(langCounts).sort(function(a,b) { return langCounts[b]-langCounts[a]; })[0] || null;
-    var hs = document.getElementById('hero-stats');
-    if (hs) hs.innerHTML = '<span class="stat-badge"><span class="stat-icon">★</span> <span class="stat-val">' + shortNum(totalStars) + '</span> stars</span><span class="stat-badge"><span class="stat-icon">⑂</span> <span class="stat-val">' + shortNum(totalForks) + '</span> forks</span><span class="stat-badge"><span class="stat-icon">◇</span> <span class="stat-val">' + totalCount + '</span> repos</span>' + (topLang ? '<span class="stat-badge"><span class="stat-icon">●</span> <span class="stat-val">' + topLang + '</span></span>' : '');
+    var totalStars = repos.reduce(function(s, r) { return s + (r.stargazerCount || 0); }, 0);
+    var projectCount = repos.length;
+    var langCounts = {};
+    repos.forEach(function(r) { if (r.primaryLanguage) langCounts[r.primaryLanguage.name] = (langCounts[r.primaryLanguage.name] || 0) + 1; });
+    var topLang = Object.keys(langCounts).sort(function(a, b) { return langCounts[b] - langCounts[a]; })[0] || null;
 
-    // Languages
     var langBytes = {};
+    var gqlLanguageColors = {};
     repos.forEach(function(r) {
-      if (r.languages && r.languages.edges) { r.languages.edges.forEach(function(e) { langBytes[e.node.name] = (langBytes[e.node.name]||0) + e.size; }); }
-      else if (r.primaryLanguage) { langBytes[r.primaryLanguage.name] = (langBytes[r.primaryLanguage.name]||0) + 1; }
+      if (r.primaryLanguage && r.primaryLanguage.color) gqlLanguageColors[r.primaryLanguage.name] = r.primaryLanguage.color;
+      if (r.languages && r.languages.edges) {
+        r.languages.edges.forEach(function(e) {
+          langBytes[e.node.name] = (langBytes[e.node.name] || 0) + e.size;
+          if (e.node.color) gqlLanguageColors[e.node.name] = e.node.color;
+        });
+      } else if (r.primaryLanguage) {
+        langBytes[r.primaryLanguage.name] = (langBytes[r.primaryLanguage.name] || 0) + 1;
+      }
     });
-    renderLangChart(Object.keys(langBytes).map(function(l) { return { name: l, bytes: langBytes[l] }; }));
-
+    renderLangChart(Object.keys(langBytes).map(function(l) { return { name: l, bytes: langBytes[l], color: gqlLanguageColors[l] || null }; }));
     renderProjects(repos);
 
-    // Releases
     var rl = document.getElementById('release-list');
     if (rl) {
       var releases = [];
-      repos.forEach(function(r) { if (r.releases && r.releases.nodes && r.releases.nodes[0]) releases.push({ name: r.name, tag: r.releases.nodes[0].tagName, date: r.releases.nodes[0].publishedAt||r.releases.nodes[0].createdAt, url: r.releases.nodes[0].url||r.url }); });
-      if (releases.length) {
-        releases.sort(function(a,b) { return new Date(b.date)-new Date(a.date); });
-        rl.innerHTML = '';
-        releases.forEach(function(r) {
-          var row = el('div', 'release-row');
-          row.innerHTML = '<span class="release-name">' + r.name + '</span><span class="release-tag">' + r.tag + '</span><span class="release-date">' + timeAgo(r.date) + '</span><a class="release-dl" href="' + r.url + '" target="_blank">View <span class="arrow">&rarr;</span></a>';
-          rl.appendChild(row);
-        });
-      } else {
-        rl.innerHTML = '<p class="loading-text">no recent releases</p>';
-      }
+      repos.forEach(function(r) { if (r.releases && r.releases.nodes && r.releases.nodes[0]) releases.push({ name: r.name, tag: r.releases.nodes[0].tagName, date: r.releases.nodes[0].publishedAt || r.releases.nodes[0].createdAt, url: r.releases.nodes[0].url || r.url }); });
+      if (releases.length) { releases.sort(function(a, b) { return new Date(b.date) - new Date(a.date); }); renderReleaseRows(releases); }
+      else rl.innerHTML = '<p class="loading-text">no recent releases</p>';
     }
-
     document.getElementById('hero-gh-status').textContent = (u.location || 'GitHub') + ' · ' + totalCount + ' public repos';
     return true;
   }
 
   /* ═══════════════════════════════════════════════
-     RELEASES RENDER (for REST path — cached separately)
-     ═══════════════════════════════════════════════ */
-  function renderReleasesREST(repos) {
-    var rl = document.getElementById('release-list');
-    if (!rl) return;
-
-    var featured = repos.filter(function(r) { return FEATURED.indexOf(r.name) !== -1; });
-    if (!featured.length) { rl.innerHTML = '<p class="loading-text">no release data</p>'; return; }
-
-    // Try cached releases first
-    var cached = getCached('releases');
-    if (cached) {
-      renderReleaseRows(cached);
-    } else {
-      rl.innerHTML = '<p class="loading-text">checking releases</p>';
-    }
-
-    // Fetch releases for ALL featured repos (cached 30 min)
-    var allReleases = [], fetched = 0;
-    var totalToFetch = featured.length;
-    featured.forEach(function(repo) {
-      restFetch(REST_URL + '/repos/' + USER + '/' + repo.name + '/releases/latest')
-        .then(function(r) {
-          if (r && r.tag_name) {
-            allReleases.push({
-              name: repo.name,
-              tag: r.tag_name,
-              date: r.published_at || r.created_at,
-              url: r.html_url
-            });
-          }
-          fetched++;
-          if (fetched === totalToFetch) {
-            allReleases.sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
-            setCache('releases', allReleases, 1800000);
-            renderReleaseRows(allReleases);
-          }
-        })
-        .catch(function() {
-          fetched++;
-          if (fetched === totalToFetch) {
-            if (allReleases.length) {
-              setCache('releases', allReleases, 1800000);
-            }
-            renderReleaseRows(allReleases);
-          }
-        });
-    });
-  }
-
-  function renderReleaseRows(releases) {
-    var rl = document.getElementById('release-list');
-    if (!rl) return;
-    if (!releases.length) { rl.innerHTML = '<p class="loading-text">no recent releases</p>'; return; }
-    rl.innerHTML = '';
-    releases.forEach(function(r) {
-      var row = el('div', 'release-row');
-      row.innerHTML = '<span class="release-name">' + r.name + '</span><span class="release-tag">' + r.tag + '</span><span class="release-date">' + timeAgo(r.date) + '</span><a class="release-dl" href="' + r.url + '" target="_blank">View <span class="arrow">&rarr;</span></a>';
-      rl.appendChild(row);
-    });
-  }
-
-  /* ═══════════════════════════════════════════════
-     REST RENDER (single pass, no double fetch)
+     REST RENDER
      ═══════════════════════════════════════════════ */
   function renderFromREST(data) {
     if (!data || !data.user || !data.repos) return;
     var user = data.user;
     var repos = data.repos.filter(function(r) { return !r.fork; });
-     var repoCount = user.public_repos || repos.length;
-     renderProfile({
-       avatar_url: user.avatar_url,
-       login: user.login,
-       name: user.name,
-       bio: user.bio,
-       public_repos: repoCount,
-       followers: user.followers,
-       public_gists: user.public_gists || 0
-     });
+    var repoCount = user.public_repos || repos.length;
+    renderProfile({ avatar_url: user.avatar_url, login: user.login, name: user.name, bio: user.bio, public_repos: repoCount, followers: user.followers, public_gists: user.public_gists || 0 });
 
-    var totalStars = repos.reduce(function(s, r) { return s + (r.stargazers_count||0); }, 0);
-    var totalForks = repos.reduce(function(s, r) { return s + (r.forks_count||0); }, 0);
-    var langCounts = {}; repos.forEach(function(r) { if (r.language) langCounts[r.language] = (langCounts[r.language]||0) + 1; });
-    var topLang = Object.keys(langCounts).sort(function(a,b) { return langCounts[b]-langCounts[a]; })[0] || null;
-    var hs = document.getElementById('hero-stats');
-    if (hs) hs.innerHTML = '<span class="stat-badge"><span class="stat-icon">★</span> <span class="stat-val">' + shortNum(totalStars) + '</span> stars</span><span class="stat-badge"><span class="stat-icon">⑂</span> <span class="stat-val">' + shortNum(totalForks) + '</span> forks</span><span class="stat-badge"><span class="stat-icon">◇</span> <span class="stat-val">' + repoCount + '</span> repos</span>' + (topLang ? '<span class="stat-badge"><span class="stat-icon">●</span> <span class="stat-val">' + topLang + '</span></span>' : '');
-     document.getElementById('hero-gh-status').textContent = (user.location || 'GitHub') + ' · ' + repoCount + ' public repos';
-
+    var totalStars = repos.reduce(function(s, r) { return s + (r.stargazers_count || 0); }, 0);
+    var projectCount = repos.length;
+    var langCounts = {};
+    repos.forEach(function(r) { if (r.language) langCounts[r.language] = (langCounts[r.language] || 0) + 1; });
+    var topLang = Object.keys(langCounts).sort(function(a, b) { return langCounts[b] - langCounts[a]; })[0] || null;
+    document.getElementById('hero-gh-status').textContent = (user.location || 'GitHub') + ' · ' + repoCount + ' public repos';
     renderLangChart(Object.keys(langCounts).map(function(l) { return { name: l, bytes: langCounts[l] }; }));
     renderProjects(repos);
-
-    // Releases — fetch for recently active featured repos (cached separately)
     renderReleasesREST(repos);
   }
 
   /* ═══════════════════════════════════════════════
-     MAIN ENTRY
+     MAIN
      ═══════════════════════════════════════════════ */
   (function() {
     var p = new URLSearchParams(window.location.search);
     var t = p.get('token') || p.get('pat');
-    if (t && t.length > 5) { setToken(t); if (window.history.replaceState) window.history.replaceState({}, document.title, window.location.origin + window.location.pathname); }
+    if (t && t.length > 5) {
+      try { localStorage.setItem('gh_pat', t); } catch(e) {}
+      if (window.history.replaceState) window.history.replaceState({}, document.title, window.location.origin + window.location.pathname);
+    }
   })();
-  initPatUI();
+
   loadActivityPage(1);
 
   var token = getToken();
   if (token) {
-    // With PAT: use GraphQL (1 call, all data including releases)
     loadOnce('gql_' + USER,
       function() { return graphQLFetch(GQL_QUERY, { login: USER }); },
       function(data) { if (!data || !data.user || !renderFromGQL(data)) renderOffline(); }
     );
   } else {
-    // Without PAT: single REST fetch (user + repos)
     loadOnce('rest_' + USER,
       function() {
         return Promise.all([
@@ -1177,16 +1250,6 @@ footer p span { color: var(--accent-dim) }
       function(data) { renderFromREST(data); }
     );
   }
-
-  // /* ── Cache status UI ── */
-  // var ftr = document.querySelector('footer .container');
-  // if (ftr) {
-  //   var st = document.createElement('div');
-  //   st.id = 'cache-status'; st.className = 'cache-status';
-  //   st.title = 'Click to clear cache and refresh';
-  //   st.onclick = function() { if (confirm('Clear cache and refresh?')) { clearAllCache(); location.reload(); } };
-  //   ftr.appendChild(st);
-  // }
 
 })();
 </script>
