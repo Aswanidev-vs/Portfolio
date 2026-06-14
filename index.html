@@ -679,43 +679,73 @@ footer p span { color: var(--accent-dim) }
   /* ═══════════════════════════════════════════════
      CACHE
      ═══════════════════════════════════════════════ */
+  var CACHE_TTL = 120000;
+  var CACHE_PREFIX = 'pf_';
+
   function getCached(key) {
     try {
-      var raw = localStorage.getItem('pf_' + key);
+      var raw = localStorage.getItem(CACHE_PREFIX + key);
       if (!raw) return null;
       var d = JSON.parse(raw);
-      if (Date.now() > d.expires) { localStorage.removeItem('pf_' + key); return null; }
+      if (Date.now() > d.ts + CACHE_TTL) { localStorage.removeItem(CACHE_PREFIX + key); return null; }
       return d.value;
     } catch(e) { return null; }
   }
-  function setCache(key, value, ttl) {
-    try { localStorage.setItem('pf_' + key, JSON.stringify({ value: value, expires: Date.now() + (ttl || 300000) })); } catch(e) {}
+  function setCache(key, value) {
+    try { localStorage.setItem(CACHE_PREFIX + key, JSON.stringify({ value: value, ts: Date.now() })); } catch(e) {}
+  }
+  function getCacheAge(key) {
+    try {
+      var raw = localStorage.getItem(CACHE_PREFIX + key);
+      if (!raw) return null;
+      var d = JSON.parse(raw);
+      return d.ts || null;
+    } catch(e) { return null; }
+  }
+  function clearPortfolioCache() {
+    try {
+      var keys = [];
+      for (var i = 0; i < localStorage.length; i++) {
+        var k = localStorage.key(i);
+        if (k && k.indexOf(CACHE_PREFIX) === 0) keys.push(k);
+      }
+      keys.forEach(function(k) { localStorage.removeItem(k); });
+    } catch(e) {}
   }
 
   /* ═══════════════════════════════════════════════
      SINGLE-FETCH PATTERN
+     With PAT: always fetch fresh, show loading.
+     Without PAT: show cache instantly, fetch background,
+     update only if data changed.
      ═══════════════════════════════════════════════ */
   function loadOnce(cacheKey, fetchFn, renderFn) {
     var cached = getCached(cacheKey);
-    if (cached) renderFn(cached);
-    fetchFn().then(function(fresh) {
-      if (!fresh) { if (!cached) renderOffline(); return; }
-      setCache(cacheKey, fresh, 300000);
-      renderFn(fresh);
-    });
+    var hasPAT = !!getToken();
+
+    if (hasPAT) {
+      fetchFn().then(function(fresh) {
+        if (fresh) { setCache(cacheKey, fresh); renderFn(fresh); }
+        else if (cached) { renderFn(cached); }
+        else { renderOffline(); }
+      });
+    } else {
+      if (cached) renderFn(cached);
+      fetchFn().then(function(fresh) {
+        if (fresh) {
+          setCache(cacheKey, fresh);
+          var oldJSON = cached ? JSON.stringify(cached) : '';
+          var newJSON = JSON.stringify(fresh);
+          if (oldJSON !== newJSON) renderFn(fresh);
+        }
+      });
+    }
   }
 
   /* ═══════════════════════════════════════════════
      GITHUB API HELPERS
      ═══════════════════════════════════════════════ */
   function getToken() { try { return localStorage.getItem('gh_pat') || ''; } catch(e) { return ''; } }
-  function clearPortfolioCache() {
-    try {
-      Object.keys(localStorage).forEach(function(key) {
-        if (key.indexOf('pf_') === 0) localStorage.removeItem(key);
-      });
-    } catch(e) {}
-  }
   window.clearPortfolioCache = clearPortfolioCache;
 
   var GQL_QUERY = [
@@ -745,7 +775,8 @@ footer p span { color: var(--accent-dim) }
     return fetch(GQL_URL, {
       method: 'POST',
       headers: { 'Authorization': 'token ' + token, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query: query, variables: vars })
+      body: JSON.stringify({ query: query, variables: vars }),
+      cache: 'no-store'
     }).then(function(res) {
       if (!res.ok) return null;
       return res.json().then(function(json) {
@@ -759,7 +790,7 @@ footer p span { color: var(--accent-dim) }
     var headers = { 'Accept': 'application/vnd.github.v3+json' };
     var token = getToken();
     if (token) headers['Authorization'] = 'token ' + token;
-    return fetch(url, { headers: headers }).then(function(res) {
+    return fetch(url, { headers: headers, cache: 'no-store' }).then(function(res) {
       if (!res.ok) { if (res.status === 403) renderRateLimited(); return null; }
       return res.json();
     }).catch(function() { return null; });
@@ -778,9 +809,7 @@ footer p span { color: var(--accent-dim) }
       LANGUAGE_COLORS = cached;
       return Promise.resolve(cached);
     }
-    if (cached) {
-      try { localStorage.removeItem('pf_language_colors'); } catch(e) {}
-    }
+    try { localStorage.removeItem(CACHE_PREFIX + 'language_colors'); } catch(e) {}
 
     languageColorsPromise = restFetch(REST_URL + '/languages').then(function(languages) {
       var map = {};
@@ -794,7 +823,7 @@ footer p span { color: var(--accent-dim) }
         });
       }
       LANGUAGE_COLORS = map;
-      if (Object.keys(map).length) setCache('language_colors', map, 604800000);
+      if (Object.keys(map).length) setCache('language_colors', map);
       return map;
     }).catch(function() {
       LANGUAGE_COLORS = {};
@@ -939,11 +968,12 @@ footer p span { color: var(--accent-dim) }
     container.innerHTML = '<p class="loading-text">loading language colors</p>';
     loadLanguageColors().then(function() {
       var total = langArray.reduce(function(a, b) { return a + b.bytes; }, 0);
-      var sorted = langArray.slice().sort(function(a, b) { return b.bytes - a.bytes; }).slice(0, 12);
+      var sorted = langArray.slice().sort(function(a, b) { return b.bytes - a.bytes; });
       if (!sorted.length) { container.innerHTML = '<p class="loading-text">no language data</p>'; return; }
       container.innerHTML = '';
       sorted.forEach(function(lang) {
         var pct = total > 0 ? (lang.bytes / total * 100) : 0;
+        if (pct < 0.1 && sorted.length > 8) return;
         var color = getLanguageColor(lang.name, lang.color);
         var row = el('div', 'lang-row');
         row.innerHTML = '<span class="lang-name">' + escapeHTML(lang.name) + '</span><div class="lang-bar-track"><div class="lang-bar-fill" style="background:' + color + ';width:0%" data-pct="' + pct + '"></div></div><span class="lang-pct">' + pct.toFixed(1) + '%</span>';
@@ -1064,13 +1094,13 @@ footer p span { color: var(--accent-dim) }
           fetched++;
           if (fetched === featured.length) {
             allReleases.sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
-            setCache('releases', allReleases, 1800000);
+            setCache('releases', allReleases);
             renderReleaseRows(allReleases);
           }
         })
         .catch(function() {
           fetched++;
-          if (fetched === featured.length) { setCache('releases', allReleases, 1800000); renderReleaseRows(allReleases); }
+          if (fetched === featured.length) { setCache('releases', allReleases); renderReleaseRows(allReleases); }
         });
     });
   }
@@ -1081,26 +1111,24 @@ footer p span { color: var(--accent-dim) }
   function fetchActivityPage(page) {
     var cacheKey = 'activity_' + USER + '_' + page;
     var cached = getCached(cacheKey);
-    if (cached && cached.items) return Promise.resolve(cached);
     var token = getToken();
     var headers = { 'Accept': 'application/vnd.github.v3+json' };
     if (token) headers['Authorization'] = 'token ' + token;
-    return fetch(REST_URL + '/users/' + USER + '/events/public?per_page=' + ACTIVITY_PER_PAGE + '&page=' + page, { headers: headers })
+    return fetch(REST_URL + '/users/' + USER + '/events/public?per_page=' + ACTIVITY_PER_PAGE + '&page=' + page, { headers: headers, cache: 'no-store' })
       .then(function(res) {
-        if (!res.ok) { if (res.status === 403) renderRateLimited(); return { items: [], hasMore: false, error: true }; }
+        if (!res.ok) { if (res.status === 403) renderRateLimited(); return cached || { items: [], hasMore: false, error: true }; }
         var link = res.headers.get('Link') || '';
         var hasMore = /rel="next"/.test(link);
         var totalFromHeader = null;
-        // GitHub caps public events at ~300; estimate total pages from Link header last page
         var lastMatch = link.match(/page=(\d+)>;\s*rel="last"/);
         if (lastMatch) totalFromHeader = parseInt(lastMatch[1]);
         return res.json().then(function(events) {
           var data = { items: events || [], hasMore: hasMore, totalPages: totalFromHeader, fetchedAt: Date.now() };
-          setCache(cacheKey, data, 300000);
+          setCache(cacheKey, data);
           return data;
         });
       })
-      .catch(function() { return { items: [], hasMore: false, error: true }; });
+      .catch(function() { return cached || { items: [], hasMore: false, error: true }; });
   }
 
   function renderActivityItem(event, i) {
@@ -1240,7 +1268,7 @@ footer p span { color: var(--accent-dim) }
       if (releases.length) { releases.sort(function(a, b) { return new Date(b.date) - new Date(a.date); }); renderReleaseRows(releases); }
       else rl.innerHTML = '<p class="loading-text">no recent releases</p>';
     }
-    document.getElementById('hero-gh-status').textContent = (u.location || 'GitHub') + ' · ' + totalRepos + ' repos';
+    document.getElementById('hero-gh-status').textContent = (u.location || 'GitHub') + ' · ' + totalRepos + ' repos · fetched ' + timeAgo(new Date().toISOString());
     return true;
   }
 
@@ -1262,7 +1290,7 @@ footer p span { color: var(--accent-dim) }
     var langCounts = {};
     repos.forEach(function(r) { if (r.language) langCounts[r.language] = (langCounts[r.language] || 0) + 1; });
     var topLang = Object.keys(langCounts).sort(function(a, b) { return langCounts[b] - langCounts[a]; })[0] || null;
-    document.getElementById('hero-gh-status').textContent = (user.location || 'GitHub') + ' · ' + totalRepos + ' repos';
+    document.getElementById('hero-gh-status').textContent = (user.location || 'GitHub') + ' · ' + totalRepos + ' repos · fetched ' + timeAgo(new Date().toISOString());
     renderLangChart(Object.keys(langCounts).map(function(l) { return { name: l, bytes: langCounts[l] }; }));
     renderProjects(repos);
     renderReleasesREST(repos);
