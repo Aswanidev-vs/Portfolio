@@ -90,10 +90,11 @@ jobs:
 
           # Extract language bytes (aggregated from GraphQL data)
           LANG_BYTES=$(echo "$GQL_RESULT" | jq '
-            [.data.user.repositories.nodes[] | .languages.edges[] | {name: .node.name, size: .size}]
+            [.data.user.repositories.nodes[] | .languages.edges[] | {name: .node.name, size: (.size | tonumber)}]
             | group_by(.name)
             | map({name: .[0].name, bytes: (map(.size) | add)})
             | sort_by(-.bytes)
+            | map({key: .name, value: .bytes})
             | from_entries
           ')
 
