@@ -102,11 +102,9 @@ jobs:
           ACTIVITY_DATA="[]"
           for PAGE in 1 2 3; do
             PAGE_DATA=$(curl -s -H "Authorization: token $GH_TOKEN" -H "Accept: application/vnd.github.v3+json" "$REST/users/$USER/events/public?per_page=30&page=$PAGE")
-            if [ "$PAGE" = "1" ]; then
-              ACTIVITY_DATA="$PAGE_DATA"
-            else
-              ACTIVITY_DATA=$(echo "$ACTIVITY_DATA $PAGE_DATA" | jq -s '.[0] + .[1]')
-            fi
+            echo "$ACTIVITY_DATA" > /tmp/activity_current.json
+            echo "$PAGE_DATA" > /tmp/activity_page.json
+            ACTIVITY_DATA=$(jq -s '.[0] + .[1]' /tmp/activity_current.json /tmp/activity_page.json)
           done
 
           # Extract releases from GraphQL data (already fetched)
