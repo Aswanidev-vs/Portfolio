@@ -94,13 +94,13 @@ jobs:
           ')
 
           # Fetch activity (3 pages via REST - GraphQL doesn't support events)
-          ACTIVITY_DATA="[]"
+          echo "[]" > /tmp/activity_combined.json
           for PAGE in 1 2 3; do
-            PAGE_DATA=$(curl -s -H "Authorization: token $GH_TOKEN" -H "Accept: application/vnd.github.v3+json" "$REST/users/$USER/events/public?per_page=30&page=$PAGE")
-            echo "$ACTIVITY_DATA" > /tmp/activity_current.json
-            echo "$PAGE_DATA" > /tmp/activity_page.json
-            ACTIVITY_DATA=$(jq -s '.[0] + .[1]' /tmp/activity_current.json /tmp/activity_page.json)
+            curl -s -H "Authorization: token $GH_TOKEN" -H "Accept: application/vnd.github.v3+json" "$REST/users/$USER/events/public?per_page=30&page=$PAGE" > /tmp/activity_page.json
+            jq -s '.[0] + .[1]' /tmp/activity_combined.json /tmp/activity_page.json > /tmp/activity_combined.json.tmp
+            mv /tmp/activity_combined.json.tmp /tmp/activity_combined.json
           done
+          ACTIVITY_DATA=$(cat /tmp/activity_combined.json)
 
           # Extract releases from GraphQL data (already fetched)
           RELEASES=$(echo "$GQL_RESULT" | jq '[.data.user.repositories.nodes[] | select(.releases.nodes[0]) | {
