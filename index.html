@@ -681,6 +681,8 @@ footer p span { color: var(--accent-dim) }
      ═══════════════════════════════════════════════ */
   var CACHE_TTL = 120000;
   var CACHE_PREFIX = 'pf_';
+  var SHARED_CACHE_URL = 'cache.json';
+  var sharedCachePromise = null;
 
   function getCached(key) {
     try {
@@ -710,16 +712,53 @@ footer p span { color: var(--accent-dim) }
         if (k && k.indexOf(CACHE_PREFIX) === 0) keys.push(k);
       }
       keys.forEach(function(k) { localStorage.removeItem(k); });
+      localStorage.removeItem('pf_shared_cache_ts');
     } catch(e) {}
+  }
+
+  /* ═══════════════════════════════════════════════
+     SHARED CACHE (encrypted static file)
+     ═══════════════════════════════════════════════ */
+  function fetchSharedCache() {
+    if (sharedCachePromise) return sharedCachePromise;
+    sharedCachePromise = fetch(SHARED_CACHE_URL, { cache: 'no-store' })
+      .then(function(res) {
+        if (!res.ok) return null;
+        return res.json();
+      })
+      .then(function(wrapper) {
+        if (!wrapper || !wrapper.d) return null;
+        try {
+          var decoded = atob(wrapper.d.split('').reverse().join(''));
+          return JSON.parse(decoded);
+        } catch(e) { return null; }
+      })
+      .catch(function() { return null; });
+    return sharedCachePromise;
+  }
+
+  function loadSharedCache() {
+    var localTs = parseInt(localStorage.getItem('pf_shared_cache_ts') || '0', 10);
+    if (Date.now() - localTs < CACHE_TTL) {
+      var local = getCached('shared_data');
+      if (local) return Promise.resolve(local);
+    }
+    return fetchSharedCache().then(function(data) {
+      if (data) {
+        setCache('shared_data', data);
+        try { localStorage.setItem('pf_shared_cache_ts', String(Date.now())); } catch(e) {}
+      }
+      return data;
+    });
   }
 
   /* ═══════════════════════════════════════════════
      SINGLE-FETCH PATTERN
      With PAT: always fetch fresh, show loading.
-     Without PAT: show cache instantly, fetch background,
+     Without PAT: try shared cache first, then API,
      update only if data changed.
      ═══════════════════════════════════════════════ */
-  function loadOnce(cacheKey, fetchFn, renderFn) {
+  function loadOnce(cacheKey, fetchFn, renderFn, mapSharedFn) {
     var cached = getCached(cacheKey);
     var hasPAT = !!getToken();
 
@@ -731,13 +770,24 @@ footer p span { color: var(--accent-dim) }
       });
     } else {
       if (cached) renderFn(cached);
-      fetchFn().then(function(fresh) {
-        if (fresh) {
-          setCache(cacheKey, fresh);
-          var oldJSON = cached ? JSON.stringify(cached) : '';
-          var newJSON = JSON.stringify(fresh);
-          if (oldJSON !== newJSON) renderFn(fresh);
+
+      loadSharedCache().then(function(shared) {
+        if (shared && mapSharedFn) {
+          var mapped = mapSharedFn(shared);
+          if (mapped) {
+            setCache(cacheKey, mapped);
+            renderFn(mapped);
+            return;
+          }
         }
+        fetchFn().then(function(fresh) {
+          if (fresh) {
+            setCache(cacheKey, fresh);
+            var oldJSON = cached ? JSON.stringify(cached) : '';
+            var newJSON = JSON.stringify(fresh);
+            if (oldJSON !== newJSON) renderFn(fresh);
+          }
+        });
       });
     }
   }
@@ -811,20 +861,40 @@ footer p span { color: var(--accent-dim) }
     }
     try { localStorage.removeItem(CACHE_PREFIX + 'language_colors'); } catch(e) {}
 
-    languageColorsPromise = restFetch(REST_URL + '/languages').then(function(languages) {
-      var map = {};
-      if (Array.isArray(languages)) {
-        languages.forEach(function(lang) {
-          if (lang && lang.name && lang.color) map[lang.name] = lang.color;
+    languageColorsPromise = loadSharedCache().then(function(shared) {
+      if (shared && shared.repos && Array.isArray(shared.repos)) {
+        var map = {};
+        shared.repos.forEach(function(repo) {
+          if (repo.primaryLanguage && repo.primaryLanguage.name && repo.primaryLanguage.color) {
+            map[repo.primaryLanguage.name] = repo.primaryLanguage.color;
+          }
+          if (repo.languages && repo.languages.edges) {
+            repo.languages.edges.forEach(function(e) {
+              if (e.node && e.node.name && e.node.color) map[e.node.name] = e.node.color;
+            });
+          }
         });
-      } else if (languages) {
-        Object.keys(languages).forEach(function(name) {
-          if (languages[name] && languages[name].color) map[name] = languages[name].color;
-        });
+        if (Object.keys(map).length) {
+          LANGUAGE_COLORS = map;
+          setCache('language_colors', map);
+          return map;
+        }
       }
-      LANGUAGE_COLORS = map;
-      if (Object.keys(map).length) setCache('language_colors', map);
-      return map;
+      return restFetch(REST_URL + '/languages').then(function(languages) {
+        var map = {};
+        if (Array.isArray(languages)) {
+          languages.forEach(function(lang) {
+            if (lang && lang.name && lang.color) map[lang.name] = lang.color;
+          });
+        } else if (languages) {
+          Object.keys(languages).forEach(function(name) {
+            if (languages[name] && languages[name].color) map[name] = languages[name].color;
+          });
+        }
+        LANGUAGE_COLORS = map;
+        if (Object.keys(map).length) setCache('language_colors', map);
+        return map;
+      });
     }).catch(function() {
       LANGUAGE_COLORS = {};
       return {};
@@ -833,10 +903,10 @@ footer p span { color: var(--accent-dim) }
   }
 
   function renderRateLimited() {
-    document.getElementById('hero-gh-status').textContent = 'rate limited';
+    document.getElementById('hero-gh-status').textContent = 'loading...';
     ['profile-card', 'lang-chart', 'project-grid', 'release-list', 'activity-list'].forEach(function(id) {
       var c = document.getElementById(id);
-      if (c && c.querySelector('.loading-text')) c.innerHTML = '<p class="loading-text">Rate limited. Add a GitHub PAT for 5,000 req/hr.</p>';
+      if (c && c.querySelector('.loading-text')) c.innerHTML = '<p class="loading-text">Loading data...</p>';
     });
   }
   function renderOffline() {
@@ -1084,24 +1154,32 @@ footer p span { color: var(--accent-dim) }
     var featured = repos.filter(function(r) { return FEATURED.indexOf(r.name) !== -1; });
     if (!featured.length) { rl.innerHTML = '<p class="loading-text">no release data</p>'; return; }
     var cached = getCached('releases');
-    if (cached) renderReleaseRows(cached);
-    else rl.innerHTML = '<p class="loading-text">checking releases</p>';
-    var allReleases = [], fetched = 0;
-    featured.forEach(function(repo) {
-      restFetch(REST_URL + '/repos/' + USER + '/' + repo.name + '/releases/latest')
-        .then(function(r) {
-          if (r && r.tag_name) allReleases.push({ name: repo.name, tag: r.tag_name, date: r.published_at || r.created_at, url: r.html_url });
-          fetched++;
-          if (fetched === featured.length) {
-            allReleases.sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
-            setCache('releases', allReleases);
-            renderReleaseRows(allReleases);
-          }
-        })
-        .catch(function() {
-          fetched++;
-          if (fetched === featured.length) { setCache('releases', allReleases); renderReleaseRows(allReleases); }
-        });
+    if (cached) { renderReleaseRows(cached); return; }
+
+    loadSharedCache().then(function(shared) {
+      if (shared && shared.releases && shared.releases.length) {
+        setCache('releases', shared.releases);
+        renderReleaseRows(shared.releases);
+        return;
+      }
+      rl.innerHTML = '<p class="loading-text">checking releases</p>';
+      var allReleases = [], fetched = 0;
+      featured.forEach(function(repo) {
+        restFetch(REST_URL + '/repos/' + USER + '/' + repo.name + '/releases/latest')
+          .then(function(r) {
+            if (r && r.tag_name) allReleases.push({ name: repo.name, tag: r.tag_name, date: r.published_at || r.created_at, url: r.html_url });
+            fetched++;
+            if (fetched === featured.length) {
+              allReleases.sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
+              setCache('releases', allReleases);
+              renderReleaseRows(allReleases);
+            }
+          })
+          .catch(function() {
+            fetched++;
+            if (fetched === featured.length) { setCache('releases', allReleases); renderReleaseRows(allReleases); }
+          });
+      });
     });
   }
 
@@ -1111,6 +1189,25 @@ footer p span { color: var(--accent-dim) }
   function fetchActivityPage(page) {
     var cacheKey = 'activity_' + USER + '_' + page;
     var cached = getCached(cacheKey);
+    var token = getToken();
+
+    if (!token && page <= 3) {
+      return loadSharedCache().then(function(shared) {
+        if (shared && shared.activity && Array.isArray(shared.activity)) {
+          var start = (page - 1) * ACTIVITY_PER_PAGE;
+          var items = shared.activity.slice(start, start + ACTIVITY_PER_PAGE);
+          var hasMore = start + ACTIVITY_PER_PAGE < shared.activity.length;
+          var data = { items: items, hasMore: hasMore, totalPages: Math.ceil(shared.activity.length / ACTIVITY_PER_PAGE), fetchedAt: shared.ts || Date.now() };
+          setCache(cacheKey, data);
+          return data;
+        }
+        return fetchActivityFromAPI(page, cached);
+      });
+    }
+    return fetchActivityFromAPI(page, cached);
+  }
+
+  function fetchActivityFromAPI(page, cached) {
     var token = getToken();
     var headers = { 'Accept': 'application/vnd.github.v3+json' };
     if (token) headers['Authorization'] = 'token ' + token;
@@ -1287,11 +1384,16 @@ footer p span { color: var(--accent-dim) }
 
     var totalStars = repos.reduce(function(s, r) { return s + (r.stargazers_count || 0); }, 0);
     var projectCount = repos.length;
-    var langCounts = {};
-    repos.forEach(function(r) { if (r.language) langCounts[r.language] = (langCounts[r.language] || 0) + 1; });
-    var topLang = Object.keys(langCounts).sort(function(a, b) { return langCounts[b] - langCounts[a]; })[0] || null;
+    var langData = data.languageBytes || {};
+    var hasLangBytes = Object.keys(langData).length > 0;
+    if (!hasLangBytes) {
+      var langCounts = {};
+      repos.forEach(function(r) { if (r.language) langCounts[r.language] = (langCounts[r.language] || 0) + 1; });
+      langData = langCounts;
+    }
+    var topLang = Object.keys(langData).sort(function(a, b) { return langData[b] - langData[a]; })[0] || null;
     document.getElementById('hero-gh-status').textContent = (user.location || 'GitHub') + ' · ' + totalRepos + ' repos · fetched ' + timeAgo(new Date().toISOString());
-    renderLangChart(Object.keys(langCounts).map(function(l) { return { name: l, bytes: langCounts[l] }; }));
+    renderLangChart(Object.keys(langData).map(function(l) { return { name: l, bytes: langData[l] }; }));
     renderProjects(repos);
     renderReleasesREST(repos);
   }
@@ -1299,14 +1401,7 @@ footer p span { color: var(--accent-dim) }
   /* ═══════════════════════════════════════════════
      MAIN
      ═══════════════════════════════════════════════ */
-  (function() {
-    var p = new URLSearchParams(window.location.search);
-    var t = p.get('token') || p.get('pat');
-    if (t && t.length > 5) {
-      try { localStorage.setItem('gh_pat', t); } catch(e) {}
-      if (window.history.replaceState) window.history.replaceState({}, document.title, window.location.origin + window.location.pathname);
-    }
-  })();
+
 
   loadActivityPage(1);
 
@@ -1314,7 +1409,8 @@ footer p span { color: var(--accent-dim) }
   if (token) {
     loadOnce('gql_' + USER,
       function() { return graphQLFetch(GQL_QUERY, { login: USER }); },
-      function(data) { if (!data || !data.user || !renderFromGQL(data)) renderOffline(); }
+      function(data) { if (!data || !data.user || !renderFromGQL(data)) renderOffline(); },
+      null
     );
   } else {
     loadOnce('rest_' + USER,
@@ -1324,7 +1420,11 @@ footer p span { color: var(--accent-dim) }
           restFetch(REST_URL + '/users/' + USER + '/repos?per_page=100&sort=updated&type=owner')
         ]).then(function(r) { return { user: r[0], repos: r[1] }; });
       },
-      function(data) { renderFromREST(data); }
+      function(data) { renderFromREST(data); },
+      function(shared) {
+        if (!shared || !shared.user || !shared.repos) return null;
+        return { user: shared.user, repos: shared.repos, languageBytes: shared.languageBytes || {} };
+      }
     );
   }
 

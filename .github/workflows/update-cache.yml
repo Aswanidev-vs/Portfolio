@@ -1,0 +1,143 @@
+name: Update GitHub Cache
+
+on:
+  schedule:
+    - cron: '* * * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - 'index.html'
+
+permissions:
+  contents: write
+
+jobs:
+  update-cache:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch GitHub data and write encrypted cache
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          USER="Aswanidev-vs"
+          GQL="https://api.github.com/graphql"
+          REST="https://api.github.com"
+
+          # GraphQL query: user + repos + languages in ONE call
+          GQL_QUERY=$(cat <<'QUERY'
+          query($login: String!) {
+            user(login: $login) {
+              login name avatarUrl bio location
+              followers { totalCount }
+              repositories(first: 100, privacy: PUBLIC, isFork: false, orderBy: {field: UPDATED_AT, direction: DESC}, ownerAffiliations: OWNER) {
+                totalCount
+                nodes {
+                  name description url homepageUrl pushedAt createdAt
+                  stargazerCount forkCount isFork
+                  primaryLanguage { name color }
+                  languages(first: 10) { edges { size node { name color } } }
+                  licenseInfo { spdxId }
+                  releases(first: 1, orderBy: {field: CREATED_AT, direction: DESC}) {
+                    nodes { tagName publishedAt createdAt url }
+                  }
+                }
+              }
+              forkedRepositories: repositories(first: 1, privacy: PUBLIC, isFork: true, ownerAffiliations: OWNER) {
+                totalCount
+              }
+            }
+          }
+          QUERY
+          )
+
+          # Single GraphQL call for user + repos + languages
+          GQL_RESULT=$(curl -s -H "Authorization: token $GH_TOKEN" -H "Content-Type: application/json" \
+            -d "$(jq -n --arg q "$GQL_QUERY" --arg login "$USER" '{query: $q, variables: {login: $login}}')" \
+            "$GQL")
+
+          # Extract user data
+          USER_DATA=$(echo "$GQL_RESULT" | jq '{
+            login: .data.user.login,
+            name: .data.user.name,
+            avatar_url: .data.user.avatarUrl,
+            bio: .data.user.bio,
+            location: .data.user.location,
+            followers: .data.user.followers.totalCount,
+            public_repos: .data.user.repositories.totalCount,
+            forked_repos: .data.user.forkedRepositories.totalCount
+          }')
+
+          # Extract repos data
+          REPOS_DATA=$(echo "$GQL_RESULT" | jq '[.data.user.repositories.nodes[] | {
+            name: .name,
+            description: .description,
+            html_url: .url,
+            homepage: .homepageUrl,
+            pushed_at: .pushedAt,
+            created_at: .createdAt,
+            stargazers_count: .stargazerCount,
+            forks_count: .forkCount,
+            fork: .isFork,
+            language: .primaryLanguage.name,
+            primaryLanguage: .primaryLanguage,
+            languages: .languages,
+            license: (if .licenseInfo then {spdx_id: .licenseInfo.spdxId} else null end),
+            releases: .releases
+          }]')
+
+          # Extract language bytes (aggregated from GraphQL data)
+          LANG_BYTES=$(echo "$GQL_RESULT" | jq '
+            [.data.user.repositories.nodes[] | .languages.edges[] | {name: .node.name, size: .size}]
+            | group_by(.name)
+            | map({name: .[0].name, bytes: (map(.size) | add)})
+            | sort_by(-.bytes)
+            | from_entries
+          ')
+
+          # Fetch activity (3 pages via REST - GraphQL doesn't support events)
+          ACTIVITY_DATA="[]"
+          for PAGE in 1 2 3; do
+            PAGE_DATA=$(curl -s -H "Authorization: token $GH_TOKEN" -H "Accept: application/vnd.github.v3+json" "$REST/users/$USER/events/public?per_page=30&page=$PAGE")
+            if [ "$PAGE" = "1" ]; then
+              ACTIVITY_DATA="$PAGE_DATA"
+            else
+              ACTIVITY_DATA=$(echo "$ACTIVITY_DATA $PAGE_DATA" | jq -s '.[0] + .[1]')
+            fi
+          done
+
+          # Extract releases from GraphQL data (already fetched)
+          RELEASES=$(echo "$GQL_RESULT" | jq '[.data.user.repositories.nodes[] | select(.releases.nodes[0]) | {
+            name: .name,
+            tag: .releases.nodes[0].tagName,
+            date: (.releases.nodes[0].publishedAt // .releases.nodes[0].createdAt),
+            url: .releases.nodes[0].url
+          }] | sort_by(-.date)')
+
+          # Build cache object
+          TIMESTAMP=$(date +%s%3N)
+          CACHE=$(jq -n \
+            --argjson ts "$TIMESTAMP" \
+            --argjson user "$USER_DATA" \
+            --argjson repos "$REPOS_DATA" \
+            --argjson activity "$ACTIVITY_DATA" \
+            --argjson releases "$RELEASES" \
+            --argjson langs "$LANG_BYTES" \
+            '{ts: $ts, user: $user, repos: $repos, activity: $activity, releases: $releases, languageBytes: $langs}')
+
+          # Encode with simple obfuscation: base64 + reverse
+          ENCODED=$(echo "$CACHE" | base64 -w0 | rev)
+
+          # Write with wrapper
+          jq -n --arg d "$ENCODED" --arg v "1" '{v: $v, d: $d}' > cache.json
+
+          echo "Cache updated at $(date -u)"
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add cache.json
+          git diff --cached --quiet || git commit -m "chore: update GitHub cache [skip ci]" && git push
