@@ -27,8 +27,7 @@ jobs:
           REST="https://api.github.com"
 
           # GraphQL query: user + repos + languages in ONE call
-          GQL_QUERY=$(cat <<'QUERY'
-          query($login: String!) {
+          GQL_QUERY='query($login: String!) {
             user(login: $login) {
               login name avatarUrl bio location
               followers { totalCount }
@@ -49,9 +48,7 @@ jobs:
                 totalCount
               }
             }
-          }
-          QUERY
-          )
+          }'
 
           # Single GraphQL call for user + repos + languages
           GQL_RESULT=$(curl -s -H "Authorization: token $GH_TOKEN" -H "Content-Type: application/json" \
@@ -90,11 +87,9 @@ jobs:
 
           # Extract language bytes (aggregated from GraphQL data)
           LANG_BYTES=$(echo "$GQL_RESULT" | jq '
-            [.data.user.repositories.nodes[] | .languages.edges[] | {name: .node.name, size: (.size | tonumber)}]
+            [.data.user.repositories.nodes[] | .languages.edges[]? | {name: .node.name, size: .size}]
             | group_by(.name)
-            | map({name: .[0].name, bytes: (map(.size) | add)})
-            | sort_by(-.bytes)
-            | map({key: .name, value: .bytes})
+            | map({key: .[0].name, value: (map(.size) | add)})
             | from_entries
           ')
 
