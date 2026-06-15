@@ -1,5 +1,5 @@
 {
-  "ts": 1781530228116,
+  "ts": 1781544701082,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -13,11 +13,83 @@
   },
   "repos": [
     {
+      "name": "Gocut",
+      "description": "Gocut is a fast, lightweight, fully offline video editor for the desktop. Built with a Go backend (Wails) and Vue 3 frontend, it offers a multi-track timeline and other features without uploading footage to the cloud.",
+      "html_url": "https://github.com/Aswanidev-vs/Gocut",
+      "homepage": "",
+      "pushed_at": "2026-06-15T16:56:27Z",
+      "created_at": "2026-06-03T11:10:16Z",
+      "stargazers_count": 5,
+      "forks_count": 0,
+      "fork": false,
+      "language": "Vue",
+      "primaryLanguage": {
+        "name": "Vue",
+        "color": "#41b883"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 13156,
+            "node": {
+              "name": "NSIS",
+              "color": null
+            }
+          },
+          {
+            "size": 274,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          },
+          {
+            "size": 66567,
+            "node": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            }
+          },
+          {
+            "size": 292228,
+            "node": {
+              "name": "Vue",
+              "color": "#41b883"
+            }
+          },
+          {
+            "size": 650,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          },
+          {
+            "size": 19132,
+            "node": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            }
+          },
+          {
+            "size": 94517,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          }
+        ]
+      },
+      "license": {
+        "spdx_id": "AGPL-3.0"
+      }
+    },
+    {
       "name": "Portfolio",
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": null,
-      "pushed_at": "2026-06-15T13:26:10Z",
+      "pushed_at": "2026-06-15T13:30:29Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -252,78 +324,6 @@
       },
       "license": {
         "spdx_id": "MIT"
-      }
-    },
-    {
-      "name": "Gocut",
-      "description": "Gocut is a fast, lightweight, fully offline video editor for the desktop. Built with a Go backend (Wails) and Vue 3 frontend, it offers a multi-track timeline and other features without uploading footage to the cloud.",
-      "html_url": "https://github.com/Aswanidev-vs/Gocut",
-      "homepage": "",
-      "pushed_at": "2026-06-14T11:24:46Z",
-      "created_at": "2026-06-03T11:10:16Z",
-      "stargazers_count": 5,
-      "forks_count": 0,
-      "fork": false,
-      "language": "Vue",
-      "primaryLanguage": {
-        "name": "Vue",
-        "color": "#41b883"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 13156,
-            "node": {
-              "name": "NSIS",
-              "color": null
-            }
-          },
-          {
-            "size": 274,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 65622,
-            "node": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            }
-          },
-          {
-            "size": 291568,
-            "node": {
-              "name": "Vue",
-              "color": "#41b883"
-            }
-          },
-          {
-            "size": 650,
-            "node": {
-              "name": "CSS",
-              "color": "#663399"
-            }
-          },
-          {
-            "size": 19030,
-            "node": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            }
-          },
-          {
-            "size": 92238,
-            "node": {
-              "name": "Go",
-              "color": "#00ADD8"
-            }
-          }
-        ]
-      },
-      "license": {
-        "spdx_id": "AGPL-3.0"
       }
     },
     {
@@ -1331,6 +1331,84 @@
     }
   ],
   "activity": [
+    {
+      "id": "13361485494",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1258201172,
+        "name": "Aswanidev-vs/Gocut",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Gocut"
+      },
+      "payload": {
+        "repository_id": 1258201172,
+        "push_id": 35649368089,
+        "ref": "refs/heads/main",
+        "head": "d959a334513caaa0ef91b8437c4d0481657c2201",
+        "before": "29748a2038381e8f2226516be37809ae015b189b"
+      },
+      "public": true,
+      "created_at": "2026-06-15T16:55:39Z"
+    },
+    {
+      "id": "13361332412",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1258201172,
+        "name": "Aswanidev-vs/Gocut",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Gocut"
+      },
+      "payload": {
+        "repository_id": 1258201172,
+        "push_id": 35649214676,
+        "ref": "refs/heads/main",
+        "head": "29748a2038381e8f2226516be37809ae015b189b",
+        "before": "8e7dac8ab4ecd389552cd258789209dc9a78a07d"
+      },
+      "public": true,
+      "created_at": "2026-06-15T16:52:16Z"
+    },
+    {
+      "id": "13353241448",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1258201172,
+        "name": "Aswanidev-vs/Gocut",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Gocut"
+      },
+      "payload": {
+        "repository_id": 1258201172,
+        "push_id": 35641127573,
+        "ref": "refs/heads/main",
+        "head": "8e7dac8ab4ecd389552cd258789209dc9a78a07d",
+        "before": "64727ab7a87e0ab78a7f5994fa08dc1fcbe8a925"
+      },
+      "public": true,
+      "created_at": "2026-06-15T14:10:59Z"
+    },
     {
       "id": "13350871679",
       "type": "PushEvent",
@@ -8204,162 +8282,14 @@
         "url": "https://api.github.com/orgs/Open-LLM-VTuber",
         "avatar_url": "https://avatars.githubusercontent.com/u/193920693?"
       }
-    },
-    {
-      "id": "10599348626",
-      "type": "WatchEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 58981472,
-        "name": "xlab/android-go",
-        "url": "https://api.github.com/repos/xlab/android-go"
-      },
-      "payload": {
-        "action": "started"
-      },
-      "public": true,
-      "created_at": "2026-06-12T04:58:29Z"
-    },
-    {
-      "id": "10530675860",
-      "type": "WatchEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1138126760,
-        "name": "JoshAtticus/Compressor",
-        "url": "https://api.github.com/repos/JoshAtticus/Compressor"
-      },
-      "payload": {
-        "action": "started"
-      },
-      "public": true,
-      "created_at": "2026-06-10T19:56:52Z"
-    },
-    {
-      "id": "13122757323",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1014679271,
-        "name": "Aswanidev-vs/Aswanidev-vs",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Aswanidev-vs"
-      },
-      "payload": {
-        "repository_id": 1014679271,
-        "push_id": 35411606194,
-        "ref": "refs/heads/main",
-        "head": "575412d0488303edb7c9773ed1efd0584d65c61b",
-        "before": "6c0ecc063108eb8c01ace2901869ace4e4a7d4cf"
-      },
-      "public": true,
-      "created_at": "2026-06-10T17:59:56Z"
-    },
-    {
-      "id": "13121740324",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1014679271,
-        "name": "Aswanidev-vs/Aswanidev-vs",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Aswanidev-vs"
-      },
-      "payload": {
-        "repository_id": 1014679271,
-        "push_id": 35410606055,
-        "ref": "refs/heads/main",
-        "head": "6c0ecc063108eb8c01ace2901869ace4e4a7d4cf",
-        "before": "193d45eb9a3adc60fc561d887f081ffa57694f69"
-      },
-      "public": true,
-      "created_at": "2026-06-10T17:38:25Z"
-    },
-    {
-      "id": "13121531274",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1014679271,
-        "name": "Aswanidev-vs/Aswanidev-vs",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Aswanidev-vs"
-      },
-      "payload": {
-        "repository_id": 1014679271,
-        "push_id": 35410397118,
-        "ref": "refs/heads/main",
-        "head": "193d45eb9a3adc60fc561d887f081ffa57694f69",
-        "before": "ee36b3e676f1d98cb1ee64f385b7951f1765baf4"
-      },
-      "public": true,
-      "created_at": "2026-06-10T17:34:00Z"
-    },
-    {
-      "id": "13121319101",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1014679271,
-        "name": "Aswanidev-vs/Aswanidev-vs",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Aswanidev-vs"
-      },
-      "payload": {
-        "repository_id": 1014679271,
-        "push_id": 35410184969,
-        "ref": "refs/heads/main",
-        "head": "ee36b3e676f1d98cb1ee64f385b7951f1765baf4",
-        "before": "95afd84d2ef01c50b3d1e1e502c112872173da8f"
-      },
-      "public": true,
-      "created_at": "2026-06-10T17:29:44Z"
     }
   ],
   "releases": [
     {
       "name": "Gocut",
-      "tag": "v0.3.0",
-      "date": "2026-06-12T17:39:25Z",
-      "url": "https://github.com/Aswanidev-vs/Gocut/releases/tag/v0.3.0"
+      "tag": "v0.3.1",
+      "date": "2026-06-15T16:59:36Z",
+      "url": "https://github.com/Aswanidev-vs/Gocut/releases/tag/v0.3.1"
     },
     {
       "name": "gkport",
@@ -8413,11 +8343,11 @@
   "languageBytes": {
     "CSS": 375506,
     "Dockerfile": 378,
-    "Go": 2356933,
+    "Go": 2359212,
     "Go Template": 221386,
     "HTML": 454712,
     "Hack": 1679,
-    "JavaScript": 609309,
+    "JavaScript": 610254,
     "Lua": 2388,
     "Makefile": 3963,
     "NSIS": 38728,
@@ -8425,7 +8355,7 @@
     "PowerShell": 145,
     "Python": 25908,
     "Shell": 3585,
-    "TypeScript": 53586,
-    "Vue": 291568
+    "TypeScript": 53688,
+    "Vue": 292228
   }
 }
