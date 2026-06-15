@@ -81,7 +81,7 @@ jobs:
             license: (if .licenseInfo then {spdx_id: .licenseInfo.spdxId} else null end)
           }]' /tmp/gql.json > /tmp/repos.json
 
-          jq '[.data.user.repositories.nodes[] | .languages.edges[]? | {name: .node.name, size: .size}]
+          jq '[.data.user.repositories.nodes[] | select(.isFork == false) | .languages.edges[]? | {name: .node.name, size: .size}]
             | group_by(.name)
             | map({key: .[0].name, value: (map(.size) | add)})
             | from_entries' /tmp/gql.json > /tmp/languages.json
