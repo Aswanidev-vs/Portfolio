@@ -115,7 +115,7 @@ jobs:
             tag: .releases.nodes[0].tagName,
             date: (.releases.nodes[0].publishedAt // .releases.nodes[0].createdAt),
             url: .releases.nodes[0].url
-          }] | sort_by(-.date)')
+          }] | sort_by(-(.date | fromdateiso8601))')
 
           # Build cache object
           TIMESTAMP=$(date +%s%3N)
