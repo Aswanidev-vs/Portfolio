@@ -719,8 +719,8 @@ footer p span { color: var(--accent-dim) }
      SHARED CACHE (encrypted static file)
      ═══════════════════════════════════════════════ */
   function fetchSharedCache() {
-    if (sharedCachePromise) return sharedCachePromise;
-    sharedCachePromise = fetch(SHARED_CACHE_URL, { cache: 'no-store' })
+    sharedCachePromise = null;
+    sharedCachePromise = fetch(SHARED_CACHE_URL + '?v=' + Date.now(), { cache: 'no-store' })
       .then(function(res) {
         if (!res.ok) return null;
         return res.json();
@@ -738,15 +738,20 @@ footer p span { color: var(--accent-dim) }
 
   function loadSharedCache() {
     var localTs = parseInt(localStorage.getItem('pf_shared_cache_ts') || '0', 10);
-    if (Date.now() - localTs < CACHE_TTL) {
+    if (Date.now() - localTs < 60000) {
       var local = getCached('shared_data');
-      if (local) return Promise.resolve(local);
+      if (local && local.languageBytes && Object.keys(local.languageBytes).length) return Promise.resolve(local);
     }
     return fetchSharedCache().then(function(data) {
-      if (data) {
+      if (data && data.languageBytes && Object.keys(data.languageBytes).length) {
         setCache('shared_data', data);
         try { localStorage.setItem('pf_shared_cache_ts', String(Date.now())); } catch(e) {}
+        return data;
       }
+      try {
+        localStorage.removeItem(CACHE_PREFIX + 'shared_data');
+        localStorage.removeItem('pf_shared_cache_ts');
+      } catch(e) {}
       return data;
     });
   }
