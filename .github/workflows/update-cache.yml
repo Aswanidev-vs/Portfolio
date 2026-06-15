@@ -26,7 +26,6 @@ jobs:
           GQL="https://api.github.com/graphql"
           REST="https://api.github.com"
 
-          # GraphQL query: user + repos + languages in ONE call
           GQL_QUERY='query($login: String!) {
             user(login: $login) {
               login name avatarUrl bio location
@@ -50,13 +49,13 @@ jobs:
             }
           }'
 
-          # Single GraphQL call for user + repos + languages
-          GQL_RESULT=$(curl -s -H "Authorization: token $GH_TOKEN" -H "Content-Type: application/json" \
+          # GraphQL call → write to file
+          curl -s -H "Authorization: token $GH_TOKEN" -H "Content-Type: application/json" \
             -d "$(jq -n --arg q "$GQL_QUERY" --arg login "$USER" '{query: $q, variables: {login: $login}}')" \
-            "$GQL")
+            "$GQL" > /tmp/gql_result.json
 
-          # Extract user data
-          USER_DATA=$(echo "$GQL_RESULT" | jq '{
+          # Extract user data → file
+          jq '{
             login: .data.user.login,
             name: .data.user.name,
             avatar_url: .data.user.avatarUrl,
@@ -65,10 +64,10 @@ jobs:
             followers: .data.user.followers.totalCount,
             public_repos: .data.user.repositories.totalCount,
             forked_repos: .data.user.forkedRepositories.totalCount
-          }')
+          }' /tmp/gql_result.json > /tmp/user_data.json
 
-          # Extract repos data
-          REPOS_DATA=$(echo "$GQL_RESULT" | jq '[.data.user.repositories.nodes[] | {
+          # Extract repos data → file
+          jq '[.data.user.repositories.nodes[] | {
             name: .name,
             description: .description,
             html_url: .url,
@@ -83,48 +82,45 @@ jobs:
             languages: .languages,
             license: (if .licenseInfo then {spdx_id: .licenseInfo.spdxId} else null end),
             releases: .releases
-          }]')
+          }]' /tmp/gql_result.json > /tmp/repos_data.json
 
-          # Extract language bytes (aggregated from GraphQL data)
-          LANG_BYTES=$(echo "$GQL_RESULT" | jq '
-            [.data.user.repositories.nodes[] | .languages.edges[]? | {name: .node.name, size: .size}]
-            | group_by(.name)
-            | map({key: .[0].name, value: (map(.size) | add)})
-            | from_entries
-          ')
+          # Extract language bytes → file
+          jq '[
+            .data.user.repositories.nodes[] | .languages.edges[]? | {name: .node.name, size: .size}
+          ] | group_by(.name) | map({key: .[0].name, value: (map(.size) | add)}) | from_entries' \
+            /tmp/gql_result.json > /tmp/lang_bytes.json
 
-          # Fetch activity (3 pages via REST - GraphQL doesn't support events)
+          # Fetch activity (3 pages) → file-based merging
           echo "[]" > /tmp/activity_combined.json
           for PAGE in 1 2 3; do
-            curl -s -H "Authorization: token $GH_TOKEN" -H "Accept: application/vnd.github.v3+json" "$REST/users/$USER/events/public?per_page=30&page=$PAGE" > /tmp/activity_page.json
-            jq -s '.[0] + .[1]' /tmp/activity_combined.json /tmp/activity_page.json > /tmp/activity_combined.json.tmp
+            curl -s -H "Authorization: token $GH_TOKEN" -H "Accept: application/vnd.github.v3+json" \
+              "$REST/users/$USER/events/public?per_page=30&page=$PAGE" > /tmp/activity_page.json
+            jq -s 'add' /tmp/activity_combined.json /tmp/activity_page.json > /tmp/activity_combined.json.tmp
             mv /tmp/activity_combined.json.tmp /tmp/activity_combined.json
           done
-          ACTIVITY_DATA=$(cat /tmp/activity_combined.json)
 
-          # Extract releases from GraphQL data (already fetched)
-          RELEASES=$(echo "$GQL_RESULT" | jq '[.data.user.repositories.nodes[] | select(.releases.nodes[0]) | {
+          # Extract releases → file
+          jq '[.data.user.repositories.nodes[] | select(.releases.nodes[0]) | {
             name: .name,
             tag: .releases.nodes[0].tagName,
             date: (.releases.nodes[0].publishedAt // .releases.nodes[0].createdAt),
             url: .releases.nodes[0].url
-          }] | sort_by(-(.date | fromdateiso8601))')
+          }] | sort_by(-(.date | fromdateiso8601))' /tmp/gql_result.json > /tmp/releases.json
 
-          # Build cache object
+          # Build cache from files using jq --slurpfile
           TIMESTAMP=$(date +%s%3N)
-          CACHE=$(jq -n \
+          jq -n \
             --argjson ts "$TIMESTAMP" \
-            --argjson user "$USER_DATA" \
-            --argjson repos "$REPOS_DATA" \
-            --argjson activity "$ACTIVITY_DATA" \
-            --argjson releases "$RELEASES" \
-            --argjson langs "$LANG_BYTES" \
-            '{ts: $ts, user: $user, repos: $repos, activity: $activity, releases: $releases, languageBytes: $langs}')
+            --slurpfile user /tmp/user_data.json \
+            --slurpfile repos /tmp/repos_data.json \
+            --slurpfile activity /tmp/activity_combined.json \
+            --slurpfile releases /tmp/releases.json \
+            --slurpfile langs /tmp/lang_bytes.json \
+            '{ts: $ts, user: $user[0], repos: $repos[0], activity: $activity[0], releases: $releases[0], languageBytes: $langs[0]}' \
+            > /tmp/cache.json
 
-          # Encode with simple obfuscation: base64 + reverse
-          ENCODED=$(echo "$CACHE" | base64 -w0 | rev)
-
-          # Write with wrapper
+          # Encode and write
+          ENCODED=$(base64 -w0 /tmp/cache.json | rev)
           jq -n --arg d "$ENCODED" --arg v "1" '{v: $v, d: $d}' > cache.json
 
           echo "Cache updated at $(date -u)"
