@@ -2,11 +2,11 @@ name: Update GitHub Cache
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: '* * * * *'
   workflow_dispatch:
   push:
     paths:
-      - "index.html"
+      - 'index.html'
 
 permissions:
   contents: write
@@ -29,97 +29,32 @@ jobs:
           GQL="https://api.github.com/graphql"
           REST="https://api.github.com"
 
-          mkdir -p cache
-
           GQL_QUERY='query($login: String!) {
             user(login: $login) {
-              login
-              name
-              avatarUrl
-              bio
-              location
-
-              followers {
-                totalCount
-              }
-
-              repositories(
-                first: 100
-                privacy: PUBLIC
-                isFork: false
-                ownerAffiliations: OWNER
-                orderBy: {
-                  field: UPDATED_AT
-                  direction: DESC
-                }
-              ) {
+              login name avatarUrl bio location
+              followers { totalCount }
+              repositories(first: 100, privacy: PUBLIC, isFork: false, ownerAffiliations: OWNER, orderBy: {field: UPDATED_AT, direction: DESC}) {
                 totalCount
                 nodes {
-                  name
-                  description
-                  url
-                  homepageUrl
-                  pushedAt
-                  createdAt
-                  stargazerCount
-                  forkCount
-                  isFork
-
-                  primaryLanguage {
-                    name
-                    color
-                  }
-
-                  languages(first: 10) {
-                    edges {
-                      size
-                      node {
-                        name
-                        color
-                      }
-                    }
-                  }
-
-                  licenseInfo {
-                    spdxId
-                  }
-
-                  releases(
-                    first: 1
-                    orderBy: {
-                      field: CREATED_AT
-                      direction: DESC
-                    }
-                  ) {
-                    nodes {
-                      tagName
-                      publishedAt
-                      createdAt
-                      url
-                    }
+                  name description url homepageUrl pushedAt createdAt
+                  stargazerCount forkCount isFork
+                  primaryLanguage { name color }
+                  languages(first: 10) { edges { size node { name color } } }
+                  licenseInfo { spdxId }
+                  releases(first: 1, orderBy: {field: CREATED_AT, direction: DESC}) {
+                    nodes { tagName publishedAt createdAt url }
                   }
                 }
               }
-
-              forkedRepositories: repositories(
-                first: 1
-                privacy: PUBLIC
-                isFork: true
-                ownerAffiliations: OWNER
-              ) {
+              forkedRepositories: repositories(first: 1, privacy: PUBLIC, isFork: true, ownerAffiliations: OWNER) {
                 totalCount
               }
             }
           }'
 
-          curl -s \
-            -H "Authorization: token $GH_TOKEN" \
-            -H "Content-Type: application/json" \
-            -d "$(jq -n \
-              --arg q "$GQL_QUERY" \
-              --arg login "$USER" \
-              '{query:$q,variables:{login:$login}}')" \
-            "$GQL" > gql.json
+          curl -s -H "Authorization: token $GH_TOKEN" -H "Content-Type: application/json" \
+            -d "$(jq -n --arg q "$GQL_QUERY" --arg login "$USER" '{query:$q,variables:{login:$login}}')" \
+            "$GQL" > /tmp/gql.json
 
           jq '{
             login: .data.user.login,
@@ -130,95 +65,53 @@ jobs:
             followers: .data.user.followers.totalCount,
             public_repos: .data.user.repositories.totalCount,
             forked_repos: .data.user.forkedRepositories.totalCount
-          }' gql.json > cache/user.json
+          }' /tmp/gql.json > /tmp/user.json
 
           jq '[.data.user.repositories.nodes[] | {
-            name: .name,
-            description: .description,
-            html_url: .url,
-            homepage: .homepageUrl,
-            pushed_at: .pushedAt,
-            created_at: .createdAt,
-            stargazers_count: .stargazerCount,
-            forks_count: .forkCount,
-            fork: .isFork,
-            language: .primaryLanguage.name,
-            primaryLanguage: .primaryLanguage,
+            name: .name, description: .description, html_url: .url,
+            homepage: .homepageUrl, pushed_at: .pushedAt, created_at: .createdAt,
+            stargazers_count: .stargazerCount, forks_count: .forkCount, fork: .isFork,
+            language: .primaryLanguage.name, primaryLanguage: .primaryLanguage,
             languages: .languages,
-            license: (
-              if .licenseInfo
-              then {spdx_id: .licenseInfo.spdxId}
-              else null
-              end
-            )
-          }]' gql.json > cache/repos.json
+            license: (if .licenseInfo then {spdx_id: .licenseInfo.spdxId} else null end)
+          }]' /tmp/gql.json > /tmp/repos.json
 
-          jq '[.data.user.repositories.nodes[]
-            | select(.releases.nodes[0])
-            | {
-                name: .name,
-                tag: .releases.nodes[0].tagName,
-                date: (
-                  .releases.nodes[0].publishedAt
-                  // .releases.nodes[0].createdAt
-                ),
-                url: .releases.nodes[0].url
-              }
-          ] | sort_by(.date) | reverse' \
-          gql.json > cache/releases.json
+          jq '[.data.user.repositories.nodes[] | .languages.edges[]? | {name: .node.name, size: .size}]
+            | group_by(.name)
+            | map({key: .[0].name, value: (map(.size) | add)})
+            | from_entries' /tmp/gql.json > /tmp/languages.json
 
-          jq '
-          [
-            .data.user.repositories.nodes[]
-            | .languages.edges[]?
-            | {
-                name: .node.name,
-                size: .size
-              }
-          ]
-          | group_by(.name)
-          | map({
-              key: .[0].name,
-              value: (map(.size) | add)
-            })
-          | from_entries
-          ' gql.json > cache/languages.json
+          jq '[.data.user.repositories.nodes[] | select(.releases.nodes[0]) | {
+            name: .name, tag: .releases.nodes[0].tagName,
+            date: (.releases.nodes[0].publishedAt // .releases.nodes[0].createdAt),
+            url: .releases.nodes[0].url
+          }] | sort_by(.date) | reverse' /tmp/gql.json > /tmp/releases.json
 
-          echo "[]" > cache/activity.json
-
+          echo "[]" > /tmp/activity.json
           for PAGE in 1 2 3; do
-            curl -s \
-              -H "Authorization: token $GH_TOKEN" \
-              -H "Accept: application/vnd.github+json" \
-              "$REST/users/$USER/events/public?per_page=30&page=$PAGE" \
-              > page.json
-
-            jq -s 'add' cache/activity.json page.json \
-              > activity.tmp
-
-            mv activity.tmp cache/activity.json
+            curl -s -H "Authorization: token $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+              "$REST/users/$USER/events/public?per_page=30&page=$PAGE" > /tmp/page.json
+            jq -s 'add' /tmp/activity.json /tmp/page.json > /tmp/activity.tmp
+            mv /tmp/activity.tmp /tmp/activity.json
           done
 
           jq -n \
-            --arg ts "$(date +%s)" \
-            '{
-              timestamp: $ts,
-              files: {
-                user: "cache/user.json",
-                repos: "cache/repos.json",
-                releases: "cache/releases.json",
-                languages: "cache/languages.json",
-                activity: "cache/activity.json"
-              }
-            }' > cache/manifest.json
+            --argjson ts "$(date +%s%3N)" \
+            --slurpfile user /tmp/user.json \
+            --slurpfile repos /tmp/repos.json \
+            --slurpfile activity /tmp/activity.json \
+            --slurpfile releases /tmp/releases.json \
+            --slurpfile langs /tmp/languages.json \
+            '{ts: $ts, user: $user[0], repos: $repos[0], activity: $activity[0], releases: $releases[0], languageBytes: $langs[0]}' \
+            > cache.json
+
+          echo "Cache updated at $(date -u)"
 
       - name: Commit and Push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git add cache/
-
+          git add cache.json
           if ! git diff --cached --quiet; then
             git commit -m "chore: update GitHub cache [skip ci]"
             git push

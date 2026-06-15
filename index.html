@@ -725,13 +725,6 @@ footer p span { color: var(--accent-dim) }
         if (!res.ok) return null;
         return res.json();
       })
-      .then(function(wrapper) {
-        if (!wrapper || !wrapper.d) return null;
-        try {
-          var decoded = atob(wrapper.d.split('').reverse().join(''));
-          return JSON.parse(decoded);
-        } catch(e) { return null; }
-      })
       .catch(function() { return null; });
     return sharedCachePromise;
   }
