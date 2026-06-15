@@ -2,14 +2,21 @@ name: Update GitHub Cache
 
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: '*/5 * * * *'
   workflow_dispatch:
   push:
     paths:
       - 'index.html'
+  create:
+  release:
+  fork:
 
 permissions:
   contents: write
+
+concurrency:
+  group: update-cache
+  cancel-in-progress: true
 
 jobs:
   update-cache:
