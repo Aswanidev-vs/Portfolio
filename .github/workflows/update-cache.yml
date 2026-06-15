@@ -120,8 +120,7 @@ jobs:
             > /tmp/cache.json
 
           # Encode and write
-          ENCODED=$(base64 -w0 /tmp/cache.json | rev)
-          jq -n --arg d "$ENCODED" --arg v "1" '{v: $v, d: $d}' > cache.json
+          base64 -w0 /tmp/cache.json | rev | jq -R '{v: "1", d: .}' > cache.json
 
           echo "Cache updated at $(date -u)"
 
