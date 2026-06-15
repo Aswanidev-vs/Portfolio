@@ -1335,9 +1335,10 @@ footer p span { color: var(--accent-dim) }
   function renderFromGQL(data) {
     var u = data.user;
     if (!u || !u.repositories) return false;
-    var repos = u.repositories.nodes.filter(function(r) { return !r.isFork; });
-    var projectCount = u.repositories.totalCount;
-    var forkedCount = u.forkedRepositories ? u.forkedRepositories.totalCount : 0;
+    var allRepos = u.repositories.nodes;
+    var repos = allRepos.filter(function(r) { return !r.isFork; });
+    var forkedCount = allRepos.filter(function(r) { return r.isFork; }).length;
+    var projectCount = repos.length;
     var totalRepos = projectCount + forkedCount;
 
     renderProfile({ login: u.login, name: u.name, avatar_url: u.avatarUrl, bio: u.bio, public_repos: projectCount, forked_repos: forkedCount, total_repos: totalRepos, followers: u.followers ? u.followers.totalCount : 0, public_gists: 0 });

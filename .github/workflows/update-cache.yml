@@ -40,7 +40,7 @@ jobs:
             user(login: $login) {
               login name avatarUrl bio location
               followers { totalCount }
-              repositories(first: 100, privacy: PUBLIC, isFork: false, ownerAffiliations: OWNER, orderBy: {field: UPDATED_AT, direction: DESC}) {
+              repositories(first: 100, privacy: PUBLIC, ownerAffiliations: OWNER, orderBy: {field: UPDATED_AT, direction: DESC}) {
                 totalCount
                 nodes {
                   name description url homepageUrl pushedAt createdAt
@@ -52,9 +52,6 @@ jobs:
                     nodes { tagName publishedAt createdAt url }
                   }
                 }
-              }
-              forkedRepositories: repositories(first: 1, privacy: PUBLIC, isFork: true, ownerAffiliations: OWNER) {
-                totalCount
               }
             }
           }'
@@ -70,8 +67,9 @@ jobs:
             bio: .data.user.bio,
             location: .data.user.location,
             followers: .data.user.followers.totalCount,
-            public_repos: .data.user.repositories.totalCount,
-            forked_repos: .data.user.forkedRepositories.totalCount
+            public_repos: ([.data.user.repositories.nodes[] | select(.isFork == false)] | length),
+            forked_repos: ([.data.user.repositories.nodes[] | select(.isFork == true)] | length),
+            total_repos: .data.user.repositories.totalCount
           }' /tmp/gql.json > /tmp/user.json
 
           jq '[.data.user.repositories.nodes[] | {
