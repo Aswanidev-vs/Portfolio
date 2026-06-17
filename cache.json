@@ -1,5 +1,5 @@
 {
-  "ts": 1781707051177,
+  "ts": 1781717827523,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -13,11 +13,60 @@
   },
   "repos": [
     {
+      "name": "LearnFlow",
+      "description": "LearnFlow is a high-concurrency Go/Chi LMS bridging education and freelancing. It features AI personalization, GitHub-based code assessments, and a built-in marketplace to turn learners into hired professionals.",
+      "html_url": "https://github.com/Aswanidev-vs/LearnFlow",
+      "homepage": "",
+      "pushed_at": "2026-06-17T17:26:49Z",
+      "created_at": "2026-05-09T13:09:26Z",
+      "stargazers_count": 1,
+      "forks_count": 1,
+      "fork": false,
+      "language": "JavaScript",
+      "primaryLanguage": {
+        "name": "JavaScript",
+        "color": "#f1e05a"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 47556,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          },
+          {
+            "size": 3796,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          },
+          {
+            "size": 170478,
+            "node": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            }
+          },
+          {
+            "size": 143449,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
+    {
       "name": "Portfolio",
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": null,
-      "pushed_at": "2026-06-17T11:26:40Z",
+      "pushed_at": "2026-06-17T14:37:32Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -572,55 +621,6 @@
             "node": {
               "name": "Go",
               "color": "#00ADD8"
-            }
-          }
-        ]
-      },
-      "license": null
-    },
-    {
-      "name": "LearnFlow",
-      "description": "LearnFlow is a high-concurrency Go/Chi LMS bridging education and freelancing. It features AI personalization, GitHub-based code assessments, and a built-in marketplace to turn learners into hired professionals.",
-      "html_url": "https://github.com/Aswanidev-vs/LearnFlow",
-      "homepage": "",
-      "pushed_at": "2026-06-16T12:23:14Z",
-      "created_at": "2026-05-09T13:09:26Z",
-      "stargazers_count": 1,
-      "forks_count": 1,
-      "fork": false,
-      "language": "JavaScript",
-      "primaryLanguage": {
-        "name": "JavaScript",
-        "color": "#f1e05a"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 47556,
-            "node": {
-              "name": "Go",
-              "color": "#00ADD8"
-            }
-          },
-          {
-            "size": 3796,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 170478,
-            "node": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            }
-          },
-          {
-            "size": 143449,
-            "node": {
-              "name": "CSS",
-              "color": "#663399"
             }
           }
         ]
@@ -1331,6 +1331,126 @@
     }
   ],
   "activity": [
+    {
+      "id": "10819834462",
+      "type": "IssuesEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1233869030,
+        "name": "Aswanidev-vs/LearnFlow",
+        "url": "https://api.github.com/repos/Aswanidev-vs/LearnFlow"
+      },
+      "payload": {
+        "action": "closed",
+        "issue": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/LearnFlow/issues/3",
+          "repository_url": "https://api.github.com/repos/Aswanidev-vs/LearnFlow",
+          "labels_url": "https://api.github.com/repos/Aswanidev-vs/LearnFlow/issues/3/labels{/name}",
+          "comments_url": "https://api.github.com/repos/Aswanidev-vs/LearnFlow/issues/3/comments",
+          "events_url": "https://api.github.com/repos/Aswanidev-vs/LearnFlow/issues/3/events",
+          "html_url": "https://github.com/Aswanidev-vs/LearnFlow/issues/3",
+          "id": 4412618501,
+          "node_id": "I_kwDOSYtY5s8AAAABBwM3BQ",
+          "number": 3,
+          "title": "ui issue on profile",
+          "user": {
+            "login": "Aswanidev-vs",
+            "id": 178192591,
+            "node_id": "U_kgDOCp8Azw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Aswanidev-vs",
+            "html_url": "https://github.com/Aswanidev-vs",
+            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
+            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
+            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
+            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
+            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 0,
+          "created_at": "2026-05-09T13:17:38Z",
+          "updated_at": "2026-06-17T17:26:58Z",
+          "closed_at": "2026-06-17T17:26:58Z",
+          "assignee": null,
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": "there are some ui issue on the user profile side",
+          "reactions": {
+            "url": "https://api.github.com/repos/Aswanidev-vs/LearnFlow/issues/3/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/Aswanidev-vs/LearnFlow/issues/3/timeline",
+          "performed_via_github_app": null,
+          "state_reason": "completed",
+          "pinned_comment": null
+        }
+      },
+      "public": true,
+      "created_at": "2026-06-17T17:26:59Z"
+    },
+    {
+      "id": "13480501557",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1233869030,
+        "name": "Aswanidev-vs/LearnFlow",
+        "url": "https://api.github.com/repos/Aswanidev-vs/LearnFlow"
+      },
+      "payload": {
+        "repository_id": 1233869030,
+        "push_id": 35768679670,
+        "ref": "refs/heads/main",
+        "head": "5f472333c2d9deed104fc17ab4d83becdb9d0a3e",
+        "before": "8eb86871bb921ab2adae2765fc967473531ae4c4"
+      },
+      "public": true,
+      "created_at": "2026-06-17T17:26:42Z"
+    },
     {
       "id": "10810914542",
       "type": "WatchEvent",
@@ -7417,187 +7537,6 @@
       },
       "public": true,
       "created_at": "2026-06-12T17:16:03Z"
-    },
-    {
-      "id": "10627418078",
-      "type": "IssuesEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1258201172,
-        "name": "Aswanidev-vs/Gocut",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Gocut"
-      },
-      "payload": {
-        "action": "closed",
-        "issue": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Gocut/issues/15",
-          "repository_url": "https://api.github.com/repos/Aswanidev-vs/Gocut",
-          "labels_url": "https://api.github.com/repos/Aswanidev-vs/Gocut/issues/15/labels{/name}",
-          "comments_url": "https://api.github.com/repos/Aswanidev-vs/Gocut/issues/15/comments",
-          "events_url": "https://api.github.com/repos/Aswanidev-vs/Gocut/issues/15/events",
-          "html_url": "https://github.com/Aswanidev-vs/Gocut/issues/15",
-          "id": 4632824161,
-          "node_id": "I_kwDOSv6gVM8AAAABFCNJYQ",
-          "number": 15,
-          "title": "fix this issue of the image",
-          "user": {
-            "login": "Aswanidev-vs",
-            "id": 178192591,
-            "node_id": "U_kgDOCp8Azw",
-            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/Aswanidev-vs",
-            "html_url": "https://github.com/Aswanidev-vs",
-            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
-            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
-            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
-            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
-            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
-            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [
-            {
-              "id": 11130963426,
-              "node_id": "LA_kwDOSv6gVM8AAAACl3UF4g",
-              "url": "https://api.github.com/repos/Aswanidev-vs/Gocut/labels/help%20wanted",
-              "name": "help wanted",
-              "color": "008672",
-              "default": true,
-              "description": "Extra attention is needed"
-            },
-            {
-              "id": 11177486998,
-              "node_id": "LA_kwDOSv6gVM8AAAACmjrqlg",
-              "url": "https://api.github.com/repos/Aswanidev-vs/Gocut/labels/low",
-              "name": "low",
-              "color": "db25c7",
-              "default": false,
-              "description": "low priority"
-            }
-          ],
-          "state": "closed",
-          "locked": false,
-          "assignees": [
-            {
-              "login": "Aswanidev-vs",
-              "id": 178192591,
-              "node_id": "U_kgDOCp8Azw",
-              "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
-              "gravatar_id": "",
-              "url": "https://api.github.com/users/Aswanidev-vs",
-              "html_url": "https://github.com/Aswanidev-vs",
-              "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
-              "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
-              "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
-              "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
-              "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
-              "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
-              "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
-              "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
-              "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
-              "type": "User",
-              "user_view_type": "public",
-              "site_admin": false
-            }
-          ],
-          "milestone": null,
-          "comments": 0,
-          "created_at": "2026-06-10T15:56:41Z",
-          "updated_at": "2026-06-12T17:14:55Z",
-          "closed_at": "2026-06-12T17:14:55Z",
-          "assignee": {
-            "login": "Aswanidev-vs",
-            "id": 178192591,
-            "node_id": "U_kgDOCp8Azw",
-            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/Aswanidev-vs",
-            "html_url": "https://github.com/Aswanidev-vs",
-            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
-            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
-            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
-            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
-            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
-            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": "<img width=\"276\" height=\"179\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/6d4a5380-6c8f-4b2a-98b8-3554d704d6b1\" />",
-          "reactions": {
-            "url": "https://api.github.com/repos/Aswanidev-vs/Gocut/issues/15/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/Aswanidev-vs/Gocut/issues/15/timeline",
-          "performed_via_github_app": null,
-          "state_reason": "completed",
-          "pinned_comment": null
-        }
-      },
-      "public": true,
-      "created_at": "2026-06-12T17:14:56Z"
-    },
-    {
-      "id": "13238062505",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1258201172,
-        "name": "Aswanidev-vs/Gocut",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Gocut"
-      },
-      "payload": {
-        "repository_id": 1258201172,
-        "push_id": 35526000967,
-        "ref": "refs/heads/main",
-        "head": "8c45613e8567bc6f3119f7c2f44dc843284489cd",
-        "before": "f2726fd20e5dae3a1832f248a6bc1d989e73ade1"
-      },
-      "public": true,
-      "created_at": "2026-06-12T17:06:49Z"
     }
   ],
   "releases": [
