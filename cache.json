@@ -1,5 +1,5 @@
 {
-  "ts": 1782157083302,
+  "ts": 1782164874267,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -12,6 +12,34 @@
     "total_repos": 31
   },
   "repos": [
+    {
+      "name": "Portfolio",
+      "description": null,
+      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
+      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
+      "pushed_at": "2026-06-22T19:38:04Z",
+      "created_at": "2025-09-03T16:31:24Z",
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "fork": false,
+      "language": "HTML",
+      "primaryLanguage": {
+        "name": "HTML",
+        "color": "#e34c26"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 57690,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
     {
       "name": "Brain",
       "description": "Brain is a Chrome extension that automatically captures AI conversations from ChatGPT, Claude, Gemini, and Grok, saving them directly to your Obsidian vault via the Local REST API. With full privacy, auto-capture, and graph-friendly linked notes, it turns fleeting AI chats into a permanent, searchable knowledge base 100% local, open source.",
@@ -55,34 +83,6 @@
       "license": {
         "spdx_id": "MIT"
       }
-    },
-    {
-      "name": "Portfolio",
-      "description": null,
-      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
-      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-06-22T16:00:31Z",
-      "created_at": "2025-09-03T16:31:24Z",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "fork": false,
-      "language": "HTML",
-      "primaryLanguage": {
-        "name": "HTML",
-        "color": "#e34c26"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 57690,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          }
-        ]
-      },
-      "license": null
     },
     {
       "name": "My_Web_Template_Of_Connect",
@@ -1376,6 +1376,28 @@
   ],
   "activity": [
     {
+      "id": "10890100332",
+      "type": "WatchEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1262765811,
+        "name": "Shineii86/AniKotoAPI",
+        "url": "https://api.github.com/repos/Shineii86/AniKotoAPI"
+      },
+      "payload": {
+        "action": "started"
+      },
+      "public": true,
+      "created_at": "2026-06-20T16:56:50Z"
+    },
+    {
       "id": "10889169207",
       "type": "WatchEvent",
       "actor": {
@@ -2558,6 +2580,32 @@
       "created_at": "2026-06-16T04:33:57Z"
     },
     {
+      "id": "13386180490",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1268977595,
+        "name": "Aswanidev-vs/goml",
+        "url": "https://api.github.com/repos/Aswanidev-vs/goml"
+      },
+      "payload": {
+        "repository_id": 1268977595,
+        "push_id": 35674037275,
+        "ref": "refs/heads/alert-autofix-1",
+        "head": "31299a4f5df67ecc57cb023b1e1ed53c67b7af1c",
+        "before": "5e7fa291b4fa307b3b16ddbf8cf8fef0f598f22f"
+      },
+      "public": true,
+      "created_at": "2026-06-16T04:32:24Z"
+    },
+    {
       "id": "13386180349",
       "type": "CreateEvent",
       "actor": {
@@ -2580,32 +2628,6 @@
         "master_branch": "main",
         "description": "GOML (Go Markup Language) is a simple, human-readable data format designed to solve common pain points in configuration files like JSON, YAML, and TOML. It offers three flexible syntax styles Flat, Dot Notation, and Block—allowing developers to choose the best approach for their use case, to complex nested configurations.",
         "pusher_type": "user"
-      },
-      "public": true,
-      "created_at": "2026-06-16T04:32:24Z"
-    },
-    {
-      "id": "13386180490",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1268977595,
-        "name": "Aswanidev-vs/goml",
-        "url": "https://api.github.com/repos/Aswanidev-vs/goml"
-      },
-      "payload": {
-        "repository_id": 1268977595,
-        "push_id": 35674037275,
-        "ref": "refs/heads/alert-autofix-1",
-        "head": "31299a4f5df67ecc57cb023b1e1ed53c67b7af1c",
-        "before": "5e7fa291b4fa307b3b16ddbf8cf8fef0f598f22f"
       },
       "public": true,
       "created_at": "2026-06-16T04:32:24Z"
@@ -6122,28 +6144,6 @@
       },
       "public": true,
       "created_at": "2026-06-14T12:24:21Z"
-    },
-    {
-      "id": "10668275389",
-      "type": "WatchEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1183029175,
-        "name": "1146345502/aural-oss",
-        "url": "https://api.github.com/repos/1146345502/aural-oss"
-      },
-      "payload": {
-        "action": "started"
-      },
-      "public": true,
-      "created_at": "2026-06-14T12:19:03Z"
     }
   ],
   "releases": [
