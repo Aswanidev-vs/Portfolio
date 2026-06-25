@@ -1,5 +1,5 @@
 {
-  "ts": 1782366907920,
+  "ts": 1782377825892,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -13,11 +13,69 @@
   },
   "repos": [
     {
+      "name": "gitscope",
+      "description": "GitScope is a lightweight and intuitive Git GUI client built with Go and Fyne, designed to make version control simple, easy to implement.",
+      "html_url": "https://github.com/Aswanidev-vs/gitscope",
+      "homepage": "",
+      "pushed_at": "2026-06-25T08:50:17Z",
+      "created_at": "2025-11-02T18:10:59Z",
+      "stargazers_count": 4,
+      "forks_count": 0,
+      "fork": false,
+      "language": "Go",
+      "primaryLanguage": {
+        "name": "Go",
+        "color": "#00ADD8"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 125090,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          },
+          {
+            "size": 10069,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          },
+          {
+            "size": 13156,
+            "node": {
+              "name": "NSIS",
+              "color": null
+            }
+          },
+          {
+            "size": 55475,
+            "node": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            }
+          },
+          {
+            "size": 20921,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          }
+        ]
+      },
+      "license": {
+        "spdx_id": "MIT"
+      }
+    },
+    {
       "name": "Portfolio",
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-06-25T01:51:32Z",
+      "pushed_at": "2026-06-25T05:55:08Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -110,64 +168,6 @@
       },
       "license": {
         "spdx_id": "AGPL-3.0"
-      }
-    },
-    {
-      "name": "gitscope",
-      "description": "GitScope is a lightweight and intuitive Git GUI client built with Go and Fyne, designed to make version control simple, easy to implement.",
-      "html_url": "https://github.com/Aswanidev-vs/gitscope",
-      "homepage": "",
-      "pushed_at": "2026-06-24T18:34:13Z",
-      "created_at": "2025-11-02T18:10:59Z",
-      "stargazers_count": 4,
-      "forks_count": 0,
-      "fork": false,
-      "language": "Go",
-      "primaryLanguage": {
-        "name": "Go",
-        "color": "#00ADD8"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 123718,
-            "node": {
-              "name": "Go",
-              "color": "#00ADD8"
-            }
-          },
-          {
-            "size": 10069,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 13156,
-            "node": {
-              "name": "NSIS",
-              "color": null
-            }
-          },
-          {
-            "size": 55195,
-            "node": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            }
-          },
-          {
-            "size": 20921,
-            "node": {
-              "name": "CSS",
-              "color": "#663399"
-            }
-          }
-        ]
-      },
-      "license": {
-        "spdx_id": "MIT"
       }
     },
     {
@@ -1396,6 +1396,32 @@
     }
   ],
   "activity": [
+    {
+      "id": "13864252667",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1088310194,
+        "name": "Aswanidev-vs/gitscope",
+        "url": "https://api.github.com/repos/Aswanidev-vs/gitscope"
+      },
+      "payload": {
+        "repository_id": 1088310194,
+        "push_id": 36152308322,
+        "ref": "refs/heads/main",
+        "head": "4ad7b084d462f89c4577f3b0e691dbc090c34f1d",
+        "before": "496ec44cfee7a24c2f73af5e73764bb8fc4c91ac"
+      },
+      "public": true,
+      "created_at": "2026-06-25T08:50:18Z"
+    },
     {
       "id": "13835022196",
       "type": "PushEvent",
@@ -3253,32 +3279,6 @@
       "created_at": "2026-06-16T04:33:57Z"
     },
     {
-      "id": "13386180490",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1268977595,
-        "name": "Aswanidev-vs/goml",
-        "url": "https://api.github.com/repos/Aswanidev-vs/goml"
-      },
-      "payload": {
-        "repository_id": 1268977595,
-        "push_id": 35674037275,
-        "ref": "refs/heads/alert-autofix-1",
-        "head": "31299a4f5df67ecc57cb023b1e1ed53c67b7af1c",
-        "before": "5e7fa291b4fa307b3b16ddbf8cf8fef0f598f22f"
-      },
-      "public": true,
-      "created_at": "2026-06-16T04:32:24Z"
-    },
-    {
       "id": "13386180349",
       "type": "CreateEvent",
       "actor": {
@@ -3301,6 +3301,32 @@
         "master_branch": "main",
         "description": "GOML (Go Markup Language) is a simple, human-readable data format designed to solve common pain points in configuration files like JSON, YAML, and TOML. It offers three flexible syntax styles Flat, Dot Notation, and Block—allowing developers to choose the best approach for their use case, to complex nested configurations.",
         "pusher_type": "user"
+      },
+      "public": true,
+      "created_at": "2026-06-16T04:32:24Z"
+    },
+    {
+      "id": "13386180490",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1268977595,
+        "name": "Aswanidev-vs/goml",
+        "url": "https://api.github.com/repos/Aswanidev-vs/goml"
+      },
+      "payload": {
+        "repository_id": 1268977595,
+        "push_id": 35674037275,
+        "ref": "refs/heads/alert-autofix-1",
+        "head": "31299a4f5df67ecc57cb023b1e1ed53c67b7af1c",
+        "before": "5e7fa291b4fa307b3b16ddbf8cf8fef0f598f22f"
       },
       "public": true,
       "created_at": "2026-06-16T04:32:24Z"
@@ -5487,28 +5513,6 @@
         "url": "https://api.github.com/orgs/gohugoio",
         "avatar_url": "https://avatars.githubusercontent.com/u/29385237?"
       }
-    },
-    {
-      "id": "10671602543",
-      "type": "WatchEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 314379039,
-        "name": "TheForgotten69/goinsta",
-        "url": "https://api.github.com/repos/TheForgotten69/goinsta"
-      },
-      "payload": {
-        "action": "started"
-      },
-      "public": true,
-      "created_at": "2026-06-14T16:07:57Z"
     }
   ],
   "releases": [
@@ -5570,11 +5574,11 @@
   "languageBytes": {
     "CSS": 404806,
     "Dockerfile": 378,
-    "Go": 2382909,
+    "Go": 2384281,
     "Go Template": 221386,
     "HTML": 504672,
     "Hack": 1679,
-    "JavaScript": 706704,
+    "JavaScript": 706984,
     "Lua": 2388,
     "Makefile": 3963,
     "NSIS": 51884,
