@@ -1,5 +1,5 @@
 {
-  "ts": 1782665936028,
+  "ts": 1782670283523,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -17,7 +17,7 @@
       "description": "Predator is a lightweight, cross platform desktop application for downloading videos and extracting audio from YouTube. It is built using Go and wails GUI framework, with go-ytdlp wrapper used as the download engine. The application focuses on simplicity, and a clean user experience .",
       "html_url": "https://github.com/Aswanidev-vs/Predator",
       "homepage": "",
-      "pushed_at": "2026-06-28T16:58:07Z",
+      "pushed_at": "2026-06-28T17:42:06Z",
       "created_at": "2025-12-21T17:07:16Z",
       "stargazers_count": 3,
       "forks_count": 0,
@@ -44,17 +44,38 @@
             }
           },
           {
-            "size": 1511,
+            "size": 51582,
             "node": {
               "name": "JavaScript",
               "color": "#f1e05a"
             }
           },
           {
-            "size": 1404,
+            "size": 7941,
             "node": {
               "name": "Inno Setup",
               "color": "#264b99"
+            }
+          },
+          {
+            "size": 11601,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          },
+          {
+            "size": 32894,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          },
+          {
+            "size": 4781,
+            "node": {
+              "name": "TypeScript",
+              "color": "#3178c6"
             }
           }
         ]
@@ -68,7 +89,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-06-28T15:52:49Z",
+      "pushed_at": "2026-06-28T16:58:56Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -1447,6 +1468,372 @@
     }
   ],
   "activity": [
+    {
+      "id": "14014911956",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1120654297,
+        "name": "Aswanidev-vs/Predator",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
+      },
+      "payload": {
+        "repository_id": 1120654297,
+        "push_id": 36303131012,
+        "ref": "refs/heads/v5",
+        "head": "6f3601cc73915333966b18ea5e05241ec7314e02",
+        "before": "9860de9eaf8640dd62d2e4e582d80b9266c29ccd"
+      },
+      "public": true,
+      "created_at": "2026-06-28T17:41:00Z"
+    },
+    {
+      "id": "11087996693",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1120654297,
+        "name": "Aswanidev-vs/Predator",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 45,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Predator/pulls/45",
+          "id": 3951422520,
+          "number": 45,
+          "head": {
+            "ref": "v10",
+            "sha": "78d6011c35ac62def117a955707cdb22085c0811",
+            "repo": {
+              "id": 1120654297,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Predator",
+              "name": "Predator"
+            }
+          },
+          "base": {
+            "ref": "v5",
+            "sha": "9860de9eaf8640dd62d2e4e582d80b9266c29ccd",
+            "repo": {
+              "id": 1120654297,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Predator",
+              "name": "Predator"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-06-28T17:41:00Z"
+    },
+    {
+      "id": "11087993932",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1120654297,
+        "name": "Aswanidev-vs/Predator",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 45,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Predator/pulls/45",
+          "id": 3951422520,
+          "number": 45,
+          "head": {
+            "ref": "v10",
+            "sha": "78d6011c35ac62def117a955707cdb22085c0811",
+            "repo": {
+              "id": 1120654297,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Predator",
+              "name": "Predator"
+            }
+          },
+          "base": {
+            "ref": "v5",
+            "sha": "9860de9eaf8640dd62d2e4e582d80b9266c29ccd",
+            "repo": {
+              "id": 1120654297,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Predator",
+              "name": "Predator"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-06-28T17:40:48Z"
+    },
+    {
+      "id": "14014719659",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1120654297,
+        "name": "Aswanidev-vs/Predator",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
+      },
+      "payload": {
+        "repository_id": 1120654297,
+        "push_id": 36302939232,
+        "ref": "refs/heads/v10",
+        "head": "78d6011c35ac62def117a955707cdb22085c0811",
+        "before": "d74010f637af69c57d6457d6c2e6916bd0f92398"
+      },
+      "public": true,
+      "created_at": "2026-06-28T17:34:06Z"
+    },
+    {
+      "id": "14014524939",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1120654297,
+        "name": "Aswanidev-vs/Predator",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
+      },
+      "payload": {
+        "repository_id": 1120654297,
+        "push_id": 36302744719,
+        "ref": "refs/heads/v10",
+        "head": "d74010f637af69c57d6457d6c2e6916bd0f92398",
+        "before": "a8a953fedaaaf903f83f42c8aae756ad745f4b00"
+      },
+      "public": true,
+      "created_at": "2026-06-28T17:27:09Z"
+    },
+    {
+      "id": "14014372621",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1120654297,
+        "name": "Aswanidev-vs/Predator",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
+      },
+      "payload": {
+        "repository_id": 1120654297,
+        "push_id": 36302592475,
+        "ref": "refs/heads/v10",
+        "head": "a8a953fedaaaf903f83f42c8aae756ad745f4b00",
+        "before": "edb07a9aaf66048d8ef564ed2dd632eb104b74d1"
+      },
+      "public": true,
+      "created_at": "2026-06-28T17:21:30Z"
+    },
+    {
+      "id": "14014146140",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1120654297,
+        "name": "Aswanidev-vs/Predator",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
+      },
+      "payload": {
+        "repository_id": 1120654297,
+        "push_id": 36302366548,
+        "ref": "refs/heads/v10",
+        "head": "edb07a9aaf66048d8ef564ed2dd632eb104b74d1",
+        "before": "a7dab570ebda5e65f3aab410799e9ca7469929c4"
+      },
+      "public": true,
+      "created_at": "2026-06-28T17:13:28Z"
+    },
+    {
+      "id": "11087486632",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1120654297,
+        "name": "Aswanidev-vs/Predator",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 44,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Predator/pulls/44",
+          "id": 3951347426,
+          "number": 44,
+          "head": {
+            "ref": "v10",
+            "sha": "a7dab570ebda5e65f3aab410799e9ca7469929c4",
+            "repo": {
+              "id": 1120654297,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Predator",
+              "name": "Predator"
+            }
+          },
+          "base": {
+            "ref": "v5",
+            "sha": "afa25dd12c0c9efd97146086acb241fea27388df",
+            "repo": {
+              "id": 1120654297,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Predator",
+              "name": "Predator"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-06-28T17:05:14Z"
+    },
+    {
+      "id": "14013915738",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1120654297,
+        "name": "Aswanidev-vs/Predator",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
+      },
+      "payload": {
+        "repository_id": 1120654297,
+        "push_id": 36302136403,
+        "ref": "refs/heads/v5",
+        "head": "9860de9eaf8640dd62d2e4e582d80b9266c29ccd",
+        "before": "afa25dd12c0c9efd97146086acb241fea27388df"
+      },
+      "public": true,
+      "created_at": "2026-06-28T17:05:15Z"
+    },
+    {
+      "id": "11087482540",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1120654297,
+        "name": "Aswanidev-vs/Predator",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 44,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Predator/pulls/44",
+          "id": 3951347426,
+          "number": 44,
+          "head": {
+            "ref": "v10",
+            "sha": "a7dab570ebda5e65f3aab410799e9ca7469929c4",
+            "repo": {
+              "id": 1120654297,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Predator",
+              "name": "Predator"
+            }
+          },
+          "base": {
+            "ref": "v5",
+            "sha": "afa25dd12c0c9efd97146086acb241fea27388df",
+            "repo": {
+              "id": 1120654297,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Predator",
+              "name": "Predator"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-06-28T17:05:01Z"
+    },
+    {
+      "id": "14013893658",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1120654297,
+        "name": "Aswanidev-vs/Predator",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
+      },
+      "payload": {
+        "repository_id": 1120654297,
+        "push_id": 36302114452,
+        "ref": "refs/heads/v10",
+        "head": "a7dab570ebda5e65f3aab410799e9ca7469929c4",
+        "before": "cc0bd5c7d606a20ce77ec7eaf258a623b4e9f78d"
+      },
+      "public": true,
+      "created_at": "2026-06-28T17:04:29Z"
+    },
     {
       "id": "14013704813",
       "type": "PushEvent",
@@ -5286,430 +5673,15 @@
       },
       "public": true,
       "created_at": "2026-06-24T17:00:24Z"
-    },
-    {
-      "id": "13828642480",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1258201172,
-        "name": "Aswanidev-vs/Gocut",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Gocut"
-      },
-      "payload": {
-        "repository_id": 1258201172,
-        "push_id": 36116729195,
-        "ref": "refs/heads/main",
-        "head": "7eaea933b81cf3e6d662f1180039a76aa5842ab1",
-        "before": "6bf2cd4e9b45a1ed19b2a71ee32a28a1c2072bd7"
-      },
-      "public": true,
-      "created_at": "2026-06-24T16:31:15Z"
-    },
-    {
-      "id": "13828398990",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1258201172,
-        "name": "Aswanidev-vs/Gocut",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Gocut"
-      },
-      "payload": {
-        "repository_id": 1258201172,
-        "push_id": 36116485555,
-        "ref": "refs/heads/main",
-        "head": "6bf2cd4e9b45a1ed19b2a71ee32a28a1c2072bd7",
-        "before": "de88f4cad3466295727923f4e94595ab240b0724"
-      },
-      "public": true,
-      "created_at": "2026-06-24T16:26:20Z"
-    },
-    {
-      "id": "10938051301",
-      "type": "WatchEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 971300888,
-        "name": "modelcontextprotocol/go-sdk",
-        "url": "https://api.github.com/repos/modelcontextprotocol/go-sdk"
-      },
-      "payload": {
-        "action": "started"
-      },
-      "public": true,
-      "created_at": "2026-06-24T10:03:24Z",
-      "org": {
-        "id": 182288589,
-        "login": "modelcontextprotocol",
-        "gravatar_id": "",
-        "url": "https://api.github.com/orgs/modelcontextprotocol",
-        "avatar_url": "https://avatars.githubusercontent.com/u/182288589?"
-      }
-    },
-    {
-      "id": "10926651641",
-      "type": "IssuesEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1274667189,
-        "name": "Aswanidev-vs/Brain",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Brain"
-      },
-      "payload": {
-        "action": "labeled",
-        "issue": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Brain/issues/3",
-          "repository_url": "https://api.github.com/repos/Aswanidev-vs/Brain",
-          "labels_url": "https://api.github.com/repos/Aswanidev-vs/Brain/issues/3/labels{/name}",
-          "comments_url": "https://api.github.com/repos/Aswanidev-vs/Brain/issues/3/comments",
-          "events_url": "https://api.github.com/repos/Aswanidev-vs/Brain/issues/3/events",
-          "html_url": "https://github.com/Aswanidev-vs/Brain/issues/3",
-          "id": 4728751422,
-          "node_id": "I_kwDOS_ngtc8AAAABGdsFPg",
-          "number": 3,
-          "title": "Feature",
-          "user": {
-            "login": "Aswanidev-vs",
-            "id": 178192591,
-            "node_id": "U_kgDOCp8Azw",
-            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/Aswanidev-vs",
-            "html_url": "https://github.com/Aswanidev-vs",
-            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
-            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
-            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
-            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
-            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
-            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [
-            {
-              "id": 11282974083,
-              "node_id": "LA_kwDOS_ngtc8AAAACoISFgw",
-              "url": "https://api.github.com/repos/Aswanidev-vs/Brain/labels/enhancement",
-              "name": "enhancement",
-              "color": "a2eeef",
-              "default": true,
-              "description": "New feature or request"
-            }
-          ],
-          "state": "open",
-          "locked": false,
-          "assignees": [
-            {
-              "login": "Aswanidev-vs",
-              "id": 178192591,
-              "node_id": "U_kgDOCp8Azw",
-              "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
-              "gravatar_id": "",
-              "url": "https://api.github.com/users/Aswanidev-vs",
-              "html_url": "https://github.com/Aswanidev-vs",
-              "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
-              "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
-              "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
-              "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
-              "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
-              "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
-              "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
-              "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
-              "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
-              "type": "User",
-              "user_view_type": "public",
-              "site_admin": false
-            }
-          ],
-          "milestone": null,
-          "comments": 0,
-          "created_at": "2026-06-23T19:03:51Z",
-          "updated_at": "2026-06-23T19:03:51Z",
-          "closed_at": null,
-          "assignee": {
-            "login": "Aswanidev-vs",
-            "id": 178192591,
-            "node_id": "U_kgDOCp8Azw",
-            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/Aswanidev-vs",
-            "html_url": "https://github.com/Aswanidev-vs",
-            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
-            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
-            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
-            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
-            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
-            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": "Add local LLM and cloud models api.in which when user asked something to the chat section based on. These multi different response graph and the info.and based on that give us a result ",
-          "reactions": {
-            "url": "https://api.github.com/repos/Aswanidev-vs/Brain/issues/3/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/Aswanidev-vs/Brain/issues/3/timeline",
-          "performed_via_github_app": null,
-          "state_reason": null,
-          "pinned_comment": null
-        },
-        "label": {
-          "id": 11282974083,
-          "node_id": "LA_kwDOS_ngtc8AAAACoISFgw",
-          "url": "https://api.github.com/repos/Aswanidev-vs/Brain/labels/enhancement",
-          "name": "enhancement",
-          "color": "a2eeef",
-          "default": true,
-          "description": "New feature or request"
-        },
-        "labels": [
-          {
-            "id": 11282974083,
-            "node_id": "LA_kwDOS_ngtc8AAAACoISFgw",
-            "url": "https://api.github.com/repos/Aswanidev-vs/Brain/labels/enhancement",
-            "name": "enhancement",
-            "color": "a2eeef",
-            "default": true,
-            "description": "New feature or request"
-          }
-        ]
-      },
-      "public": true,
-      "created_at": "2026-06-23T19:03:53Z"
-    },
-    {
-      "id": "10890100332",
-      "type": "WatchEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1262765811,
-        "name": "Shineii86/AniKotoAPI",
-        "url": "https://api.github.com/repos/Shineii86/AniKotoAPI"
-      },
-      "payload": {
-        "action": "started"
-      },
-      "public": true,
-      "created_at": "2026-06-20T16:56:50Z"
-    },
-    {
-      "id": "10889169207",
-      "type": "WatchEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1274667189,
-        "name": "Aswanidev-vs/Brain",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Brain"
-      },
-      "payload": {
-        "action": "started"
-      },
-      "public": true,
-      "created_at": "2026-06-20T06:41:59Z"
-    },
-    {
-      "id": "13716044595",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1274667189,
-        "name": "Aswanidev-vs/Brain",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Brain"
-      },
-      "payload": {
-        "repository_id": 1274667189,
-        "push_id": 36004228083,
-        "ref": "refs/heads/main",
-        "head": "254903477d4bd62610e6be8f00a31d2ac793eb34",
-        "before": "c354be248968a2a8960c739d91e86ef583cfc2cb"
-      },
-      "public": true,
-      "created_at": "2026-06-22T18:23:29Z"
-    },
-    {
-      "id": "13714363531",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1274667189,
-        "name": "Aswanidev-vs/Brain",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Brain"
-      },
-      "payload": {
-        "repository_id": 1274667189,
-        "push_id": 36002552026,
-        "ref": "refs/heads/main",
-        "head": "c354be248968a2a8960c739d91e86ef583cfc2cb",
-        "before": "b3e60e91cad15781853f356012cc75af67eb15e3"
-      },
-      "public": true,
-      "created_at": "2026-06-22T17:46:34Z"
-    },
-    {
-      "id": "13700258583",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1274667189,
-        "name": "Aswanidev-vs/Brain",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Brain"
-      },
-      "payload": {
-        "repository_id": 1274667189,
-        "push_id": 35988476960,
-        "ref": "refs/heads/main",
-        "head": "b3e60e91cad15781853f356012cc75af67eb15e3",
-        "before": "cd50eea3af3fc949eff99ab4813c1106430abe17"
-      },
-      "public": true,
-      "created_at": "2026-06-22T13:10:32Z"
-    },
-    {
-      "id": "13700195431",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1274667189,
-        "name": "Aswanidev-vs/Brain",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Brain"
-      },
-      "payload": {
-        "repository_id": 1274667189,
-        "push_id": 35988413959,
-        "ref": "refs/heads/main",
-        "head": "cd50eea3af3fc949eff99ab4813c1106430abe17",
-        "before": "2b62133d383d5818a42f4f38c1994753d4f557da"
-      },
-      "public": true,
-      "created_at": "2026-06-22T13:09:20Z"
-    },
-    {
-      "id": "13699653127",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1274667189,
-        "name": "Aswanidev-vs/Brain",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Brain"
-      },
-      "payload": {
-        "repository_id": 1274667189,
-        "push_id": 35987871789,
-        "ref": "refs/heads/main",
-        "head": "2b62133d383d5818a42f4f38c1994753d4f557da",
-        "before": "e7065c9a55dd49bca3b5d70acc623ae67c759988"
-      },
-      "public": true,
-      "created_at": "2026-06-22T12:59:04Z"
     }
   ],
   "releases": [
+    {
+      "name": "Predator",
+      "tag": "v1.3.8",
+      "date": "2026-06-28T17:38:23Z",
+      "url": "https://github.com/Aswanidev-vs/Predator/releases/tag/v1.3.8"
+    },
     {
       "name": "gitscope",
       "tag": "v1.1.11",
@@ -5753,12 +5725,6 @@
       "url": "https://github.com/Aswanidev-vs/Akashic/releases/tag/v0.2.0"
     },
     {
-      "name": "Predator",
-      "tag": "v1.3.2",
-      "date": "2025-12-21T17:16:51Z",
-      "url": "https://github.com/Aswanidev-vs/Predator/releases/tag/v1.3.2"
-    },
-    {
       "name": "Writedown",
       "tag": "v1.0",
       "date": "2025-09-03T15:34:49Z",
@@ -5766,14 +5732,14 @@
     }
   ],
   "languageBytes": {
-    "CSS": 405080,
+    "CSS": 437974,
     "Dockerfile": 378,
     "Go": 2386210,
     "Go Template": 221386,
-    "HTML": 504763,
+    "HTML": 516364,
     "Hack": 1679,
-    "Inno Setup": 1404,
-    "JavaScript": 707691,
+    "Inno Setup": 7941,
+    "JavaScript": 757762,
     "Lua": 2388,
     "Makefile": 3963,
     "NSIS": 51884,
@@ -5781,7 +5747,7 @@
     "PowerShell": 145,
     "Python": 25908,
     "Shell": 3585,
-    "TypeScript": 53847,
+    "TypeScript": 58628,
     "Vue": 295355
   }
 }
