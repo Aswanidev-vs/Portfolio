@@ -1,5 +1,5 @@
 {
-  "ts": 1782645618629,
+  "ts": 1782650961562,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -13,39 +13,11 @@
   },
   "repos": [
     {
-      "name": "Portfolio",
-      "description": null,
-      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
-      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-06-28T09:26:41Z",
-      "created_at": "2025-09-03T16:31:24Z",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "fork": false,
-      "language": "HTML",
-      "primaryLanguage": {
-        "name": "HTML",
-        "color": "#e34c26"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 57690,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          }
-        ]
-      },
-      "license": null
-    },
-    {
       "name": "gitscope",
       "description": "GitScope is a lightweight and intuitive Git GUI client built with Go and Fyne, designed to make version control simple, easy to implement.",
       "html_url": "https://github.com/Aswanidev-vs/gitscope",
       "homepage": "",
-      "pushed_at": "2026-06-28T09:00:31Z",
+      "pushed_at": "2026-06-28T12:26:49Z",
       "created_at": "2025-11-02T18:10:59Z",
       "stargazers_count": 4,
       "forks_count": 0,
@@ -79,7 +51,7 @@
             }
           },
           {
-            "size": 55788,
+            "size": 55976,
             "node": {
               "name": "JavaScript",
               "color": "#f1e05a"
@@ -97,6 +69,34 @@
       "license": {
         "spdx_id": "MIT"
       }
+    },
+    {
+      "name": "Portfolio",
+      "description": null,
+      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
+      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
+      "pushed_at": "2026-06-28T11:20:19Z",
+      "created_at": "2025-09-03T16:31:24Z",
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "fork": false,
+      "language": "HTML",
+      "primaryLanguage": {
+        "name": "HTML",
+        "color": "#e34c26"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 57690,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          }
+        ]
+      },
+      "license": null
     },
     {
       "name": "Ani-sync",
@@ -1440,6 +1440,203 @@
     }
   ],
   "activity": [
+    {
+      "id": "14005989940",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1088310194,
+        "name": "Aswanidev-vs/gitscope",
+        "url": "https://api.github.com/repos/Aswanidev-vs/gitscope"
+      },
+      "payload": {
+        "repository_id": 1088310194,
+        "push_id": 36294173155,
+        "ref": "refs/heads/main",
+        "head": "78c24519bc572e463cf777867fe7811b1434c3c5",
+        "before": "4178d652d6d889a9936fd6f2ac296f96786f3d0c"
+      },
+      "public": true,
+      "created_at": "2026-06-28T12:22:24Z"
+    },
+    {
+      "id": "11083377920",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1088310194,
+        "name": "Aswanidev-vs/gitscope",
+        "url": "https://api.github.com/repos/Aswanidev-vs/gitscope"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 15,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/gitscope/pulls/15",
+          "id": 3950733805,
+          "number": 15,
+          "head": {
+            "ref": "alert-autofix-1",
+            "sha": "7f9f2ab1df404ddad94a6965a8c9264f1a967ca8",
+            "repo": {
+              "id": 1088310194,
+              "url": "https://api.github.com/repos/Aswanidev-vs/gitscope",
+              "name": "gitscope"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "e21e33ce0533cafe45442bdbb7d449254ac226a0",
+            "repo": {
+              "id": 1088310194,
+              "url": "https://api.github.com/repos/Aswanidev-vs/gitscope",
+              "name": "gitscope"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-06-28T12:19:31Z"
+    },
+    {
+      "id": "14005919485",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1088310194,
+        "name": "Aswanidev-vs/gitscope",
+        "url": "https://api.github.com/repos/Aswanidev-vs/gitscope"
+      },
+      "payload": {
+        "repository_id": 1088310194,
+        "push_id": 36294102636,
+        "ref": "refs/heads/main",
+        "head": "4178d652d6d889a9936fd6f2ac296f96786f3d0c",
+        "before": "e21e33ce0533cafe45442bdbb7d449254ac226a0"
+      },
+      "public": true,
+      "created_at": "2026-06-28T12:19:33Z"
+    },
+    {
+      "id": "14005907945",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1088310194,
+        "name": "Aswanidev-vs/gitscope",
+        "url": "https://api.github.com/repos/Aswanidev-vs/gitscope"
+      },
+      "payload": {
+        "repository_id": 1088310194,
+        "push_id": 36294091179,
+        "ref": "refs/heads/alert-autofix-1",
+        "head": "7f9f2ab1df404ddad94a6965a8c9264f1a967ca8",
+        "before": "e21e33ce0533cafe45442bdbb7d449254ac226a0"
+      },
+      "public": true,
+      "created_at": "2026-06-28T12:19:05Z"
+    },
+    {
+      "id": "14005907876",
+      "type": "CreateEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1088310194,
+        "name": "Aswanidev-vs/gitscope",
+        "url": "https://api.github.com/repos/Aswanidev-vs/gitscope"
+      },
+      "payload": {
+        "ref": "alert-autofix-1",
+        "ref_type": "branch",
+        "full_ref": "refs/heads/alert-autofix-1",
+        "master_branch": "main",
+        "description": "GitScope is a lightweight and intuitive Git GUI client built with Go and Fyne, designed to make version control simple, easy to implement.",
+        "pusher_type": "user"
+      },
+      "public": true,
+      "created_at": "2026-06-28T12:19:04Z"
+    },
+    {
+      "id": "11083371610",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1088310194,
+        "name": "Aswanidev-vs/gitscope",
+        "url": "https://api.github.com/repos/Aswanidev-vs/gitscope"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 15,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/gitscope/pulls/15",
+          "id": 3950733805,
+          "number": 15,
+          "head": {
+            "ref": "alert-autofix-1",
+            "sha": "7f9f2ab1df404ddad94a6965a8c9264f1a967ca8",
+            "repo": {
+              "id": 1088310194,
+              "url": "https://api.github.com/repos/Aswanidev-vs/gitscope",
+              "name": "gitscope"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "e21e33ce0533cafe45442bdbb7d449254ac226a0",
+            "repo": {
+              "id": 1088310194,
+              "url": "https://api.github.com/repos/Aswanidev-vs/gitscope",
+              "name": "gitscope"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-06-28T12:19:05Z"
+    },
     {
       "id": "14001190642",
       "type": "PushEvent",
@@ -5311,171 +5508,14 @@
       },
       "public": true,
       "created_at": "2026-06-20T06:57:34Z"
-    },
-    {
-      "id": "13614089722",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1274667189,
-        "name": "Aswanidev-vs/Brain",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Brain"
-      },
-      "payload": {
-        "repository_id": 1274667189,
-        "push_id": 35902191521,
-        "ref": "refs/heads/main",
-        "head": "89bce45ee5bef1a98efb00b9c10a390fd0470be4",
-        "before": "a788c4bd5a8bec107242179f8d2b75982ec55c2b"
-      },
-      "public": true,
-      "created_at": "2026-06-20T06:47:55Z"
-    },
-    {
-      "id": "13614030589",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1274667189,
-        "name": "Aswanidev-vs/Brain",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Brain"
-      },
-      "payload": {
-        "repository_id": 1274667189,
-        "push_id": 35902132268,
-        "ref": "refs/heads/main",
-        "head": "a788c4bd5a8bec107242179f8d2b75982ec55c2b",
-        "before": "8226fb66b1d20d7b8ff21b4b2cf5a90983494907"
-      },
-      "public": true,
-      "created_at": "2026-06-20T06:45:10Z"
-    },
-    {
-      "id": "13613878005",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1274667189,
-        "name": "Aswanidev-vs/Brain",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Brain"
-      },
-      "payload": {
-        "repository_id": 1274667189,
-        "push_id": 35901979831,
-        "ref": "refs/heads/main",
-        "head": "8226fb66b1d20d7b8ff21b4b2cf5a90983494907",
-        "before": "f35d93af806f8fd26ebbc27b990cb10228d35eb6"
-      },
-      "public": true,
-      "created_at": "2026-06-20T06:37:59Z"
-    },
-    {
-      "id": "13599299020",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1274667189,
-        "name": "Aswanidev-vs/Brain",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Brain"
-      },
-      "payload": {
-        "repository_id": 1274667189,
-        "push_id": 35887391015,
-        "ref": "refs/heads/main",
-        "head": "f35d93af806f8fd26ebbc27b990cb10228d35eb6",
-        "before": "a39ad66cd281af32a861a384140b3f091a77b0c1"
-      },
-      "public": true,
-      "created_at": "2026-06-19T20:15:01Z"
-    },
-    {
-      "id": "13598066099",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1274667189,
-        "name": "Aswanidev-vs/Brain",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Brain"
-      },
-      "payload": {
-        "repository_id": 1274667189,
-        "push_id": 35886156873,
-        "ref": "refs/heads/main",
-        "head": "a39ad66cd281af32a861a384140b3f091a77b0c1",
-        "before": "64f70527f37604b01fe1b82d38cee315d6df9bf3"
-      },
-      "public": true,
-      "created_at": "2026-06-19T19:38:58Z"
-    },
-    {
-      "id": "13596984962",
-      "type": "CreateEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1274667189,
-        "name": "Aswanidev-vs/Brain",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Brain"
-      },
-      "payload": {
-        "ref": "main",
-        "ref_type": "branch",
-        "full_ref": "refs/heads/main",
-        "master_branch": "main",
-        "description": "Brain is a Chrome extension that automatically captures AI conversations from ChatGPT, Claude, Gemini, and Grok, saving them directly to your Obsidian vault via the Local REST API. With full privacy, auto-capture, and graph-friendly linked notes, it turns fleeting AI chats into a permanent, searchable knowledge base 100% local, open source.",
-        "pusher_type": "user"
-      },
-      "public": true,
-      "created_at": "2026-06-19T19:07:24Z"
     }
   ],
   "releases": [
     {
       "name": "gitscope",
-      "tag": "v1.1.9",
-      "date": "2026-06-25T09:59:08Z",
-      "url": "https://github.com/Aswanidev-vs/gitscope/releases/tag/v1.1.9"
+      "tag": "v1.1.11",
+      "date": "2026-06-28T12:28:57Z",
+      "url": "https://github.com/Aswanidev-vs/gitscope/releases/tag/v1.1.11"
     },
     {
       "name": "Gocut",
@@ -5533,7 +5573,7 @@
     "Go Template": 221386,
     "HTML": 504763,
     "Hack": 1679,
-    "JavaScript": 707503,
+    "JavaScript": 707691,
     "Lua": 2388,
     "Makefile": 3963,
     "NSIS": 51884,
