@@ -1,5 +1,5 @@
 {
-  "ts": 1783164368012,
+  "ts": 1783169055681,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -13,39 +13,11 @@
   },
   "repos": [
     {
-      "name": "Portfolio",
-      "description": null,
-      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
-      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-07-04T09:55:59Z",
-      "created_at": "2025-09-03T16:31:24Z",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "fork": false,
-      "language": "HTML",
-      "primaryLanguage": {
-        "name": "HTML",
-        "color": "#e34c26"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 57690,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          }
-        ]
-      },
-      "license": null
-    },
-    {
       "name": "Gocut",
       "description": "Gocut is a fast, lightweight, fully offline video editor for the desktop. Built with a Go backend (Wails) and Vue 3 frontend, it offers a multi-track timeline and other features without uploading footage to the cloud.",
       "html_url": "https://github.com/Aswanidev-vs/Gocut",
       "homepage": "",
-      "pushed_at": "2026-07-04T08:46:38Z",
+      "pushed_at": "2026-07-04T12:33:06Z",
       "created_at": "2026-06-03T11:10:16Z",
       "stargazers_count": 5,
       "forks_count": 0,
@@ -79,7 +51,7 @@
             }
           },
           {
-            "size": 295355,
+            "size": 297582,
             "node": {
               "name": "Vue",
               "color": "#41b883"
@@ -100,7 +72,7 @@
             }
           },
           {
-            "size": 95093,
+            "size": 89056,
             "node": {
               "name": "Go",
               "color": "#00ADD8"
@@ -111,6 +83,34 @@
       "license": {
         "spdx_id": "AGPL-3.0"
       }
+    },
+    {
+      "name": "Portfolio",
+      "description": null,
+      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
+      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
+      "pushed_at": "2026-07-04T11:26:08Z",
+      "created_at": "2025-09-03T16:31:24Z",
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "fork": false,
+      "language": "HTML",
+      "primaryLanguage": {
+        "name": "HTML",
+        "color": "#e34c26"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 57690,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          }
+        ]
+      },
+      "license": null
     },
     {
       "name": "gitscope",
@@ -1468,6 +1468,32 @@
     }
   ],
   "activity": [
+    {
+      "id": "14333837719",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1258201172,
+        "name": "Aswanidev-vs/Gocut",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Gocut"
+      },
+      "payload": {
+        "repository_id": 1258201172,
+        "push_id": 36623005904,
+        "ref": "refs/heads/main",
+        "head": "aa31deede7eff235ad41cd065e584e81eec6de3e",
+        "before": "41de47299acc5b9a349bd734652c7617372774dc"
+      },
+      "public": true,
+      "created_at": "2026-07-04T12:29:53Z"
+    },
     {
       "id": "14328087066",
       "type": "PushEvent",
@@ -4407,36 +4433,15 @@
       },
       "public": true,
       "created_at": "2026-06-29T10:50:38Z"
-    },
-    {
-      "id": "14047069654",
-      "type": "CreateEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1120654297,
-        "name": "Aswanidev-vs/Predator",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
-      },
-      "payload": {
-        "ref": "alert-autofix-12-2",
-        "ref_type": "branch",
-        "full_ref": "refs/heads/alert-autofix-12-2",
-        "master_branch": "v5",
-        "description": "Predator is a lightweight, cross platform desktop application for downloading videos and extracting audio from YouTube. It is built using Go and wails GUI framework, with go-ytdlp wrapper used as the download engine. The application focuses on simplicity, and a clean user experience .",
-        "pusher_type": "user"
-      },
-      "public": true,
-      "created_at": "2026-06-29T10:50:38Z"
     }
   ],
   "releases": [
+    {
+      "name": "Gocut",
+      "tag": "v0.4.0",
+      "date": "2026-07-04T12:36:03Z",
+      "url": "https://github.com/Aswanidev-vs/Gocut/releases/tag/v0.4.0"
+    },
     {
       "name": "Predator",
       "tag": "v1.3.8",
@@ -4448,12 +4453,6 @@
       "tag": "v1.1.11",
       "date": "2026-06-28T12:28:57Z",
       "url": "https://github.com/Aswanidev-vs/gitscope/releases/tag/v1.1.11"
-    },
-    {
-      "name": "Gocut",
-      "tag": "v0.3.3",
-      "date": "2026-06-24T16:49:21Z",
-      "url": "https://github.com/Aswanidev-vs/Gocut/releases/tag/v0.3.3"
     },
     {
       "name": "gkport",
@@ -4495,7 +4494,7 @@
   "languageBytes": {
     "CSS": 437974,
     "Dockerfile": 378,
-    "Go": 2397021,
+    "Go": 2390984,
     "Go Template": 221386,
     "HTML": 516364,
     "Hack": 1679,
@@ -4509,6 +4508,6 @@
     "Python": 25908,
     "Shell": 3585,
     "TypeScript": 58628,
-    "Vue": 295355
+    "Vue": 297582
   }
 }
