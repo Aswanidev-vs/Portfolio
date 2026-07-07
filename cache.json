@@ -1,5 +1,5 @@
 {
-  "ts": 1783411203410,
+  "ts": 1783423012222,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -17,7 +17,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-07-07T04:28:56Z",
+      "pushed_at": "2026-07-07T08:00:04Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -452,7 +452,7 @@
       "description": "Mai is a fully offline, voice-driven AI assistant built in Go. It processes everything locally using optimized ONNX models, ensuring complete privacy and fast, customizable performance without any cloud dependency.",
       "html_url": "https://github.com/Aswanidev-vs/Mai",
       "homepage": "",
-      "pushed_at": "2026-07-07T06:18:32Z",
+      "pushed_at": "2026-07-07T08:33:06Z",
       "created_at": "2026-04-25T16:27:51Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -1468,6 +1468,32 @@
     }
   ],
   "activity": [
+    {
+      "id": "14472836751",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1221010957,
+        "name": "Aswanidev-vs/Mai",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
+      },
+      "payload": {
+        "repository_id": 1221010957,
+        "push_id": 36762075892,
+        "ref": "refs/heads/v1",
+        "head": "15eac102b32e6184481b34398a6af3e2bda95d82",
+        "before": "430656f86a626ccedc1b43d735b97276044b09e8"
+      },
+      "public": true,
+      "created_at": "2026-07-07T08:33:07Z"
+    },
     {
       "id": "14466539942",
       "type": "PushEvent",
@@ -4267,32 +4293,6 @@
       },
       "public": true,
       "created_at": "2026-06-30T09:19:41Z"
-    },
-    {
-      "id": "14100779990",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1282047643,
-        "name": "Aswanidev-vs/Ani-sync",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Ani-sync"
-      },
-      "payload": {
-        "repository_id": 1282047643,
-        "push_id": 36389399326,
-        "ref": "refs/heads/feature",
-        "head": "66dc26489acbf33b81fd49c3549d04248c1082a3",
-        "before": "d177dc670d2eadff4c9e653e3d70ddb0939cab98"
-      },
-      "public": true,
-      "created_at": "2026-06-30T09:18:55Z"
     }
   ],
   "releases": [
