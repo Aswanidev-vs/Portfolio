@@ -1,5 +1,5 @@
 {
-  "ts": 1783515913387,
+  "ts": 1783524659776,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -7,11 +7,67 @@
     "bio": "",
     "location": "India ",
     "followers": 12,
-    "public_repos": 27,
+    "public_repos": 28,
     "forked_repos": 5,
-    "total_repos": 32
+    "total_repos": 33
   },
   "repos": [
+    {
+      "name": "go-cognitive-voice",
+      "description": "A pure Go library for speaker detection and identification. Zero CGo, zero ML frameworks—just math. Enroll speakers with WAV/MP3 files and get real-time identification with MFCC, GMM, and neural embeddings",
+      "html_url": "https://github.com/Aswanidev-vs/go-cognitive-voice",
+      "homepage": "https://aswanidev-vs.github.io/go-cognitive-voice/",
+      "pushed_at": "2026-07-08T15:12:59Z",
+      "created_at": "2026-07-08T14:30:07Z",
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "fork": false,
+      "language": "Go",
+      "primaryLanguage": {
+        "name": "Go",
+        "color": "#00ADD8"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 172237,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
+    {
+      "name": "Portfolio",
+      "description": null,
+      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
+      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
+      "pushed_at": "2026-07-08T13:05:14Z",
+      "created_at": "2025-09-03T16:31:24Z",
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "fork": false,
+      "language": "HTML",
+      "primaryLanguage": {
+        "name": "HTML",
+        "color": "#e34c26"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 57690,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
     {
       "name": "Gcode",
       "description": null,
@@ -104,34 +160,6 @@
       "license": {
         "spdx_id": "MIT"
       }
-    },
-    {
-      "name": "Portfolio",
-      "description": null,
-      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
-      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-07-08T11:26:39Z",
-      "created_at": "2025-09-03T16:31:24Z",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "fork": false,
-      "language": "HTML",
-      "primaryLanguage": {
-        "name": "HTML",
-        "color": "#e34c26"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 57690,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          }
-        ]
-      },
-      "license": null
     },
     {
       "name": "Ani-sync",
@@ -1503,6 +1531,85 @@
     }
   ],
   "activity": [
+    {
+      "id": "14562143862",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1293718642,
+        "name": "Aswanidev-vs/go-cognitive-voice",
+        "url": "https://api.github.com/repos/Aswanidev-vs/go-cognitive-voice"
+      },
+      "payload": {
+        "repository_id": 1293718642,
+        "push_id": 36851453022,
+        "ref": "refs/heads/main",
+        "head": "8384dd838b619c639fdfb7a0e154716134b9f207",
+        "before": "820aa87e5f2428a2f349a27d983c17fa37377c37"
+      },
+      "public": true,
+      "created_at": "2026-07-08T15:12:35Z"
+    },
+    {
+      "id": "14560689109",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1293718642,
+        "name": "Aswanidev-vs/go-cognitive-voice",
+        "url": "https://api.github.com/repos/Aswanidev-vs/go-cognitive-voice"
+      },
+      "payload": {
+        "repository_id": 1293718642,
+        "push_id": 36849996844,
+        "ref": "refs/heads/main",
+        "head": "820aa87e5f2428a2f349a27d983c17fa37377c37",
+        "before": "19818401d02f88f00de6eef40b6c73b60e243490"
+      },
+      "public": true,
+      "created_at": "2026-07-08T14:50:07Z"
+    },
+    {
+      "id": "14560661277",
+      "type": "CreateEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1293718642,
+        "name": "Aswanidev-vs/go-cognitive-voice",
+        "url": "https://api.github.com/repos/Aswanidev-vs/go-cognitive-voice"
+      },
+      "payload": {
+        "ref": "main",
+        "ref_type": "branch",
+        "full_ref": "refs/heads/main",
+        "master_branch": "main",
+        "description": "A pure Go library for speaker detection and identification. Zero CGo, zero ML frameworks—just math. Enroll speakers with WAV/MP3 files and get real-time identification with MFCC, GMM, and neural embeddings",
+        "pusher_type": "user"
+      },
+      "public": true,
+      "created_at": "2026-07-08T14:49:41Z"
+    },
     {
       "id": "14553631712",
       "type": "PushEvent",
@@ -4060,104 +4167,6 @@
       },
       "public": true,
       "created_at": "2026-07-01T16:25:11Z"
-    },
-    {
-      "id": "14181192120",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "repository_id": 1221010957,
-        "push_id": 36470089177,
-        "ref": "refs/heads/v1",
-        "head": "7591cecc4160e6903a56233c463596e8f4e0d4dc",
-        "before": "184a02e51c8a0f8ac2ae852ad6af8265f998f275"
-      },
-      "public": true,
-      "created_at": "2026-07-01T16:22:48Z"
-    },
-    {
-      "id": "14179933893",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "repository_id": 1221010957,
-        "push_id": 36468828175,
-        "ref": "refs/heads/main",
-        "head": "88891f60857c675036f19e37d10b8d7a74b8d769",
-        "before": "50d212c437ee4cadc311db2b4402b2ec65acb198"
-      },
-      "public": true,
-      "created_at": "2026-07-01T15:56:30Z"
-    },
-    {
-      "id": "11231313995",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "action": "merged",
-        "number": 12,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Mai/pulls/12",
-          "id": 3972081809,
-          "number": 12,
-          "head": {
-            "ref": "v1",
-            "sha": "184a02e51c8a0f8ac2ae852ad6af8265f998f275",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "50d212c437ee4cadc311db2b4402b2ec65acb198",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-07-01T15:56:29Z"
     }
   ],
   "releases": [
@@ -4219,7 +4228,7 @@
   "languageBytes": {
     "CSS": 449745,
     "Dockerfile": 378,
-    "Go": 2607926,
+    "Go": 2780163,
     "Go Template": 230517,
     "HTML": 524542,
     "Hack": 1679,
