@@ -1,5 +1,5 @@
 {
-  "ts": 1783540969021,
+  "ts": 1783545595159,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -13,11 +13,69 @@
   },
   "repos": [
     {
+      "name": "Mai",
+      "description": "Mai is a fully offline, voice-driven AI assistant built in Go. It processes everything locally using optimized ONNX models, ensuring complete privacy and fast, customizable performance without any cloud dependency.",
+      "html_url": "https://github.com/Aswanidev-vs/Mai",
+      "homepage": "",
+      "pushed_at": "2026-07-08T20:23:55Z",
+      "created_at": "2026-04-25T16:27:51Z",
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "fork": false,
+      "language": "Go",
+      "primaryLanguage": {
+        "name": "Go",
+        "color": "#00ADD8"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 317966,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          },
+          {
+            "size": 3033,
+            "node": {
+              "name": "Makefile",
+              "color": "#427819"
+            }
+          },
+          {
+            "size": 11771,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          },
+          {
+            "size": 8178,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          },
+          {
+            "size": 91290,
+            "node": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            }
+          }
+        ]
+      },
+      "license": {
+        "spdx_id": "MIT"
+      }
+    },
+    {
       "name": "Portfolio",
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-07-08T18:25:07Z",
+      "pushed_at": "2026-07-08T20:02:49Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -197,64 +255,6 @@
             "node": {
               "name": "CSS",
               "color": "#663399"
-            }
-          }
-        ]
-      },
-      "license": {
-        "spdx_id": "MIT"
-      }
-    },
-    {
-      "name": "Mai",
-      "description": "Mai is a fully offline, voice-driven AI assistant built in Go. It processes everything locally using optimized ONNX models, ensuring complete privacy and fast, customizable performance without any cloud dependency.",
-      "html_url": "https://github.com/Aswanidev-vs/Mai",
-      "homepage": "",
-      "pushed_at": "2026-07-07T16:30:16Z",
-      "created_at": "2026-04-25T16:27:51Z",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "fork": false,
-      "language": "Go",
-      "primaryLanguage": {
-        "name": "Go",
-        "color": "#00ADD8"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 317966,
-            "node": {
-              "name": "Go",
-              "color": "#00ADD8"
-            }
-          },
-          {
-            "size": 3033,
-            "node": {
-              "name": "Makefile",
-              "color": "#427819"
-            }
-          },
-          {
-            "size": 11771,
-            "node": {
-              "name": "CSS",
-              "color": "#663399"
-            }
-          },
-          {
-            "size": 8178,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 71182,
-            "node": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
             }
           }
         ]
@@ -1531,6 +1531,150 @@
     }
   ],
   "activity": [
+    {
+      "id": "14579037645",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1221010957,
+        "name": "Aswanidev-vs/Mai",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
+      },
+      "payload": {
+        "repository_id": 1221010957,
+        "push_id": 36868368174,
+        "ref": "refs/heads/main",
+        "head": "161394464341eb1ced56088e6a5bc96a7e3a9f21",
+        "before": "c71382e8de98f49ae6b696e2d77538b570f2045d"
+      },
+      "public": true,
+      "created_at": "2026-07-08T20:23:58Z"
+    },
+    {
+      "id": "11531698378",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1221010957,
+        "name": "Aswanidev-vs/Mai",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 17,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Mai/pulls/17",
+          "id": 4017326774,
+          "number": 17,
+          "head": {
+            "ref": "v1",
+            "sha": "d43b62b1cd00e63db852302ad6a857109d0ef104",
+            "repo": {
+              "id": 1221010957,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
+              "name": "Mai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "c71382e8de98f49ae6b696e2d77538b570f2045d",
+            "repo": {
+              "id": 1221010957,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
+              "name": "Mai"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-07-08T20:23:56Z"
+    },
+    {
+      "id": "11531611826",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1221010957,
+        "name": "Aswanidev-vs/Mai",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 17,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Mai/pulls/17",
+          "id": 4017326774,
+          "number": 17,
+          "head": {
+            "ref": "v1",
+            "sha": "d43b62b1cd00e63db852302ad6a857109d0ef104",
+            "repo": {
+              "id": 1221010957,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
+              "name": "Mai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "c71382e8de98f49ae6b696e2d77538b570f2045d",
+            "repo": {
+              "id": 1221010957,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
+              "name": "Mai"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-07-08T20:21:46Z"
+    },
+    {
+      "id": "14578849659",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1221010957,
+        "name": "Aswanidev-vs/Mai",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
+      },
+      "payload": {
+        "repository_id": 1221010957,
+        "push_id": 36868179719,
+        "ref": "refs/heads/v1",
+        "head": "d43b62b1cd00e63db852302ad6a857109d0ef104",
+        "before": "f10e833b88a0d3306099801582f708847c482732"
+      },
+      "public": true,
+      "created_at": "2026-07-08T20:20:06Z"
+    },
     {
       "id": "14562143862",
       "type": "PushEvent",
@@ -4027,150 +4171,6 @@
       },
       "public": true,
       "created_at": "2026-07-01T18:02:30Z"
-    },
-    {
-      "id": "14181345526",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "repository_id": 1221010957,
-        "push_id": 36470242561,
-        "ref": "refs/heads/main",
-        "head": "628e48c6e8ba50f460ec0ab9be41d471e3ab6da5",
-        "before": "88891f60857c675036f19e37d10b8d7a74b8d769"
-      },
-      "public": true,
-      "created_at": "2026-07-01T16:26:15Z"
-    },
-    {
-      "id": "11232693779",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "action": "merged",
-        "number": 13,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Mai/pulls/13",
-          "id": 3972279001,
-          "number": 13,
-          "head": {
-            "ref": "feature",
-            "sha": "684bafc77bf6c1d7a968db8f612c63abc02e2abb",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "88891f60857c675036f19e37d10b8d7a74b8d769",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-07-01T16:26:14Z"
-    },
-    {
-      "id": "11232647276",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "action": "opened",
-        "number": 13,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Mai/pulls/13",
-          "id": 3972279001,
-          "number": 13,
-          "head": {
-            "ref": "feature",
-            "sha": "684bafc77bf6c1d7a968db8f612c63abc02e2abb",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "88891f60857c675036f19e37d10b8d7a74b8d769",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-07-01T16:25:11Z"
-    },
-    {
-      "id": "14181192120",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "repository_id": 1221010957,
-        "push_id": 36470089177,
-        "ref": "refs/heads/v1",
-        "head": "7591cecc4160e6903a56233c463596e8f4e0d4dc",
-        "before": "184a02e51c8a0f8ac2ae852ad6af8265f998f275"
-      },
-      "public": true,
-      "created_at": "2026-07-01T16:22:48Z"
     }
   ],
   "releases": [
@@ -4237,7 +4237,7 @@
     "HTML": 524542,
     "Hack": 1679,
     "Inno Setup": 7941,
-    "JavaScript": 829222,
+    "JavaScript": 849330,
     "Lua": 2388,
     "Makefile": 5002,
     "NSIS": 51884,
