@@ -1,5 +1,5 @@
 {
-  "ts": 1783869259533,
+  "ts": 1783872853124,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -17,7 +17,7 @@
       "description": "Miku is a feature-rich, native Android application for tracking anime and manga on AniList. Built with Wails 3, it combines a high-performance Go backend with a Vue 3 frontend to deliver a smooth, 60 FPS experience.",
       "html_url": "https://github.com/Aswanidev-vs/Miku",
       "homepage": "",
-      "pushed_at": "2026-07-12T14:20:25Z",
+      "pushed_at": "2026-07-12T15:51:52Z",
       "created_at": "2026-07-11T18:58:55Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -37,14 +37,14 @@
             }
           },
           {
-            "size": 101856,
+            "size": 101780,
             "node": {
               "name": "Vue",
               "color": "#41b883"
             }
           },
           {
-            "size": 42606,
+            "size": 42492,
             "node": {
               "name": "TypeScript",
               "color": "#3178c6"
@@ -108,7 +108,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-07-12T14:08:59Z",
+      "pushed_at": "2026-07-12T15:14:20Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -1650,6 +1650,32 @@
     }
   ],
   "activity": [
+    {
+      "id": "14829952270",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "repository_id": 1297710346,
+        "push_id": 37119998131,
+        "ref": "refs/heads/main",
+        "head": "5ef0176bbdb3a5747b27284f3dba384709fc6d05",
+        "before": "3c54f6b0bdcdf6569877341748136c55d63acae6"
+      },
+      "public": true,
+      "created_at": "2026-07-12T15:51:35Z"
+    },
     {
       "id": "14825506532",
       "type": "PushEvent",
@@ -3931,40 +3957,14 @@
       },
       "public": true,
       "created_at": "2026-07-11T19:32:45Z"
-    },
-    {
-      "id": "14781070290",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "repository_id": 1297710346,
-        "push_id": 37070977327,
-        "ref": "refs/heads/main",
-        "head": "c9127ef3b0901031e98dc376e66b3bcb030d5558",
-        "before": "0ea65e8f038a34338777113ac66bc23ef00a9340"
-      },
-      "public": true,
-      "created_at": "2026-07-11T19:32:11Z"
     }
   ],
   "releases": [
     {
       "name": "Miku",
-      "tag": "v0.5.0",
-      "date": "2026-07-12T12:21:30Z",
-      "url": "https://github.com/Aswanidev-vs/Miku/releases/tag/v0.5.0"
+      "tag": "v0.6.0",
+      "date": "2026-07-12T15:56:00Z",
+      "url": "https://github.com/Aswanidev-vs/Miku/releases/tag/v0.6.0"
     },
     {
       "name": "Gocut",
@@ -4040,7 +4040,7 @@
     "PowerShell": 145,
     "Python": 25908,
     "Shell": 5617,
-    "TypeScript": 135039,
-    "Vue": 399438
+    "TypeScript": 134925,
+    "Vue": 399362
   }
 }
