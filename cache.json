@@ -1,5 +1,5 @@
 {
-  "ts": 1783872853124,
+  "ts": 1783877215133,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -17,15 +17,15 @@
       "description": "Miku is a feature-rich, native Android application for tracking anime and manga on AniList. Built with Wails 3, it combines a high-performance Go backend with a Vue 3 frontend to deliver a smooth, 60 FPS experience.",
       "html_url": "https://github.com/Aswanidev-vs/Miku",
       "homepage": "",
-      "pushed_at": "2026-07-12T15:51:52Z",
+      "pushed_at": "2026-07-12T17:04:39Z",
       "created_at": "2026-07-11T18:58:55Z",
       "stargazers_count": 1,
       "forks_count": 0,
       "fork": false,
-      "language": "Java",
+      "language": "Vue",
       "primaryLanguage": {
-        "name": "Java",
-        "color": "#b07219"
+        "name": "Vue",
+        "color": "#41b883"
       },
       "languages": {
         "edges": [
@@ -37,21 +37,21 @@
             }
           },
           {
-            "size": 101780,
+            "size": 110005,
             "node": {
               "name": "Vue",
               "color": "#41b883"
             }
           },
           {
-            "size": 42492,
+            "size": 51715,
             "node": {
               "name": "TypeScript",
               "color": "#3178c6"
             }
           },
           {
-            "size": 9110,
+            "size": 15096,
             "node": {
               "name": "CSS",
               "color": "#663399"
@@ -65,7 +65,7 @@
             }
           },
           {
-            "size": 44713,
+            "size": 46291,
             "node": {
               "name": "Go",
               "color": "#00ADD8"
@@ -108,7 +108,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-07-12T15:14:20Z",
+      "pushed_at": "2026-07-12T16:14:13Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -1650,6 +1650,348 @@
     }
   ],
   "activity": [
+    {
+      "id": "11679393938",
+      "type": "IssuesEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "action": "assigned",
+        "issue": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/15",
+          "repository_url": "https://api.github.com/repos/Aswanidev-vs/Miku",
+          "labels_url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/15/labels{/name}",
+          "comments_url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/15/comments",
+          "events_url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/15/events",
+          "html_url": "https://github.com/Aswanidev-vs/Miku/issues/15",
+          "id": 4868023555,
+          "node_id": "I_kwDOTVl9Cs8AAAABIiglAw",
+          "number": 15,
+          "title": "optimize app size",
+          "user": {
+            "login": "Aswanidev-vs",
+            "id": 178192591,
+            "node_id": "U_kgDOCp8Azw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Aswanidev-vs",
+            "html_url": "https://github.com/Aswanidev-vs",
+            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
+            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
+            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
+            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
+            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "open",
+          "locked": false,
+          "assignees": [
+            {
+              "login": "Aswanidev-vs",
+              "id": 178192591,
+              "node_id": "U_kgDOCp8Azw",
+              "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/Aswanidev-vs",
+              "html_url": "https://github.com/Aswanidev-vs",
+              "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
+              "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
+              "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
+              "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
+              "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
+              "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
+              "type": "User",
+              "user_view_type": "public",
+              "site_admin": false
+            }
+          ],
+          "milestone": null,
+          "comments": 0,
+          "created_at": "2026-07-12T17:25:52Z",
+          "updated_at": "2026-07-12T17:25:57Z",
+          "closed_at": null,
+          "assignee": {
+            "login": "Aswanidev-vs",
+            "id": 178192591,
+            "node_id": "U_kgDOCp8Azw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Aswanidev-vs",
+            "html_url": "https://github.com/Aswanidev-vs",
+            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
+            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
+            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
+            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
+            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": "tries to optimize the memory and app size",
+          "reactions": {
+            "url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/15/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/15/timeline",
+          "performed_via_github_app": null,
+          "state_reason": null,
+          "pinned_comment": null
+        },
+        "assignee": {
+          "login": "Aswanidev-vs",
+          "id": 178192591,
+          "node_id": "U_kgDOCp8Azw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Aswanidev-vs",
+          "html_url": "https://github.com/Aswanidev-vs",
+          "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
+          "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
+          "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
+          "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
+          "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "assignees": [
+          {
+            "login": "Aswanidev-vs",
+            "id": 178192591,
+            "node_id": "U_kgDOCp8Azw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Aswanidev-vs",
+            "html_url": "https://github.com/Aswanidev-vs",
+            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
+            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
+            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
+            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
+            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          }
+        ]
+      },
+      "public": true,
+      "created_at": "2026-07-12T17:25:57Z"
+    },
+    {
+      "id": "11679392571",
+      "type": "IssuesEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "action": "opened",
+        "issue": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/15",
+          "repository_url": "https://api.github.com/repos/Aswanidev-vs/Miku",
+          "labels_url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/15/labels{/name}",
+          "comments_url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/15/comments",
+          "events_url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/15/events",
+          "html_url": "https://github.com/Aswanidev-vs/Miku/issues/15",
+          "id": 4868023555,
+          "node_id": "I_kwDOTVl9Cs8AAAABIiglAw",
+          "number": 15,
+          "title": "optimize app size",
+          "user": {
+            "login": "Aswanidev-vs",
+            "id": 178192591,
+            "node_id": "U_kgDOCp8Azw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Aswanidev-vs",
+            "html_url": "https://github.com/Aswanidev-vs",
+            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
+            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
+            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
+            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
+            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "open",
+          "locked": false,
+          "assignees": [
+            {
+              "login": "Aswanidev-vs",
+              "id": 178192591,
+              "node_id": "U_kgDOCp8Azw",
+              "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/Aswanidev-vs",
+              "html_url": "https://github.com/Aswanidev-vs",
+              "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
+              "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
+              "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
+              "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
+              "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
+              "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
+              "type": "User",
+              "user_view_type": "public",
+              "site_admin": false
+            }
+          ],
+          "milestone": null,
+          "comments": 0,
+          "created_at": "2026-07-12T17:25:52Z",
+          "updated_at": "2026-07-12T17:25:57Z",
+          "closed_at": null,
+          "assignee": {
+            "login": "Aswanidev-vs",
+            "id": 178192591,
+            "node_id": "U_kgDOCp8Azw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Aswanidev-vs",
+            "html_url": "https://github.com/Aswanidev-vs",
+            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
+            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
+            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
+            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
+            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": "tries to optimize the memory and app size",
+          "reactions": {
+            "url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/15/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/15/timeline",
+          "performed_via_github_app": null,
+          "state_reason": null,
+          "pinned_comment": null
+        }
+      },
+      "public": true,
+      "created_at": "2026-07-12T17:25:53Z"
+    },
+    {
+      "id": "14833446480",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "repository_id": 1297710346,
+        "push_id": 37123501229,
+        "ref": "refs/heads/main",
+        "head": "b04f11d107e75f52e694fc24c75763e626726c9a",
+        "before": "5ef0176bbdb3a5747b27284f3dba384709fc6d05"
+      },
+      "public": true,
+      "created_at": "2026-07-12T17:03:01Z"
+    },
     {
       "id": "14829952270",
       "type": "PushEvent",
@@ -3879,92 +4221,14 @@
       },
       "public": true,
       "created_at": "2026-07-11T19:39:45Z"
-    },
-    {
-      "id": "14781227526",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "repository_id": 1297710346,
-        "push_id": 37071134938,
-        "ref": "refs/heads/main",
-        "head": "34434634acc259849833d302786f98f15ae851ac",
-        "before": "928042f92f4b57119359ed6c83874ebdbf14c64c"
-      },
-      "public": true,
-      "created_at": "2026-07-11T19:36:08Z"
-    },
-    {
-      "id": "14781099438",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "repository_id": 1297710346,
-        "push_id": 37071006603,
-        "ref": "refs/heads/main",
-        "head": "928042f92f4b57119359ed6c83874ebdbf14c64c",
-        "before": "c9127ef3b0901031e98dc376e66b3bcb030d5558"
-      },
-      "public": true,
-      "created_at": "2026-07-11T19:32:55Z"
-    },
-    {
-      "id": "14781092936",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "repository_id": 1297710346,
-        "push_id": 37070999994,
-        "ref": "refs/heads/dependabot/npm_and_yarn/multi-24d6d97f19",
-        "head": "f128f032f1cd420bec761182f04b3b3db481a6dc",
-        "before": "07e0afb436e6921b67b83689bd70d7200e8b10e7"
-      },
-      "public": true,
-      "created_at": "2026-07-11T19:32:45Z"
     }
   ],
   "releases": [
     {
       "name": "Miku",
-      "tag": "v0.6.0",
-      "date": "2026-07-12T15:56:00Z",
-      "url": "https://github.com/Aswanidev-vs/Miku/releases/tag/v0.6.0"
+      "tag": "v0.7.0",
+      "date": "2026-07-12T17:08:18Z",
+      "url": "https://github.com/Aswanidev-vs/Miku/releases/tag/v0.7.0"
     },
     {
       "name": "Gocut",
@@ -4023,9 +4287,9 @@
   ],
   "languageBytes": {
     "Batchfile": 807,
-    "CSS": 459837,
+    "CSS": 465823,
     "Dockerfile": 378,
-    "Go": 2825330,
+    "Go": 2826908,
     "Go Template": 230517,
     "HTML": 525642,
     "Hack": 1679,
@@ -4040,7 +4304,7 @@
     "PowerShell": 145,
     "Python": 25908,
     "Shell": 5617,
-    "TypeScript": 134925,
-    "Vue": 399362
+    "TypeScript": 144148,
+    "Vue": 407587
   }
 }
