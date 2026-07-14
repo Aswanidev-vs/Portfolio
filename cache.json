@@ -1,5 +1,5 @@
 {
-  "ts": 1784040446755,
+  "ts": 1784045070357,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -12,6 +12,125 @@
     "total_repos": 35
   },
   "repos": [
+    {
+      "name": "Miku",
+      "description": "Miku is a feature-rich, native Android application for tracking anime and manga on AniList. Built with Wails 3, it combines a high-performance Go backend with a Vue 3 frontend to deliver a smooth experience.",
+      "html_url": "https://github.com/Aswanidev-vs/Miku",
+      "homepage": "",
+      "pushed_at": "2026-07-14T15:47:48Z",
+      "created_at": "2026-07-11T18:58:55Z",
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "fork": false,
+      "language": "Vue",
+      "primaryLanguage": {
+        "name": "Vue",
+        "color": "#41b883"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 763,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          },
+          {
+            "size": 147058,
+            "node": {
+              "name": "Vue",
+              "color": "#41b883"
+            }
+          },
+          {
+            "size": 64231,
+            "node": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            }
+          },
+          {
+            "size": 19154,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          },
+          {
+            "size": 102149,
+            "node": {
+              "name": "Java",
+              "color": "#b07219"
+            }
+          },
+          {
+            "size": 47557,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          },
+          {
+            "size": 1074,
+            "node": {
+              "name": "Objective-C",
+              "color": "#438eff"
+            }
+          },
+          {
+            "size": 2032,
+            "node": {
+              "name": "Shell",
+              "color": "#89e051"
+            }
+          },
+          {
+            "size": 13634,
+            "node": {
+              "name": "NSIS",
+              "color": null
+            }
+          },
+          {
+            "size": 807,
+            "node": {
+              "name": "Batchfile",
+              "color": "#C1F12E"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
+    {
+      "name": "Portfolio",
+      "description": null,
+      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
+      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
+      "pushed_at": "2026-07-14T14:47:27Z",
+      "created_at": "2025-09-03T16:31:24Z",
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "fork": false,
+      "language": "HTML",
+      "primaryLanguage": {
+        "name": "HTML",
+        "color": "#e34c26"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 57690,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
     {
       "name": "Mai",
       "description": "Mai is a fully offline, voice-driven AI assistant built in Go. It processes everything locally using optimized ONNX models, ensuring complete privacy and fast, customizable performance without any cloud dependency.",
@@ -69,125 +188,6 @@
       "license": {
         "spdx_id": "MIT"
       }
-    },
-    {
-      "name": "Portfolio",
-      "description": null,
-      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
-      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-07-14T12:55:20Z",
-      "created_at": "2025-09-03T16:31:24Z",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "fork": false,
-      "language": "HTML",
-      "primaryLanguage": {
-        "name": "HTML",
-        "color": "#e34c26"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 57690,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          }
-        ]
-      },
-      "license": null
-    },
-    {
-      "name": "Miku",
-      "description": "Miku is a feature-rich, native Android application for tracking anime and manga on AniList. Built with Wails 3, it combines a high-performance Go backend with a Vue 3 frontend to deliver a smooth experience.",
-      "html_url": "https://github.com/Aswanidev-vs/Miku",
-      "homepage": "",
-      "pushed_at": "2026-07-14T08:10:43Z",
-      "created_at": "2026-07-11T18:58:55Z",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "fork": false,
-      "language": "Vue",
-      "primaryLanguage": {
-        "name": "Vue",
-        "color": "#41b883"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 763,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 147058,
-            "node": {
-              "name": "Vue",
-              "color": "#41b883"
-            }
-          },
-          {
-            "size": 64231,
-            "node": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            }
-          },
-          {
-            "size": 18999,
-            "node": {
-              "name": "CSS",
-              "color": "#663399"
-            }
-          },
-          {
-            "size": 102149,
-            "node": {
-              "name": "Java",
-              "color": "#b07219"
-            }
-          },
-          {
-            "size": 47557,
-            "node": {
-              "name": "Go",
-              "color": "#00ADD8"
-            }
-          },
-          {
-            "size": 1074,
-            "node": {
-              "name": "Objective-C",
-              "color": "#438eff"
-            }
-          },
-          {
-            "size": 2032,
-            "node": {
-              "name": "Shell",
-              "color": "#89e051"
-            }
-          },
-          {
-            "size": 13634,
-            "node": {
-              "name": "NSIS",
-              "color": null
-            }
-          },
-          {
-            "size": 807,
-            "node": {
-              "name": "Batchfile",
-              "color": "#C1F12E"
-            }
-          }
-        ]
-      },
-      "license": null
     },
     {
       "name": "Gocut",
@@ -1650,6 +1650,58 @@
     }
   ],
   "activity": [
+    {
+      "id": "14972495454",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "repository_id": 1297710346,
+        "push_id": 37262523778,
+        "ref": "refs/heads/main",
+        "head": "d825cc53f32869ab400c4e8ca1e5ee38d53ed9e2",
+        "before": "77da3624272f7c763a6d70ee419704187bf8047c"
+      },
+      "public": true,
+      "created_at": "2026-07-14T15:47:31Z"
+    },
+    {
+      "id": "14971356811",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "repository_id": 1297710346,
+        "push_id": 37261383838,
+        "ref": "refs/heads/main",
+        "head": "77da3624272f7c763a6d70ee419704187bf8047c",
+        "before": "50866cf2057a41cec081814aa00b2b1b276b84db"
+      },
+      "public": true,
+      "created_at": "2026-07-14T15:27:58Z"
+    },
     {
       "id": "14964915352",
       "type": "PushEvent",
@@ -6506,65 +6558,14 @@
       },
       "public": true,
       "created_at": "2026-07-12T05:37:29Z"
-    },
-    {
-      "id": "14801074954",
-      "type": "DeleteEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "ref": "v0.1.0",
-        "ref_type": "tag",
-        "full_ref": "refs/tags/v0.1.0",
-        "pusher_type": "user"
-      },
-      "public": true,
-      "created_at": "2026-07-12T05:35:08Z"
-    },
-    {
-      "id": "14801036109",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "repository_id": 1297710346,
-        "push_id": 37090987594,
-        "ref": "refs/heads/main",
-        "head": "bb393d8ece906038ea21de8b5d0095de7206f7fd",
-        "before": "af0b71ded4175b1a70b98c2463d8efd97f89d7ae"
-      },
-      "public": true,
-      "created_at": "2026-07-12T05:34:09Z"
     }
   ],
   "releases": [
     {
       "name": "Miku",
-      "tag": "v0.8.13",
-      "date": "2026-07-14T08:15:25Z",
-      "url": "https://github.com/Aswanidev-vs/Miku/releases/tag/v0.8.13"
+      "tag": "v0.8.14",
+      "date": "2026-07-14T15:52:28Z",
+      "url": "https://github.com/Aswanidev-vs/Miku/releases/tag/v0.8.14"
     },
     {
       "name": "Gocut",
@@ -6623,7 +6624,7 @@
   ],
   "languageBytes": {
     "Batchfile": 807,
-    "CSS": 469726,
+    "CSS": 469881,
     "Dockerfile": 378,
     "Go": 2840094,
     "Go Template": 230517,
