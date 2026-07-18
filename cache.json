@@ -1,5 +1,5 @@
 {
-  "ts": 1784359262043,
+  "ts": 1784365492170,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -17,7 +17,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-07-18T05:50:43Z",
+      "pushed_at": "2026-07-18T07:21:02Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -1650,6 +1650,35 @@
     }
   ],
   "activity": [
+    {
+      "id": "11962312155",
+      "type": "WatchEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 227615179,
+        "name": "ProtonVPN/android-app",
+        "url": "https://api.github.com/repos/ProtonVPN/android-app"
+      },
+      "payload": {
+        "action": "started"
+      },
+      "public": true,
+      "created_at": "2026-07-18T07:56:58Z",
+      "org": {
+        "id": 25028530,
+        "login": "ProtonVPN",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/ProtonVPN",
+        "avatar_url": "https://avatars.githubusercontent.com/u/25028530?"
+      }
+    },
     {
       "id": "15195929055",
       "type": "PushEvent",
@@ -5249,100 +5278,6 @@
       },
       "public": true,
       "created_at": "2026-07-13T05:34:27Z"
-    },
-    {
-      "id": "11692768064",
-      "type": "IssuesEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "action": "opened",
-        "issue": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/20",
-          "repository_url": "https://api.github.com/repos/Aswanidev-vs/Miku",
-          "labels_url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/20/labels{/name}",
-          "comments_url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/20/comments",
-          "events_url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/20/events",
-          "html_url": "https://github.com/Aswanidev-vs/Miku/issues/20",
-          "id": 4870592744,
-          "node_id": "I_kwDOTVl9Cs8AAAABIk9Y6A",
-          "number": 20,
-          "title": "Nothing loading the mobile ui",
-          "user": {
-            "login": "Aswanidev-vs",
-            "id": 178192591,
-            "node_id": "U_kgDOCp8Azw",
-            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/Aswanidev-vs",
-            "html_url": "https://github.com/Aswanidev-vs",
-            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
-            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
-            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
-            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
-            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
-            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [],
-          "state": "closed",
-          "locked": false,
-          "assignees": [],
-          "milestone": null,
-          "comments": 0,
-          "created_at": "2026-07-13T05:09:37Z",
-          "updated_at": "2026-07-13T07:01:14Z",
-          "closed_at": "2026-07-13T07:01:14Z",
-          "assignee": null,
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": "<img width=\"1080\" height=\"2400\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/5dfc2969-d467-4e85-9999-67c684bcffda\" />\n",
-          "reactions": {
-            "url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/20/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/20/timeline",
-          "performed_via_github_app": null,
-          "state_reason": "completed",
-          "pinned_comment": null
-        }
-      },
-      "public": true,
-      "created_at": "2026-07-13T05:09:38Z"
     }
   ],
   "releases": [
