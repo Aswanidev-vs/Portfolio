@@ -1,5 +1,5 @@
 {
-  "ts": 1784911062165,
+  "ts": 1784914762479,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -17,7 +17,7 @@
       "description": "Miku is a feature-rich, native Android application for tracking anime and manga on AniList. Built with Wails 3, it combines a high-performance Go backend with a Vue 3 frontend to deliver a smooth experience.",
       "html_url": "https://github.com/Aswanidev-vs/Miku",
       "homepage": "",
-      "pushed_at": "2026-07-24T16:36:32Z",
+      "pushed_at": "2026-07-24T17:30:09Z",
       "created_at": "2026-07-11T18:58:55Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -37,14 +37,14 @@
             }
           },
           {
-            "size": 172228,
+            "size": 179833,
             "node": {
               "name": "Vue",
               "color": "#41b883"
             }
           },
           {
-            "size": 74478,
+            "size": 75023,
             "node": {
               "name": "TypeScript",
               "color": "#3178c6"
@@ -58,14 +58,14 @@
             }
           },
           {
-            "size": 103589,
+            "size": 104501,
             "node": {
               "name": "Java",
               "color": "#b07219"
             }
           },
           {
-            "size": 62269,
+            "size": 62270,
             "node": {
               "name": "Go",
               "color": "#00ADD8"
@@ -108,7 +108,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-07-24T14:29:25Z",
+      "pushed_at": "2026-07-24T16:37:43Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -1741,6 +1741,532 @@
     }
   ],
   "activity": [
+    {
+      "id": "15732068531",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "repository_id": 1297710346,
+        "push_id": 38027336054,
+        "ref": "refs/heads/main",
+        "head": "aa079201e9a9d3221bd0e32696177b811c41dfc8",
+        "before": "a3809aecb5bf53bbfa9d10e247a9a1251c5e1eee"
+      },
+      "public": true,
+      "created_at": "2026-07-24T17:25:34Z"
+    },
+    {
+      "id": "12262557184",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 43,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Miku/pulls/43",
+          "id": 4126595308,
+          "number": 43,
+          "head": {
+            "ref": "develop",
+            "sha": "a16734ee1db802c1675d4ebda15215f3191d1aed",
+            "repo": {
+              "id": 1297710346,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
+              "name": "Miku"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "a3809aecb5bf53bbfa9d10e247a9a1251c5e1eee",
+            "repo": {
+              "id": 1297710346,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
+              "name": "Miku"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-07-24T17:25:34Z"
+    },
+    {
+      "id": "12262544104",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 43,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Miku/pulls/43",
+          "id": 4126595308,
+          "number": 43,
+          "head": {
+            "ref": "develop",
+            "sha": "a16734ee1db802c1675d4ebda15215f3191d1aed",
+            "repo": {
+              "id": 1297710346,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
+              "name": "Miku"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "a3809aecb5bf53bbfa9d10e247a9a1251c5e1eee",
+            "repo": {
+              "id": 1297710346,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
+              "name": "Miku"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-07-24T17:25:17Z"
+    },
+    {
+      "id": "15731939416",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "repository_id": 1297710346,
+        "push_id": 38027008529,
+        "ref": "refs/heads/develop",
+        "head": "a16734ee1db802c1675d4ebda15215f3191d1aed",
+        "before": "4f77f4a00af770ab6bbb897c14a902b23e99cf40"
+      },
+      "public": true,
+      "created_at": "2026-07-24T17:19:51Z"
+    },
+    {
+      "id": "12261766942",
+      "type": "IssuesEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "action": "opened",
+        "issue": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/42",
+          "repository_url": "https://api.github.com/repos/Aswanidev-vs/Miku",
+          "labels_url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/42/labels{/name}",
+          "comments_url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/42/comments",
+          "events_url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/42/events",
+          "html_url": "https://github.com/Aswanidev-vs/Miku/issues/42",
+          "id": 4970531895,
+          "node_id": "I_kwDOTVl9Cs8AAAABKERMNw",
+          "number": 42,
+          "title": "issue raised by qodo",
+          "user": {
+            "login": "Aswanidev-vs",
+            "id": 178192591,
+            "node_id": "U_kgDOCp8Azw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Aswanidev-vs",
+            "html_url": "https://github.com/Aswanidev-vs",
+            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
+            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
+            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
+            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
+            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "open",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 0,
+          "created_at": "2026-07-24T17:08:11Z",
+          "updated_at": "2026-07-24T17:08:11Z",
+          "closed_at": null,
+          "assignee": null,
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": "<h3>Code Review by Qodo</h3>\n\n<code>🐞 Bugs (4)</code>  <code>📘 Rule violations (0)</code>  <code>📜 Skill insights (0)</code>\n\n<img src=\"https://www.qodo.ai/wp-content/uploads/2025/11/light-grey-line.svg\" height=\"10%\" alt=\"Grey Divider\">\n\n<br/>\n\n<img src=\"https://img.shields.io/badge/Action_required-634FD1?style=flat-square\" height=\"20px\" alt=\"Action required\">\n\n<details>\n<summary>  1.  Badge ignores episode notices <code>🐞 Bug</code> <code>≡ Correctness</code></summary>\n\n<br/>\n\n> <details open>\n><summary>Description</summary>\n><br/>\n>\n><pre>\n>In UpdateNotification.vue, the hasUpdate watcher sets showBadge=false whenever no update is\n>available, even if episodeNotices still exist (and useUpdate is a shared singleton affected by the\n>Settings “Check for Updates” action). Also, the hasEpisodeNotice watcher never clears showBadge when\n>notices disappear, which can leave a visible badge showing &quot;0&quot;.\n></pre>\n></details>\n\n> <details open>\n><summary>Code</summary>\n><br/>\n>\n><code>[frontend/src/components/layout/UpdateNotification.vue[R68-78]](https://github.com/Aswanidev-vs/Miku/pull/40/files#diff-a96b7ea30a4c68e25f4975bcc09922896c2e7d7f8810df7188b0c5afedcc130aR68-R78)</code>\n>\n>```diff\n> watch(hasUpdate, (available) => {\n>```\n></details>\n\n> <details>\n><summary>Evidence</summary>\n><br/>\n>\n><pre>\n>The hasUpdate watcher unconditionally clears showBadge when updates are unavailable, while the\n>episode watcher only ever sets it to true; because useUpdate’s refs are module-scoped, ProfileView’s\n>manual update check can flip hasUpdate and trigger this clearing even when episode notices remain.\n></pre>\n>\n> <code>[frontend/src/components/layout/UpdateNotification.vue[68-78]](https://github.com/Aswanidev-vs/Miku/blob/f1779bdc3c56a66365ee36344fb0ab2774e21b07/frontend/src/components/layout/UpdateNotification.vue/#L68-L78)</code>\n> <code>[frontend/src/composables/useUpdate.ts[28-43]](https://github.com/Aswanidev-vs/Miku/blob/f1779bdc3c56a66365ee36344fb0ab2774e21b07/frontend/src/composables/useUpdate.ts/#L28-L43)</code>\n> <code>[frontend/src/views/ProfileView.vue[115-139]](https://github.com/Aswanidev-vs/Miku/blob/f1779bdc3c56a66365ee36344fb0ab2774e21b07/frontend/src/views/ProfileView.vue/#L115-L139)</code>\n></details>\n\n> <details>\n><summary>Agent prompt</summary>\n><br/>\n>\n>```\n>The issue below was found during a code review. Follow the provided context and guidance below and implement a solution\n>\n>### Issue description\n>`showBadge` is managed by separate watchers and can become inconsistent: update checks can clear the badge while episode notices still exist, and episode notices going away can leave a stale badge (even showing `0`).\n>\n>### Issue Context\n>`useUpdate()` is implemented with module-level refs, so update checks from other views (e.g. Settings/ProfileView) mutate the same `hasUpdate` ref watched by the notification bell.\n>\n>### Fix Focus Areas\n>- frontend/src/components/layout/UpdateNotification.vue[68-116]\n>- frontend/src/composables/useUpdate.ts[28-43]\n>- frontend/src/views/ProfileView.vue[115-139]\n>\n>### Implementation notes\n>- Prefer making `showBadge` a computed derived from `(hasUpdate && !wasDismissedForCurrent()) || hasEpisodeNotice`.\n>- If you keep `showBadge` as a ref, update it in a single place (e.g., a watcher on `[hasUpdate, hasEpisodeNotice]`) and ensure it is set both true and false appropriately.\n>- Ensure the badge count and visibility never result in a visible `0` badge.\n>```\n> <code>ⓘ Copy this prompt and use it to remediate the issue with your preferred AI generation tools</code>\n></details>\n\n<hr/>\n</details>\n\n\n<details>\n<summary>  2.  Notices persist after logout <code>🐞 Bug</code> <code>⛨ Security</code></summary>\n\n<br/>\n\n> <details open>\n><summary>Description</summary>\n><br/>\n>\n><pre>\n>The bell’s episodeNotices computation reads animeStore.myList regardless of auth state, and the auth\n>watcher only fetches on login without clearing anything on logout. Since authStore.logout() doesn’t\n>clear animeStore.myList, users can see the previous account’s episode notifications after signing\n>out.\n></pre>\n></details>\n\n> <details open>\n><summary>Code</summary>\n><br/>\n>\n><code>[frontend/src/components/layout/UpdateNotification.vue[R80-84]](https://github.com/Aswanidev-vs/Miku/pull/40/files#diff-a96b7ea30a4c68e25f4975bcc09922896c2e7d7f8810df7188b0c5afedcc130aR80-R84)</code>\n>\n>```diff\n>+watch(() => authStore.isLoggedIn, async (loggedIn) => {\n>+  if (loggedIn && authStore.currentUser) {\n>+    await animeStore.fetchMyList(authStore.currentUser.id)\n>+  }\n>+})\n>```\n></details>\n\n> <details>\n><summary>Evidence</summary>\n><br/>\n>\n><pre>\n>UpdateNotification derives notices from animeStore.myList and only fetches on login; on logout,\n>authStore clears user/isAuthenticated but animeStore.myList remains populated because it’s only\n>assigned during fetchMyList and never cleared, so the component can continue to render previous-user\n>notices.\n></pre>\n>\n> <code>[frontend/src/components/layout/UpdateNotification.vue[25-48]](https://github.com/Aswanidev-vs/Miku/blob/f1779bdc3c56a66365ee36344fb0ab2774e21b07/frontend/src/components/layout/UpdateNotification.vue/#L25-L48)</code>\n> <code>[frontend/src/components/layout/UpdateNotification.vue[80-84]](https://github.com/Aswanidev-vs/Miku/blob/f1779bdc3c56a66365ee36344fb0ab2774e21b07/frontend/src/components/layout/UpdateNotification.vue/#L80-L84)</code>\n> <code>[frontend/src/stores/auth.ts[171-187]](https://github.com/Aswanidev-vs/Miku/blob/f1779bdc3c56a66365ee36344fb0ab2774e21b07/frontend/src/stores/auth.ts/#L171-L187)</code>\n> <code>[frontend/src/stores/anime.ts[253-257]](https://github.com/Aswanidev-vs/Miku/blob/f1779bdc3c56a66365ee36344fb0ab2774e21b07/frontend/src/stores/anime.ts/#L253-L257)</code>\n> <code>[frontend/src/stores/anime.ts[302-318]](https://github.com/Aswanidev-vs/Miku/blob/f1779bdc3c56a66365ee36344fb0ab2774e21b07/frontend/src/stores/anime.ts/#L302-L318)</code>\n></details>\n\n> <details>\n><summary>Agent prompt</summary>\n><br/>\n>\n>```\n>The issue below was found during a code review. Follow the provided context and guidance below and implement a solution\n>\n>### Issue description\n>Episode notifications can remain visible after logout because `animeStore.myList` is cached and not cleared when auth state changes to logged-out.\n>\n>### Issue Context\n>- `episodeNotices` derives from `animeStore.myList`.\n>- `authStore.logout()` clears auth state only.\n>- `animeStore.fetchMyList()` assigns `myList`, but there is no corresponding clear on logout.\n>\n>### Fix Focus Areas\n>- frontend/src/components/layout/UpdateNotification.vue[25-48]\n>- frontend/src/components/layout/UpdateNotification.vue[80-84]\n>- frontend/src/stores/auth.ts[171-188]\n>- frontend/src/stores/anime.ts[253-257]\n>- frontend/src/stores/anime.ts[302-318]\n>\n>### Implementation notes\n>- Add an explicit `clearMyList()` (and possibly `clearAnimeState()`) action on the anime store that sets `myList.value = null`.\n>- Call that clear action on logout (e.g., in logout handlers like ProfileView/MyListView) and/or in the auth watcher when `loggedIn` becomes false.\n>- Additionally, guard `episodeNotices` to return `[]` when `!authStore.isLoggedIn` to avoid rendering cached data.\n>```\n> <code>ⓘ Copy this prompt and use it to remediate the issue with your preferred AI generation tools</code>\n></details>\n\n<hr/>\n</details>\n\n\n<br/>\n\n<img src=\"https://img.shields.io/badge/Review_recommended-634FD1?style=flat-square\" height=\"20px\" alt=\"Remediation recommended\">\n\n<details>\n<summary>  3.  Planned episodes trigger notices <code>🐞 Bug</code> <code>≡ Correctness</code></summary>\n\n<br/>\n\n> <details open>\n><summary>Description</summary>\n><br/>\n>\n><pre>\n>episodeNotices uses media.episodes as the &quot;released&quot; episode count for any non-RELEASING status, so\n>NOT_YET_RELEASED/HIATUS/CANCELLED entries can generate false &quot;new episode&quot; notifications based on\n>planned totals rather than actually released episodes.\n></pre>\n></details>\n\n> <details open>\n><summary>Code</summary>\n><br/>\n>\n><code>[frontend/src/components/layout/UpdateNotification.vue[R33-36]](https://github.com/Aswanidev-vs/Miku/pull/40/files#diff-a96b7ea30a4c68e25f4975bcc09922896c2e7d7f8810df7188b0c5afedcc130aR33-R36)</code>\n>\n>```diff\n>+      const releasedEpisode = media?.status === 'RELEASING' && media.nextAiringEpisode\n>+        ? media.nextAiringEpisode.episode - 1\n>+        : media?.episodes\n>+      return {\n>```\n></details>\n\n> <details>\n><summary>Evidence</summary>\n><br/>\n>\n><pre>\n>The code falls back to <b><i>media.episodes</i></b> for non-RELEASING statuses; the project’s own MediaStatus\n>type includes NOT_YET_RELEASED/HIATUS/CANCELLED, where <b><i>episodes</i></b> can be planned rather than\n>released, causing false positives when compared to user progress.\n></pre>\n>\n> <code>[frontend/src/components/layout/UpdateNotification.vue[25-47]](https://github.com/Aswanidev-vs/Miku/blob/f1779bdc3c56a66365ee36344fb0ab2774e21b07/frontend/src/components/layout/UpdateNotification.vue/#L25-L47)</code>\n> <code>[frontend/src/types/index.ts[46-53]](https://github.com/Aswanidev-vs/Miku/blob/f1779bdc3c56a66365ee36344fb0ab2774e21b07/frontend/src/types/index.ts/#L46-L53)</code>\n></details>\n\n> <details>\n><summary>Agent prompt</summary>\n><br/>\n>\n>```\n>The issue below was found during a code review. Follow the provided context and guidance below and implement a solution\n>\n>### Issue description\n>The notification logic treats `media.episodes` as a proxy for \"released episodes\" whenever the show isn’t `RELEASING` with `nextAiringEpisode`. For statuses like `NOT_YET_RELEASED`, that value is typically a planned total and can create incorrect episode notifications.\n>\n>### Issue Context\n>`MediaStatus` explicitly includes statuses where episode release cannot be inferred from `episodes`.\n>\n>### Fix Focus Areas\n>- frontend/src/components/layout/UpdateNotification.vue[25-47]\n>- frontend/src/types/index.ts[46-53]\n>\n>### Implementation notes\n>- Only generate episode notices when you have a reliable released-episode boundary:\n>  - `RELEASING` + `nextAiringEpisode`: use `nextAiringEpisode.episode - 1`.\n>  - `FINISHED`: `media.episodes` is likely safe.\n>  - For `NOT_YET_RELEASED`, `HIATUS`, `CANCELLED`: consider returning no notice (or require other evidence of releases).\n>- Keep the filter `releasedEpisode > progress` but ensure `releasedEpisode` truly means \"already aired\".\n>```\n> <code>ⓘ Copy this prompt and use it to remediate the issue with your preferred AI generation tools</code>\n></details>\n\n<hr/>\n</details>\n\n\n<details>\n<summary>  4.  Read state shared across users <code>🐞 Bug</code> <code>≡ Correctness</code></summary>\n\n<br/>\n\n> <details open>\n><summary>Description</summary>\n><br/>\n>\n><pre>\n>Episode read state is stored in localStorage under <b><i>miku-episode-notice-${mediaId}</i></b> (no user id), so\n>different accounts on the same device will share/overwrite each other’s read markers and suppress or\n>re-trigger notifications incorrectly.\n></pre>\n></details>\n\n> <details open>\n><summary>Code</summary>\n><br/>\n>\n><code>[frontend/src/components/layout/UpdateNotification.vue[R45-46]](https://github.com/Aswanidev-vs/Miku/pull/40/files#diff-a96b7ea30a4c68e25f4975bcc09922896c2e7d7f8810df7188b0c5afedcc130aR45-R46)</code>\n>\n>```diff\n>+      const seen = Number(localStorage.getItem(`miku-episode-notice-${notice.id}`) || 0)\n>+      return notice.episode > seen\n>```\n></details>\n\n> <details>\n><summary>Evidence</summary>\n><br/>\n>\n><pre>\n>The code reads/writes episode notice state using only the media id, while the auth store clearly\n>supports logging out and switching users; since localStorage is shared on the device, these unscoped\n>keys will apply across accounts.\n></pre>\n>\n> <code>[frontend/src/components/layout/UpdateNotification.vue[44-47]](https://github.com/Aswanidev-vs/Miku/blob/f1779bdc3c56a66365ee36344fb0ab2774e21b07/frontend/src/components/layout/UpdateNotification.vue/#L44-L47)</code>\n> <code>[frontend/src/components/layout/UpdateNotification.vue[99-116]](https://github.com/Aswanidev-vs/Miku/blob/f1779bdc3c56a66365ee36344fb0ab2774e21b07/frontend/src/components/layout/UpdateNotification.vue/#L99-L116)</code>\n> <code>[frontend/src/stores/auth.ts[171-187]](https://github.com/Aswanidev-vs/Miku/blob/f1779bdc3c56a66365ee36344fb0ab2774e21b07/frontend/src/stores/auth.ts/#L171-L187)</code>\n></details>\n\n> <details>\n><summary>Agent prompt</summary>\n><br/>\n>\n>```\n>The issue below was found during a code review. Follow the provided context and guidance below and implement a solution\n>\n>### Issue description\n>Episode notification read markers are persisted globally per media id, not per user, so account switching on the same device causes cross-account state bleed.\n>\n>### Issue Context\n>The app supports login/logout; localStorage persists across sessions and accounts.\n>\n>### Fix Focus Areas\n>- frontend/src/components/layout/UpdateNotification.vue[44-47]\n>- frontend/src/components/layout/UpdateNotification.vue[99-116]\n>- frontend/src/stores/auth.ts[171-187]\n>\n>### Implementation notes\n>- Include `authStore.currentUser.id` in the key, e.g. `miku-episode-notice-${userId}-${mediaId}`.\n>- Ensure both reads and writes use the same scoped key.\n>- Optionally migrate/clear old unscoped keys to avoid surprising behavior for existing users.\n>```\n> <code>ⓘ Copy this prompt and use it to remediate the issue with your preferred AI generation tools</code>\n></details>\n\n<hr/>\n</details>\n\n\n<img src=\"https://www.qodo.ai/wp-content/uploads/2025/11/light-grey-line.svg\" height=\"10%\" alt=\"Grey Divider\">\n\n\n<!-- https://github.com/Aswanidev-vs/Miku/commit/f1779bdc3c56a66365ee36344fb0ab2774e21b07 -->\n\n<a href=\"https://www.qodo.ai\"><img src=\"https://www.qodo.ai/wp-content/uploads/2025/03/qodo-logo.svg\" width=\"80\" alt=\"Qodo Logo\"></a>",
+          "reactions": {
+            "url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/42/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/42/timeline",
+          "performed_via_github_app": null,
+          "state_reason": null,
+          "pinned_comment": null
+        }
+      },
+      "public": true,
+      "created_at": "2026-07-24T17:08:12Z"
+    },
+    {
+      "id": "15730525207",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "repository_id": 1297710346,
+        "push_id": 38026160105,
+        "ref": "refs/heads/main",
+        "head": "a3809aecb5bf53bbfa9d10e247a9a1251c5e1eee",
+        "before": "72f7066a4b987c92f6ae8eb7a616584701a51247"
+      },
+      "public": true,
+      "created_at": "2026-07-24T17:05:10Z"
+    },
+    {
+      "id": "12261612573",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 41,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Miku/pulls/41",
+          "id": 4126468641,
+          "number": 41,
+          "head": {
+            "ref": "develop",
+            "sha": "4f77f4a00af770ab6bbb897c14a902b23e99cf40",
+            "repo": {
+              "id": 1297710346,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
+              "name": "Miku"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "72f7066a4b987c92f6ae8eb7a616584701a51247",
+            "repo": {
+              "id": 1297710346,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
+              "name": "Miku"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-07-24T17:05:08Z"
+    },
+    {
+      "id": "12261600241",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 41,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Miku/pulls/41",
+          "id": 4126468641,
+          "number": 41,
+          "head": {
+            "ref": "develop",
+            "sha": "4f77f4a00af770ab6bbb897c14a902b23e99cf40",
+            "repo": {
+              "id": 1297710346,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
+              "name": "Miku"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "72f7066a4b987c92f6ae8eb7a616584701a51247",
+            "repo": {
+              "id": 1297710346,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
+              "name": "Miku"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-07-24T17:04:55Z"
+    },
+    {
+      "id": "15730452610",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "repository_id": 1297710346,
+        "push_id": 38026103558,
+        "ref": "refs/heads/develop",
+        "head": "4f77f4a00af770ab6bbb897c14a902b23e99cf40",
+        "before": "f1779bdc3c56a66365ee36344fb0ab2774e21b07"
+      },
+      "public": true,
+      "created_at": "2026-07-24T17:04:13Z"
+    },
+    {
+      "id": "12261196227",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 40,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Miku/pulls/40",
+          "id": 4126405140,
+          "number": 40,
+          "head": {
+            "ref": "develop",
+            "sha": "f1779bdc3c56a66365ee36344fb0ab2774e21b07",
+            "repo": {
+              "id": 1297710346,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
+              "name": "Miku"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "82a1a7b683bf98d3583dd9381f35425989bd600d",
+            "repo": {
+              "id": 1297710346,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
+              "name": "Miku"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-07-24T16:55:16Z"
+    },
+    {
+      "id": "15729964871",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "repository_id": 1297710346,
+        "push_id": 38025568816,
+        "ref": "refs/heads/main",
+        "head": "72f7066a4b987c92f6ae8eb7a616584701a51247",
+        "before": "82a1a7b683bf98d3583dd9381f35425989bd600d"
+      },
+      "public": true,
+      "created_at": "2026-07-24T16:55:17Z"
+    },
+    {
+      "id": "12261179610",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 40,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Miku/pulls/40",
+          "id": 4126405140,
+          "number": 40,
+          "head": {
+            "ref": "develop",
+            "sha": "f1779bdc3c56a66365ee36344fb0ab2774e21b07",
+            "repo": {
+              "id": 1297710346,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
+              "name": "Miku"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "82a1a7b683bf98d3583dd9381f35425989bd600d",
+            "repo": {
+              "id": 1297710346,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
+              "name": "Miku"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-07-24T16:54:58Z"
+    },
+    {
+      "id": "15729940488",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "repository_id": 1297710346,
+        "push_id": 38024452267,
+        "ref": "refs/heads/develop",
+        "head": "f1779bdc3c56a66365ee36344fb0ab2774e21b07",
+        "before": "0c0843ea5fd887c58ca861f33c6fcf9dbfd0e9f9"
+      },
+      "public": true,
+      "created_at": "2026-07-24T16:36:33Z"
+    },
     {
       "id": "12256657559",
       "type": "WatchEvent",
@@ -5651,472 +6177,14 @@
       },
       "public": true,
       "created_at": "2026-07-20T10:57:02Z"
-    },
-    {
-      "id": "12017191601",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "action": "merged",
-        "number": 38,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Mai/pulls/38",
-          "id": 4090414614,
-          "number": 38,
-          "head": {
-            "ref": "v1",
-            "sha": "3f886f0776b7c1ae59b67e9c007fbe3237686b47",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "c436c9192ca2ff878f8d38d940d18395a8682e7b",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-07-20T10:53:20Z"
-    },
-    {
-      "id": "15361737647",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "repository_id": 1221010957,
-        "push_id": 37652804160,
-        "ref": "refs/heads/main",
-        "head": "3a30f245ef91f194b0125e225f2d6f37482445d4",
-        "before": "c436c9192ca2ff878f8d38d940d18395a8682e7b"
-      },
-      "public": true,
-      "created_at": "2026-07-20T10:53:21Z"
-    },
-    {
-      "id": "12017175819",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "action": "opened",
-        "number": 38,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Mai/pulls/38",
-          "id": 4090414614,
-          "number": 38,
-          "head": {
-            "ref": "v1",
-            "sha": "3f886f0776b7c1ae59b67e9c007fbe3237686b47",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "c436c9192ca2ff878f8d38d940d18395a8682e7b",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-07-20T10:52:57Z"
-    },
-    {
-      "id": "15361687931",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "repository_id": 1221010957,
-        "push_id": 37652754628,
-        "ref": "refs/heads/v1",
-        "head": "3f886f0776b7c1ae59b67e9c007fbe3237686b47",
-        "before": "b4dd29fe28aeb16d54a8784c8cd15fa5d9405c46"
-      },
-      "public": true,
-      "created_at": "2026-07-20T10:52:31Z"
-    },
-    {
-      "id": "15360396731",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "repository_id": 1221010957,
-        "push_id": 37651463416,
-        "ref": "refs/heads/main",
-        "head": "c436c9192ca2ff878f8d38d940d18395a8682e7b",
-        "before": "c09a2143672d45e02d96db061af5603d06e363d6"
-      },
-      "public": true,
-      "created_at": "2026-07-20T10:31:36Z"
-    },
-    {
-      "id": "12016336630",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "action": "merged",
-        "number": 37,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Mai/pulls/37",
-          "id": 4090194504,
-          "number": 37,
-          "head": {
-            "ref": "v1",
-            "sha": "b4dd29fe28aeb16d54a8784c8cd15fa5d9405c46",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "a0a12047a0d45470258607595b61791cc11fba47",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-07-20T10:31:35Z"
-    },
-    {
-      "id": "15359586376",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "repository_id": 1221010957,
-        "push_id": 37650653176,
-        "ref": "refs/heads/main",
-        "head": "c09a2143672d45e02d96db061af5603d06e363d6",
-        "before": "a0a12047a0d45470258607595b61791cc11fba47"
-      },
-      "public": true,
-      "created_at": "2026-07-20T10:18:41Z"
-    },
-    {
-      "id": "12015659277",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "action": "opened",
-        "number": 37,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Mai/pulls/37",
-          "id": 4090194504,
-          "number": 37,
-          "head": {
-            "ref": "v1",
-            "sha": "b4dd29fe28aeb16d54a8784c8cd15fa5d9405c46",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "a0a12047a0d45470258607595b61791cc11fba47",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-07-20T10:14:59Z"
-    },
-    {
-      "id": "15359209878",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "repository_id": 1221010957,
-        "push_id": 37650277028,
-        "ref": "refs/heads/v1",
-        "head": "b4dd29fe28aeb16d54a8784c8cd15fa5d9405c46",
-        "before": "f3640a9f9caf701db681e05a6c408dcfa9e0af40"
-      },
-      "public": true,
-      "created_at": "2026-07-20T10:12:53Z"
-    },
-    {
-      "id": "11993133362",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "action": "merged",
-        "number": 36,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Mai/pulls/36",
-          "id": 4086596828,
-          "number": 36,
-          "head": {
-            "ref": "v1",
-            "sha": "f3640a9f9caf701db681e05a6c408dcfa9e0af40",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "04c639d749fd0ac380a694d6dd42038ad78c40dc",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-07-19T17:22:43Z"
-    },
-    {
-      "id": "15313949151",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "repository_id": 1221010957,
-        "push_id": 37604922421,
-        "ref": "refs/heads/main",
-        "head": "a0a12047a0d45470258607595b61791cc11fba47",
-        "before": "04c639d749fd0ac380a694d6dd42038ad78c40dc"
-      },
-      "public": true,
-      "created_at": "2026-07-19T17:22:44Z"
-    },
-    {
-      "id": "11993089526",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "action": "opened",
-        "number": 36,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Mai/pulls/36",
-          "id": 4086596828,
-          "number": 36,
-          "head": {
-            "ref": "v1",
-            "sha": "f3640a9f9caf701db681e05a6c408dcfa9e0af40",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "04c639d749fd0ac380a694d6dd42038ad78c40dc",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-07-19T17:20:12Z"
-    },
-    {
-      "id": "15312712579",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "repository_id": 1221010957,
-        "push_id": 37603682423,
-        "ref": "refs/heads/v1",
-        "head": "f3640a9f9caf701db681e05a6c408dcfa9e0af40",
-        "before": "ca3c0594df8f2b09ffe2f6eee457ed79d286b5ce"
-      },
-      "public": true,
-      "created_at": "2026-07-19T16:55:37Z"
     }
   ],
   "releases": [
     {
       "name": "Miku",
-      "tag": "v0.9.9",
-      "date": "2026-07-24T14:35:52Z",
-      "url": "https://github.com/Aswanidev-vs/Miku/releases/tag/v0.9.9"
+      "tag": "v0.10.2",
+      "date": "2026-07-24T17:30:12Z",
+      "url": "https://github.com/Aswanidev-vs/Miku/releases/tag/v0.10.2"
     },
     {
       "name": "light",
@@ -6183,12 +6251,12 @@
     "Batchfile": 807,
     "CSS": 471881,
     "Dockerfile": 378,
-    "Go": 2942710,
+    "Go": 2942711,
     "Go Template": 230517,
     "HTML": 526063,
     "Hack": 1679,
     "Inno Setup": 10332,
-    "Java": 203845,
+    "Java": 204757,
     "JavaScript": 893047,
     "Lua": 2388,
     "Makefile": 5002,
@@ -6198,7 +6266,7 @@
     "PowerShell": 145,
     "Python": 25908,
     "Shell": 7649,
-    "TypeScript": 188056,
-    "Vue": 515665
+    "TypeScript": 188601,
+    "Vue": 523270
   }
 }
