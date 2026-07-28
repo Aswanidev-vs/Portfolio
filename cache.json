@@ -1,5 +1,5 @@
 {
-  "ts": 1785219235530,
+  "ts": 1785229608526,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -13,39 +13,69 @@
   },
   "repos": [
     {
-      "name": "Portfolio",
-      "description": null,
-      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
-      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-07-28T03:40:02Z",
-      "created_at": "2025-09-03T16:31:24Z",
+      "name": "Mai",
+      "description": "Mai is a fully offline, voice-driven AI assistant built in Go. It processes everything locally using optimized ONNX models, ensuring complete privacy and fast, customizable performance without any cloud dependency.",
+      "html_url": "https://github.com/Aswanidev-vs/Mai",
+      "homepage": "https://aswanidev-vs.github.io/Mai/",
+      "pushed_at": "2026-07-28T07:59:25Z",
+      "created_at": "2026-04-25T16:27:51Z",
       "stargazers_count": 1,
       "forks_count": 0,
       "fork": false,
-      "language": "HTML",
+      "language": "Go",
       "primaryLanguage": {
-        "name": "HTML",
-        "color": "#e34c26"
+        "name": "Go",
+        "color": "#00ADD8"
       },
       "languages": {
         "edges": [
           {
-            "size": 57690,
+            "size": 318420,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          },
+          {
+            "size": 3033,
+            "node": {
+              "name": "Makefile",
+              "color": "#427819"
+            }
+          },
+          {
+            "size": 12753,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          },
+          {
+            "size": 8515,
             "node": {
               "name": "HTML",
               "color": "#e34c26"
             }
+          },
+          {
+            "size": 123577,
+            "node": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            }
           }
         ]
       },
-      "license": null
+      "license": {
+        "spdx_id": "MIT"
+      }
     },
     {
       "name": "light",
       "description": "Light is a high-speed, cross-platform file sharing application built for speed, security, and simplicity. Leveraging the QUIC protocol with 0-RTT connections and 32 parallel streams, it delivers lightning-fast transfers across Windows,Android.",
       "html_url": "https://github.com/Aswanidev-vs/light",
       "homepage": "",
-      "pushed_at": "2026-07-27T16:02:08Z",
+      "pushed_at": "2026-07-28T07:20:16Z",
       "created_at": "2026-07-22T15:30:31Z",
       "stargazers_count": 0,
       "forks_count": 0,
@@ -65,7 +95,7 @@
             }
           },
           {
-            "size": 93304,
+            "size": 95101,
             "node": {
               "name": "Go",
               "color": "#00ADD8"
@@ -93,28 +123,28 @@
             }
           },
           {
-            "size": 23897,
+            "size": 45304,
             "node": {
               "name": "TypeScript",
               "color": "#3178c6"
             }
           },
           {
-            "size": 126487,
+            "size": 126505,
             "node": {
               "name": "HTML",
               "color": "#e34c26"
             }
           },
           {
-            "size": 2022,
+            "size": 2267,
             "node": {
               "name": "CSS",
               "color": "#663399"
             }
           },
           {
-            "size": 63119,
+            "size": 66750,
             "node": {
               "name": "Vue",
               "color": "#41b883"
@@ -125,6 +155,34 @@
             "node": {
               "name": "Inno Setup",
               "color": "#264b99"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
+    {
+      "name": "Portfolio",
+      "description": null,
+      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
+      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
+      "pushed_at": "2026-07-28T06:13:56Z",
+      "created_at": "2025-09-03T16:31:24Z",
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "fork": false,
+      "language": "HTML",
+      "primaryLanguage": {
+        "name": "HTML",
+        "color": "#e34c26"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 57690,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
             }
           }
         ]
@@ -650,64 +708,6 @@
       },
       "license": {
         "spdx_id": "Unlicense"
-      }
-    },
-    {
-      "name": "Mai",
-      "description": "Mai is a fully offline, voice-driven AI assistant built in Go. It processes everything locally using optimized ONNX models, ensuring complete privacy and fast, customizable performance without any cloud dependency.",
-      "html_url": "https://github.com/Aswanidev-vs/Mai",
-      "homepage": "https://aswanidev-vs.github.io/Mai/",
-      "pushed_at": "2026-07-21T16:07:05Z",
-      "created_at": "2026-04-25T16:27:51Z",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "fork": false,
-      "language": "Go",
-      "primaryLanguage": {
-        "name": "Go",
-        "color": "#00ADD8"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 342246,
-            "node": {
-              "name": "Go",
-              "color": "#00ADD8"
-            }
-          },
-          {
-            "size": 3033,
-            "node": {
-              "name": "Makefile",
-              "color": "#427819"
-            }
-          },
-          {
-            "size": 12753,
-            "node": {
-              "name": "CSS",
-              "color": "#663399"
-            }
-          },
-          {
-            "size": 8515,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 135007,
-            "node": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            }
-          }
-        ]
-      },
-      "license": {
-        "spdx_id": "MIT"
       }
     },
     {
@@ -1829,6 +1829,58 @@
     }
   ],
   "activity": [
+    {
+      "id": "16002567569",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1221010957,
+        "name": "Aswanidev-vs/Mai",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
+      },
+      "payload": {
+        "repository_id": 1221010957,
+        "push_id": 38305627088,
+        "ref": "refs/heads/main",
+        "head": "f65e6ae84e23acc3de377406596e24e3d5234397",
+        "before": "4ab9ccb1526ffaf5eb0117a48d0f123620f95004"
+      },
+      "public": true,
+      "created_at": "2026-07-28T07:59:08Z"
+    },
+    {
+      "id": "15999539546",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1308977261,
+        "name": "Aswanidev-vs/light",
+        "url": "https://api.github.com/repos/Aswanidev-vs/light"
+      },
+      "payload": {
+        "repository_id": 1308977261,
+        "push_id": 38302377297,
+        "ref": "refs/heads/main",
+        "head": "ad0735282126fe7c72da6406cb72d6df35f4c8ed",
+        "before": "c7b1249040fd326042a63cd04ef03ac4eb95d9ac"
+      },
+      "public": true,
+      "created_at": "2026-07-28T07:19:47Z"
+    },
     {
       "id": "15947913197",
       "type": "PushEvent",
@@ -3157,52 +3209,6 @@
       "created_at": "2026-07-25T12:28:10Z"
     },
     {
-      "id": "12281731310",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "action": "closed",
-        "number": 50,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Miku/pulls/50",
-          "id": 4130510829,
-          "number": 50,
-          "head": {
-            "ref": "dependabot/npm_and_yarn/frontend/vite-8.1.5",
-            "sha": "4bb765ac36ba8433cc87e11ff647c61a6e5e14d0",
-            "repo": {
-              "id": 1297710346,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
-              "name": "Miku"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "85df759df3620b8af6462ebf04718fdc5b45ea07",
-            "repo": {
-              "id": 1297710346,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
-              "name": "Miku"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-07-25T05:13:34Z"
-    },
-    {
       "id": "12281731311",
       "type": "PullRequestEvent",
       "actor": {
@@ -3247,6 +3253,52 @@
       },
       "public": true,
       "created_at": "2026-07-25T05:12:24Z"
+    },
+    {
+      "id": "12281731310",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "action": "closed",
+        "number": 50,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Miku/pulls/50",
+          "id": 4130510829,
+          "number": 50,
+          "head": {
+            "ref": "dependabot/npm_and_yarn/frontend/vite-8.1.5",
+            "sha": "4bb765ac36ba8433cc87e11ff647c61a6e5e14d0",
+            "repo": {
+              "id": 1297710346,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
+              "name": "Miku"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "85df759df3620b8af6462ebf04718fdc5b45ea07",
+            "repo": {
+              "id": 1297710346,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
+              "name": "Miku"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-07-25T05:13:34Z"
     },
     {
       "id": "12281731307",
@@ -5559,86 +5611,14 @@
       },
       "public": true,
       "created_at": "2026-07-24T14:51:14Z"
-    },
-    {
-      "id": "15721226777",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "repository_id": 1297710346,
-        "push_id": 38016194902,
-        "ref": "refs/heads/main",
-        "head": "82a1a7b683bf98d3583dd9381f35425989bd600d",
-        "before": "546cd566b3da2e3f2b42ea84af38b7d1ab3d05d8"
-      },
-      "public": true,
-      "created_at": "2026-07-24T14:31:10Z"
-    },
-    {
-      "id": "12255015348",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "action": "merged",
-        "number": 39,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Miku/pulls/39",
-          "id": 4125497691,
-          "number": 39,
-          "head": {
-            "ref": "develop",
-            "sha": "0c0843ea5fd887c58ca861f33c6fcf9dbfd0e9f9",
-            "repo": {
-              "id": 1297710346,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
-              "name": "Miku"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "546cd566b3da2e3f2b42ea84af38b7d1ab3d05d8",
-            "repo": {
-              "id": 1297710346,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
-              "name": "Miku"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-07-24T14:31:09Z"
     }
   ],
   "releases": [
     {
       "name": "light",
-      "tag": "v0.1.29",
-      "date": "2026-07-27T16:07:46Z",
-      "url": "https://github.com/Aswanidev-vs/light/releases/tag/v0.1.29"
+      "tag": "v0.1.30",
+      "date": "2026-07-28T07:24:28Z",
+      "url": "https://github.com/Aswanidev-vs/light/releases/tag/v0.1.30"
     },
     {
       "name": "Gocut",
@@ -5703,15 +5683,15 @@
   ],
   "languageBytes": {
     "Batchfile": 807,
-    "CSS": 462155,
+    "CSS": 462400,
     "Dockerfile": 875,
-    "Go": 3066629,
+    "Go": 3044600,
     "Go Template": 230517,
-    "HTML": 662505,
+    "HTML": 662523,
     "Hack": 1679,
     "Inno Setup": 10332,
     "Java": 205562,
-    "JavaScript": 927220,
+    "JavaScript": 915790,
     "Lua": 2388,
     "Makefile": 5002,
     "NSIS": 77334,
@@ -5720,7 +5700,7 @@
     "PowerShell": 145,
     "Python": 25908,
     "Shell": 7649,
-    "TypeScript": 191882,
-    "Vue": 544971
+    "TypeScript": 213289,
+    "Vue": 548602
   }
 }
