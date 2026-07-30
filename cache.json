@@ -1,5 +1,5 @@
 {
-  "ts": 1785403111408,
+  "ts": 1785410643462,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -13,11 +13,102 @@
   },
   "repos": [
     {
+      "name": "light",
+      "description": "Light is a high-speed, cross-platform file sharing application built for speed, security, and simplicity. Leveraging the QUIC protocol with 0-RTT connections and 32 parallel streams, it delivers lightning-fast transfers across Windows,Android.",
+      "html_url": "https://github.com/Aswanidev-vs/light",
+      "homepage": "",
+      "pushed_at": "2026-07-30T10:29:58Z",
+      "created_at": "2026-07-22T15:30:31Z",
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "fork": false,
+      "language": "Go",
+      "primaryLanguage": {
+        "name": "Go",
+        "color": "#00ADD8"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 104858,
+            "node": {
+              "name": "Java",
+              "color": "#b07219"
+            }
+          },
+          {
+            "size": 155010,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          },
+          {
+            "size": 1074,
+            "node": {
+              "name": "Objective-C",
+              "color": "#438eff"
+            }
+          },
+          {
+            "size": 2032,
+            "node": {
+              "name": "Shell",
+              "color": "#89e051"
+            }
+          },
+          {
+            "size": 11816,
+            "node": {
+              "name": "NSIS",
+              "color": null
+            }
+          },
+          {
+            "size": 46417,
+            "node": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            }
+          },
+          {
+            "size": 126505,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          },
+          {
+            "size": 5967,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          },
+          {
+            "size": 101707,
+            "node": {
+              "name": "Vue",
+              "color": "#41b883"
+            }
+          },
+          {
+            "size": 2391,
+            "node": {
+              "name": "Inno Setup",
+              "color": "#264b99"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
+    {
       "name": "Portfolio",
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-07-30T06:41:56Z",
+      "pushed_at": "2026-07-30T09:18:32Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -97,97 +188,6 @@
       "license": {
         "spdx_id": "MIT"
       }
-    },
-    {
-      "name": "light",
-      "description": "Light is a high-speed, cross-platform file sharing application built for speed, security, and simplicity. Leveraging the QUIC protocol with 0-RTT connections and 32 parallel streams, it delivers lightning-fast transfers across Windows,Android.",
-      "html_url": "https://github.com/Aswanidev-vs/light",
-      "homepage": "",
-      "pushed_at": "2026-07-29T10:50:54Z",
-      "created_at": "2026-07-22T15:30:31Z",
-      "stargazers_count": 0,
-      "forks_count": 0,
-      "fork": false,
-      "language": "HTML",
-      "primaryLanguage": {
-        "name": "HTML",
-        "color": "#e34c26"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 104858,
-            "node": {
-              "name": "Java",
-              "color": "#b07219"
-            }
-          },
-          {
-            "size": 116158,
-            "node": {
-              "name": "Go",
-              "color": "#00ADD8"
-            }
-          },
-          {
-            "size": 1074,
-            "node": {
-              "name": "Objective-C",
-              "color": "#438eff"
-            }
-          },
-          {
-            "size": 2032,
-            "node": {
-              "name": "Shell",
-              "color": "#89e051"
-            }
-          },
-          {
-            "size": 11816,
-            "node": {
-              "name": "NSIS",
-              "color": null
-            }
-          },
-          {
-            "size": 25647,
-            "node": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            }
-          },
-          {
-            "size": 126505,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 4467,
-            "node": {
-              "name": "CSS",
-              "color": "#663399"
-            }
-          },
-          {
-            "size": 97166,
-            "node": {
-              "name": "Vue",
-              "color": "#41b883"
-            }
-          },
-          {
-            "size": 2391,
-            "node": {
-              "name": "Inno Setup",
-              "color": "#264b99"
-            }
-          }
-        ]
-      },
-      "license": null
     },
     {
       "name": "Gotunnel",
@@ -1829,6 +1829,32 @@
     }
   ],
   "activity": [
+    {
+      "id": "16208931425",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1308977261,
+        "name": "Aswanidev-vs/light",
+        "url": "https://api.github.com/repos/Aswanidev-vs/light"
+      },
+      "payload": {
+        "repository_id": 1308977261,
+        "push_id": 38514788672,
+        "ref": "refs/heads/main",
+        "head": "8c764585276678458b715d4db821960556b3f8c0",
+        "before": "ea9a4c294ceedc1f65e96f2603f9964d2f7a209d"
+      },
+      "public": true,
+      "created_at": "2026-07-30T10:29:37Z"
+    },
     {
       "id": "16133853928",
       "type": "PushEvent",
@@ -4944,204 +4970,14 @@
       },
       "public": true,
       "created_at": "2026-07-24T19:31:01Z"
-    },
-    {
-      "id": "12267399449",
-      "type": "IssuesEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "action": "assigned",
-        "issue": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/46",
-          "repository_url": "https://api.github.com/repos/Aswanidev-vs/Miku",
-          "labels_url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/46/labels{/name}",
-          "comments_url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/46/comments",
-          "events_url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/46/events",
-          "html_url": "https://github.com/Aswanidev-vs/Miku/issues/46",
-          "id": 4971450656,
-          "node_id": "I_kwDOTVl9Cs8AAAABKFJRIA",
-          "number": 46,
-          "title": "Mark all as read is not working",
-          "user": {
-            "login": "Aswanidev-vs",
-            "id": 178192591,
-            "node_id": "U_kgDOCp8Azw",
-            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/Aswanidev-vs",
-            "html_url": "https://github.com/Aswanidev-vs",
-            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
-            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
-            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
-            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
-            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
-            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [
-            {
-              "id": 11495126787,
-              "node_id": "LA_kwDOTVl9Cs8AAAACrSm3Aw",
-              "url": "https://api.github.com/repos/Aswanidev-vs/Miku/labels/bug",
-              "name": "bug",
-              "color": "d73a4a",
-              "default": true,
-              "description": "Something isn't working"
-            }
-          ],
-          "state": "closed",
-          "locked": false,
-          "assignees": [
-            {
-              "login": "Aswanidev-vs",
-              "id": 178192591,
-              "node_id": "U_kgDOCp8Azw",
-              "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
-              "gravatar_id": "",
-              "url": "https://api.github.com/users/Aswanidev-vs",
-              "html_url": "https://github.com/Aswanidev-vs",
-              "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
-              "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
-              "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
-              "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
-              "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
-              "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
-              "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
-              "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
-              "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
-              "type": "User",
-              "user_view_type": "public",
-              "site_admin": false
-            }
-          ],
-          "milestone": null,
-          "comments": 0,
-          "created_at": "2026-07-24T19:30:30Z",
-          "updated_at": "2026-07-25T05:28:43Z",
-          "closed_at": "2026-07-25T05:28:43Z",
-          "assignee": {
-            "login": "Aswanidev-vs",
-            "id": 178192591,
-            "node_id": "U_kgDOCp8Azw",
-            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/Aswanidev-vs",
-            "html_url": "https://github.com/Aswanidev-vs",
-            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
-            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
-            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
-            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
-            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
-            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": null,
-          "reactions": {
-            "url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/46/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/Aswanidev-vs/Miku/issues/46/timeline",
-          "performed_via_github_app": null,
-          "state_reason": "completed",
-          "pinned_comment": null
-        },
-        "assignee": {
-          "login": "Aswanidev-vs",
-          "id": 178192591,
-          "node_id": "U_kgDOCp8Azw",
-          "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/Aswanidev-vs",
-          "html_url": "https://github.com/Aswanidev-vs",
-          "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
-          "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
-          "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
-          "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
-          "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
-          "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "assignees": [
-          {
-            "login": "Aswanidev-vs",
-            "id": 178192591,
-            "node_id": "U_kgDOCp8Azw",
-            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/Aswanidev-vs",
-            "html_url": "https://github.com/Aswanidev-vs",
-            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
-            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
-            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
-            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
-            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
-            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          }
-        ]
-      },
-      "public": true,
-      "created_at": "2026-07-24T19:30:37Z"
     }
   ],
   "releases": [
     {
       "name": "light",
-      "tag": "v0.1.40",
-      "date": "2026-07-29T10:55:07Z",
-      "url": "https://github.com/Aswanidev-vs/light/releases/tag/v0.1.40"
+      "tag": "v0.1.41",
+      "date": "2026-07-30T10:35:16Z",
+      "url": "https://github.com/Aswanidev-vs/light/releases/tag/v0.1.41"
     },
     {
       "name": "Gocut",
@@ -5206,9 +5042,9 @@
   ],
   "languageBytes": {
     "Batchfile": 807,
-    "CSS": 464600,
+    "CSS": 466100,
     "Dockerfile": 875,
-    "Go": 3171510,
+    "Go": 3210362,
     "Go Template": 230517,
     "HTML": 662523,
     "Hack": 1679,
@@ -5223,7 +5059,7 @@
     "PowerShell": 145,
     "Python": 25908,
     "Shell": 7649,
-    "TypeScript": 193632,
-    "Vue": 579018
+    "TypeScript": 214402,
+    "Vue": 583559
   }
 }
