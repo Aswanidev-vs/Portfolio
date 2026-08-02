@@ -1,5 +1,5 @@
 {
-  "ts": 1785645534467,
+  "ts": 1785655012422,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -13,11 +13,213 @@
   },
   "repos": [
     {
+      "name": "Mana",
+      "description": "Mana : Go framework for real-time apps: WebSocket, rooms, signaling, WebRTC & E2EE. Perfect for chat, collaboration tools, and MVPs.",
+      "html_url": "https://github.com/Aswanidev-vs/Mana",
+      "homepage": "https://aswanidev-vs.github.io/Mana/",
+      "pushed_at": "2026-08-02T06:51:02Z",
+      "created_at": "2026-04-02T16:54:00Z",
+      "stargazers_count": 2,
+      "forks_count": 1,
+      "fork": false,
+      "language": "Go",
+      "primaryLanguage": {
+        "name": "Go",
+        "color": "#00ADD8"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 318116,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          },
+          {
+            "size": 51740,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          },
+          {
+            "size": 378,
+            "node": {
+              "name": "Dockerfile",
+              "color": "#384d54"
+            }
+          },
+          {
+            "size": 26273,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          },
+          {
+            "size": 82223,
+            "node": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            }
+          },
+          {
+            "size": 145,
+            "node": {
+              "name": "PowerShell",
+              "color": "#012456"
+            }
+          },
+          {
+            "size": 106,
+            "node": {
+              "name": "Shell",
+              "color": "#89e051"
+            }
+          }
+        ]
+      },
+      "license": {
+        "spdx_id": "AGPL-3.0"
+      }
+    },
+    {
+      "name": "gitscope",
+      "description": "GitScope is a lightweight and intuitive Git GUI client built with Go and wails designed to make version control simple, easy to implement.",
+      "html_url": "https://github.com/Aswanidev-vs/gitscope",
+      "homepage": "",
+      "pushed_at": "2026-08-02T06:44:28Z",
+      "created_at": "2025-11-02T18:10:59Z",
+      "stargazers_count": 4,
+      "forks_count": 0,
+      "fork": false,
+      "language": "Go",
+      "primaryLanguage": {
+        "name": "Go",
+        "color": "#00ADD8"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 123292,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          },
+          {
+            "size": 10069,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          },
+          {
+            "size": 13156,
+            "node": {
+              "name": "NSIS",
+              "color": null
+            }
+          },
+          {
+            "size": 55976,
+            "node": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            }
+          },
+          {
+            "size": 21195,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          }
+        ]
+      },
+      "license": {
+        "spdx_id": "MIT"
+      }
+    },
+    {
+      "name": "Predator",
+      "description": "Predator is a lightweight, cross platform desktop application for downloading videos and extracting audio from YouTube. It is built using Go and wails GUI framework, with go-ytdlp wrapper used as the download engine. The application focuses on simplicity, and a clean user experience .",
+      "html_url": "https://github.com/Aswanidev-vs/Predator",
+      "homepage": "",
+      "pushed_at": "2026-08-02T06:43:13Z",
+      "created_at": "2025-12-21T17:07:16Z",
+      "stargazers_count": 3,
+      "forks_count": 0,
+      "fork": false,
+      "language": "Go",
+      "primaryLanguage": {
+        "name": "Go",
+        "color": "#00ADD8"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 83090,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          },
+          {
+            "size": 12416,
+            "node": {
+              "name": "NSIS",
+              "color": null
+            }
+          },
+          {
+            "size": 51860,
+            "node": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            }
+          },
+          {
+            "size": 7941,
+            "node": {
+              "name": "Inno Setup",
+              "color": "#264b99"
+            }
+          },
+          {
+            "size": 11601,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          },
+          {
+            "size": 32894,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          },
+          {
+            "size": 4781,
+            "node": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            }
+          }
+        ]
+      },
+      "license": {
+        "spdx_id": "MIT"
+      }
+    },
+    {
       "name": "Portfolio",
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-08-02T01:12:24Z",
+      "pushed_at": "2026-08-02T04:38:55Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -183,64 +385,6 @@
             "node": {
               "name": "JavaScript",
               "color": "#f1e05a"
-            }
-          }
-        ]
-      },
-      "license": {
-        "spdx_id": "MIT"
-      }
-    },
-    {
-      "name": "gitscope",
-      "description": "GitScope is a lightweight and intuitive Git GUI client built with Go and wails designed to make version control simple, easy to implement.",
-      "html_url": "https://github.com/Aswanidev-vs/gitscope",
-      "homepage": "",
-      "pushed_at": "2026-08-02T01:55:01Z",
-      "created_at": "2025-11-02T18:10:59Z",
-      "stargazers_count": 4,
-      "forks_count": 0,
-      "fork": false,
-      "language": "Go",
-      "primaryLanguage": {
-        "name": "Go",
-        "color": "#00ADD8"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 123292,
-            "node": {
-              "name": "Go",
-              "color": "#00ADD8"
-            }
-          },
-          {
-            "size": 10069,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 13156,
-            "node": {
-              "name": "NSIS",
-              "color": null
-            }
-          },
-          {
-            "size": 55976,
-            "node": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            }
-          },
-          {
-            "size": 21195,
-            "node": {
-              "name": "CSS",
-              "color": "#663399"
             }
           }
         ]
@@ -878,78 +1022,6 @@
       "license": null
     },
     {
-      "name": "Mana",
-      "description": "Mana : Go framework for real-time apps: WebSocket, rooms, signaling, WebRTC & E2EE. Perfect for chat, collaboration tools, and MVPs.",
-      "html_url": "https://github.com/Aswanidev-vs/Mana",
-      "homepage": "https://aswanidev-vs.github.io/Mana/",
-      "pushed_at": "2026-08-01T02:41:46Z",
-      "created_at": "2026-04-02T16:54:00Z",
-      "stargazers_count": 2,
-      "forks_count": 1,
-      "fork": false,
-      "language": "Go",
-      "primaryLanguage": {
-        "name": "Go",
-        "color": "#00ADD8"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 318116,
-            "node": {
-              "name": "Go",
-              "color": "#00ADD8"
-            }
-          },
-          {
-            "size": 51740,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 378,
-            "node": {
-              "name": "Dockerfile",
-              "color": "#384d54"
-            }
-          },
-          {
-            "size": 26273,
-            "node": {
-              "name": "CSS",
-              "color": "#663399"
-            }
-          },
-          {
-            "size": 82223,
-            "node": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            }
-          },
-          {
-            "size": 145,
-            "node": {
-              "name": "PowerShell",
-              "color": "#012456"
-            }
-          },
-          {
-            "size": 106,
-            "node": {
-              "name": "Shell",
-              "color": "#89e051"
-            }
-          }
-        ]
-      },
-      "license": {
-        "spdx_id": "AGPL-3.0"
-      }
-    },
-    {
       "name": "go-cognitive-voice",
       "description": "A pure Go library for speaker detection and identification. Zero CGo, zero ML frameworks—just math. Enroll speakers with WAV/MP3 files and get real-time identification with MFCC, GMM, and neural embeddings",
       "html_url": "https://github.com/Aswanidev-vs/go-cognitive-voice",
@@ -1095,78 +1167,6 @@
         ]
       },
       "license": null
-    },
-    {
-      "name": "Predator",
-      "description": "Predator is a lightweight, cross platform desktop application for downloading videos and extracting audio from YouTube. It is built using Go and wails GUI framework, with go-ytdlp wrapper used as the download engine. The application focuses on simplicity, and a clean user experience .",
-      "html_url": "https://github.com/Aswanidev-vs/Predator",
-      "homepage": "",
-      "pushed_at": "2026-08-02T03:50:03Z",
-      "created_at": "2025-12-21T17:07:16Z",
-      "stargazers_count": 3,
-      "forks_count": 0,
-      "fork": false,
-      "language": "Go",
-      "primaryLanguage": {
-        "name": "Go",
-        "color": "#00ADD8"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 83090,
-            "node": {
-              "name": "Go",
-              "color": "#00ADD8"
-            }
-          },
-          {
-            "size": 12416,
-            "node": {
-              "name": "NSIS",
-              "color": null
-            }
-          },
-          {
-            "size": 51860,
-            "node": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            }
-          },
-          {
-            "size": 7941,
-            "node": {
-              "name": "Inno Setup",
-              "color": "#264b99"
-            }
-          },
-          {
-            "size": 11601,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 32894,
-            "node": {
-              "name": "CSS",
-              "color": "#663399"
-            }
-          },
-          {
-            "size": 4781,
-            "node": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            }
-          }
-        ]
-      },
-      "license": {
-        "spdx_id": "MIT"
-      }
     },
     {
       "name": "Brain",
@@ -1738,6 +1738,136 @@
     }
   ],
   "activity": [
+    {
+      "id": "16451628042",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1199739307,
+        "name": "Aswanidev-vs/Mana",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Mana"
+      },
+      "payload": {
+        "repository_id": 1199739307,
+        "push_id": 38759299447,
+        "ref": "refs/heads/main",
+        "head": "b861f8d4d3f4e602b0e22cc56496a57feca995e5",
+        "before": "697b750d9b432bddf31421575b8154c10fbdf962"
+      },
+      "public": true,
+      "created_at": "2026-08-02T06:50:55Z"
+    },
+    {
+      "id": "16451585270",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1199739307,
+        "name": "Aswanidev-vs/Mana",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Mana"
+      },
+      "payload": {
+        "repository_id": 1199739307,
+        "push_id": 38759255632,
+        "ref": "refs/heads/main",
+        "head": "697b750d9b432bddf31421575b8154c10fbdf962",
+        "before": "28b1d724c5fb0ff0dbe896c55d56c8090e976c62"
+      },
+      "public": true,
+      "created_at": "2026-08-02T06:50:17Z"
+    },
+    {
+      "id": "16451359042",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1199739307,
+        "name": "Aswanidev-vs/Mana",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Mana"
+      },
+      "payload": {
+        "repository_id": 1199739307,
+        "push_id": 38759023107,
+        "ref": "refs/heads/main",
+        "head": "28b1d724c5fb0ff0dbe896c55d56c8090e976c62",
+        "before": "5521f6b906a2f660ba151df37e762979ae5a7a35"
+      },
+      "public": true,
+      "created_at": "2026-08-02T06:46:47Z"
+    },
+    {
+      "id": "16451204021",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1088310194,
+        "name": "Aswanidev-vs/gitscope",
+        "url": "https://api.github.com/repos/Aswanidev-vs/gitscope"
+      },
+      "payload": {
+        "repository_id": 1088310194,
+        "push_id": 38758863924,
+        "ref": "refs/heads/main",
+        "head": "43d2d12040e2c3edfc099dd007f7d0b505e8de05",
+        "before": "fe2832d0bff298a597fafc4ed5e7f1e7a58d96ee"
+      },
+      "public": true,
+      "created_at": "2026-08-02T06:44:21Z"
+    },
+    {
+      "id": "16451125885",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1120654297,
+        "name": "Aswanidev-vs/Predator",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
+      },
+      "payload": {
+        "repository_id": 1120654297,
+        "push_id": 38758783732,
+        "ref": "refs/heads/v5",
+        "head": "720f7810e49268b4843d43c0cec019033ba3785c",
+        "before": "5859504e2280e7c78ade55cddf82485a51809ec1"
+      },
+      "public": true,
+      "created_at": "2026-08-02T06:43:06Z"
+    },
     {
       "id": "16413520697",
       "type": "PushEvent",
@@ -4250,176 +4380,6 @@
       },
       "public": true,
       "created_at": "2026-07-25T13:04:21Z"
-    },
-    {
-      "id": "15787964806",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "repository_id": 1297710346,
-        "push_id": 38084742131,
-        "ref": "refs/heads/main",
-        "head": "66c0c9e17420cf9f4bb024a6a79b8586b698750c",
-        "before": "46fa884306687d3cf034161b07efba2b133cf491"
-      },
-      "public": true,
-      "created_at": "2026-07-25T13:04:22Z"
-    },
-    {
-      "id": "12288659614",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "action": "opened",
-        "number": 54,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Miku/pulls/54",
-          "id": 4132434791,
-          "number": 54,
-          "head": {
-            "ref": "develop",
-            "sha": "24faaeb422707a316f928b0975c15a9c20e1dfdc",
-            "repo": {
-              "id": 1297710346,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
-              "name": "Miku"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "46fa884306687d3cf034161b07efba2b133cf491",
-            "repo": {
-              "id": 1297710346,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
-              "name": "Miku"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-07-25T13:04:05Z"
-    },
-    {
-      "id": "15787934883",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "repository_id": 1297710346,
-        "push_id": 38084711490,
-        "ref": "refs/heads/develop",
-        "head": "24faaeb422707a316f928b0975c15a9c20e1dfdc",
-        "before": "5e197345485d0c016adf2cf52dd8a72e4798a669"
-      },
-      "public": true,
-      "created_at": "2026-07-25T13:03:50Z"
-    },
-    {
-      "id": "15786027307",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1258201172,
-        "name": "Aswanidev-vs/Gocut",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Gocut"
-      },
-      "payload": {
-        "repository_id": 1258201172,
-        "push_id": 38082746640,
-        "ref": "refs/heads/main",
-        "head": "08de3683b558f38c69b3b9bda0ff665491e2a9ef",
-        "before": "6d17b0da7051ade4556eed3e44a76eaf888e1657"
-      },
-      "public": true,
-      "created_at": "2026-07-25T12:28:10Z"
-    },
-    {
-      "id": "12281731311",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "action": "closed",
-        "number": 52,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Miku/pulls/52",
-          "id": 4131177985,
-          "number": 52,
-          "head": {
-            "ref": "dependabot/npm_and_yarn/frontend/postcss-8.5.23",
-            "sha": "45fc2fbe492f6b99b666167e965ccbd49b3e2603",
-            "repo": {
-              "id": 1297710346,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
-              "name": "Miku"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "85df759df3620b8af6462ebf04718fdc5b45ea07",
-            "repo": {
-              "id": 1297710346,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
-              "name": "Miku"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-07-25T05:12:24Z"
     }
   ],
   "releases": [
