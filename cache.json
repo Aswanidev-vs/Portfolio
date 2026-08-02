@@ -1,5 +1,5 @@
 {
-  "ts": 1785668249395,
+  "ts": 1785672286609,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -12,6 +12,155 @@
     "total_repos": 36
   },
   "repos": [
+    {
+      "name": "Akashic",
+      "description": "Akashic is a free and open-source alternative to Windows Notepad, built with Go and Wails.",
+      "html_url": "https://github.com/Aswanidev-vs/Akashic",
+      "homepage": "",
+      "pushed_at": "2026-08-02T11:34:20Z",
+      "created_at": "2026-02-13T17:32:40Z",
+      "stargazers_count": 2,
+      "forks_count": 0,
+      "fork": false,
+      "language": "JavaScript",
+      "primaryLanguage": {
+        "name": "JavaScript",
+        "color": "#f1e05a"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 94669,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          },
+          {
+            "size": 13156,
+            "node": {
+              "name": "NSIS",
+              "color": null
+            }
+          },
+          {
+            "size": 120849,
+            "node": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            }
+          },
+          {
+            "size": 18872,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          },
+          {
+            "size": 32656,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          },
+          {
+            "size": 7657,
+            "node": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            }
+          }
+        ]
+      },
+      "license": {
+        "spdx_id": "MIT"
+      }
+    },
+    {
+      "name": "AnimeUpscale",
+      "description": "A Go CLI tool for upscaling anime and illustration images using Real-ESRGAN and RealSR backends. Features native execution, video support, and multiple model presets.",
+      "html_url": "https://github.com/Aswanidev-vs/AnimeUpscale",
+      "homepage": "",
+      "pushed_at": "2026-08-02T11:26:25Z",
+      "created_at": "2026-05-25T15:33:11Z",
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "fork": false,
+      "language": "Go",
+      "primaryLanguage": {
+        "name": "Go",
+        "color": "#00ADD8"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 106441,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          },
+          {
+            "size": 1336,
+            "node": {
+              "name": "Makefile",
+              "color": "#427819"
+            }
+          },
+          {
+            "size": 24411,
+            "node": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            }
+          },
+          {
+            "size": 12391,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          },
+          {
+            "size": 17054,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
+    {
+      "name": "Portfolio",
+      "description": null,
+      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
+      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
+      "pushed_at": "2026-08-02T10:57:30Z",
+      "created_at": "2025-09-03T16:31:24Z",
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "fork": false,
+      "language": "HTML",
+      "primaryLanguage": {
+        "name": "HTML",
+        "color": "#e34c26"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 57690,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
     {
       "name": "Gocut",
       "description": "Gocut is a fast, lightweight, fully offline video editor for the desktop. Built with a Go backend (Wails) and Vue 3 frontend, it offers a multi-track timeline and other features without uploading footage to the cloud.",
@@ -83,34 +232,6 @@
       "license": {
         "spdx_id": "AGPL-3.0"
       }
-    },
-    {
-      "name": "Portfolio",
-      "description": null,
-      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
-      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-08-02T09:24:56Z",
-      "created_at": "2025-09-03T16:31:24Z",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "fork": false,
-      "language": "HTML",
-      "primaryLanguage": {
-        "name": "HTML",
-        "color": "#e34c26"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 57690,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          }
-        ]
-      },
-      "license": null
     },
     {
       "name": "Mana",
@@ -559,62 +680,6 @@
       }
     },
     {
-      "name": "AnimeUpscale",
-      "description": "A Go CLI tool for upscaling anime and illustration images using Real-ESRGAN and RealSR backends. Features native execution, video support, and multiple model presets.",
-      "html_url": "https://github.com/Aswanidev-vs/AnimeUpscale",
-      "homepage": "",
-      "pushed_at": "2026-07-25T17:47:21Z",
-      "created_at": "2026-05-25T15:33:11Z",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "fork": false,
-      "language": "Go",
-      "primaryLanguage": {
-        "name": "Go",
-        "color": "#00ADD8"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 106441,
-            "node": {
-              "name": "Go",
-              "color": "#00ADD8"
-            }
-          },
-          {
-            "size": 1336,
-            "node": {
-              "name": "Makefile",
-              "color": "#427819"
-            }
-          },
-          {
-            "size": 20308,
-            "node": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            }
-          },
-          {
-            "size": 10424,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 13598,
-            "node": {
-              "name": "CSS",
-              "color": "#663399"
-            }
-          }
-        ]
-      },
-      "license": null
-    },
-    {
       "name": "LearnFlow",
       "description": "LearnFlow is a high-concurrency Go/Chi LMS bridging education and freelancing. It features AI personalization, GitHub-based code assessments, and a built-in marketplace to turn learners into hired professionals.",
       "html_url": "https://github.com/Aswanidev-vs/LearnFlow",
@@ -913,71 +978,6 @@
         ]
       },
       "license": null
-    },
-    {
-      "name": "Akashic",
-      "description": "Akashic is a free and open-source alternative to Windows Notepad, built with Go and Wails.",
-      "html_url": "https://github.com/Aswanidev-vs/Akashic",
-      "homepage": "",
-      "pushed_at": "2026-08-02T01:34:42Z",
-      "created_at": "2026-02-13T17:32:40Z",
-      "stargazers_count": 2,
-      "forks_count": 0,
-      "fork": false,
-      "language": "JavaScript",
-      "primaryLanguage": {
-        "name": "JavaScript",
-        "color": "#f1e05a"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 94669,
-            "node": {
-              "name": "Go",
-              "color": "#00ADD8"
-            }
-          },
-          {
-            "size": 13156,
-            "node": {
-              "name": "NSIS",
-              "color": null
-            }
-          },
-          {
-            "size": 120849,
-            "node": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            }
-          },
-          {
-            "size": 18872,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 32656,
-            "node": {
-              "name": "CSS",
-              "color": "#663399"
-            }
-          },
-          {
-            "size": 7657,
-            "node": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            }
-          }
-        ]
-      },
-      "license": {
-        "spdx_id": "MIT"
-      }
     },
     {
       "name": "lucid",
@@ -1738,6 +1738,58 @@
     }
   ],
   "activity": [
+    {
+      "id": "16470534419",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1157325468,
+        "name": "Aswanidev-vs/Akashic",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Akashic"
+      },
+      "payload": {
+        "repository_id": 1157325468,
+        "push_id": 38778892150,
+        "ref": "refs/heads/main",
+        "head": "c5a79e2a0ad7a147e717ba3bd8465c5cf05776a9",
+        "before": "ec8449cf61b4aab3f1eeba908875dee5f1b93b13"
+      },
+      "public": true,
+      "created_at": "2026-08-02T11:34:14Z"
+    },
+    {
+      "id": "16470066140",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1249331403,
+        "name": "Aswanidev-vs/AnimeUpscale",
+        "url": "https://api.github.com/repos/Aswanidev-vs/AnimeUpscale"
+      },
+      "payload": {
+        "repository_id": 1249331403,
+        "push_id": 38778408990,
+        "ref": "refs/heads/main",
+        "head": "2544e4f3836ebf4e9e01cca17abe3777e723f6f1",
+        "before": "8dd8498cd08fb7a077c2dd3a30e7718d5b2beaf5"
+      },
+      "public": true,
+      "created_at": "2026-08-02T11:26:07Z"
+    },
     {
       "id": "16468193621",
       "type": "PushEvent",
@@ -4308,58 +4360,6 @@
       },
       "public": true,
       "created_at": "2026-07-25T13:19:11Z"
-    },
-    {
-      "id": "15788594507",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1268565583,
-        "name": "Aswanidev-vs/Gcode",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Gcode"
-      },
-      "payload": {
-        "repository_id": 1268565583,
-        "push_id": 38085387140,
-        "ref": "refs/heads/main",
-        "head": "64ad287fc086c0f45c04c950403dbe6566b8b6c7",
-        "before": "24cf10e62cdc8f68cb7e3b94113886b1620e404e"
-      },
-      "public": true,
-      "created_at": "2026-07-25T13:16:07Z"
-    },
-    {
-      "id": "15788318972",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "repository_id": 1297710346,
-        "push_id": 38085104398,
-        "ref": "refs/heads/main",
-        "head": "1e1cf4a508f6ac7b5a067ffa341878a0235cb149",
-        "before": "66c0c9e17420cf9f4bb024a6a79b8586b698750c"
-      },
-      "public": true,
-      "created_at": "2026-07-25T13:10:54Z"
     }
   ],
   "releases": [
@@ -4426,15 +4426,15 @@
   ],
   "languageBytes": {
     "Batchfile": 807,
-    "CSS": 460133,
+    "CSS": 463589,
     "Dockerfile": 875,
     "Go": 3064941,
     "Go Template": 230517,
-    "HTML": 536018,
+    "HTML": 537985,
     "Hack": 1679,
     "Inno Setup": 7941,
     "Java": 105342,
-    "JavaScript": 928190,
+    "JavaScript": 932293,
     "Lua": 2388,
     "Makefile": 5002,
     "NSIS": 65518,
