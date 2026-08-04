@@ -1,5 +1,5 @@
 {
-  "ts": 1785848991325,
+  "ts": 1785857657882,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -13,11 +13,83 @@
   },
   "repos": [
     {
+      "name": "Predator",
+      "description": "Predator is a lightweight, cross platform desktop application for downloading videos and extracting audio from YouTube. It is built using Go and wails GUI framework, with go-ytdlp wrapper used as the download engine. The application focuses on simplicity, and a clean user experience .",
+      "html_url": "https://github.com/Aswanidev-vs/Predator",
+      "homepage": "",
+      "pushed_at": "2026-08-04T15:16:58Z",
+      "created_at": "2025-12-21T17:07:16Z",
+      "stargazers_count": 3,
+      "forks_count": 0,
+      "fork": false,
+      "language": "Go",
+      "primaryLanguage": {
+        "name": "Go",
+        "color": "#00ADD8"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 94697,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          },
+          {
+            "size": 12416,
+            "node": {
+              "name": "NSIS",
+              "color": null
+            }
+          },
+          {
+            "size": 51860,
+            "node": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            }
+          },
+          {
+            "size": 7941,
+            "node": {
+              "name": "Inno Setup",
+              "color": "#264b99"
+            }
+          },
+          {
+            "size": 11601,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          },
+          {
+            "size": 32894,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          },
+          {
+            "size": 4781,
+            "node": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            }
+          }
+        ]
+      },
+      "license": {
+        "spdx_id": "MIT"
+      }
+    },
+    {
       "name": "Portfolio",
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-08-04T11:12:32Z",
+      "pushed_at": "2026-08-04T13:09:52Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -399,78 +471,6 @@
             "node": {
               "name": "CSS",
               "color": "#663399"
-            }
-          }
-        ]
-      },
-      "license": {
-        "spdx_id": "MIT"
-      }
-    },
-    {
-      "name": "Predator",
-      "description": "Predator is a lightweight, cross platform desktop application for downloading videos and extracting audio from YouTube. It is built using Go and wails GUI framework, with go-ytdlp wrapper used as the download engine. The application focuses on simplicity, and a clean user experience .",
-      "html_url": "https://github.com/Aswanidev-vs/Predator",
-      "homepage": "",
-      "pushed_at": "2026-08-02T06:43:13Z",
-      "created_at": "2025-12-21T17:07:16Z",
-      "stargazers_count": 3,
-      "forks_count": 0,
-      "fork": false,
-      "language": "Go",
-      "primaryLanguage": {
-        "name": "Go",
-        "color": "#00ADD8"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 83090,
-            "node": {
-              "name": "Go",
-              "color": "#00ADD8"
-            }
-          },
-          {
-            "size": 12416,
-            "node": {
-              "name": "NSIS",
-              "color": null
-            }
-          },
-          {
-            "size": 51860,
-            "node": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            }
-          },
-          {
-            "size": 7941,
-            "node": {
-              "name": "Inno Setup",
-              "color": "#264b99"
-            }
-          },
-          {
-            "size": 11601,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 32894,
-            "node": {
-              "name": "CSS",
-              "color": "#663399"
-            }
-          },
-          {
-            "size": 4781,
-            "node": {
-              "name": "TypeScript",
-              "color": "#3178c6"
             }
           }
         ]
@@ -1738,6 +1738,312 @@
     }
   ],
   "activity": [
+    {
+      "id": "12768276908",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1120654297,
+        "name": "Aswanidev-vs/Predator",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 53,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Predator/pulls/53",
+          "id": 4204678918,
+          "number": 53,
+          "head": {
+            "ref": "v10",
+            "sha": "7d631b25ef6c52d842635608759b52553b833913",
+            "repo": {
+              "id": 1120654297,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Predator",
+              "name": "Predator"
+            }
+          },
+          "base": {
+            "ref": "v5",
+            "sha": "720f7810e49268b4843d43c0cec019033ba3785c",
+            "repo": {
+              "id": 1120654297,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Predator",
+              "name": "Predator"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-08-04T15:16:58Z"
+    },
+    {
+      "id": "12767914612",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1120654297,
+        "name": "Aswanidev-vs/Predator",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 53,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Predator/pulls/53",
+          "id": 4204678918,
+          "number": 53,
+          "head": {
+            "ref": "v10",
+            "sha": "7d631b25ef6c52d842635608759b52553b833913",
+            "repo": {
+              "id": 1120654297,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Predator",
+              "name": "Predator"
+            }
+          },
+          "base": {
+            "ref": "v5",
+            "sha": "720f7810e49268b4843d43c0cec019033ba3785c",
+            "repo": {
+              "id": 1120654297,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Predator",
+              "name": "Predator"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-08-04T15:10:49Z"
+    },
+    {
+      "id": "12767897666",
+      "type": "IssuesEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1120654297,
+        "name": "Aswanidev-vs/Predator",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
+      },
+      "payload": {
+        "action": "closed",
+        "issue": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Predator/issues/52",
+          "repository_url": "https://api.github.com/repos/Aswanidev-vs/Predator",
+          "labels_url": "https://api.github.com/repos/Aswanidev-vs/Predator/issues/52/labels{/name}",
+          "comments_url": "https://api.github.com/repos/Aswanidev-vs/Predator/issues/52/comments",
+          "events_url": "https://api.github.com/repos/Aswanidev-vs/Predator/issues/52/events",
+          "html_url": "https://github.com/Aswanidev-vs/Predator/issues/52",
+          "id": 5061781829,
+          "node_id": "I_kwDOQsvT2c8AAAABLbSpRQ",
+          "number": 52,
+          "title": "issue m4a merging issue",
+          "user": {
+            "login": "Aswanidev-vs",
+            "id": 178192591,
+            "node_id": "U_kgDOCp8Azw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Aswanidev-vs",
+            "html_url": "https://github.com/Aswanidev-vs",
+            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
+            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
+            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
+            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
+            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 0,
+          "created_at": "2026-08-04T14:46:17Z",
+          "updated_at": "2026-08-04T15:10:33Z",
+          "closed_at": "2026-08-04T15:10:32Z",
+          "assignee": null,
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": null,
+          "reactions": {
+            "url": "https://api.github.com/repos/Aswanidev-vs/Predator/issues/52/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/Aswanidev-vs/Predator/issues/52/timeline",
+          "performed_via_github_app": null,
+          "state_reason": "completed",
+          "pinned_comment": null
+        }
+      },
+      "public": true,
+      "created_at": "2026-08-04T15:10:33Z"
+    },
+    {
+      "id": "16700721403",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1120654297,
+        "name": "Aswanidev-vs/Predator",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
+      },
+      "payload": {
+        "repository_id": 1120654297,
+        "push_id": 39015606341,
+        "ref": "refs/heads/v10",
+        "head": "6f685f1b521a4507704edf5c192b7adca9b2ad77",
+        "before": "78d6011c35ac62def117a955707cdb22085c0811"
+      },
+      "public": true,
+      "created_at": "2026-08-04T15:09:55Z"
+    },
+    {
+      "id": "12766449582",
+      "type": "IssuesEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1120654297,
+        "name": "Aswanidev-vs/Predator",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
+      },
+      "payload": {
+        "action": "opened",
+        "issue": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Predator/issues/52",
+          "repository_url": "https://api.github.com/repos/Aswanidev-vs/Predator",
+          "labels_url": "https://api.github.com/repos/Aswanidev-vs/Predator/issues/52/labels{/name}",
+          "comments_url": "https://api.github.com/repos/Aswanidev-vs/Predator/issues/52/comments",
+          "events_url": "https://api.github.com/repos/Aswanidev-vs/Predator/issues/52/events",
+          "html_url": "https://github.com/Aswanidev-vs/Predator/issues/52",
+          "id": 5061781829,
+          "node_id": "I_kwDOQsvT2c8AAAABLbSpRQ",
+          "number": 52,
+          "title": "issue m4a merging issue",
+          "user": {
+            "login": "Aswanidev-vs",
+            "id": 178192591,
+            "node_id": "U_kgDOCp8Azw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Aswanidev-vs",
+            "html_url": "https://github.com/Aswanidev-vs",
+            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
+            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
+            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
+            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
+            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 0,
+          "created_at": "2026-08-04T14:46:17Z",
+          "updated_at": "2026-08-04T15:10:33Z",
+          "closed_at": "2026-08-04T15:10:32Z",
+          "assignee": null,
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": null,
+          "reactions": {
+            "url": "https://api.github.com/repos/Aswanidev-vs/Predator/issues/52/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/Aswanidev-vs/Predator/issues/52/timeline",
+          "performed_via_github_app": null,
+          "state_reason": "completed",
+          "pinned_comment": null
+        }
+      },
+      "public": true,
+      "created_at": "2026-08-04T14:46:18Z"
+    },
     {
       "id": "16574787123",
       "type": "PushEvent",
@@ -4271,138 +4577,15 @@
       },
       "public": false,
       "created_at": "2026-07-26T18:24:26Z"
-    },
-    {
-      "id": "12317246708",
-      "type": "WatchEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 52034309,
-        "name": "uber-go/zap",
-        "url": "https://api.github.com/repos/uber-go/zap"
-      },
-      "payload": {
-        "action": "started"
-      },
-      "public": true,
-      "created_at": "2026-07-26T17:36:04Z",
-      "org": {
-        "id": 19262598,
-        "login": "uber-go",
-        "gravatar_id": "",
-        "url": "https://api.github.com/orgs/uber-go",
-        "avatar_url": "https://avatars.githubusercontent.com/u/19262598?"
-      }
-    },
-    {
-      "id": "12316896966",
-      "type": "WatchEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1310647636,
-        "name": "SeriousBug/webp-go-pure",
-        "url": "https://api.github.com/repos/SeriousBug/webp-go-pure"
-      },
-      "payload": {
-        "action": "started"
-      },
-      "public": true,
-      "created_at": "2026-07-26T17:17:30Z"
-    },
-    {
-      "id": "15844209078",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1308977261,
-        "name": "Aswanidev-vs/light",
-        "url": "https://api.github.com/repos/Aswanidev-vs/light"
-      },
-      "payload": {
-        "repository_id": 1308977261,
-        "push_id": 38142282099,
-        "ref": "refs/heads/main",
-        "head": "1e5fb651f5f4bded250038cfbad13ce3513bbb3b",
-        "before": "3919e034af4954d70056725e72ca5e31cc2849ab"
-      },
-      "public": false,
-      "created_at": "2026-07-26T10:45:42Z"
-    },
-    {
-      "id": "15832564508",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1308977261,
-        "name": "Aswanidev-vs/light",
-        "url": "https://api.github.com/repos/Aswanidev-vs/light"
-      },
-      "payload": {
-        "repository_id": 1308977261,
-        "push_id": 38130273350,
-        "ref": "refs/heads/main",
-        "head": "3919e034af4954d70056725e72ca5e31cc2849ab",
-        "before": "6977f4468e38994658f5a6ebb674e6ee93e2b244"
-      },
-      "public": false,
-      "created_at": "2026-07-26T07:27:11Z"
-    },
-    {
-      "id": "15831853096",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1308977261,
-        "name": "Aswanidev-vs/light",
-        "url": "https://api.github.com/repos/Aswanidev-vs/light"
-      },
-      "payload": {
-        "repository_id": 1308977261,
-        "push_id": 38129536501,
-        "ref": "refs/heads/main",
-        "head": "6977f4468e38994658f5a6ebb674e6ee93e2b244",
-        "before": "57f53018b4b707a31d6deae5dcc937496dea119d"
-      },
-      "public": false,
-      "created_at": "2026-07-26T07:14:15Z"
     }
   ],
   "releases": [
+    {
+      "name": "Predator",
+      "tag": "v1.3.9",
+      "date": "2026-08-04T15:15:36Z",
+      "url": "https://github.com/Aswanidev-vs/Predator/releases/tag/v1.3.9"
+    },
     {
       "name": "Gocut",
       "tag": "v0.4.4",
@@ -4420,12 +4603,6 @@
       "tag": "v0.10.4",
       "date": "2026-07-25T05:41:47Z",
       "url": "https://github.com/Aswanidev-vs/Miku/releases/tag/v0.10.4"
-    },
-    {
-      "name": "Predator",
-      "tag": "v1.3.8",
-      "date": "2026-06-28T17:38:23Z",
-      "url": "https://github.com/Aswanidev-vs/Predator/releases/tag/v1.3.8"
     },
     {
       "name": "gkport",
@@ -4468,7 +4645,7 @@
     "Batchfile": 807,
     "CSS": 463589,
     "Dockerfile": 875,
-    "Go": 3074470,
+    "Go": 3086077,
     "Go Template": 230517,
     "HTML": 537985,
     "Hack": 1679,
