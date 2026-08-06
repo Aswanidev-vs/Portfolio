@@ -1,5 +1,5 @@
 {
-  "ts": 1785996761653,
+  "ts": 1786007201780,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -13,11 +13,76 @@
   },
   "repos": [
     {
+      "name": "Akashic",
+      "description": "Akashic is a free and open-source alternative to Windows Notepad, built with Go and Wails.",
+      "html_url": "https://github.com/Aswanidev-vs/Akashic",
+      "homepage": "",
+      "pushed_at": "2026-08-06T07:58:44Z",
+      "created_at": "2026-02-13T17:32:40Z",
+      "stargazers_count": 2,
+      "forks_count": 0,
+      "fork": false,
+      "language": "JavaScript",
+      "primaryLanguage": {
+        "name": "JavaScript",
+        "color": "#f1e05a"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 95188,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          },
+          {
+            "size": 13156,
+            "node": {
+              "name": "NSIS",
+              "color": null
+            }
+          },
+          {
+            "size": 133778,
+            "node": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            }
+          },
+          {
+            "size": 37246,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          },
+          {
+            "size": 36985,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          },
+          {
+            "size": 7657,
+            "node": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            }
+          }
+        ]
+      },
+      "license": {
+        "spdx_id": "MIT"
+      }
+    },
+    {
       "name": "Portfolio",
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-08-06T03:32:06Z",
+      "pushed_at": "2026-08-06T06:12:42Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -360,71 +425,6 @@
           },
           {
             "size": 4781,
-            "node": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            }
-          }
-        ]
-      },
-      "license": {
-        "spdx_id": "MIT"
-      }
-    },
-    {
-      "name": "Akashic",
-      "description": "Akashic is a free and open-source alternative to Windows Notepad, built with Go and Wails.",
-      "html_url": "https://github.com/Aswanidev-vs/Akashic",
-      "homepage": "",
-      "pushed_at": "2026-08-02T11:34:20Z",
-      "created_at": "2026-02-13T17:32:40Z",
-      "stargazers_count": 2,
-      "forks_count": 0,
-      "fork": false,
-      "language": "JavaScript",
-      "primaryLanguage": {
-        "name": "JavaScript",
-        "color": "#f1e05a"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 94669,
-            "node": {
-              "name": "Go",
-              "color": "#00ADD8"
-            }
-          },
-          {
-            "size": 13156,
-            "node": {
-              "name": "NSIS",
-              "color": null
-            }
-          },
-          {
-            "size": 120849,
-            "node": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            }
-          },
-          {
-            "size": 18872,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 32656,
-            "node": {
-              "name": "CSS",
-              "color": "#663399"
-            }
-          },
-          {
-            "size": 7657,
             "node": {
               "name": "TypeScript",
               "color": "#3178c6"
@@ -1738,6 +1738,32 @@
     }
   ],
   "activity": [
+    {
+      "id": "16896511262",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1157325468,
+        "name": "Aswanidev-vs/Akashic",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Akashic"
+      },
+      "payload": {
+        "repository_id": 1157325468,
+        "push_id": 39211067689,
+        "ref": "refs/heads/main",
+        "head": "f90a87bf15d75387c96caa5fa9895f71c25904e0",
+        "before": "c5a79e2a0ad7a147e717ba3bd8465c5cf05776a9"
+      },
+      "public": true,
+      "created_at": "2026-08-06T07:56:33Z"
+    },
     {
       "id": "16820436811",
       "type": "PushEvent",
@@ -4672,32 +4698,6 @@
       },
       "public": false,
       "created_at": "2026-07-27T14:07:49Z"
-    },
-    {
-      "id": "15935665353",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1308977261,
-        "name": "Aswanidev-vs/light",
-        "url": "https://api.github.com/repos/Aswanidev-vs/light"
-      },
-      "payload": {
-        "repository_id": 1308977261,
-        "push_id": 38236471867,
-        "ref": "refs/heads/main",
-        "head": "8ad1e3a739a0e2eedbae2eb23563c7baa5dad89d",
-        "before": "a9c2c5a8ac91407ab7cdc7fe9e8d70eaeabf94fb"
-      },
-      "public": false,
-      "created_at": "2026-07-27T13:36:59Z"
     }
   ],
   "releases": [
@@ -4764,15 +4764,15 @@
   ],
   "languageBytes": {
     "Batchfile": 807,
-    "CSS": 463589,
+    "CSS": 467918,
     "Dockerfile": 875,
-    "Go": 3093339,
+    "Go": 3093858,
     "Go Template": 230517,
-    "HTML": 537985,
+    "HTML": 556359,
     "Hack": 1679,
     "Inno Setup": 7941,
     "Java": 105342,
-    "JavaScript": 975219,
+    "JavaScript": 988148,
     "Lua": 2388,
     "Makefile": 5002,
     "NSIS": 65518,
