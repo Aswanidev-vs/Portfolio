@@ -1,5 +1,5 @@
 {
-  "ts": 1786194494861,
+  "ts": 1786197252207,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -17,7 +17,7 @@
       "description": "Light is a zero-config, cross-platform file-sharing tool for local networks. Built with Go and Vue 3, it uses UDP beacons for instant device discovery and QR codes for secure pairing. Transfer files instantly with real-time progress, checksum verification, and a privacy-first design. No internet required.",
       "html_url": "https://github.com/Aswanidev-vs/light",
       "homepage": "",
-      "pushed_at": "2026-08-08T12:47:07Z",
+      "pushed_at": "2026-08-08T13:51:55Z",
       "created_at": "2026-08-07T08:26:18Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -30,7 +30,7 @@
       "languages": {
         "edges": [
           {
-            "size": 115846,
+            "size": 118362,
             "node": {
               "name": "Java",
               "color": "#b07219"
@@ -44,7 +44,7 @@
             }
           },
           {
-            "size": 69166,
+            "size": 79708,
             "node": {
               "name": "Go",
               "color": "#00ADD8"
@@ -79,7 +79,7 @@
             }
           },
           {
-            "size": 48825,
+            "size": 49153,
             "node": {
               "name": "TypeScript",
               "color": "#3178c6"
@@ -93,7 +93,7 @@
             }
           },
           {
-            "size": 36230,
+            "size": 37706,
             "node": {
               "name": "Vue",
               "color": "#41b883"
@@ -101,14 +101,16 @@
           }
         ]
       },
-      "license": null
+      "license": {
+        "spdx_id": "MIT"
+      }
     },
     {
       "name": "Portfolio",
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-08-08T12:03:54Z",
+      "pushed_at": "2026-08-08T13:08:16Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -1829,6 +1831,253 @@
     }
   ],
   "activity": [
+    {
+      "id": "17129422044",
+      "type": "DeleteEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1326406301,
+        "name": "Aswanidev-vs/light",
+        "url": "https://api.github.com/repos/Aswanidev-vs/light"
+      },
+      "payload": {
+        "ref": "v0.1.16",
+        "ref_type": "tag",
+        "full_ref": "refs/tags/v0.1.16",
+        "pusher_type": "user"
+      },
+      "public": true,
+      "created_at": "2026-08-08T13:51:04Z"
+    },
+    {
+      "id": "17128952611",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1326406301,
+        "name": "Aswanidev-vs/light",
+        "url": "https://api.github.com/repos/Aswanidev-vs/light"
+      },
+      "payload": {
+        "repository_id": 1326406301,
+        "push_id": 39446149331,
+        "ref": "refs/heads/main",
+        "head": "e9cd65910346be35298cb89172e029613f5e4803",
+        "before": "2b93a5782ba839666a0a7d1dfe4d8772091bc937"
+      },
+      "public": true,
+      "created_at": "2026-08-08T13:43:14Z"
+    },
+    {
+      "id": "17128874799",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1326406301,
+        "name": "Aswanidev-vs/light",
+        "url": "https://api.github.com/repos/Aswanidev-vs/light"
+      },
+      "payload": {
+        "repository_id": 1326406301,
+        "push_id": 39446071368,
+        "ref": "refs/heads/main",
+        "head": "2b93a5782ba839666a0a7d1dfe4d8772091bc937",
+        "before": "f2ea4f029a73fa22494d0da606c2c28a0019c8ac"
+      },
+      "public": true,
+      "created_at": "2026-08-08T13:41:56Z"
+    },
+    {
+      "id": "12976418980",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1326406301,
+        "name": "Aswanidev-vs/light",
+        "url": "https://api.github.com/repos/Aswanidev-vs/light"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 18,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/light/pulls/18",
+          "id": 4234691091,
+          "number": 18,
+          "head": {
+            "ref": "develop",
+            "sha": "0199f743db624fd9ea030cdaf37b78b2c6315bfd",
+            "repo": {
+              "id": 1326406301,
+              "url": "https://api.github.com/repos/Aswanidev-vs/light",
+              "name": "light"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "3c043518e87b086099ee1f0230e6e0b3844ac6a3",
+            "repo": {
+              "id": 1326406301,
+              "url": "https://api.github.com/repos/Aswanidev-vs/light",
+              "name": "light"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-08-08T13:36:35Z"
+    },
+    {
+      "id": "17128560349",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1326406301,
+        "name": "Aswanidev-vs/light",
+        "url": "https://api.github.com/repos/Aswanidev-vs/light"
+      },
+      "payload": {
+        "repository_id": 1326406301,
+        "push_id": 39445756068,
+        "ref": "refs/heads/main",
+        "head": "f2ea4f029a73fa22494d0da606c2c28a0019c8ac",
+        "before": "3c043518e87b086099ee1f0230e6e0b3844ac6a3"
+      },
+      "public": true,
+      "created_at": "2026-08-08T13:36:36Z"
+    },
+    {
+      "id": "12976413547",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1326406301,
+        "name": "Aswanidev-vs/light",
+        "url": "https://api.github.com/repos/Aswanidev-vs/light"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 18,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/light/pulls/18",
+          "id": 4234691091,
+          "number": 18,
+          "head": {
+            "ref": "develop",
+            "sha": "0199f743db624fd9ea030cdaf37b78b2c6315bfd",
+            "repo": {
+              "id": 1326406301,
+              "url": "https://api.github.com/repos/Aswanidev-vs/light",
+              "name": "light"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "3c043518e87b086099ee1f0230e6e0b3844ac6a3",
+            "repo": {
+              "id": 1326406301,
+              "url": "https://api.github.com/repos/Aswanidev-vs/light",
+              "name": "light"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-08-08T13:36:19Z"
+    },
+    {
+      "id": "17128317703",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1326406301,
+        "name": "Aswanidev-vs/light",
+        "url": "https://api.github.com/repos/Aswanidev-vs/light"
+      },
+      "payload": {
+        "repository_id": 1326406301,
+        "push_id": 39445512711,
+        "ref": "refs/heads/develop",
+        "head": "0199f743db624fd9ea030cdaf37b78b2c6315bfd",
+        "before": "dca68888a660403653108520c8371846b8b66df6"
+      },
+      "public": true,
+      "created_at": "2026-08-08T13:32:37Z"
+    },
+    {
+      "id": "17127548854",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1326406301,
+        "name": "Aswanidev-vs/light",
+        "url": "https://api.github.com/repos/Aswanidev-vs/light"
+      },
+      "payload": {
+        "repository_id": 1326406301,
+        "push_id": 39444739975,
+        "ref": "refs/heads/develop",
+        "head": "dca68888a660403653108520c8371846b8b66df6",
+        "before": "070bab33bb563348bb03d8468566cf25759f2716"
+      },
+      "public": true,
+      "created_at": "2026-08-08T13:20:53Z"
+    },
     {
       "id": "17125437104",
       "type": "PushEvent",
@@ -5431,234 +5680,6 @@
       },
       "public": true,
       "created_at": "2026-08-06T10:19:22Z"
-    },
-    {
-      "id": "16911521461",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1157325468,
-        "name": "Aswanidev-vs/Akashic",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Akashic"
-      },
-      "payload": {
-        "repository_id": 1157325468,
-        "push_id": 39226017562,
-        "ref": "refs/heads/main",
-        "head": "99cab62b883802fb86295f47f899520f3cb40929",
-        "before": "0e16776921d9fce5f21bc4a6aa19abc614884d76"
-      },
-      "public": true,
-      "created_at": "2026-08-06T10:22:34Z"
-    },
-    {
-      "id": "16911260429",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1157325468,
-        "name": "Aswanidev-vs/Akashic",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Akashic"
-      },
-      "payload": {
-        "repository_id": 1157325468,
-        "push_id": 39225740273,
-        "ref": "refs/heads/main",
-        "head": "972c04958c2fb2e86a5f03d1f509184d65d4e4c4",
-        "before": "384c334236a28bc1b5929dcbad963a3d685b4d67"
-      },
-      "public": true,
-      "created_at": "2026-08-06T10:19:41Z"
-    },
-    {
-      "id": "16910895732",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1157325468,
-        "name": "Aswanidev-vs/Akashic",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Akashic"
-      },
-      "payload": {
-        "repository_id": 1157325468,
-        "push_id": 39226079623,
-        "ref": "refs/heads/main",
-        "head": "2a4a0c1ebefaa1d8e58f0c7516841f1089ee39d9",
-        "before": "e2ae620252986288853a1024048f0a6ccb16ce7b"
-      },
-      "public": true,
-      "created_at": "2026-08-06T10:23:14Z"
-    },
-    {
-      "id": "16908986031",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1157325468,
-        "name": "Aswanidev-vs/Akashic",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Akashic"
-      },
-      "payload": {
-        "repository_id": 1157325468,
-        "push_id": 39226433608,
-        "ref": "refs/heads/main",
-        "head": "f106dce9bafe4001705a31baf5b733c4a875cac0",
-        "before": "3aca959c37334cfbc5c347df8f9ee1b0074ce42a"
-      },
-      "public": true,
-      "created_at": "2026-08-06T10:27:01Z"
-    },
-    {
-      "id": "16908967468",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1157325468,
-        "name": "Aswanidev-vs/Akashic",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Akashic"
-      },
-      "payload": {
-        "repository_id": 1157325468,
-        "push_id": 39226414157,
-        "ref": "refs/heads/main",
-        "head": "3aca959c37334cfbc5c347df8f9ee1b0074ce42a",
-        "before": "2a4a0c1ebefaa1d8e58f0c7516841f1089ee39d9"
-      },
-      "public": true,
-      "created_at": "2026-08-06T10:26:48Z"
-    },
-    {
-      "id": "16908613933",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1157325468,
-        "name": "Aswanidev-vs/Akashic",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Akashic"
-      },
-      "payload": {
-        "repository_id": 1157325468,
-        "push_id": 39226041786,
-        "ref": "refs/heads/main",
-        "head": "e2ae620252986288853a1024048f0a6ccb16ce7b",
-        "before": "99cab62b883802fb86295f47f899520f3cb40929"
-      },
-      "public": true,
-      "created_at": "2026-08-06T10:22:50Z"
-    },
-    {
-      "id": "12874638775",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1157325468,
-        "name": "Aswanidev-vs/Akashic",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Akashic"
-      },
-      "payload": {
-        "action": "merged",
-        "number": 29,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Akashic/pulls/29",
-          "id": 4219993919,
-          "number": 29,
-          "head": {
-            "ref": "alert-autofix-3",
-            "sha": "ec002abb9232ef7bd0a33ef01db57ba4e450b793",
-            "repo": {
-              "id": 1157325468,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Akashic",
-              "name": "Akashic"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "384c334236a28bc1b5929dcbad963a3d685b4d67",
-            "repo": {
-              "id": 1157325468,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Akashic",
-              "name": "Akashic"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-08-06T10:19:39Z"
-    },
-    {
-      "id": "16908306391",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1157325468,
-        "name": "Aswanidev-vs/Akashic",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Akashic"
-      },
-      "payload": {
-        "repository_id": 1157325468,
-        "push_id": 39225712701,
-        "ref": "refs/heads/alert-autofix-3",
-        "head": "ec002abb9232ef7bd0a33ef01db57ba4e450b793",
-        "before": "384c334236a28bc1b5929dcbad963a3d685b4d67"
-      },
-      "public": true,
-      "created_at": "2026-08-06T10:19:23Z"
     }
   ],
   "releases": [
@@ -5733,12 +5754,12 @@
     "Batchfile": 807,
     "CSS": 467918,
     "Dockerfile": 875,
-    "Go": 3163024,
+    "Go": 3173566,
     "Go Template": 230517,
     "HTML": 682789,
     "Hack": 1679,
     "Inno Setup": 10332,
-    "Java": 221188,
+    "Java": 223704,
     "JavaScript": 990227,
     "Lua": 2388,
     "Makefile": 5002,
@@ -5748,7 +5769,7 @@
     "PowerShell": 145,
     "Python": 25908,
     "Shell": 7649,
-    "TypeScript": 219613,
-    "Vue": 585336
+    "TypeScript": 219941,
+    "Vue": 586812
   }
 }
