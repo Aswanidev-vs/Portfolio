@@ -1,5 +1,5 @@
 {
-  "ts": 1786728498592,
+  "ts": 1786731965922,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -13,39 +13,11 @@
   },
   "repos": [
     {
-      "name": "Portfolio",
-      "description": null,
-      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
-      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-08-14T16:26:32Z",
-      "created_at": "2025-09-03T16:31:24Z",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "fork": false,
-      "language": "HTML",
-      "primaryLanguage": {
-        "name": "HTML",
-        "color": "#e34c26"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 57690,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          }
-        ]
-      },
-      "license": null
-    },
-    {
       "name": "light",
       "description": "Light is a zero-config, cross-platform file-sharing tool for local networks. Built with Go and Vue 3, it uses UDP beacons for instant device discovery and QR codes for secure pairing. Transfer files instantly with real-time progress, checksum verification, and a privacy-first design. No internet required.",
       "html_url": "https://github.com/Aswanidev-vs/light",
       "homepage": "",
-      "pushed_at": "2026-08-14T14:41:26Z",
+      "pushed_at": "2026-08-14T18:18:22Z",
       "created_at": "2026-08-07T08:26:18Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -72,7 +44,7 @@
             }
           },
           {
-            "size": 164460,
+            "size": 168785,
             "node": {
               "name": "Go",
               "color": "#00ADD8"
@@ -132,6 +104,34 @@
       "license": {
         "spdx_id": "MIT"
       }
+    },
+    {
+      "name": "Portfolio",
+      "description": null,
+      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
+      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
+      "pushed_at": "2026-08-14T17:28:19Z",
+      "created_at": "2025-09-03T16:31:24Z",
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "fork": false,
+      "language": "HTML",
+      "primaryLanguage": {
+        "name": "HTML",
+        "color": "#e34c26"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 57690,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          }
+        ]
+      },
+      "license": null
     },
     {
       "name": "Writedown",
@@ -1831,6 +1831,150 @@
     }
   ],
   "activity": [
+    {
+      "id": "17676912033",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1326406301,
+        "name": "Aswanidev-vs/light",
+        "url": "https://api.github.com/repos/Aswanidev-vs/light"
+      },
+      "payload": {
+        "repository_id": 1326406301,
+        "push_id": 40000692892,
+        "ref": "refs/heads/main",
+        "head": "6ebb81dbcbee9808f6ee234fd896f5d63065297c",
+        "before": "c140f9ed7714e951fd3d1389dfc7802d0b63485c"
+      },
+      "public": true,
+      "created_at": "2026-08-14T18:18:23Z"
+    },
+    {
+      "id": "13304152087",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1326406301,
+        "name": "Aswanidev-vs/light",
+        "url": "https://api.github.com/repos/Aswanidev-vs/light"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 40,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/light/pulls/40",
+          "id": 4282221751,
+          "number": 40,
+          "head": {
+            "ref": "develop",
+            "sha": "3aa0dfd34cdad3a87d0288ba6fea4a129a532d2e",
+            "repo": {
+              "id": 1326406301,
+              "url": "https://api.github.com/repos/Aswanidev-vs/light",
+              "name": "light"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "c140f9ed7714e951fd3d1389dfc7802d0b63485c",
+            "repo": {
+              "id": 1326406301,
+              "url": "https://api.github.com/repos/Aswanidev-vs/light",
+              "name": "light"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-08-14T18:18:22Z"
+    },
+    {
+      "id": "13304145075",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1326406301,
+        "name": "Aswanidev-vs/light",
+        "url": "https://api.github.com/repos/Aswanidev-vs/light"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 40,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/light/pulls/40",
+          "id": 4282221751,
+          "number": 40,
+          "head": {
+            "ref": "develop",
+            "sha": "3aa0dfd34cdad3a87d0288ba6fea4a129a532d2e",
+            "repo": {
+              "id": 1326406301,
+              "url": "https://api.github.com/repos/Aswanidev-vs/light",
+              "name": "light"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "c140f9ed7714e951fd3d1389dfc7802d0b63485c",
+            "repo": {
+              "id": 1326406301,
+              "url": "https://api.github.com/repos/Aswanidev-vs/light",
+              "name": "light"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-08-14T18:18:13Z"
+    },
+    {
+      "id": "17676793605",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1326406301,
+        "name": "Aswanidev-vs/light",
+        "url": "https://api.github.com/repos/Aswanidev-vs/light"
+      },
+      "payload": {
+        "repository_id": 1326406301,
+        "push_id": 40000579165,
+        "ref": "refs/heads/develop",
+        "head": "3aa0dfd34cdad3a87d0288ba6fea4a129a532d2e",
+        "before": "d6ef14bc7d6fb42f92037edfda3480f54ebb6e52"
+      },
+      "public": true,
+      "created_at": "2026-08-14T18:16:43Z"
+    },
     {
       "id": "17660665914",
       "type": "PushEvent",
@@ -5671,283 +5815,6 @@
       },
       "public": true,
       "created_at": "2026-08-10T10:56:39Z"
-    },
-    {
-      "id": "13038039974",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "action": "merged",
-        "number": 46,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Mai/pulls/46",
-          "id": 4244020107,
-          "number": 46,
-          "head": {
-            "ref": "v1",
-            "sha": "b94d9cc4f15c7b0bd9401a75d2b1e4c1d0e07d04",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "7e63a3f4caebea34663cba1808bb91d9d201638a",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-08-10T10:58:11Z"
-    },
-    {
-      "id": "17280406333",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "repository_id": 1221010957,
-        "push_id": 39598851476,
-        "ref": "refs/heads/main",
-        "head": "50ad6f8086dff0c3a327fa9ba5d6767dc06e16b2",
-        "before": "7e63a3f4caebea34663cba1808bb91d9d201638a"
-      },
-      "public": true,
-      "created_at": "2026-08-10T10:58:12Z"
-    },
-    {
-      "id": "13038006217",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "action": "opened",
-        "number": 46,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Mai/pulls/46",
-          "id": 4244020107,
-          "number": 46,
-          "head": {
-            "ref": "v1",
-            "sha": "b94d9cc4f15c7b0bd9401a75d2b1e4c1d0e07d04",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "7e63a3f4caebea34663cba1808bb91d9d201638a",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-08-10T10:57:28Z"
-    },
-    {
-      "id": "13036590700",
-      "type": "IssueCommentEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 531380835,
-        "name": "k2-fsa/sherpa-onnx",
-        "url": "https://api.github.com/repos/k2-fsa/sherpa-onnx"
-      },
-      "payload": {
-        "action": "created",
-        "issue": {
-          "url": "https://api.github.com/repos/k2-fsa/sherpa-onnx/issues/3854",
-          "repository_url": "https://api.github.com/repos/k2-fsa/sherpa-onnx",
-          "labels_url": "https://api.github.com/repos/k2-fsa/sherpa-onnx/issues/3854/labels{/name}",
-          "comments_url": "https://api.github.com/repos/k2-fsa/sherpa-onnx/issues/3854/comments",
-          "events_url": "https://api.github.com/repos/k2-fsa/sherpa-onnx/issues/3854/events",
-          "html_url": "https://github.com/k2-fsa/sherpa-onnx/issues/3854",
-          "id": 5107877244,
-          "node_id": "I_kwDOH6w6Y88AAAABMHQFfA",
-          "number": 3854,
-          "title": "[FEATURE]",
-          "user": {
-            "login": "Aswanidev-vs",
-            "id": 178192591,
-            "node_id": "U_kgDOCp8Azw",
-            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/Aswanidev-vs",
-            "html_url": "https://github.com/Aswanidev-vs",
-            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
-            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
-            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
-            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
-            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
-            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [
-            {
-              "id": 4485847432,
-              "node_id": "LA_kwDOH6w6Y88AAAABC2CZiA",
-              "url": "https://api.github.com/repos/k2-fsa/sherpa-onnx/labels/enhancement",
-              "name": "enhancement",
-              "color": "a2eeef",
-              "default": true,
-              "description": "New feature or request"
-            }
-          ],
-          "state": "open",
-          "locked": false,
-          "assignees": [],
-          "milestone": null,
-          "comments": 2,
-          "created_at": "2026-08-10T07:52:14Z",
-          "updated_at": "2026-08-10T10:29:34Z",
-          "closed_at": null,
-          "assignee": null,
-          "issue_field_values": [],
-          "type": null,
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": "### Describe the feature\n\nRequesting support for exported ONNX/sherpa models and native inference support for **Chatterbox-Nano**, the 110M parameter zero-shot text-to-speech model developed by Resemble AI.\n\nKey operational requirements for integration:\n\n* **Model Architecture:** Lightweight 110M parameter backbone with a single-step distilled speech-token-to-mel decoder.\n* **Zero-Shot Voice Cloning:** Input support for a reference audio prompt embedding (typically ~5s audio clip) to clone target voices dynamically.\n* **Paralinguistic Tokens:** Handling inline expressive tag parsing (e.g., `[laugh]`, `[chuckle]`, `[cough]`).\n\n---\n\n### Motivation / Use Case\n\n* **Extremely Low VRAM & CPU Efficiency:** Chatterbox-Nano runs 3x faster than real-time on standard 8-core CPUs, making it ideal for resource-constrained edge environments, embedded devices, and desktop applications running without dedicated GPUs.\n* **On-Device Voice Cloning:** Combining a tiny footprint (110M parameters) with zero-shot voice cloning allows offline applications to generate personalized, high-fidelity speech without relying on cloud APIs or heavy local models.\n* **Natural Expressiveness at the Edge:** Support for paralinguistic tags directly within the text stream provides conversational AI agents with enhanced realism while maintaining low latency.\n\n---\n\n### Additional context\n\n* **Model Repository:** [[ResembleAI/chatterbox-nano on Hugging Face](https://huggingface.co/ResembleAI/chatterbox-nano)](https://huggingface.co/ResembleAI/chatterbox-nano)\n* **Upstream Codebase:** [[resemble-ai/chatterbox on GitHub](https://github.com/resemble-ai/chatterbox)](https://github.com/resemble-ai/chatterbox)\n* **License:** Permissive / Open Source (MIT)\n* **Python Usage Example:**\n```python\nfrom chatterbox.tts_turbo import ChatterboxTurboTTS\n\n# Loaded via ChatterboxTurboTTS with nano=True\nmodel = ChatterboxTurboTTS.from_pretrained(device=\"cpu\", nano=True)\n\n# Generation using reference audio for voice cloning\nwav = model.generate(\n    text=\"Hi there! [chuckle] Testing the new nano model.\",\n    audio_prompt_path=\"reference_5s.wav\"\n)\n\n```",
-          "reactions": {
-            "url": "https://api.github.com/repos/k2-fsa/sherpa-onnx/issues/3854/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/k2-fsa/sherpa-onnx/issues/3854/timeline",
-          "performed_via_github_app": null,
-          "state_reason": null,
-          "pinned_comment": null
-        },
-        "comment": {
-          "url": "https://api.github.com/repos/k2-fsa/sherpa-onnx/issues/comments/5238943138",
-          "html_url": "https://github.com/k2-fsa/sherpa-onnx/issues/3854#issuecomment-5238943138",
-          "issue_url": "https://api.github.com/repos/k2-fsa/sherpa-onnx/issues/3854",
-          "id": 5238943138,
-          "node_id": "IC_kwDOH6w6Y88AAAABOEPtog",
-          "user": {
-            "login": "Aswanidev-vs",
-            "id": 178192591,
-            "node_id": "U_kgDOCp8Azw",
-            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/Aswanidev-vs",
-            "html_url": "https://github.com/Aswanidev-vs",
-            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
-            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
-            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
-            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
-            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
-            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "created_at": "2026-08-10T10:26:34Z",
-          "updated_at": "2026-08-10T10:29:34Z",
-          "body": "I haven’t personally benchmarked Chatterbox-Nano on a specific CPU yet.\n> The \"3x faster than real-time on standard 8-core CPUs\" \n\n\nclaim comes directly from the model's github repository and hugging face demos .https://github.com/resemble-ai/chatterbox\n\nMy own quick tests were done on a Hugging Face Spaces demo, and it performed impressively for an 110M parameter model. That said, I agree the term \"standard 8-core CPU\" is vague.Since I haven't tested it on my own target hardware, I cannot confirm exactly what the developers meant by that claim.\n\nFor my use case, I’m building everything in Golang, and ONNX is the most practical path to integrate this and other onnx models you guys providing . I’m incredibly grateful for Sherpa-onnx this project is exactly what helps me build my dream project while staying completely free of Python dependencies.\n\ni will attach a voice cloned version  sample if possible using the demo audio they provided\nthere sample:\n\n[there-sample.wav](https://github.com/user-attachments/files/30895268/there-sample.wav)\n\ncloned one:\n\n\n[voice cloned.wav](https://github.com/user-attachments/files/30895321/voice.cloned.wav)\n\n",
-          "pin": null,
-          "reactions": {
-            "url": "https://api.github.com/repos/k2-fsa/sherpa-onnx/issues/comments/5238943138/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "performed_via_github_app": null,
-          "minimized": null
-        }
-      },
-      "public": true,
-      "created_at": "2026-08-10T10:26:34Z",
-      "org": {
-        "id": 71431748,
-        "login": "k2-fsa",
-        "gravatar_id": "",
-        "url": "https://api.github.com/orgs/k2-fsa",
-        "avatar_url": "https://avatars.githubusercontent.com/u/71431748?"
-      }
     }
   ],
   "releases": [
@@ -6022,7 +5889,7 @@
     "Batchfile": 807,
     "CSS": 467918,
     "Dockerfile": 875,
-    "Go": 3373140,
+    "Go": 3377465,
     "Go Template": 230517,
     "HTML": 682789,
     "Hack": 1679,
