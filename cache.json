@@ -1,5 +1,5 @@
 {
-  "ts": 1786904394019,
+  "ts": 1786906238494,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -12,6 +12,34 @@
     "total_repos": 37
   },
   "repos": [
+    {
+      "name": "Portfolio",
+      "description": null,
+      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
+      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
+      "pushed_at": "2026-08-16T18:19:55Z",
+      "created_at": "2025-09-03T16:31:24Z",
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "fork": false,
+      "language": "HTML",
+      "primaryLanguage": {
+        "name": "HTML",
+        "color": "#e34c26"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 57690,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
     {
       "name": "Predator",
       "description": "Predator is a lightweight, cross platform desktop application for downloading videos and extracting audio from YouTube. It is built using Go and wails GUI framework, with go-ytdlp wrapper used as the download engine. The application focuses on simplicity, and a clean user experience .",
@@ -83,34 +111,6 @@
       "license": {
         "spdx_id": "MIT"
       }
-    },
-    {
-      "name": "Portfolio",
-      "description": null,
-      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
-      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-08-16T17:54:10Z",
-      "created_at": "2025-09-03T16:31:24Z",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "fork": false,
-      "language": "HTML",
-      "primaryLanguage": {
-        "name": "HTML",
-        "color": "#e34c26"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 57690,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          }
-        ]
-      },
-      "license": null
     },
     {
       "name": "Mai",
@@ -1832,6 +1832,100 @@
   ],
   "activity": [
     {
+      "id": "13362439000",
+      "type": "IssuesEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1326406301,
+        "name": "Aswanidev-vs/light",
+        "url": "https://api.github.com/repos/Aswanidev-vs/light"
+      },
+      "payload": {
+        "action": "closed",
+        "issue": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/light/issues/42",
+          "repository_url": "https://api.github.com/repos/Aswanidev-vs/light",
+          "labels_url": "https://api.github.com/repos/Aswanidev-vs/light/issues/42/labels{/name}",
+          "comments_url": "https://api.github.com/repos/Aswanidev-vs/light/issues/42/comments",
+          "events_url": "https://api.github.com/repos/Aswanidev-vs/light/issues/42/events",
+          "html_url": "https://github.com/Aswanidev-vs/light/issues/42",
+          "id": 5160947031,
+          "node_id": "I_kwDOTw9anc8AAAABM53NVw",
+          "number": 42,
+          "title": "wifi-direct: not supported on this platform",
+          "user": {
+            "login": "Aswanidev-vs",
+            "id": 178192591,
+            "node_id": "U_kgDOCp8Azw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Aswanidev-vs",
+            "html_url": "https://github.com/Aswanidev-vs",
+            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
+            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
+            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
+            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
+            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 0,
+          "created_at": "2026-08-15T19:21:32Z",
+          "updated_at": "2026-08-16T18:50:36Z",
+          "closed_at": "2026-08-16T18:50:36Z",
+          "assignee": null,
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": "wifi-direct: not supported on this platform",
+          "reactions": {
+            "url": "https://api.github.com/repos/Aswanidev-vs/light/issues/42/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/Aswanidev-vs/light/issues/42/timeline",
+          "performed_via_github_app": null,
+          "state_reason": "completed",
+          "pinned_comment": null
+        }
+      },
+      "public": true,
+      "created_at": "2026-08-16T18:50:36Z"
+    },
+    {
       "id": "17855614202",
       "type": "PushEvent",
       "actor": {
@@ -3058,14 +3152,14 @@
             "site_admin": false
           },
           "labels": [],
-          "state": "open",
+          "state": "closed",
           "locked": false,
           "assignees": [],
           "milestone": null,
           "comments": 0,
           "created_at": "2026-08-15T19:21:32Z",
-          "updated_at": "2026-08-15T19:21:32Z",
-          "closed_at": null,
+          "updated_at": "2026-08-16T18:50:36Z",
+          "closed_at": "2026-08-16T18:50:36Z",
           "assignee": null,
           "active_lock_reason": null,
           "sub_issues_summary": {
@@ -3094,7 +3188,7 @@
           },
           "timeline_url": "https://api.github.com/repos/Aswanidev-vs/light/issues/42/timeline",
           "performed_via_github_app": null,
-          "state_reason": null,
+          "state_reason": "completed",
           "pinned_comment": null
         }
       },
@@ -6343,34 +6437,15 @@
       },
       "public": true,
       "created_at": "2026-08-13T10:30:13Z"
-    },
-    {
-      "id": "17556671986",
-      "type": "DeleteEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1258201172,
-        "name": "Aswanidev-vs/Gocut",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Gocut"
-      },
-      "payload": {
-        "ref": "v0.5.0",
-        "ref_type": "tag",
-        "full_ref": "refs/tags/v0.5.0",
-        "pusher_type": "user"
-      },
-      "public": true,
-      "created_at": "2026-08-13T10:18:00Z"
     }
   ],
   "releases": [
+    {
+      "name": "Predator",
+      "tag": "v1.3.10",
+      "date": "2026-08-16T18:22:42Z",
+      "url": "https://github.com/Aswanidev-vs/Predator/releases/tag/v1.3.10"
+    },
     {
       "name": "light",
       "tag": "v0.4.1",
@@ -6400,12 +6475,6 @@
       "tag": "v0.3.0",
       "date": "2026-08-06T10:18:06Z",
       "url": "https://github.com/Aswanidev-vs/Akashic/releases/tag/v0.3.0"
-    },
-    {
-      "name": "Predator",
-      "tag": "v1.3.9",
-      "date": "2026-08-04T15:15:36Z",
-      "url": "https://github.com/Aswanidev-vs/Predator/releases/tag/v1.3.9"
     },
     {
       "name": "gkport",
