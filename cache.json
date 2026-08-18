@@ -1,5 +1,5 @@
 {
-  "ts": 1787043530278,
+  "ts": 1787045980262,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -13,11 +13,104 @@
   },
   "repos": [
     {
+      "name": "light",
+      "description": "Light is a zero-config, cross-platform file-sharing tool for local networks. Built with Go and Vue 3, it uses UDP beacons for instant device discovery and QR codes for secure pairing. Transfer files instantly with real-time progress, checksum verification, and a privacy-first design. No internet required.",
+      "html_url": "https://github.com/Aswanidev-vs/light",
+      "homepage": "",
+      "pushed_at": "2026-08-18T09:16:17Z",
+      "created_at": "2026-08-07T08:26:18Z",
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "fork": false,
+      "language": "Go",
+      "primaryLanguage": {
+        "name": "Go",
+        "color": "#00ADD8"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 136129,
+            "node": {
+              "name": "Java",
+              "color": "#b07219"
+            }
+          },
+          {
+            "size": 126430,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          },
+          {
+            "size": 201065,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          },
+          {
+            "size": 1074,
+            "node": {
+              "name": "Objective-C",
+              "color": "#438eff"
+            }
+          },
+          {
+            "size": 2032,
+            "node": {
+              "name": "Shell",
+              "color": "#89e051"
+            }
+          },
+          {
+            "size": 2418,
+            "node": {
+              "name": "Inno Setup",
+              "color": "#264b99"
+            }
+          },
+          {
+            "size": 11816,
+            "node": {
+              "name": "NSIS",
+              "color": null
+            }
+          },
+          {
+            "size": 62198,
+            "node": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            }
+          },
+          {
+            "size": 1733,
+            "node": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            }
+          },
+          {
+            "size": 45384,
+            "node": {
+              "name": "Vue",
+              "color": "#41b883"
+            }
+          }
+        ]
+      },
+      "license": {
+        "spdx_id": "MIT"
+      }
+    },
+    {
       "name": "Portfolio",
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-08-18T08:21:08Z",
+      "pushed_at": "2026-08-18T08:58:51Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -206,99 +299,6 @@
             "node": {
               "name": "JavaScript",
               "color": "#f1e05a"
-            }
-          }
-        ]
-      },
-      "license": {
-        "spdx_id": "MIT"
-      }
-    },
-    {
-      "name": "light",
-      "description": "Light is a zero-config, cross-platform file-sharing tool for local networks. Built with Go and Vue 3, it uses UDP beacons for instant device discovery and QR codes for secure pairing. Transfer files instantly with real-time progress, checksum verification, and a privacy-first design. No internet required.",
-      "html_url": "https://github.com/Aswanidev-vs/light",
-      "homepage": "",
-      "pushed_at": "2026-08-16T05:54:17Z",
-      "created_at": "2026-08-07T08:26:18Z",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "fork": false,
-      "language": "Go",
-      "primaryLanguage": {
-        "name": "Go",
-        "color": "#00ADD8"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 136129,
-            "node": {
-              "name": "Java",
-              "color": "#b07219"
-            }
-          },
-          {
-            "size": 126430,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 201808,
-            "node": {
-              "name": "Go",
-              "color": "#00ADD8"
-            }
-          },
-          {
-            "size": 1074,
-            "node": {
-              "name": "Objective-C",
-              "color": "#438eff"
-            }
-          },
-          {
-            "size": 2032,
-            "node": {
-              "name": "Shell",
-              "color": "#89e051"
-            }
-          },
-          {
-            "size": 2418,
-            "node": {
-              "name": "Inno Setup",
-              "color": "#264b99"
-            }
-          },
-          {
-            "size": 11816,
-            "node": {
-              "name": "NSIS",
-              "color": null
-            }
-          },
-          {
-            "size": 62198,
-            "node": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            }
-          },
-          {
-            "size": 1733,
-            "node": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            }
-          },
-          {
-            "size": 45323,
-            "node": {
-              "name": "Vue",
-              "color": "#41b883"
             }
           }
         ]
@@ -1831,6 +1831,98 @@
     }
   ],
   "activity": [
+    {
+      "id": "13444258769",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1326406301,
+        "name": "Aswanidev-vs/light",
+        "url": "https://api.github.com/repos/Aswanidev-vs/light"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 45,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/light/pulls/45",
+          "id": 4303221242,
+          "number": 45,
+          "head": {
+            "ref": "develop",
+            "sha": "4c2dc2b2411fb5b8408fa477e782360dfa6800a5",
+            "repo": {
+              "id": 1326406301,
+              "url": "https://api.github.com/repos/Aswanidev-vs/light",
+              "name": "light"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "f4178c387806cb8dda2c3419d7fcea75db0faa49",
+            "repo": {
+              "id": 1326406301,
+              "url": "https://api.github.com/repos/Aswanidev-vs/light",
+              "name": "light"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-08-18T09:16:17Z"
+    },
+    {
+      "id": "13444245522",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1326406301,
+        "name": "Aswanidev-vs/light",
+        "url": "https://api.github.com/repos/Aswanidev-vs/light"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 45,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/light/pulls/45",
+          "id": 4303221242,
+          "number": 45,
+          "head": {
+            "ref": "develop",
+            "sha": "4c2dc2b2411fb5b8408fa477e782360dfa6800a5",
+            "repo": {
+              "id": 1326406301,
+              "url": "https://api.github.com/repos/Aswanidev-vs/light",
+              "name": "light"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "f4178c387806cb8dda2c3419d7fcea75db0faa49",
+            "repo": {
+              "id": 1326406301,
+              "url": "https://api.github.com/repos/Aswanidev-vs/light",
+              "name": "light"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-08-18T09:16:03Z"
+    },
     {
       "id": "17935315904",
       "type": "PushEvent",
@@ -6497,72 +6589,20 @@
       },
       "public": true,
       "created_at": "2026-08-13T16:38:55Z"
-    },
-    {
-      "id": "17584700062",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1126247590,
-        "name": "Aswanidev-vs/fyne-x",
-        "url": "https://api.github.com/repos/Aswanidev-vs/fyne-x"
-      },
-      "payload": {
-        "repository_id": 1126247590,
-        "push_id": 39905261698,
-        "ref": "refs/heads/master",
-        "head": "503f1dbc15316404407e7edb9b8c74afe3428734",
-        "before": "c0c2b4256e692e93d35945e526d72d3864e907ab"
-      },
-      "public": true,
-      "created_at": "2026-08-13T16:19:08Z"
-    },
-    {
-      "id": "17584636682",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1126247590,
-        "name": "Aswanidev-vs/fyne-x",
-        "url": "https://api.github.com/repos/Aswanidev-vs/fyne-x"
-      },
-      "payload": {
-        "repository_id": 1126247590,
-        "push_id": 39905193253,
-        "ref": "refs/heads/master",
-        "head": "c0c2b4256e692e93d35945e526d72d3864e907ab",
-        "before": "61fca488d3814e5664820e9b05e09ba070a4afe3"
-      },
-      "public": true,
-      "created_at": "2026-08-13T16:18:09Z"
     }
   ],
   "releases": [
+    {
+      "name": "light",
+      "tag": "v0.4.2",
+      "date": "2026-08-18T09:19:55Z",
+      "url": "https://github.com/Aswanidev-vs/light/releases/tag/v0.4.2"
+    },
     {
       "name": "Predator",
       "tag": "v1.3.10",
       "date": "2026-08-16T18:22:42Z",
       "url": "https://github.com/Aswanidev-vs/Predator/releases/tag/v1.3.10"
-    },
-    {
-      "name": "light",
-      "tag": "v0.4.1",
-      "date": "2026-08-16T05:57:09Z",
-      "url": "https://github.com/Aswanidev-vs/light/releases/tag/v0.4.1"
     },
     {
       "name": "gitscope",
@@ -6623,7 +6663,7 @@
     "Batchfile": 807,
     "CSS": 467918,
     "Dockerfile": 875,
-    "Go": 3425706,
+    "Go": 3424963,
     "Go Template": 230517,
     "HTML": 682789,
     "Hack": 1679,
@@ -6639,6 +6679,6 @@
     "Python": 25908,
     "Shell": 7649,
     "TypeScript": 232986,
-    "Vue": 605788
+    "Vue": 605849
   }
 }
