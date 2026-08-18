@@ -1,5 +1,5 @@
 {
-  "ts": 1787079449306,
+  "ts": 1787081377401,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -13,11 +13,83 @@
   },
   "repos": [
     {
+      "name": "Predator",
+      "description": "Predator is a lightweight, cross platform desktop application for downloading videos and extracting audio from YouTube. It is built using Go and wails GUI framework, with go-ytdlp wrapper used as the download engine. The application focuses on simplicity, and a clean user experience .",
+      "html_url": "https://github.com/Aswanidev-vs/Predator",
+      "homepage": "",
+      "pushed_at": "2026-08-18T19:25:44Z",
+      "created_at": "2025-12-21T17:07:16Z",
+      "stargazers_count": 3,
+      "forks_count": 0,
+      "fork": false,
+      "language": "Go",
+      "primaryLanguage": {
+        "name": "Go",
+        "color": "#00ADD8"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 101794,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          },
+          {
+            "size": 12416,
+            "node": {
+              "name": "NSIS",
+              "color": null
+            }
+          },
+          {
+            "size": 51860,
+            "node": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            }
+          },
+          {
+            "size": 7941,
+            "node": {
+              "name": "Inno Setup",
+              "color": "#264b99"
+            }
+          },
+          {
+            "size": 11601,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          },
+          {
+            "size": 32894,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          },
+          {
+            "size": 4781,
+            "node": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            }
+          }
+        ]
+      },
+      "license": {
+        "spdx_id": "MIT"
+      }
+    },
+    {
       "name": "Portfolio",
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-08-18T18:13:26Z",
+      "pushed_at": "2026-08-18T18:57:30Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -169,78 +241,6 @@
             "node": {
               "name": "CSS",
               "color": "#663399"
-            }
-          }
-        ]
-      },
-      "license": {
-        "spdx_id": "MIT"
-      }
-    },
-    {
-      "name": "Predator",
-      "description": "Predator is a lightweight, cross platform desktop application for downloading videos and extracting audio from YouTube. It is built using Go and wails GUI framework, with go-ytdlp wrapper used as the download engine. The application focuses on simplicity, and a clean user experience .",
-      "html_url": "https://github.com/Aswanidev-vs/Predator",
-      "homepage": "",
-      "pushed_at": "2026-08-16T18:19:05Z",
-      "created_at": "2025-12-21T17:07:16Z",
-      "stargazers_count": 3,
-      "forks_count": 0,
-      "fork": false,
-      "language": "Go",
-      "primaryLanguage": {
-        "name": "Go",
-        "color": "#00ADD8"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 101039,
-            "node": {
-              "name": "Go",
-              "color": "#00ADD8"
-            }
-          },
-          {
-            "size": 12416,
-            "node": {
-              "name": "NSIS",
-              "color": null
-            }
-          },
-          {
-            "size": 51860,
-            "node": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            }
-          },
-          {
-            "size": 7941,
-            "node": {
-              "name": "Inno Setup",
-              "color": "#264b99"
-            }
-          },
-          {
-            "size": 11601,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 32894,
-            "node": {
-              "name": "CSS",
-              "color": "#663399"
-            }
-          },
-          {
-            "size": 4781,
-            "node": {
-              "name": "TypeScript",
-              "color": "#3178c6"
             }
           }
         ]
@@ -1831,6 +1831,124 @@
     }
   ],
   "activity": [
+    {
+      "id": "13476903958",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1120654297,
+        "name": "Aswanidev-vs/Predator",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 55,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Predator/pulls/55",
+          "id": 4307724730,
+          "number": 55,
+          "head": {
+            "ref": "v10",
+            "sha": "514111e8efb80124244ca499476ce5b6cafd328e",
+            "repo": {
+              "id": 1120654297,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Predator",
+              "name": "Predator"
+            }
+          },
+          "base": {
+            "ref": "v5",
+            "sha": "df1e4d934c3a27a9e7e3126b9a457dd4b4dad72b",
+            "repo": {
+              "id": 1120654297,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Predator",
+              "name": "Predator"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-08-18T19:25:44Z"
+    },
+    {
+      "id": "13476885249",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1120654297,
+        "name": "Aswanidev-vs/Predator",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 55,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Predator/pulls/55",
+          "id": 4307724730,
+          "number": 55,
+          "head": {
+            "ref": "v10",
+            "sha": "514111e8efb80124244ca499476ce5b6cafd328e",
+            "repo": {
+              "id": 1120654297,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Predator",
+              "name": "Predator"
+            }
+          },
+          "base": {
+            "ref": "v5",
+            "sha": "df1e4d934c3a27a9e7e3126b9a457dd4b4dad72b",
+            "repo": {
+              "id": 1120654297,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Predator",
+              "name": "Predator"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-08-18T19:25:24Z"
+    },
+    {
+      "id": "18069636288",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1120654297,
+        "name": "Aswanidev-vs/Predator",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
+      },
+      "payload": {
+        "repository_id": 1120654297,
+        "push_id": 40403892379,
+        "ref": "refs/heads/v10",
+        "head": "514111e8efb80124244ca499476ce5b6cafd328e",
+        "before": "956e784bcdee63910bf77276c3dff09119b74ee5"
+      },
+      "public": true,
+      "created_at": "2026-08-18T19:24:23Z"
+    },
     {
       "id": "18038708250",
       "type": "PushEvent",
@@ -6395,80 +6513,6 @@
       },
       "public": true,
       "created_at": "2026-08-14T11:39:46Z"
-    },
-    {
-      "id": "17646493727",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1326406301,
-        "name": "Aswanidev-vs/light",
-        "url": "https://api.github.com/repos/Aswanidev-vs/light"
-      },
-      "payload": {
-        "repository_id": 1326406301,
-        "push_id": 39970231173,
-        "ref": "refs/heads/develop",
-        "head": "2994db583c95673f68f70a545ad9a329d20c15a3",
-        "before": "8d93d3977be3c82fba7d30d372a9884ab2b35a57"
-      },
-      "public": true,
-      "created_at": "2026-08-14T11:37:48Z"
-    },
-    {
-      "id": "17646008287",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1326406301,
-        "name": "Aswanidev-vs/light",
-        "url": "https://api.github.com/repos/Aswanidev-vs/light"
-      },
-      "payload": {
-        "repository_id": 1326406301,
-        "push_id": 39969743779,
-        "ref": "refs/heads/develop",
-        "head": "8d93d3977be3c82fba7d30d372a9884ab2b35a57",
-        "before": "2537e000c0478e8af38eda49ee93063c00d5ea25"
-      },
-      "public": true,
-      "created_at": "2026-08-14T11:29:47Z"
-    },
-    {
-      "id": "13284497605",
-      "type": "WatchEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1331135699,
-        "name": "guillaumemeyer/watermarks-remover",
-        "url": "https://api.github.com/repos/guillaumemeyer/watermarks-remover"
-      },
-      "payload": {
-        "action": "started"
-      },
-      "public": true,
-      "created_at": "2026-08-14T11:28:46Z"
     }
   ],
   "releases": [
@@ -6543,7 +6587,7 @@
     "Batchfile": 807,
     "CSS": 467918,
     "Dockerfile": 875,
-    "Go": 3429411,
+    "Go": 3430166,
     "Go Template": 230517,
     "HTML": 682789,
     "Hack": 1679,
