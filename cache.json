@@ -1,5 +1,5 @@
 {
-  "ts": 1787241155142,
+  "ts": 1787242896462,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -13,11 +13,69 @@
   },
   "repos": [
     {
+      "name": "gitscope",
+      "description": "GitScope is a lightweight and intuitive Git GUI client built with Go and wails designed to make version control simple, easy to implement.",
+      "html_url": "https://github.com/Aswanidev-vs/gitscope",
+      "homepage": "",
+      "pushed_at": "2026-08-20T16:05:45Z",
+      "created_at": "2025-11-02T18:10:59Z",
+      "stargazers_count": 4,
+      "forks_count": 0,
+      "fork": false,
+      "language": "Go",
+      "primaryLanguage": {
+        "name": "Go",
+        "color": "#00ADD8"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 129298,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          },
+          {
+            "size": 10069,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          },
+          {
+            "size": 13156,
+            "node": {
+              "name": "NSIS",
+              "color": null
+            }
+          },
+          {
+            "size": 55976,
+            "node": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            }
+          },
+          {
+            "size": 21195,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          }
+        ]
+      },
+      "license": {
+        "spdx_id": "MIT"
+      }
+    },
+    {
       "name": "Portfolio",
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-08-20T15:18:02Z",
+      "pushed_at": "2026-08-20T15:52:36Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -494,64 +552,6 @@
             "node": {
               "name": "Go",
               "color": "#00ADD8"
-            }
-          }
-        ]
-      },
-      "license": {
-        "spdx_id": "MIT"
-      }
-    },
-    {
-      "name": "gitscope",
-      "description": "GitScope is a lightweight and intuitive Git GUI client built with Go and wails designed to make version control simple, easy to implement.",
-      "html_url": "https://github.com/Aswanidev-vs/gitscope",
-      "homepage": "",
-      "pushed_at": "2026-08-13T16:41:30Z",
-      "created_at": "2025-11-02T18:10:59Z",
-      "stargazers_count": 4,
-      "forks_count": 0,
-      "fork": false,
-      "language": "Go",
-      "primaryLanguage": {
-        "name": "Go",
-        "color": "#00ADD8"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 129298,
-            "node": {
-              "name": "Go",
-              "color": "#00ADD8"
-            }
-          },
-          {
-            "size": 10069,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 13156,
-            "node": {
-              "name": "NSIS",
-              "color": null
-            }
-          },
-          {
-            "size": 55976,
-            "node": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            }
-          },
-          {
-            "size": 21195,
-            "node": {
-              "name": "CSS",
-              "color": "#663399"
             }
           }
         ]
@@ -1831,6 +1831,98 @@
     }
   ],
   "activity": [
+    {
+      "id": "13594315638",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1088310194,
+        "name": "Aswanidev-vs/gitscope",
+        "url": "https://api.github.com/repos/Aswanidev-vs/gitscope"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 22,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/gitscope/pulls/22",
+          "id": 4324571431,
+          "number": 22,
+          "head": {
+            "ref": "feature",
+            "sha": "c0bdf8b46a7a370e5d430fb2dd3364e26dbee811",
+            "repo": {
+              "id": 1088310194,
+              "url": "https://api.github.com/repos/Aswanidev-vs/gitscope",
+              "name": "gitscope"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "736e5f229e25b023093c3f283b87c23a5b3eb558",
+            "repo": {
+              "id": 1088310194,
+              "url": "https://api.github.com/repos/Aswanidev-vs/gitscope",
+              "name": "gitscope"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-08-20T16:05:45Z"
+    },
+    {
+      "id": "13594304894",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1088310194,
+        "name": "Aswanidev-vs/gitscope",
+        "url": "https://api.github.com/repos/Aswanidev-vs/gitscope"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 22,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/gitscope/pulls/22",
+          "id": 4324571431,
+          "number": 22,
+          "head": {
+            "ref": "feature",
+            "sha": "c0bdf8b46a7a370e5d430fb2dd3364e26dbee811",
+            "repo": {
+              "id": 1088310194,
+              "url": "https://api.github.com/repos/Aswanidev-vs/gitscope",
+              "name": "gitscope"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "736e5f229e25b023093c3f283b87c23a5b3eb558",
+            "repo": {
+              "id": 1088310194,
+              "url": "https://api.github.com/repos/Aswanidev-vs/gitscope",
+              "name": "gitscope"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-08-20T16:05:35Z"
+    },
     {
       "id": "18152304191",
       "type": "PushEvent",
@@ -6952,78 +7044,6 @@
       },
       "public": true,
       "created_at": "2026-08-14T12:29:54Z"
-    },
-    {
-      "id": "13287072370",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1326406301,
-        "name": "Aswanidev-vs/light",
-        "url": "https://api.github.com/repos/Aswanidev-vs/light"
-      },
-      "payload": {
-        "action": "opened",
-        "number": 35,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/light/pulls/35",
-          "id": 4279733427,
-          "number": 35,
-          "head": {
-            "ref": "develop",
-            "sha": "62e8b2ffbb6a9575a183530ba5162283ced77b85",
-            "repo": {
-              "id": 1326406301,
-              "url": "https://api.github.com/repos/Aswanidev-vs/light",
-              "name": "light"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "a4e699d666b5cd513c4565f2564c9701d927b720",
-            "repo": {
-              "id": 1326406301,
-              "url": "https://api.github.com/repos/Aswanidev-vs/light",
-              "name": "light"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-08-14T12:29:45Z"
-    },
-    {
-      "id": "17649701807",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1326406301,
-        "name": "Aswanidev-vs/light",
-        "url": "https://api.github.com/repos/Aswanidev-vs/light"
-      },
-      "payload": {
-        "repository_id": 1326406301,
-        "push_id": 39973445996,
-        "ref": "refs/heads/develop",
-        "head": "62e8b2ffbb6a9575a183530ba5162283ced77b85",
-        "before": "27ba808dd8d0bfcf6ca0ad9e42e2187b87f0d9ea"
-      },
-      "public": true,
-      "created_at": "2026-08-14T12:29:15Z"
     }
   ],
   "releases": [
