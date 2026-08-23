@@ -1,5 +1,5 @@
 {
-  "ts": 1787490105663,
+  "ts": 1787492387260,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -13,11 +13,39 @@
   },
   "repos": [
     {
+      "name": "Portfolio",
+      "description": null,
+      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
+      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
+      "pushed_at": "2026-08-23T13:01:46Z",
+      "created_at": "2025-09-03T16:31:24Z",
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "fork": false,
+      "language": "HTML",
+      "primaryLanguage": {
+        "name": "HTML",
+        "color": "#e34c26"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 57690,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
+    {
       "name": "Mai",
       "description": "Mai is a fully offline, voice-driven AI assistant built in Go. It processes everything locally using optimized ONNX models, ensuring complete privacy and fast, customizable performance without any cloud dependency.",
       "html_url": "https://github.com/Aswanidev-vs/Mai",
       "homepage": "https://aswanidev-vs.github.io/Mai/",
-      "pushed_at": "2026-08-23T12:57:42Z",
+      "pushed_at": "2026-08-23T13:21:59Z",
       "created_at": "2026-04-25T16:27:51Z",
       "stargazers_count": 2,
       "forks_count": 0,
@@ -69,34 +97,6 @@
       "license": {
         "spdx_id": "MIT"
       }
-    },
-    {
-      "name": "Portfolio",
-      "description": null,
-      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
-      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-08-23T12:10:55Z",
-      "created_at": "2025-09-03T16:31:24Z",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "fork": false,
-      "language": "HTML",
-      "primaryLanguage": {
-        "name": "HTML",
-        "color": "#e34c26"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 57690,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          }
-        ]
-      },
-      "license": null
     },
     {
       "name": "Remainwith",
@@ -1831,6 +1831,32 @@
     }
   ],
   "activity": [
+    {
+      "id": "18616177904",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1221010957,
+        "name": "Aswanidev-vs/Mai",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
+      },
+      "payload": {
+        "repository_id": 1221010957,
+        "push_id": 40941994103,
+        "ref": "refs/heads/v1",
+        "head": "115d65d98039bc6097afb9de40befbbc1b42da99",
+        "before": "360c5f948087485e22a0b19ecf295bd278a1da5a"
+      },
+      "public": true,
+      "created_at": "2026-08-23T13:22:00Z"
+    },
     {
       "id": "18614322866",
       "type": "PushEvent",
@@ -5947,52 +5973,6 @@
       },
       "public": true,
       "created_at": "2026-08-16T18:19:06Z"
-    },
-    {
-      "id": "13361782140",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1120654297,
-        "name": "Aswanidev-vs/Predator",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
-      },
-      "payload": {
-        "action": "merged",
-        "number": 54,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Predator/pulls/54",
-          "id": 4291176579,
-          "number": 54,
-          "head": {
-            "ref": "v10",
-            "sha": "956e784bcdee63910bf77276c3dff09119b74ee5",
-            "repo": {
-              "id": 1120654297,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Predator",
-              "name": "Predator"
-            }
-          },
-          "base": {
-            "ref": "v5",
-            "sha": "4dcf5f5a1c9308b851f552b3cbe62a1a81628325",
-            "repo": {
-              "id": 1120654297,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Predator",
-              "name": "Predator"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-08-16T18:19:05Z"
     }
   ],
   "releases": [
