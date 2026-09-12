@@ -1,5 +1,5 @@
 {
-  "ts": 1789232234858,
+  "ts": 1789239665511,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -12,6 +12,51 @@
     "total_repos": 39
   },
   "repos": [
+    {
+      "name": "Aswanidev-vs",
+      "description": null,
+      "html_url": "https://github.com/Aswanidev-vs/Aswanidev-vs",
+      "homepage": null,
+      "pushed_at": "2026-09-12T18:06:54Z",
+      "created_at": "2025-07-06T07:36:50Z",
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "fork": false,
+      "language": null,
+      "primaryLanguage": null,
+      "languages": {
+        "edges": []
+      },
+      "license": null
+    },
+    {
+      "name": "Portfolio",
+      "description": null,
+      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
+      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
+      "pushed_at": "2026-09-12T16:57:15Z",
+      "created_at": "2025-09-03T16:31:24Z",
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "fork": false,
+      "language": "HTML",
+      "primaryLanguage": {
+        "name": "HTML",
+        "color": "#e34c26"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 57690,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
     {
       "name": "Chest",
       "description": "Chest is a deterministic file organization and automation CLI tool built in Go. Inspired by the Minecraft chest, CHEST sorts files into compartments with reversible operations, fast concurrent search, and extensible plugin support.",
@@ -62,34 +107,6 @@
       "license": {
         "spdx_id": "GPL-3.0"
       }
-    },
-    {
-      "name": "Portfolio",
-      "description": null,
-      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
-      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-09-12T14:00:50Z",
-      "created_at": "2025-09-03T16:31:24Z",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "fork": false,
-      "language": "HTML",
-      "primaryLanguage": {
-        "name": "HTML",
-        "color": "#e34c26"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 57690,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          }
-        ]
-      },
-      "license": null
     },
     {
       "name": "Mai",
@@ -313,23 +330,6 @@
       "license": {
         "spdx_id": "MIT"
       }
-    },
-    {
-      "name": "Aswanidev-vs",
-      "description": null,
-      "html_url": "https://github.com/Aswanidev-vs/Aswanidev-vs",
-      "homepage": null,
-      "pushed_at": "2026-09-12T14:55:08Z",
-      "created_at": "2025-07-06T07:36:50Z",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "fork": false,
-      "language": null,
-      "primaryLanguage": null,
-      "languages": {
-        "edges": []
-      },
-      "license": null
     },
     {
       "name": "light",
@@ -1913,6 +1913,194 @@
   ],
   "activity": [
     {
+      "id": "14918310059",
+      "type": "IssuesEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1357931947,
+        "name": "Aswanidev-vs/Chest",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Chest"
+      },
+      "payload": {
+        "action": "closed",
+        "issue": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Chest/issues/44",
+          "repository_url": "https://api.github.com/repos/Aswanidev-vs/Chest",
+          "labels_url": "https://api.github.com/repos/Aswanidev-vs/Chest/issues/44/labels{/name}",
+          "comments_url": "https://api.github.com/repos/Aswanidev-vs/Chest/issues/44/comments",
+          "events_url": "https://api.github.com/repos/Aswanidev-vs/Chest/issues/44/events",
+          "html_url": "https://github.com/Aswanidev-vs/Chest/issues/44",
+          "id": 5424914142,
+          "node_id": "I_kwDOUPBlq88AAAABQ1me3g",
+          "number": 44,
+          "title": "patch",
+          "user": {
+            "login": "Aswanidev-vs",
+            "id": 178192591,
+            "node_id": "U_kgDOCp8Azw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Aswanidev-vs",
+            "html_url": "https://github.com/Aswanidev-vs",
+            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
+            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
+            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
+            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
+            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 0,
+          "created_at": "2026-09-11T13:33:15Z",
+          "updated_at": "2026-09-12T17:37:40Z",
+          "closed_at": "2026-09-12T17:37:40Z",
+          "assignee": null,
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": "and for the date based sorting \ncurrently it works by the copy or latest modified info\ni want it to be also use the metadata to get the actual date it too and compare both modified and acutal date and based on that it is sorted.and also need to check if user can use the rule flag along with date flag to like currently if user use the date flag it is sort by year only i want it to work like that too but also i wish to have a flag or rule or something like where the sorting caan be much better like user caan specifically sort based on the day ,month,year .year sorting is the default and also like if user write the rule flag in a way it caan sort like for eg:\n 2025\n    | \n jan ->sort based on the day\nfeb->sort based on the day \n.\n.\n.\n.\n.",
+          "reactions": {
+            "url": "https://api.github.com/repos/Aswanidev-vs/Chest/issues/44/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/Aswanidev-vs/Chest/issues/44/timeline",
+          "performed_via_github_app": null,
+          "state_reason": "completed",
+          "pinned_comment": null
+        }
+      },
+      "public": true,
+      "created_at": "2026-09-12T17:37:41Z"
+    },
+    {
+      "id": "14918307213",
+      "type": "IssuesEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1357931947,
+        "name": "Aswanidev-vs/Chest",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Chest"
+      },
+      "payload": {
+        "action": "closed",
+        "issue": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Chest/issues/41",
+          "repository_url": "https://api.github.com/repos/Aswanidev-vs/Chest",
+          "labels_url": "https://api.github.com/repos/Aswanidev-vs/Chest/issues/41/labels{/name}",
+          "comments_url": "https://api.github.com/repos/Aswanidev-vs/Chest/issues/41/comments",
+          "events_url": "https://api.github.com/repos/Aswanidev-vs/Chest/issues/41/events",
+          "html_url": "https://github.com/Aswanidev-vs/Chest/issues/41",
+          "id": 5424777938,
+          "node_id": "I_kwDOUPBlq88AAAABQ1eK0g",
+          "number": 41,
+          "title": "feature",
+          "user": {
+            "login": "Aswanidev-vs",
+            "id": 178192591,
+            "node_id": "U_kgDOCp8Azw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Aswanidev-vs",
+            "html_url": "https://github.com/Aswanidev-vs",
+            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
+            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
+            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
+            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
+            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 0,
+          "created_at": "2026-09-11T13:19:00Z",
+          "updated_at": "2026-09-12T17:37:34Z",
+          "closed_at": "2026-09-12T17:37:34Z",
+          "assignee": null,
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": "tries to map \nwhat i mean is \n like user can both explicity and imcplity run this command \nchest analyze \n\nwhat i want is when user are in a present work directory like user want to run the chest analyze command on that path user can just enter the chest analyze and it need to do the same job as chest analyze ./ or chest analyze . map it like user can either expliclity do like chest analyze ./ or chest analyze . and implicit like chest analyze \n\nand rest of it works like ussual like if user want to analyze another folder or path or directory currently it is working perfectly like chest analyze ./testing it do work so dont touch that area   ",
+          "reactions": {
+            "url": "https://api.github.com/repos/Aswanidev-vs/Chest/issues/41/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/Aswanidev-vs/Chest/issues/41/timeline",
+          "performed_via_github_app": null,
+          "state_reason": "completed",
+          "pinned_comment": null
+        }
+      },
+      "public": true,
+      "created_at": "2026-09-12T17:37:34Z"
+    },
+    {
       "id": "20919919776",
       "type": "PushEvent",
       "actor": {
@@ -2989,14 +3177,14 @@
             "site_admin": false
           },
           "labels": [],
-          "state": "open",
+          "state": "closed",
           "locked": false,
           "assignees": [],
           "milestone": null,
           "comments": 0,
           "created_at": "2026-09-11T13:33:15Z",
-          "updated_at": "2026-09-11T13:33:15Z",
-          "closed_at": null,
+          "updated_at": "2026-09-12T17:37:40Z",
+          "closed_at": "2026-09-12T17:37:40Z",
           "assignee": null,
           "active_lock_reason": null,
           "sub_issues_summary": {
@@ -3025,7 +3213,7 @@
           },
           "timeline_url": "https://api.github.com/repos/Aswanidev-vs/Chest/issues/44/timeline",
           "performed_via_github_app": null,
-          "state_reason": null,
+          "state_reason": "completed",
           "pinned_comment": null
         }
       },
@@ -3271,14 +3459,14 @@
             "site_admin": false
           },
           "labels": [],
-          "state": "open",
+          "state": "closed",
           "locked": false,
           "assignees": [],
           "milestone": null,
           "comments": 0,
           "created_at": "2026-09-11T13:19:00Z",
-          "updated_at": "2026-09-11T13:19:00Z",
-          "closed_at": null,
+          "updated_at": "2026-09-12T17:37:34Z",
+          "closed_at": "2026-09-12T17:37:34Z",
           "assignee": null,
           "active_lock_reason": null,
           "sub_issues_summary": {
@@ -3307,7 +3495,7 @@
           },
           "timeline_url": "https://api.github.com/repos/Aswanidev-vs/Chest/issues/41/timeline",
           "performed_via_github_app": null,
-          "state_reason": null,
+          "state_reason": "completed",
           "pinned_comment": null
         }
       },
@@ -7337,58 +7525,6 @@
       },
       "public": true,
       "created_at": "2026-09-06T06:13:03Z"
-    },
-    {
-      "id": "20387789506",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "repository_id": 1297710346,
-        "push_id": 42718547394,
-        "ref": "refs/heads/dependabot/npm_and_yarn/frontend/vue-router-5.3.0",
-        "head": "bd7476837f600b8d09f1f7fe666bd596b7cdec3c",
-        "before": "8d57005bc564c8a4567a3bccbb8338048182d588"
-      },
-      "public": true,
-      "created_at": "2026-09-06T06:12:26Z"
-    },
-    {
-      "id": "20387640956",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "repository_id": 1297710346,
-        "push_id": 42718622747,
-        "ref": "refs/heads/dependabot/npm_and_yarn/frontend/wailsio/runtime-3.0.0-beta.16",
-        "head": "79783e9f591b69a3a7f1be7dd369fe8d186e4038",
-        "before": "10eefe5e35c2a5b7dbb645deef52a186e37f8279"
-      },
-      "public": true,
-      "created_at": "2026-09-06T06:14:03Z"
     }
   ],
   "releases": [
