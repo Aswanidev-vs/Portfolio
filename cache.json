@@ -1,5 +1,5 @@
 {
-  "ts": 1790580682773,
+  "ts": 1790610646306,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -13,11 +13,46 @@
   },
   "repos": [
     {
+      "name": "panda-editor",
+      "description": "A modern Terminal User Interface (TUI) text editor written entirely in Go. ",
+      "html_url": "https://github.com/Aswanidev-vs/panda-editor",
+      "homepage": "",
+      "pushed_at": "2026-09-28T12:04:47Z",
+      "created_at": "2026-05-09T18:17:35Z",
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "fork": false,
+      "language": "Go",
+      "primaryLanguage": {
+        "name": "Go",
+        "color": "#00ADD8"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 483,
+            "node": {
+              "name": "Makefile",
+              "color": "#427819"
+            }
+          },
+          {
+            "size": 528406,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
+    {
       "name": "Portfolio",
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-09-28T01:31:47Z",
+      "pushed_at": "2026-09-28T07:31:24Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -1055,41 +1090,6 @@
       "license": null
     },
     {
-      "name": "panda-editor",
-      "description": "A modern Terminal User Interface (TUI) text editor written entirely in Go. ",
-      "html_url": "https://github.com/Aswanidev-vs/panda-editor",
-      "homepage": "",
-      "pushed_at": "2026-08-21T15:58:36Z",
-      "created_at": "2026-05-09T18:17:35Z",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "fork": false,
-      "language": "Go",
-      "primaryLanguage": {
-        "name": "Go",
-        "color": "#00ADD8"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 483,
-            "node": {
-              "name": "Makefile",
-              "color": "#427819"
-            }
-          },
-          {
-            "size": 459333,
-            "node": {
-              "name": "Go",
-              "color": "#00ADD8"
-            }
-          }
-        ]
-      },
-      "license": null
-    },
-    {
       "name": "Ani-sync",
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Ani-sync",
@@ -2011,6 +2011,219 @@
   ],
   "activity": [
     {
+      "id": "15927709540",
+      "type": "IssuesEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1221010957,
+        "name": "Aswanidev-vs/Mai",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
+      },
+      "payload": {
+        "action": "closed",
+        "issue": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Mai/issues/82",
+          "repository_url": "https://api.github.com/repos/Aswanidev-vs/Mai",
+          "labels_url": "https://api.github.com/repos/Aswanidev-vs/Mai/issues/82/labels{/name}",
+          "comments_url": "https://api.github.com/repos/Aswanidev-vs/Mai/issues/82/comments",
+          "events_url": "https://api.github.com/repos/Aswanidev-vs/Mai/issues/82/events",
+          "html_url": "https://github.com/Aswanidev-vs/Mai/issues/82",
+          "id": 5594448497,
+          "node_id": "I_kwDOSMcmDc8AAAABTXSCcQ",
+          "number": 82,
+          "title": "tts barge in",
+          "user": {
+            "login": "Aswanidev-vs",
+            "id": 178192591,
+            "node_id": "U_kgDOCp8Azw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Aswanidev-vs",
+            "html_url": "https://github.com/Aswanidev-vs",
+            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
+            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
+            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
+            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
+            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 0,
+          "created_at": "2026-09-26T13:47:44Z",
+          "updated_at": "2026-09-28T14:54:36Z",
+          "closed_at": "2026-09-28T14:54:36Z",
+          "assignee": null,
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": ". Startup guard (highest value, 1 small change): if BargeInEnabled && denoiser == nil, log a loud warning — or refuse to arm barge-in — instead of silently running with voiced pinned true.\n2. Regression test: an end-to-end barge-in + fan drone above 0.02 must not fire test in bargein_test.go (the existing test only covers echo, the drone test only covers the standalone noise gate — nothing pins the combination).\n3. Tighten the transient case: raise barge_in_sustain_ms 150 → 300, or add a \"noise-vote holdoff\" — if ratio < 0.3 was seen within the last ~400 ms, require the full sustain again.",
+          "reactions": {
+            "url": "https://api.github.com/repos/Aswanidev-vs/Mai/issues/82/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/Aswanidev-vs/Mai/issues/82/timeline",
+          "performed_via_github_app": null,
+          "state_reason": "completed",
+          "pinned_comment": null
+        }
+      },
+      "public": true,
+      "created_at": "2026-09-28T14:54:36Z"
+    },
+    {
+      "id": "22383405472",
+      "type": "CreateEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1234082588,
+        "name": "Aswanidev-vs/panda-editor",
+        "url": "https://api.github.com/repos/Aswanidev-vs/panda-editor"
+      },
+      "payload": {
+        "ref": "feature",
+        "ref_type": "branch",
+        "full_ref": "refs/heads/feature",
+        "master_branch": "main",
+        "description": "A modern Terminal User Interface (TUI) text editor written entirely in Go. ",
+        "pusher_type": "user"
+      },
+      "public": true,
+      "created_at": "2026-09-28T11:20:21Z"
+    },
+    {
+      "id": "15914080846",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1234082588,
+        "name": "Aswanidev-vs/panda-editor",
+        "url": "https://api.github.com/repos/Aswanidev-vs/panda-editor"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 1,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/panda-editor/pulls/1",
+          "id": 4663379531,
+          "number": 1,
+          "head": {
+            "ref": "feature",
+            "sha": "3ca1d03431b6372b7d0ca12934413411faaf9aaf",
+            "repo": {
+              "id": 1234082588,
+              "url": "https://api.github.com/repos/Aswanidev-vs/panda-editor",
+              "name": "panda-editor"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "aa390621e01f9d9a8605c0fe89e030d2131bb05d",
+            "repo": {
+              "id": 1234082588,
+              "url": "https://api.github.com/repos/Aswanidev-vs/panda-editor",
+              "name": "panda-editor"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-09-28T12:04:47Z"
+    },
+    {
+      "id": "15914068588",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1234082588,
+        "name": "Aswanidev-vs/panda-editor",
+        "url": "https://api.github.com/repos/Aswanidev-vs/panda-editor"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 1,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/panda-editor/pulls/1",
+          "id": 4663379531,
+          "number": 1,
+          "head": {
+            "ref": "feature",
+            "sha": "3ca1d03431b6372b7d0ca12934413411faaf9aaf",
+            "repo": {
+              "id": 1234082588,
+              "url": "https://api.github.com/repos/Aswanidev-vs/panda-editor",
+              "name": "panda-editor"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "aa390621e01f9d9a8605c0fe89e030d2131bb05d",
+            "repo": {
+              "id": 1234082588,
+              "url": "https://api.github.com/repos/Aswanidev-vs/panda-editor",
+              "name": "panda-editor"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-09-28T12:04:37Z"
+    },
+    {
       "id": "15884634361",
       "type": "IssuesEvent",
       "actor": {
@@ -2824,14 +3037,14 @@
             "site_admin": false
           },
           "labels": [],
-          "state": "open",
+          "state": "closed",
           "locked": false,
           "assignees": [],
           "milestone": null,
           "comments": 0,
           "created_at": "2026-09-26T13:47:44Z",
-          "updated_at": "2026-09-26T13:47:44Z",
-          "closed_at": null,
+          "updated_at": "2026-09-28T14:54:36Z",
+          "closed_at": "2026-09-28T14:54:36Z",
           "assignee": null,
           "active_lock_reason": null,
           "sub_issues_summary": {
@@ -2860,7 +3073,7 @@
           },
           "timeline_url": "https://api.github.com/repos/Aswanidev-vs/Mai/issues/82/timeline",
           "performed_via_github_app": null,
-          "state_reason": null,
+          "state_reason": "completed",
           "pinned_comment": null
         }
       },
@@ -5383,170 +5596,6 @@
       },
       "public": true,
       "created_at": "2026-09-17T17:10:13Z"
-    },
-    {
-      "id": "15242633004",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1229892522,
-        "name": "Aswanidev-vs/gkport",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gkport"
-      },
-      "payload": {
-        "action": "merged",
-        "number": 5,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/gkport/pulls/5",
-          "id": 4561748312,
-          "number": 5,
-          "head": {
-            "ref": "v1",
-            "sha": "8cbca8b45dc129014409f631f4edffd7391d67e1",
-            "repo": {
-              "id": 1229892522,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gkport",
-              "name": "gkport"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "13331728df84017eb717dbded33473c6b3d3e66e",
-            "repo": {
-              "id": 1229892522,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gkport",
-              "name": "gkport"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-09-17T18:33:10Z"
-    },
-    {
-      "id": "15242623526",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1229892522,
-        "name": "Aswanidev-vs/gkport",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gkport"
-      },
-      "payload": {
-        "action": "opened",
-        "number": 5,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/gkport/pulls/5",
-          "id": 4561748312,
-          "number": 5,
-          "head": {
-            "ref": "v1",
-            "sha": "8cbca8b45dc129014409f631f4edffd7391d67e1",
-            "repo": {
-              "id": 1229892522,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gkport",
-              "name": "gkport"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "13331728df84017eb717dbded33473c6b3d3e66e",
-            "repo": {
-              "id": 1229892522,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gkport",
-              "name": "gkport"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-09-17T18:33:02Z"
-    },
-    {
-      "id": "21418506001",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1229892522,
-        "name": "Aswanidev-vs/gkport",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gkport"
-      },
-      "payload": {
-        "repository_id": 1229892522,
-        "push_id": 43873454937,
-        "ref": "refs/heads/main",
-        "head": "13331728df84017eb717dbded33473c6b3d3e66e",
-        "before": "34a4ef6485d57fc07da30410708234fff2712e5d"
-      },
-      "public": true,
-      "created_at": "2026-09-17T18:25:44Z"
-    },
-    {
-      "id": "15242208086",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1229892522,
-        "name": "Aswanidev-vs/gkport",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gkport"
-      },
-      "payload": {
-        "action": "merged",
-        "number": 4,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/gkport/pulls/4",
-          "id": 4561687051,
-          "number": 4,
-          "head": {
-            "ref": "v1",
-            "sha": "fce0e4d221fafee3669cd95b41556e46ca81c8d2",
-            "repo": {
-              "id": 1229892522,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gkport",
-              "name": "gkport"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "34a4ef6485d57fc07da30410708234fff2712e5d",
-            "repo": {
-              "id": 1229892522,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gkport",
-              "name": "gkport"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-09-17T18:25:43Z"
     }
   ],
   "releases": [
@@ -5627,7 +5676,7 @@
     "Batchfile": 807,
     "CSS": 568112,
     "Dockerfile": 875,
-    "Go": 4395431,
+    "Go": 4464504,
     "Go Template": 230517,
     "HTML": 707100,
     "Hack": 1679,
