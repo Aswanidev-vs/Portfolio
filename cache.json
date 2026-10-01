@@ -1,5 +1,5 @@
 {
-  "ts": 1790844128015,
+  "ts": 1790869269495,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -17,7 +17,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-10-01T01:59:09Z",
+      "pushed_at": "2026-10-01T08:42:09Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -2052,6 +2052,100 @@
     }
   ],
   "activity": [
+    {
+      "id": "16188593149",
+      "type": "IssuesEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1258201172,
+        "name": "Aswanidev-vs/Gocut",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Gocut"
+      },
+      "payload": {
+        "action": "closed",
+        "issue": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Gocut/issues/33",
+          "repository_url": "https://api.github.com/repos/Aswanidev-vs/Gocut",
+          "labels_url": "https://api.github.com/repos/Aswanidev-vs/Gocut/issues/33/labels{/name}",
+          "comments_url": "https://api.github.com/repos/Aswanidev-vs/Gocut/issues/33/comments",
+          "events_url": "https://api.github.com/repos/Aswanidev-vs/Gocut/issues/33/events",
+          "html_url": "https://github.com/Aswanidev-vs/Gocut/issues/33",
+          "id": 5293509564,
+          "node_id": "I_kwDOSv6gVM8AAAABO4SLvA",
+          "number": 33,
+          "title": "compress the gif",
+          "user": {
+            "login": "Aswanidev-vs",
+            "id": 178192591,
+            "node_id": "U_kgDOCp8Azw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Aswanidev-vs",
+            "html_url": "https://github.com/Aswanidev-vs",
+            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
+            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
+            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
+            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
+            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 0,
+          "created_at": "2026-08-30T17:49:07Z",
+          "updated_at": "2026-10-01T12:28:57Z",
+          "closed_at": "2026-10-01T12:28:57Z",
+          "assignee": null,
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": "compress the gif",
+          "reactions": {
+            "url": "https://api.github.com/repos/Aswanidev-vs/Gocut/issues/33/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/Aswanidev-vs/Gocut/issues/33/timeline",
+          "performed_via_github_app": null,
+          "state_reason": "completed",
+          "pinned_comment": null
+        }
+      },
+      "public": true,
+      "created_at": "2026-10-01T12:28:57Z"
+    },
     {
       "id": "22631998631",
       "type": "PushEvent",
@@ -5743,52 +5837,6 @@
       },
       "public": true,
       "created_at": "2026-09-19T13:12:41Z"
-    },
-    {
-      "id": "15345397589",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "action": "merged",
-        "number": 79,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Mai/pulls/79",
-          "id": 4577908138,
-          "number": 79,
-          "head": {
-            "ref": "v1",
-            "sha": "9a5dc7959c13667308e9f1a9d69e60c1c7a90c01",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "f54fcbf4786a5e9ddecd63635def94d938fa3655",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-09-19T13:12:40Z"
     }
   ],
   "releases": [
