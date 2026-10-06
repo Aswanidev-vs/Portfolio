@@ -1,5 +1,5 @@
 {
-  "ts": 1791276003593,
+  "ts": 1791300403239,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -13,11 +13,74 @@
   },
   "repos": [
     {
+      "name": "AnimeArchive",
+      "description": null,
+      "html_url": "https://github.com/Aswanidev-vs/AnimeArchive",
+      "homepage": null,
+      "pushed_at": "2026-10-06T11:50:48Z",
+      "created_at": "2026-09-27T05:23:24Z",
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "fork": false,
+      "language": "TypeScript",
+      "primaryLanguage": {
+        "name": "TypeScript",
+        "color": "#3178c6"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 78721,
+            "node": {
+              "name": "Vue",
+              "color": "#41b883"
+            }
+          },
+          {
+            "size": 59145,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          },
+          {
+            "size": 88939,
+            "node": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            }
+          },
+          {
+            "size": 24948,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          },
+          {
+            "size": 7596,
+            "node": {
+              "name": "PowerShell",
+              "color": "#012456"
+            }
+          },
+          {
+            "size": 57353,
+            "node": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
+    {
       "name": "Portfolio",
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-10-06T01:56:47Z",
+      "pushed_at": "2026-10-06T08:40:04Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -464,69 +527,6 @@
             "node": {
               "name": "Go",
               "color": "#00ADD8"
-            }
-          }
-        ]
-      },
-      "license": null
-    },
-    {
-      "name": "AnimeArchive",
-      "description": null,
-      "html_url": "https://github.com/Aswanidev-vs/AnimeArchive",
-      "homepage": null,
-      "pushed_at": "2026-10-04T19:52:02Z",
-      "created_at": "2026-09-27T05:23:24Z",
-      "stargazers_count": 0,
-      "forks_count": 0,
-      "fork": false,
-      "language": "TypeScript",
-      "primaryLanguage": {
-        "name": "TypeScript",
-        "color": "#3178c6"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 78721,
-            "node": {
-              "name": "Vue",
-              "color": "#41b883"
-            }
-          },
-          {
-            "size": 75664,
-            "node": {
-              "name": "CSS",
-              "color": "#663399"
-            }
-          },
-          {
-            "size": 88939,
-            "node": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            }
-          },
-          {
-            "size": 24311,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 7596,
-            "node": {
-              "name": "PowerShell",
-              "color": "#012456"
-            }
-          },
-          {
-            "size": 82630,
-            "node": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
             }
           }
         ]
@@ -2052,6 +2052,202 @@
     }
   ],
   "activity": [
+    {
+      "id": "23159071409",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1390179877,
+        "name": "Aswanidev-vs/AnimeArchive",
+        "url": "https://api.github.com/repos/Aswanidev-vs/AnimeArchive"
+      },
+      "payload": {
+        "repository_id": 1390179877,
+        "push_id": 45612065382,
+        "ref": "refs/heads/main",
+        "head": "53cc6cebbca191fb927d4fe91fd7c543488b52ff",
+        "before": "0adad7f7dfbb6598190b5dc09faac4320da0beb1"
+      },
+      "public": true,
+      "created_at": "2026-10-06T11:50:42Z"
+    },
+    {
+      "id": "23158622116",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1390179877,
+        "name": "Aswanidev-vs/AnimeArchive",
+        "url": "https://api.github.com/repos/Aswanidev-vs/AnimeArchive"
+      },
+      "payload": {
+        "repository_id": 1390179877,
+        "push_id": 45611541804,
+        "ref": "refs/heads/main",
+        "head": "0adad7f7dfbb6598190b5dc09faac4320da0beb1",
+        "before": "2d0dc0a8b0c2ff3b829d8004acf6f5ba8a6855e8"
+      },
+      "public": true,
+      "created_at": "2026-10-06T11:44:41Z"
+    },
+    {
+      "id": "23158600245",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1390179877,
+        "name": "Aswanidev-vs/AnimeArchive",
+        "url": "https://api.github.com/repos/Aswanidev-vs/AnimeArchive"
+      },
+      "payload": {
+        "repository_id": 1390179877,
+        "push_id": 45611516756,
+        "ref": "refs/heads/main",
+        "head": "2d0dc0a8b0c2ff3b829d8004acf6f5ba8a6855e8",
+        "before": "9ccaa75243c7a732cb7e9fd888c8c5d0e3211c1e"
+      },
+      "public": true,
+      "created_at": "2026-10-06T11:44:23Z"
+    },
+    {
+      "id": "16534832796",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1390179877,
+        "name": "Aswanidev-vs/AnimeArchive",
+        "url": "https://api.github.com/repos/Aswanidev-vs/AnimeArchive"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 5,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/AnimeArchive/pulls/5",
+          "id": 4758207063,
+          "number": 5,
+          "head": {
+            "ref": "feature",
+            "sha": "ec95645cfc1376d2ca7479887456566152f8053d",
+            "repo": {
+              "id": 1390179877,
+              "url": "https://api.github.com/repos/Aswanidev-vs/AnimeArchive",
+              "name": "AnimeArchive"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "9ccaa75243c7a732cb7e9fd888c8c5d0e3211c1e",
+            "repo": {
+              "id": 1390179877,
+              "url": "https://api.github.com/repos/Aswanidev-vs/AnimeArchive",
+              "name": "AnimeArchive"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-10-06T11:44:22Z"
+    },
+    {
+      "id": "16534811168",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1390179877,
+        "name": "Aswanidev-vs/AnimeArchive",
+        "url": "https://api.github.com/repos/Aswanidev-vs/AnimeArchive"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 5,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/AnimeArchive/pulls/5",
+          "id": 4758207063,
+          "number": 5,
+          "head": {
+            "ref": "feature",
+            "sha": "ec95645cfc1376d2ca7479887456566152f8053d",
+            "repo": {
+              "id": 1390179877,
+              "url": "https://api.github.com/repos/Aswanidev-vs/AnimeArchive",
+              "name": "AnimeArchive"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "9ccaa75243c7a732cb7e9fd888c8c5d0e3211c1e",
+            "repo": {
+              "id": 1390179877,
+              "url": "https://api.github.com/repos/Aswanidev-vs/AnimeArchive",
+              "name": "AnimeArchive"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-10-06T11:44:10Z"
+    },
+    {
+      "id": "23158555997",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1390179877,
+        "name": "Aswanidev-vs/AnimeArchive",
+        "url": "https://api.github.com/repos/Aswanidev-vs/AnimeArchive"
+      },
+      "payload": {
+        "repository_id": 1390179877,
+        "push_id": 45611465563,
+        "ref": "refs/heads/feature",
+        "head": "ec95645cfc1376d2ca7479887456566152f8053d",
+        "before": "bd236103ded8e3a7576d0e05174f5ec2b05432de"
+      },
+      "public": true,
+      "created_at": "2026-10-06T11:43:46Z"
+    },
     {
       "id": "16477471846",
       "type": "WatchEvent",
@@ -5497,292 +5693,6 @@
       },
       "public": true,
       "created_at": "2026-09-24T11:49:05Z"
-    },
-    {
-      "id": "22030698282",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1088310194,
-        "name": "Aswanidev-vs/gitscope",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gitscope"
-      },
-      "payload": {
-        "repository_id": 1088310194,
-        "push_id": 44430523600,
-        "ref": "refs/heads/feature",
-        "head": "687fff5c4cef433266e1436af04a503e5696105d",
-        "before": "e5c658de8efa60215a067265746c9de4f31473d8"
-      },
-      "public": true,
-      "created_at": "2026-09-24T05:32:14Z"
-    },
-    {
-      "id": "22019083613",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1088310194,
-        "name": "Aswanidev-vs/gitscope",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gitscope"
-      },
-      "payload": {
-        "repository_id": 1088310194,
-        "push_id": 44431840831,
-        "ref": "refs/heads/main",
-        "head": "a84db827e9acbe8b70cc188a84a1d85f65b16621",
-        "before": "535ecca2bc35fbae912e02861c0976b1d14c4ecf"
-      },
-      "public": true,
-      "created_at": "2026-09-24T05:55:13Z"
-    },
-    {
-      "id": "15645688332",
-      "type": "IssuesEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1088310194,
-        "name": "Aswanidev-vs/gitscope",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gitscope"
-      },
-      "payload": {
-        "action": "opened",
-        "issue": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/gitscope/issues/28",
-          "repository_url": "https://api.github.com/repos/Aswanidev-vs/gitscope",
-          "labels_url": "https://api.github.com/repos/Aswanidev-vs/gitscope/issues/28/labels{/name}",
-          "comments_url": "https://api.github.com/repos/Aswanidev-vs/gitscope/issues/28/comments",
-          "events_url": "https://api.github.com/repos/Aswanidev-vs/gitscope/issues/28/events",
-          "html_url": "https://github.com/Aswanidev-vs/gitscope/issues/28",
-          "id": 5564181292,
-          "node_id": "I_kwDOQN5Lss8AAAABS6arLA",
-          "number": 28,
-          "title": "## CodeAnt Nitpicks",
-          "user": {
-            "login": "Aswanidev-vs",
-            "id": 178192591,
-            "node_id": "U_kgDOCp8Azw",
-            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/Aswanidev-vs",
-            "html_url": "https://github.com/Aswanidev-vs",
-            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
-            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
-            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
-            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
-            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
-            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [],
-          "state": "closed",
-          "locked": false,
-          "assignees": [],
-          "milestone": null,
-          "comments": 0,
-          "created_at": "2026-09-24T06:33:24Z",
-          "updated_at": "2026-09-24T11:49:06Z",
-          "closed_at": "2026-09-24T11:49:06Z",
-          "assignee": null,
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": "## CodeAnt Nitpicks\r\n\r\n<!-- codeant-nitpicks:pr_code_suggestions:start -->\r\n<details>\r\n<summary><strong>3 code suggestions</strong></summary>\r\n\r\n#### 1. The relative asset path fails when the installed app starts from another working directory, so `SetIcon` is skipped and the window loses its icon.\r\n\r\nPossible bug · [`internal/ui/fyne_app.go:37`](https://github.com/Aswanidev-vs/gitscope/pull/27/files#diff-448167528e60a4aa158468c0420e0773cf0c899c2632f4bce413722822f8b674R37-R37)\r\n\r\n---\r\n\r\n#### 2. The relative asset path fails outside the repository directory, causing the About page to show a blank logo without reporting the loading failure.\r\n\r\nPossible bug · [`internal/ui/fyne_views.go:602`](https://github.com/Aswanidev-vs/gitscope/pull/27/files#diff-7b7a72a78303b4d77ac8442180675b1947ebaeae572ce5ad540fcccd0dfed9a0R602-R602)\r\n\r\n---\r\n\r\n#### 3. Following this document runs the exact same packaging command twice, causing a redundant build and potentially overwriting the first output.\r\n\r\nCode quality · [`packaging.md:7`](https://github.com/Aswanidev-vs/gitscope/pull/27/files#diff-04cf364de175c8ae1ccf0c1ef795e10fcb95d7663f22b0a598b088521180e520R7-R7)\r\n\r\n</details>\r\n<!-- codeant-nitpicks:pr_code_suggestions:end -->\r\n\r\n_Originally posted by @codeant-ai[bot] in https://github.com/Aswanidev-vs/gitscope/issues/27#issuecomment-5808563610_\r\n            ",
-          "reactions": {
-            "url": "https://api.github.com/repos/Aswanidev-vs/gitscope/issues/28/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/Aswanidev-vs/gitscope/issues/28/timeline",
-          "performed_via_github_app": null,
-          "state_reason": "completed",
-          "pinned_comment": null
-        }
-      },
-      "public": true,
-      "created_at": "2026-09-24T06:33:25Z"
-    },
-    {
-      "id": "15643744335",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1088310194,
-        "name": "Aswanidev-vs/gitscope",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gitscope"
-      },
-      "payload": {
-        "action": "merged",
-        "number": 27,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/gitscope/pulls/27",
-          "id": 4622147133,
-          "number": 27,
-          "head": {
-            "ref": "feature",
-            "sha": "687fff5c4cef433266e1436af04a503e5696105d",
-            "repo": {
-              "id": 1088310194,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gitscope",
-              "name": "gitscope"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "535ecca2bc35fbae912e02861c0976b1d14c4ecf",
-            "repo": {
-              "id": 1088310194,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gitscope",
-              "name": "gitscope"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-09-24T05:55:12Z"
-    },
-    {
-      "id": "15643726414",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1088310194,
-        "name": "Aswanidev-vs/gitscope",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gitscope"
-      },
-      "payload": {
-        "action": "opened",
-        "number": 27,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/gitscope/pulls/27",
-          "id": 4622147133,
-          "number": 27,
-          "head": {
-            "ref": "feature",
-            "sha": "687fff5c4cef433266e1436af04a503e5696105d",
-            "repo": {
-              "id": 1088310194,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gitscope",
-              "name": "gitscope"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "535ecca2bc35fbae912e02861c0976b1d14c4ecf",
-            "repo": {
-              "id": 1088310194,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gitscope",
-              "name": "gitscope"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-09-24T05:54:51Z"
-    },
-    {
-      "id": "15599946644",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1088310194,
-        "name": "Aswanidev-vs/gitscope",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gitscope"
-      },
-      "payload": {
-        "action": "unlabeled",
-        "number": 24,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/gitscope/pulls/24",
-          "id": 4614609641,
-          "number": 24,
-          "head": {
-            "ref": "feature",
-            "sha": "e5c658de8efa60215a067265746c9de4f31473d8",
-            "repo": {
-              "id": 1088310194,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gitscope",
-              "name": "gitscope"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "0075995ecfae21a81eda2bbe78e22b55329fd5a9",
-            "repo": {
-              "id": 1088310194,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gitscope",
-              "name": "gitscope"
-            }
-          }
-        },
-        "label": null,
-        "labels": []
-      },
-      "public": true,
-      "created_at": "2026-09-23T14:15:44Z"
     }
   ],
   "releases": [
@@ -5861,15 +5771,15 @@
   ],
   "languageBytes": {
     "Batchfile": 807,
-    "CSS": 568112,
+    "CSS": 551593,
     "Dockerfile": 875,
     "Go": 4917440,
     "Go Template": 230517,
-    "HTML": 707100,
+    "HTML": 707737,
     "Hack": 1679,
     "Inno Setup": 11192,
     "Java": 274119,
-    "JavaScript": 1236905,
+    "JavaScript": 1211628,
     "Lua": 2388,
     "Makefile": 5851,
     "NSIS": 77334,
