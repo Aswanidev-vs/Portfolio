@@ -1,5 +1,5 @@
 {
-  "ts": 1791351784764,
+  "ts": 1791374523753,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -17,7 +17,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-10-07T00:01:18Z",
+      "pushed_at": "2026-10-07T05:43:05Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -2052,6 +2052,35 @@
     }
   ],
   "activity": [
+    {
+      "id": "16628252441",
+      "type": "WatchEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1180325220,
+        "name": "webadderallorg/Recordly",
+        "url": "https://api.github.com/repos/webadderallorg/Recordly"
+      },
+      "payload": {
+        "action": "started"
+      },
+      "public": true,
+      "created_at": "2026-10-07T10:11:51Z",
+      "org": {
+        "id": 278603407,
+        "login": "webadderallorg",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/webadderallorg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/278603407?"
+      }
+    },
     {
       "id": "23159071409",
       "type": "PushEvent",
@@ -5599,100 +5628,6 @@
       },
       "public": true,
       "created_at": "2026-09-24T11:49:06Z"
-    },
-    {
-      "id": "15665706916",
-      "type": "IssuesEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1088310194,
-        "name": "Aswanidev-vs/gitscope",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gitscope"
-      },
-      "payload": {
-        "action": "closed",
-        "issue": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/gitscope/issues/25",
-          "repository_url": "https://api.github.com/repos/Aswanidev-vs/gitscope",
-          "labels_url": "https://api.github.com/repos/Aswanidev-vs/gitscope/issues/25/labels{/name}",
-          "comments_url": "https://api.github.com/repos/Aswanidev-vs/gitscope/issues/25/comments",
-          "events_url": "https://api.github.com/repos/Aswanidev-vs/gitscope/issues/25/events",
-          "html_url": "https://github.com/Aswanidev-vs/gitscope/issues/25",
-          "id": 5554721485,
-          "node_id": "I_kwDOQN5Lss8AAAABSxZSzQ",
-          "number": 25,
-          "title": "issue raised by codacy",
-          "user": {
-            "login": "Aswanidev-vs",
-            "id": 178192591,
-            "node_id": "U_kgDOCp8Azw",
-            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/Aswanidev-vs",
-            "html_url": "https://github.com/Aswanidev-vs",
-            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
-            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
-            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
-            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
-            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
-            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [],
-          "state": "closed",
-          "locked": false,
-          "assignees": [],
-          "milestone": null,
-          "comments": 0,
-          "created_at": "2026-09-23T14:15:38Z",
-          "updated_at": "2026-09-24T11:49:05Z",
-          "closed_at": "2026-09-24T11:49:05Z",
-          "assignee": null,
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": "https://app.codacy.com/gh/Aswanidev-vs/gitscope/commits/e5c658de8efa60215a067265746c9de4f31473d8/issues",
-          "reactions": {
-            "url": "https://api.github.com/repos/Aswanidev-vs/gitscope/issues/25/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/Aswanidev-vs/gitscope/issues/25/timeline",
-          "performed_via_github_app": null,
-          "state_reason": "completed",
-          "pinned_comment": null
-        }
-      },
-      "public": true,
-      "created_at": "2026-09-24T11:49:05Z"
     }
   ],
   "releases": [
