@@ -1,5 +1,5 @@
 {
-  "ts": 1791509081125,
+  "ts": 1791531683964,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -17,7 +17,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-10-08T21:36:04Z",
+      "pushed_at": "2026-10-09T01:24:42Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -903,7 +903,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Aswanidev-vs",
       "homepage": null,
-      "pushed_at": "2026-10-08T18:21:31Z",
+      "pushed_at": "2026-10-09T04:21:17Z",
       "created_at": "2025-07-06T07:36:50Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -2052,6 +2052,35 @@
     }
   ],
   "activity": [
+    {
+      "id": "16789045911",
+      "type": "WatchEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 963223041,
+        "name": "koharu-rs/koharu",
+        "url": "https://api.github.com/repos/koharu-rs/koharu"
+      },
+      "payload": {
+        "action": "started"
+      },
+      "public": true,
+      "created_at": "2026-10-09T02:38:18Z",
+      "org": {
+        "id": 320990123,
+        "login": "koharu-rs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/orgs/koharu-rs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/320990123?"
+      }
+    },
     {
       "id": "23295039494",
       "type": "PushEvent",
@@ -5466,100 +5495,6 @@
       },
       "public": true,
       "created_at": "2026-09-24T12:30:40Z"
-    },
-    {
-      "id": "15665707806",
-      "type": "IssuesEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1088310194,
-        "name": "Aswanidev-vs/gitscope",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gitscope"
-      },
-      "payload": {
-        "action": "closed",
-        "issue": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/gitscope/issues/28",
-          "repository_url": "https://api.github.com/repos/Aswanidev-vs/gitscope",
-          "labels_url": "https://api.github.com/repos/Aswanidev-vs/gitscope/issues/28/labels{/name}",
-          "comments_url": "https://api.github.com/repos/Aswanidev-vs/gitscope/issues/28/comments",
-          "events_url": "https://api.github.com/repos/Aswanidev-vs/gitscope/issues/28/events",
-          "html_url": "https://github.com/Aswanidev-vs/gitscope/issues/28",
-          "id": 5564181292,
-          "node_id": "I_kwDOQN5Lss8AAAABS6arLA",
-          "number": 28,
-          "title": "## CodeAnt Nitpicks",
-          "user": {
-            "login": "Aswanidev-vs",
-            "id": 178192591,
-            "node_id": "U_kgDOCp8Azw",
-            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/Aswanidev-vs",
-            "html_url": "https://github.com/Aswanidev-vs",
-            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
-            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
-            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
-            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
-            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
-            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [],
-          "state": "closed",
-          "locked": false,
-          "assignees": [],
-          "milestone": null,
-          "comments": 0,
-          "created_at": "2026-09-24T06:33:24Z",
-          "updated_at": "2026-09-24T11:49:06Z",
-          "closed_at": "2026-09-24T11:49:06Z",
-          "assignee": null,
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": "## CodeAnt Nitpicks\r\n\r\n<!-- codeant-nitpicks:pr_code_suggestions:start -->\r\n<details>\r\n<summary><strong>3 code suggestions</strong></summary>\r\n\r\n#### 1. The relative asset path fails when the installed app starts from another working directory, so `SetIcon` is skipped and the window loses its icon.\r\n\r\nPossible bug · [`internal/ui/fyne_app.go:37`](https://github.com/Aswanidev-vs/gitscope/pull/27/files#diff-448167528e60a4aa158468c0420e0773cf0c899c2632f4bce413722822f8b674R37-R37)\r\n\r\n---\r\n\r\n#### 2. The relative asset path fails outside the repository directory, causing the About page to show a blank logo without reporting the loading failure.\r\n\r\nPossible bug · [`internal/ui/fyne_views.go:602`](https://github.com/Aswanidev-vs/gitscope/pull/27/files#diff-7b7a72a78303b4d77ac8442180675b1947ebaeae572ce5ad540fcccd0dfed9a0R602-R602)\r\n\r\n---\r\n\r\n#### 3. Following this document runs the exact same packaging command twice, causing a redundant build and potentially overwriting the first output.\r\n\r\nCode quality · [`packaging.md:7`](https://github.com/Aswanidev-vs/gitscope/pull/27/files#diff-04cf364de175c8ae1ccf0c1ef795e10fcb95d7663f22b0a598b088521180e520R7-R7)\r\n\r\n</details>\r\n<!-- codeant-nitpicks:pr_code_suggestions:end -->\r\n\r\n_Originally posted by @codeant-ai[bot] in https://github.com/Aswanidev-vs/gitscope/issues/27#issuecomment-5808563610_\r\n            ",
-          "reactions": {
-            "url": "https://api.github.com/repos/Aswanidev-vs/gitscope/issues/28/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/Aswanidev-vs/gitscope/issues/28/timeline",
-          "performed_via_github_app": null,
-          "state_reason": "completed",
-          "pinned_comment": null
-        }
-      },
-      "public": true,
-      "created_at": "2026-09-24T11:49:06Z"
     }
   ],
   "releases": [
