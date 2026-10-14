@@ -1,5 +1,5 @@
 {
-  "ts": 1791960313792,
+  "ts": 1791980830842,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -12,6 +12,97 @@
     "total_repos": 43
   },
   "repos": [
+    {
+      "name": "AnimeArchive",
+      "description": null,
+      "html_url": "https://github.com/Aswanidev-vs/AnimeArchive",
+      "homepage": null,
+      "pushed_at": "2026-10-14T08:55:15Z",
+      "created_at": "2026-09-27T05:23:24Z",
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "fork": false,
+      "language": "TypeScript",
+      "primaryLanguage": {
+        "name": "TypeScript",
+        "color": "#3178c6"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 78721,
+            "node": {
+              "name": "Vue",
+              "color": "#41b883"
+            }
+          },
+          {
+            "size": 59145,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          },
+          {
+            "size": 88939,
+            "node": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            }
+          },
+          {
+            "size": 24948,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          },
+          {
+            "size": 7596,
+            "node": {
+              "name": "PowerShell",
+              "color": "#012456"
+            }
+          },
+          {
+            "size": 57353,
+            "node": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
+    {
+      "name": "Portfolio",
+      "description": null,
+      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
+      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
+      "pushed_at": "2026-10-14T06:45:15Z",
+      "created_at": "2025-09-03T16:31:24Z",
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "fork": false,
+      "language": "HTML",
+      "primaryLanguage": {
+        "name": "HTML",
+        "color": "#e34c26"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 57690,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
     {
       "name": "gosqlite-ffi",
       "description": "Go-sqlite-ffi is an  experimental CGO-free Go binding prototype for SQLite's C API using purego.",
@@ -55,34 +146,6 @@
       "license": {
         "spdx_id": "MIT"
       }
-    },
-    {
-      "name": "Portfolio",
-      "description": null,
-      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
-      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-10-14T01:47:49Z",
-      "created_at": "2025-09-03T16:31:24Z",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "fork": false,
-      "language": "HTML",
-      "primaryLanguage": {
-        "name": "HTML",
-        "color": "#e34c26"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 57690,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          }
-        ]
-      },
-      "license": null
     },
     {
       "name": "Chest",
@@ -257,69 +320,6 @@
       "license": null
     },
     {
-      "name": "AnimeArchive",
-      "description": null,
-      "html_url": "https://github.com/Aswanidev-vs/AnimeArchive",
-      "homepage": null,
-      "pushed_at": "2026-10-14T05:08:00Z",
-      "created_at": "2026-09-27T05:23:24Z",
-      "stargazers_count": 0,
-      "forks_count": 0,
-      "fork": false,
-      "language": "TypeScript",
-      "primaryLanguage": {
-        "name": "TypeScript",
-        "color": "#3178c6"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 78721,
-            "node": {
-              "name": "Vue",
-              "color": "#41b883"
-            }
-          },
-          {
-            "size": 59145,
-            "node": {
-              "name": "CSS",
-              "color": "#663399"
-            }
-          },
-          {
-            "size": 88939,
-            "node": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            }
-          },
-          {
-            "size": 24948,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 7596,
-            "node": {
-              "name": "PowerShell",
-              "color": "#012456"
-            }
-          },
-          {
-            "size": 57353,
-            "node": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            }
-          }
-        ]
-      },
-      "license": null
-    },
-    {
       "name": "mimo-skills",
       "description": "A collection of my mimo code skills that i use for day to day use.",
       "html_url": "https://github.com/Aswanidev-vs/mimo-skills",
@@ -396,7 +396,7 @@
       "description": "Mai is a fully offline, voice-driven AI assistant built in Go. It processes everything locally using optimized ONNX models, ensuring complete privacy and fast, customizable performance without any cloud dependency.",
       "html_url": "https://github.com/Aswanidev-vs/Mai",
       "homepage": "https://aswanidev-vs.github.io/Mai/",
-      "pushed_at": "2026-10-03T08:32:06Z",
+      "pushed_at": "2026-10-14T11:30:21Z",
       "created_at": "2026-04-25T16:27:51Z",
       "stargazers_count": 3,
       "forks_count": 0,
@@ -2096,6 +2096,84 @@
     }
   ],
   "activity": [
+    {
+      "id": "23969320102",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1221010957,
+        "name": "Aswanidev-vs/Mai",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
+      },
+      "payload": {
+        "repository_id": 1221010957,
+        "push_id": 46461271885,
+        "ref": "refs/heads/v1",
+        "head": "5dd749d3dbe3b900670c2ca255ccfd062edd39d4",
+        "before": "dc0a65abb1b38b61bd4f4a8b17affb8a3d5fa673"
+      },
+      "public": true,
+      "created_at": "2026-10-14T11:30:22Z"
+    },
+    {
+      "id": "23963124767",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1413965738,
+        "name": "Aswanidev-vs/gosqlite-ffi",
+        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
+      },
+      "payload": {
+        "repository_id": 1413965738,
+        "push_id": 46310136545,
+        "ref": "refs/heads/main",
+        "head": "445c074c67b1c8775ebe046d93badd4b697a357e",
+        "before": "1a5cd0fd1b3b6b0fae1e1920fa8a0af8862257a4"
+      },
+      "public": true,
+      "created_at": "2026-10-13T06:13:30Z"
+    },
+    {
+      "id": "23960075430",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1413965738,
+        "name": "Aswanidev-vs/gosqlite-ffi",
+        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
+      },
+      "payload": {
+        "repository_id": 1413965738,
+        "push_id": 46308349307,
+        "ref": "refs/heads/perf/direct-driver-row-values-20261013",
+        "head": "e793827e55b40992cd0c10ec139fbfb05d66d482",
+        "before": "e5e479c0a2916fe3f26968301915641c4c0241aa"
+      },
+      "public": true,
+      "created_at": "2026-10-13T05:48:48Z"
+    },
     {
       "id": "23943148031",
       "type": "PushEvent",
@@ -4653,84 +4731,6 @@
       },
       "public": true,
       "created_at": "2026-10-11T11:45:14Z"
-    },
-    {
-      "id": "23712782226",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 46131010659,
-        "ref": "refs/heads/perf/comparative-driver-benchmarks",
-        "head": "c8e0522d68892ed7946641202666586027727213",
-        "before": "13a0e044e74ece961eab2c4f88e36b6f3b084d71"
-      },
-      "public": true,
-      "created_at": "2026-10-11T11:42:24Z"
-    },
-    {
-      "id": "23712411259",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 46130692585,
-        "ref": "refs/heads/main",
-        "head": "0db987eb8bdfacbad5c960cb262dc8ccaa1ee072",
-        "before": "39b897477c96103efc797fb3c28e6faed78a52d3"
-      },
-      "public": true,
-      "created_at": "2026-10-11T11:36:45Z"
-    },
-    {
-      "id": "23712038389",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 46131008636,
-        "ref": "refs/heads/perf/comparative-driver-benchmarks",
-        "head": "13a0e044e74ece961eab2c4f88e36b6f3b084d71",
-        "before": "852106c78f6559a5282dcd4763568cd8c87bcbb7"
-      },
-      "public": true,
-      "created_at": "2026-10-11T11:42:22Z"
     }
   ],
   "releases": [
