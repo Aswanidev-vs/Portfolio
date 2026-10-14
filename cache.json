@@ -1,5 +1,5 @@
 {
-  "ts": 1791998932301,
+  "ts": 1792011249065,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -17,7 +17,7 @@
       "description": "A simple, client-side web application for tracking your reading list. Built with plain HTML, CSS, and vanilla JavaScript — no frameworks, no build step, and no backend.",
       "html_url": "https://github.com/Aswanidev-vs/book-tracker",
       "homepage": "https://aswanidev-vs.github.io/book-tracker/",
-      "pushed_at": "2026-10-14T16:49:09Z",
+      "pushed_at": "2026-10-14T19:16:08Z",
       "created_at": "2026-10-14T16:48:07Z",
       "stargazers_count": 0,
       "forks_count": 0,
@@ -30,24 +30,31 @@
       "languages": {
         "edges": [
           {
-            "size": 10335,
+            "size": 26229,
             "node": {
               "name": "JavaScript",
               "color": "#f1e05a"
             }
           },
           {
-            "size": 3734,
+            "size": 28217,
             "node": {
               "name": "HTML",
               "color": "#e34c26"
             }
           },
           {
-            "size": 10902,
+            "size": 46015,
             "node": {
               "name": "CSS",
               "color": "#663399"
+            }
+          },
+          {
+            "size": 28451,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
             }
           }
         ]
@@ -59,7 +66,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-10-14T12:27:12Z",
+      "pushed_at": "2026-10-14T17:28:53Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -2138,6 +2145,362 @@
     }
   ],
   "activity": [
+    {
+      "id": "24007242730",
+      "type": "CreateEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1419450481,
+        "name": "Aswanidev-vs/book-tracker",
+        "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker"
+      },
+      "payload": {
+        "ref": "feature",
+        "ref_type": "branch",
+        "full_ref": "refs/heads/feature",
+        "master_branch": "main",
+        "description": "A simple, client-side web application for tracking your reading list. Built with plain HTML, CSS, and vanilla JavaScript — no frameworks, no build step, and no backend.",
+        "pusher_type": "user"
+      },
+      "public": true,
+      "created_at": "2026-10-14T18:27:24Z"
+    },
+    {
+      "id": "24002174412",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1419450481,
+        "name": "Aswanidev-vs/book-tracker",
+        "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker"
+      },
+      "payload": {
+        "repository_id": 1419450481,
+        "push_id": 46506550815,
+        "ref": "refs/heads/main",
+        "head": "83478459829df7ed0b643159d20304c245f31f51",
+        "before": "0d1e66ba40628ff6543af924ed269a1a9411d64e"
+      },
+      "public": true,
+      "created_at": "2026-10-14T18:41:52Z"
+    },
+    {
+      "id": "17236275909",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1419450481,
+        "name": "Aswanidev-vs/book-tracker",
+        "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 3,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker/pulls/3",
+          "id": 4863191589,
+          "number": 3,
+          "head": {
+            "ref": "feature",
+            "sha": "dd977378c4705c090a05c3de62b13e5c7c8d3294",
+            "repo": {
+              "id": 1419450481,
+              "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker",
+              "name": "book-tracker"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "83478459829df7ed0b643159d20304c245f31f51",
+            "repo": {
+              "id": 1419450481,
+              "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker",
+              "name": "book-tracker"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-10-14T19:16:08Z"
+    },
+    {
+      "id": "17236260140",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1419450481,
+        "name": "Aswanidev-vs/book-tracker",
+        "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 3,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker/pulls/3",
+          "id": 4863191589,
+          "number": 3,
+          "head": {
+            "ref": "feature",
+            "sha": "dd977378c4705c090a05c3de62b13e5c7c8d3294",
+            "repo": {
+              "id": 1419450481,
+              "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker",
+              "name": "book-tracker"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "83478459829df7ed0b643159d20304c245f31f51",
+            "repo": {
+              "id": 1419450481,
+              "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker",
+              "name": "book-tracker"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-10-14T19:15:59Z"
+    },
+    {
+      "id": "24000009619",
+      "type": "CreateEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1413965738,
+        "name": "Aswanidev-vs/gosqlite-ffi",
+        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
+      },
+      "payload": {
+        "ref": "docs/matched-runtime-benchmark-baseline",
+        "ref_type": "branch",
+        "full_ref": "refs/heads/docs/matched-runtime-benchmark-baseline",
+        "master_branch": "main",
+        "description": "Go-sqlite-ffi is an  experimental CGO-free Go binding prototype for SQLite's C API using purego.",
+        "pusher_type": "user"
+      },
+      "public": true,
+      "created_at": "2026-10-13T00:24:36Z"
+    },
+    {
+      "id": "17232884061",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1419450481,
+        "name": "Aswanidev-vs/book-tracker",
+        "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 2,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker/pulls/2",
+          "id": 4862747380,
+          "number": 2,
+          "head": {
+            "ref": "feature",
+            "sha": "01626412f0ae04a11a11d60a2f310334e5b6bea7",
+            "repo": {
+              "id": 1419450481,
+              "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker",
+              "name": "book-tracker"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "0d1e66ba40628ff6543af924ed269a1a9411d64e",
+            "repo": {
+              "id": 1419450481,
+              "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker",
+              "name": "book-tracker"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-10-14T18:41:50Z"
+    },
+    {
+      "id": "17232863394",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1419450481,
+        "name": "Aswanidev-vs/book-tracker",
+        "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 2,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker/pulls/2",
+          "id": 4862747380,
+          "number": 2,
+          "head": {
+            "ref": "feature",
+            "sha": "01626412f0ae04a11a11d60a2f310334e5b6bea7",
+            "repo": {
+              "id": 1419450481,
+              "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker",
+              "name": "book-tracker"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "0d1e66ba40628ff6543af924ed269a1a9411d64e",
+            "repo": {
+              "id": 1419450481,
+              "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker",
+              "name": "book-tracker"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-10-14T18:41:37Z"
+    },
+    {
+      "id": "17232200792",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1419450481,
+        "name": "Aswanidev-vs/book-tracker",
+        "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 1,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker/pulls/1",
+          "id": 4862604233,
+          "number": 1,
+          "head": {
+            "ref": "feature",
+            "sha": "cb5217a287c39390232a5639a995c52da9d0d600",
+            "repo": {
+              "id": 1419450481,
+              "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker",
+              "name": "book-tracker"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "69b0d9cc7baf423bd6f26d2eb407c67971230d0e",
+            "repo": {
+              "id": 1419450481,
+              "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker",
+              "name": "book-tracker"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-10-14T18:33:53Z"
+    },
+    {
+      "id": "17231895371",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1419450481,
+        "name": "Aswanidev-vs/book-tracker",
+        "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 1,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker/pulls/1",
+          "id": 4862604233,
+          "number": 1,
+          "head": {
+            "ref": "feature",
+            "sha": "cb5217a287c39390232a5639a995c52da9d0d600",
+            "repo": {
+              "id": 1419450481,
+              "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker",
+              "name": "book-tracker"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "69b0d9cc7baf423bd6f26d2eb407c67971230d0e",
+            "repo": {
+              "id": 1419450481,
+              "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker",
+              "name": "book-tracker"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-10-14T18:30:34Z"
+    },
     {
       "id": "23969320102",
       "type": "PushEvent",
@@ -4516,263 +4879,6 @@
       },
       "public": true,
       "created_at": "2026-10-12T03:49:21Z"
-    },
-    {
-      "id": "23739817578",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 46189231397,
-        "ref": "refs/heads/main",
-        "head": "0c525dddedc9a9b3e6c19c2e4500a12b4e89991b",
-        "before": "5fa6199edf98c5c77771de01faffa1b0d23194f2"
-      },
-      "public": true,
-      "created_at": "2026-10-12T03:49:22Z"
-    },
-    {
-      "id": "16977152676",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "action": "opened",
-        "number": 18,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi/pulls/18",
-          "id": 4824612122,
-          "number": 18,
-          "head": {
-            "ref": "fix/empty-blob-binding-20261012",
-            "sha": "14d53e771f89f55b185dccdebd7bf3a27007a8eb",
-            "repo": {
-              "id": 1413965738,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi",
-              "name": "gosqlite-ffi"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "5fa6199edf98c5c77771de01faffa1b0d23194f2",
-            "repo": {
-              "id": 1413965738,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi",
-              "name": "gosqlite-ffi"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-10-12T03:36:15Z"
-    },
-    {
-      "id": "23739067148",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 46188492543,
-        "ref": "refs/heads/fix/empty-blob-binding-20261012",
-        "head": "14d53e771f89f55b185dccdebd7bf3a27007a8eb",
-        "before": "fb8d5ca0e54b6609de8d17ffaf0aec9bf4111355"
-      },
-      "public": true,
-      "created_at": "2026-10-12T03:36:10Z"
-    },
-    {
-      "id": "23739046176",
-      "type": "CreateEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "ref": "fix/empty-blob-binding-20261012",
-        "ref_type": "branch",
-        "full_ref": "refs/heads/fix/empty-blob-binding-20261012",
-        "master_branch": "main",
-        "description": "Go-sqlite-ffi is an  experimental CGO-free Go binding prototype for SQLite's C API using purego.",
-        "pusher_type": "user"
-      },
-      "public": true,
-      "created_at": "2026-10-12T03:35:50Z"
-    },
-    {
-      "id": "23718264638",
-      "type": "CreateEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "ref": "docs/update-readme-status",
-        "ref_type": "branch",
-        "full_ref": "refs/heads/docs/update-readme-status",
-        "master_branch": "main",
-        "description": "Go-sqlite-ffi is an  experimental CGO-free Go binding prototype for SQLite's C API using purego.",
-        "pusher_type": "user"
-      },
-      "public": true,
-      "created_at": "2026-10-11T13:12:05Z"
-    },
-    {
-      "id": "23714617314",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 46132117344,
-        "ref": "refs/heads/docs/comparison-benchmark-visibility",
-        "head": "257fdfd6244e97e33a57e68f8c480608d153b2ba",
-        "before": "0a794eaeb73848526aebac9f219ea8d26a4a205e"
-      },
-      "public": true,
-      "created_at": "2026-10-11T12:01:29Z"
-    },
-    {
-      "id": "23713434515",
-      "type": "CreateEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "ref": "docs/comparison-benchmark-visibility",
-        "ref_type": "branch",
-        "full_ref": "refs/heads/docs/comparison-benchmark-visibility",
-        "master_branch": "main",
-        "description": "Go-sqlite-ffi is an  experimental CGO-free Go binding prototype for SQLite's C API using purego.",
-        "pusher_type": "user"
-      },
-      "public": true,
-      "created_at": "2026-10-11T11:44:59Z"
-    },
-    {
-      "id": "23713271674",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 46131906126,
-        "ref": "refs/heads/main",
-        "head": "9b90b0e45703d67ad043f282b72d09918b327754",
-        "before": "0db987eb8bdfacbad5c960cb262dc8ccaa1ee072"
-      },
-      "public": true,
-      "created_at": "2026-10-11T11:58:04Z"
-    },
-    {
-      "id": "23712975944",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 46131169681,
-        "ref": "refs/heads/docs/comparison-benchmark-visibility",
-        "head": "9b9045d53e0713e36c9eba0083f6b3e3d4a66141",
-        "before": "78d9503a2ce39ddef8c1d9e3e3cefc464b08e978"
-      },
-      "public": true,
-      "created_at": "2026-10-11T11:45:14Z"
     }
   ],
   "releases": [
@@ -4851,15 +4957,15 @@
   ],
   "languageBytes": {
     "Batchfile": 807,
-    "CSS": 562495,
+    "CSS": 597608,
     "Dockerfile": 875,
-    "Go": 5118059,
+    "Go": 5146510,
     "Go Template": 230517,
-    "HTML": 724906,
+    "HTML": 749389,
     "Hack": 1679,
     "Inno Setup": 11192,
     "Java": 274119,
-    "JavaScript": 1223564,
+    "JavaScript": 1239458,
     "Lua": 2388,
     "Makefile": 5851,
     "NSIS": 77334,
