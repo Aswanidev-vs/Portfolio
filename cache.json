@@ -1,5 +1,5 @@
 {
-  "ts": 1792045950280,
+  "ts": 1792065619179,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -12,6 +12,34 @@
     "total_repos": 44
   },
   "repos": [
+    {
+      "name": "Portfolio",
+      "description": null,
+      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
+      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
+      "pushed_at": "2026-10-15T06:32:31Z",
+      "created_at": "2025-09-03T16:31:24Z",
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "fork": false,
+      "language": "HTML",
+      "primaryLanguage": {
+        "name": "HTML",
+        "color": "#e34c26"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 57690,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
     {
       "name": "gosqlite-ffi",
       "description": "Go-sqlite-ffi is an  experimental CGO-free Go binding prototype for SQLite's C API using purego.",
@@ -55,34 +83,6 @@
       "license": {
         "spdx_id": "MIT"
       }
-    },
-    {
-      "name": "Portfolio",
-      "description": null,
-      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
-      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-10-15T01:47:49Z",
-      "created_at": "2025-09-03T16:31:24Z",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "fork": false,
-      "language": "HTML",
-      "primaryLanguage": {
-        "name": "HTML",
-        "color": "#e34c26"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 57690,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          }
-        ]
-      },
-      "license": null
     },
     {
       "name": "book-tracker",
@@ -2145,6 +2145,216 @@
     }
   ],
   "activity": [
+    {
+      "id": "24079349913",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1413965738,
+        "name": "Aswanidev-vs/gosqlite-ffi",
+        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
+      },
+      "payload": {
+        "repository_id": 1413965738,
+        "push_id": 46426391525,
+        "ref": "refs/heads/feature/typed-sqlite-errors-20261014",
+        "head": "7ae081df313fe75072f05c8cda0dd51644a5b511",
+        "before": "bd3268270eeb10f7997571d0dd87605d424325df"
+      },
+      "public": true,
+      "created_at": "2026-10-14T04:30:19Z"
+    },
+    {
+      "id": "24068623231",
+      "type": "CreateEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1413965738,
+        "name": "Aswanidev-vs/gosqlite-ffi",
+        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
+      },
+      "payload": {
+        "ref": "docs/matched-benchmark-results-20261015",
+        "ref_type": "branch",
+        "full_ref": "refs/heads/docs/matched-benchmark-results-20261015",
+        "master_branch": "main",
+        "description": "Go-sqlite-ffi is an  experimental CGO-free Go binding prototype for SQLite's C API using purego.",
+        "pusher_type": "user"
+      },
+      "public": true,
+      "created_at": "2026-10-15T03:42:14Z"
+    },
+    {
+      "id": "24067905856",
+      "type": "CreateEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1413965738,
+        "name": "Aswanidev-vs/gosqlite-ffi",
+        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
+      },
+      "payload": {
+        "ref": "feature/driver-ping-validation-20261015",
+        "ref_type": "branch",
+        "full_ref": "refs/heads/feature/driver-ping-validation-20261015",
+        "master_branch": "main",
+        "description": "Go-sqlite-ffi is an  experimental CGO-free Go binding prototype for SQLite's C API using purego.",
+        "pusher_type": "user"
+      },
+      "public": true,
+      "created_at": "2026-10-15T03:26:28Z"
+    },
+    {
+      "id": "24067280761",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1413965738,
+        "name": "Aswanidev-vs/gosqlite-ffi",
+        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
+      },
+      "payload": {
+        "repository_id": 1413965738,
+        "push_id": 46549087834,
+        "ref": "refs/heads/main",
+        "head": "60ff4a1eea568e2a9f3144b5d7a84084099e9b9f",
+        "before": "eb8595752f4d1b8482dd63f0b7c498f944678bbf"
+      },
+      "public": true,
+      "created_at": "2026-10-15T03:52:03Z"
+    },
+    {
+      "id": "24065040671",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1413965738,
+        "name": "Aswanidev-vs/gosqlite-ffi",
+        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
+      },
+      "payload": {
+        "repository_id": 1413965738,
+        "push_id": 46548482625,
+        "ref": "refs/heads/docs/matched-benchmark-results-20261015",
+        "head": "8a92c186a707281b7d00f1ccf664ff74222bc0ab",
+        "before": "ec8674f89c0fd9b73ddb297da2c21ae048bb0dbc"
+      },
+      "public": true,
+      "created_at": "2026-10-15T03:42:51Z"
+    },
+    {
+      "id": "24064841684",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1413965738,
+        "name": "Aswanidev-vs/gosqlite-ffi",
+        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
+      },
+      "payload": {
+        "repository_id": 1413965738,
+        "push_id": 46548333666,
+        "ref": "refs/heads/main",
+        "head": "eb8595752f4d1b8482dd63f0b7c498f944678bbf",
+        "before": "9189fcb27ab73ae5474ca23dd1c01ce273424db4"
+      },
+      "public": true,
+      "created_at": "2026-10-15T03:40:34Z"
+    },
+    {
+      "id": "24062145169",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1413965738,
+        "name": "Aswanidev-vs/gosqlite-ffi",
+        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
+      },
+      "payload": {
+        "repository_id": 1413965738,
+        "push_id": 46547421222,
+        "ref": "refs/heads/feature/driver-ping-validation-20261015",
+        "head": "9ea0d324710dd45ca805899abe09462d606a42c9",
+        "before": "ebec0d07374ff89f5ccf9c1a551bbee9d15b97be"
+      },
+      "public": true,
+      "created_at": "2026-10-15T03:26:44Z"
+    },
+    {
+      "id": "24061470489",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1413965738,
+        "name": "Aswanidev-vs/gosqlite-ffi",
+        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
+      },
+      "payload": {
+        "repository_id": 1413965738,
+        "push_id": 46547445387,
+        "ref": "refs/heads/feature/driver-ping-validation-20261015",
+        "head": "2e55f8a68b4a4d8bae48fca3beaecb4b20a9189f",
+        "before": "9ea0d324710dd45ca805899abe09462d606a42c9"
+      },
+      "public": true,
+      "created_at": "2026-10-15T03:27:05Z"
+    },
     {
       "id": "17268650285",
       "type": "PullRequestEvent",
@@ -4702,236 +4912,6 @@
       },
       "public": true,
       "created_at": "2026-10-11T11:45:12Z"
-    },
-    {
-      "id": "23797976689",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 46130037326,
-        "ref": "refs/heads/perf/comparative-driver-benchmarks",
-        "head": "79efdd33cd12c5731319dd83eb20d9a2d8abea93",
-        "before": "cc9f7b129be716d189795e6a0053b367d2f89f74"
-      },
-      "public": true,
-      "created_at": "2026-10-11T11:25:10Z"
-    },
-    {
-      "id": "23797928587",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 46129994845,
-        "ref": "refs/heads/perf/comparative-driver-benchmarks",
-        "head": "047c2c7b533ad0eccec6ce9bbc52dd7071089a46",
-        "before": "aaae398bb3d40f374037aad019a234af42afe8b9"
-      },
-      "public": true,
-      "created_at": "2026-10-11T11:24:26Z"
-    },
-    {
-      "id": "23787408060",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 46121088749,
-        "ref": "refs/heads/feat/transactions-sql-driver",
-        "head": "3c3fff9d6602281a7ad41caa77eb96628bac098a",
-        "before": "67377a8a639abece451dfa7ce3c0972970deb6fe"
-      },
-      "public": true,
-      "created_at": "2026-10-11T08:43:33Z"
-    },
-    {
-      "id": "23787130710",
-      "type": "CreateEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "ref": "perf/database-sql-row-scan",
-        "ref_type": "branch",
-        "full_ref": "refs/heads/perf/database-sql-row-scan",
-        "master_branch": "main",
-        "description": "Go-sqlite-ffi is an  experimental CGO-free Go binding prototype for SQLite's C API using purego.",
-        "pusher_type": "user"
-      },
-      "public": true,
-      "created_at": "2026-10-12T15:23:06Z"
-    },
-    {
-      "id": "23787049305",
-      "type": "CreateEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "ref": "fix/preserve-empty-blob",
-        "ref_type": "branch",
-        "full_ref": "refs/heads/fix/preserve-empty-blob",
-        "master_branch": "main",
-        "description": "Go-sqlite-ffi is an  experimental CGO-free Go binding prototype for SQLite's C API using purego.",
-        "pusher_type": "user"
-      },
-      "public": true,
-      "created_at": "2026-10-12T03:25:38Z"
-    },
-    {
-      "id": "23780701191",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 46115415475,
-        "ref": "refs/heads/feature/database-api-benchmarks",
-        "head": "ca17bfbcdf03999cd9f59851829132f45efe7f44",
-        "before": "7dc696436ac81caaeaa3784018c0715c27b17dfc"
-      },
-      "public": true,
-      "created_at": "2026-10-11T06:55:25Z"
-    },
-    {
-      "id": "23779038753",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 46234560095,
-        "ref": "refs/heads/fix/scan-nil-destinations-main-sync",
-        "head": "545a8a451aa8543faf92c3c6984fb31586541adc",
-        "before": "db8c4a22f0b2e8c60f273c5e9e01669dd1050536"
-      },
-      "public": true,
-      "created_at": "2026-10-12T13:34:37Z"
-    },
-    {
-      "id": "17009039200",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "action": "closed",
-        "number": 20,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi/pulls/20",
-          "id": 4829702150,
-          "number": 20,
-          "head": {
-            "ref": "fix/scan-nil-destinations-main-sync",
-            "sha": "db8c4a22f0b2e8c60f273c5e9e01669dd1050536",
-            "repo": {
-              "id": 1413965738,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi",
-              "name": "gosqlite-ffi"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "0c525dddedc9a9b3e6c19c2e4500a12b4e89991b",
-            "repo": {
-              "id": 1413965738,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi",
-              "name": "gosqlite-ffi"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-10-12T12:57:39Z"
     }
   ],
   "releases": [
