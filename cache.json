@@ -1,5 +1,5 @@
 {
-  "ts": 1792145489969,
+  "ts": 1792162278757,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -13,11 +13,83 @@
   },
   "repos": [
     {
+      "name": "Predator",
+      "description": "Predator is a lightweight, cross platform desktop application for downloading videos and extracting audio from YouTube. It is built using Go and wails GUI framework, with go-ytdlp wrapper used as the download engine. The application focuses on simplicity, and a clean user experience .",
+      "html_url": "https://github.com/Aswanidev-vs/Predator",
+      "homepage": "",
+      "pushed_at": "2026-10-16T12:53:44Z",
+      "created_at": "2025-12-21T17:07:16Z",
+      "stargazers_count": 3,
+      "forks_count": 0,
+      "fork": false,
+      "language": "Go",
+      "primaryLanguage": {
+        "name": "Go",
+        "color": "#00ADD8"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 90222,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          },
+          {
+            "size": 12416,
+            "node": {
+              "name": "NSIS",
+              "color": null
+            }
+          },
+          {
+            "size": 51860,
+            "node": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            }
+          },
+          {
+            "size": 7941,
+            "node": {
+              "name": "Inno Setup",
+              "color": "#264b99"
+            }
+          },
+          {
+            "size": 11601,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          },
+          {
+            "size": 32894,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          },
+          {
+            "size": 4781,
+            "node": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            }
+          }
+        ]
+      },
+      "license": {
+        "spdx_id": "MIT"
+      }
+    },
+    {
       "name": "Portfolio",
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-10-16T05:51:23Z",
+      "pushed_at": "2026-10-16T10:11:31Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -918,78 +990,6 @@
         ]
       },
       "license": null
-    },
-    {
-      "name": "Predator",
-      "description": "Predator is a lightweight, cross platform desktop application for downloading videos and extracting audio from YouTube. It is built using Go and wails GUI framework, with go-ytdlp wrapper used as the download engine. The application focuses on simplicity, and a clean user experience .",
-      "html_url": "https://github.com/Aswanidev-vs/Predator",
-      "homepage": "",
-      "pushed_at": "2026-09-14T18:27:08Z",
-      "created_at": "2025-12-21T17:07:16Z",
-      "stargazers_count": 3,
-      "forks_count": 0,
-      "fork": false,
-      "language": "Go",
-      "primaryLanguage": {
-        "name": "Go",
-        "color": "#00ADD8"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 88558,
-            "node": {
-              "name": "Go",
-              "color": "#00ADD8"
-            }
-          },
-          {
-            "size": 12416,
-            "node": {
-              "name": "NSIS",
-              "color": null
-            }
-          },
-          {
-            "size": 51860,
-            "node": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            }
-          },
-          {
-            "size": 7941,
-            "node": {
-              "name": "Inno Setup",
-              "color": "#264b99"
-            }
-          },
-          {
-            "size": 11601,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 32894,
-            "node": {
-              "name": "CSS",
-              "color": "#663399"
-            }
-          },
-          {
-            "size": 4781,
-            "node": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            }
-          }
-        ]
-      },
-      "license": {
-        "spdx_id": "MIT"
-      }
     },
     {
       "name": "Aswanidev-vs",
@@ -2145,6 +2145,224 @@
     }
   ],
   "activity": [
+    {
+      "id": "24209052551",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1229892522,
+        "name": "Aswanidev-vs/gkport",
+        "url": "https://api.github.com/repos/Aswanidev-vs/gkport"
+      },
+      "payload": {
+        "repository_id": 1229892522,
+        "push_id": 46634888549,
+        "ref": "refs/heads/main",
+        "head": "69e53b3fe0204635b1a03464f344b056fdb2cec7",
+        "before": "170da5c7770e4729240f957e8c28926762d755c8"
+      },
+      "public": true,
+      "created_at": "2026-10-15T19:14:07Z"
+    },
+    {
+      "id": "17389540895",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1120654297,
+        "name": "Aswanidev-vs/Predator",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 64,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Predator/pulls/64",
+          "id": 4888598633,
+          "number": 64,
+          "head": {
+            "ref": "v10",
+            "sha": "df8e484db37a828be8fbc90a3ce797581902db97",
+            "repo": {
+              "id": 1120654297,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Predator",
+              "name": "Predator"
+            }
+          },
+          "base": {
+            "ref": "v5",
+            "sha": "81cfa8d431e1f616448bd6f6698a9477ed3e7356",
+            "repo": {
+              "id": 1120654297,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Predator",
+              "name": "Predator"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-10-16T12:48:55Z"
+    },
+    {
+      "id": "17389525039",
+      "type": "IssuesEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1120654297,
+        "name": "Aswanidev-vs/Predator",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Predator"
+      },
+      "payload": {
+        "action": "closed",
+        "issue": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Predator/issues/63",
+          "repository_url": "https://api.github.com/repos/Aswanidev-vs/Predator",
+          "labels_url": "https://api.github.com/repos/Aswanidev-vs/Predator/issues/63/labels{/name}",
+          "comments_url": "https://api.github.com/repos/Aswanidev-vs/Predator/issues/63/comments",
+          "events_url": "https://api.github.com/repos/Aswanidev-vs/Predator/issues/63/events",
+          "html_url": "https://github.com/Aswanidev-vs/Predator/issues/63",
+          "id": 5883293799,
+          "node_id": "I_kwDOQsvT2c8AAAABXqvwZw",
+          "number": 63,
+          "title": "add support to download reddit videos",
+          "user": {
+            "login": "Aswanidev-vs",
+            "id": 178192591,
+            "node_id": "U_kgDOCp8Azw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Aswanidev-vs",
+            "html_url": "https://github.com/Aswanidev-vs",
+            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
+            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
+            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
+            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
+            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 0,
+          "created_at": "2026-10-16T11:22:37Z",
+          "updated_at": "2026-10-16T12:48:38Z",
+          "closed_at": "2026-10-16T12:48:38Z",
+          "assignee": null,
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": null,
+          "reactions": {
+            "url": "https://api.github.com/repos/Aswanidev-vs/Predator/issues/63/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/Aswanidev-vs/Predator/issues/63/timeline",
+          "performed_via_github_app": null,
+          "state_reason": "completed",
+          "pinned_comment": null
+        }
+      },
+      "public": true,
+      "created_at": "2026-10-16T12:48:40Z"
+    },
+    {
+      "id": "24198697679",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1419450481,
+        "name": "Aswanidev-vs/book-tracker",
+        "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker"
+      },
+      "payload": {
+        "repository_id": 1419450481,
+        "push_id": 46628351987,
+        "ref": "refs/heads/feature",
+        "head": "c660a4d249654ccfe8381d54b4a3edb4389a033f",
+        "before": "dd977378c4705c090a05c3de62b13e5c7c8d3294"
+      },
+      "public": true,
+      "created_at": "2026-10-15T18:05:40Z"
+    },
+    {
+      "id": "24194391305",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1419450481,
+        "name": "Aswanidev-vs/book-tracker",
+        "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker"
+      },
+      "payload": {
+        "repository_id": 1419450481,
+        "push_id": 46628928981,
+        "ref": "refs/heads/main",
+        "head": "ccf9b54b85f7a8b02e0a94f41b84f2a5543e49f2",
+        "before": "3c36781a91b7e99c01ccf249e062d6ccb0025d53"
+      },
+      "public": true,
+      "created_at": "2026-10-15T18:11:40Z"
+    },
     {
       "id": "24179866028",
       "type": "PushEvent",
@@ -4926,141 +5144,15 @@
       },
       "public": true,
       "created_at": "2026-10-11T08:42:21Z"
-    },
-    {
-      "id": "23817417268",
-      "type": "CreateEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "ref": "feat/transactions-sql-driver",
-        "ref_type": "branch",
-        "full_ref": "refs/heads/feat/transactions-sql-driver",
-        "master_branch": "main",
-        "description": "Go-sqlite-ffi is an  experimental CGO-free Go binding prototype for SQLite's C API using purego.",
-        "pusher_type": "user"
-      },
-      "public": true,
-      "created_at": "2026-10-11T08:41:16Z"
-    },
-    {
-      "id": "23816015993",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 46119476119,
-        "ref": "refs/heads/feature/database-api-benchmarks",
-        "head": "1d14fdc6c0c9ec5b06ce0d2ae323267a8e32ee57",
-        "before": "805e5567fc802f256f95d9eb5c251d7f67e242b2"
-      },
-      "public": true,
-      "created_at": "2026-10-11T08:13:09Z"
-    },
-    {
-      "id": "23815175108",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 46115484290,
-        "ref": "refs/heads/feature/database-api-benchmarks",
-        "head": "4f6074f4397de67e81d5e14dcb021d83405d9ac3",
-        "before": "8cd0f3cd60772339f1ac4cbe0649aefa2a0d5817"
-      },
-      "public": true,
-      "created_at": "2026-10-11T06:56:49Z"
-    },
-    {
-      "id": "23815072522",
-      "type": "CreateEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "ref": "feature/database-api-benchmarks",
-        "ref_type": "branch",
-        "full_ref": "refs/heads/feature/database-api-benchmarks",
-        "master_branch": "main",
-        "description": "Go-sqlite-ffi is an  experimental CGO-free Go binding prototype for SQLite's C API using purego.",
-        "pusher_type": "user"
-      },
-      "public": true,
-      "created_at": "2026-10-11T06:54:53Z"
-    },
-    {
-      "id": "23814674712",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 46114994069,
-        "ref": "refs/heads/fix/pages-docs-publishing",
-        "head": "432e9be2ead1532038cef5ea1c66d1dcd0eee6c4",
-        "before": "1ad6208ba3851ec3047518a38ddc427e651739d4"
-      },
-      "public": true,
-      "created_at": "2026-10-11T06:46:47Z"
     }
   ],
   "releases": [
+    {
+      "name": "Predator",
+      "tag": "v1.3.16",
+      "date": "2026-10-16T12:51:53Z",
+      "url": "https://github.com/Aswanidev-vs/Predator/releases/tag/v1.3.16"
+    },
     {
       "name": "gkport",
       "tag": "v0.4.0",
@@ -5098,12 +5190,6 @@
       "url": "https://github.com/Aswanidev-vs/Gocut/releases/tag/v0.6.0"
     },
     {
-      "name": "Predator",
-      "tag": "v1.3.15",
-      "date": "2026-08-24T17:05:35Z",
-      "url": "https://github.com/Aswanidev-vs/Predator/releases/tag/v1.3.15"
-    },
-    {
       "name": "Akashic",
       "tag": "v0.3.0",
       "date": "2026-08-06T10:18:06Z",
@@ -5138,7 +5224,7 @@
     "Batchfile": 807,
     "CSS": 597608,
     "Dockerfile": 875,
-    "Go": 5172618,
+    "Go": 5174282,
     "Go Template": 230517,
     "HTML": 749718,
     "Hack": 1679,
