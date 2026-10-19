@@ -1,5 +1,5 @@
 {
-  "ts": 1792418677500,
+  "ts": 1792439399457,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -17,7 +17,7 @@
       "description": "Chest is a deterministic file organization and automation CLI tool built in Go. Inspired by the Minecraft chest, CHEST sorts files into compartments with reversible operations, fast concurrent search, and extensible plugin support.",
       "html_url": "https://github.com/Aswanidev-vs/Chest",
       "homepage": "https://aswanidev-vs.github.io/Chest/",
-      "pushed_at": "2026-10-19T09:36:04Z",
+      "pushed_at": "2026-10-19T14:45:50Z",
       "created_at": "2026-09-05T07:16:44Z",
       "stargazers_count": 4,
       "forks_count": 0,
@@ -37,7 +37,7 @@
             }
           },
           {
-            "size": 1324991,
+            "size": 1345947,
             "node": {
               "name": "Go",
               "color": "#00ADD8"
@@ -68,7 +68,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-10-19T06:49:53Z",
+      "pushed_at": "2026-10-19T14:04:38Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -1182,7 +1182,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Aswanidev-vs",
       "homepage": null,
-      "pushed_at": "2026-10-19T03:02:56Z",
+      "pushed_at": "2026-10-19T18:16:22Z",
       "created_at": "2025-07-06T07:36:50Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -2117,6 +2117,150 @@
     }
   ],
   "activity": [
+    {
+      "id": "24555163729",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1357931947,
+        "name": "Aswanidev-vs/Chest",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Chest"
+      },
+      "payload": {
+        "repository_id": 1357931947,
+        "push_id": 46988078536,
+        "ref": "refs/heads/feature",
+        "head": "6c6e8e98cceb35ef640bb141a3ee416f9c1571e1",
+        "before": "57c800980710dd341ca798af58bfce25fa915985"
+      },
+      "public": true,
+      "created_at": "2026-10-19T09:32:41Z"
+    },
+    {
+      "id": "24550184737",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1357931947,
+        "name": "Aswanidev-vs/Chest",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Chest"
+      },
+      "payload": {
+        "repository_id": 1357931947,
+        "push_id": 46976572209,
+        "ref": "refs/heads/feature",
+        "head": "135ef9ec24caa6e98ab60b7cde8b6b888f1b7110",
+        "before": "884ee4dd8271d64381c8ab772be3a69bcd47c9d8"
+      },
+      "public": true,
+      "created_at": "2026-10-19T07:24:21Z"
+    },
+    {
+      "id": "17621833657",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1357931947,
+        "name": "Aswanidev-vs/Chest",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Chest"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 61,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Chest/pulls/61",
+          "id": 4922788484,
+          "number": 61,
+          "head": {
+            "ref": "feature",
+            "sha": "14992554cd8e3e9d17096afe3cf2eacfff8c6bc0",
+            "repo": {
+              "id": 1357931947,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Chest",
+              "name": "Chest"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "c4410756ab7822422aae1e21034f05c78cdd0daf",
+            "repo": {
+              "id": 1357931947,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Chest",
+              "name": "Chest"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-10-19T14:45:50Z"
+    },
+    {
+      "id": "17608891291",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1357931947,
+        "name": "Aswanidev-vs/Chest",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Chest"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 61,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Chest/pulls/61",
+          "id": 4922788484,
+          "number": 61,
+          "head": {
+            "ref": "feature",
+            "sha": "14992554cd8e3e9d17096afe3cf2eacfff8c6bc0",
+            "repo": {
+              "id": 1357931947,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Chest",
+              "name": "Chest"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "c4410756ab7822422aae1e21034f05c78cdd0daf",
+            "repo": {
+              "id": 1357931947,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Chest",
+              "name": "Chest"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-10-19T14:45:11Z"
+    },
     {
       "id": "17596675700",
       "type": "IssuesEvent",
@@ -5127,138 +5271,14 @@
       },
       "public": true,
       "created_at": "2026-10-14T11:30:22Z"
-    },
-    {
-      "id": "23963124767",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 46310136545,
-        "ref": "refs/heads/main",
-        "head": "445c074c67b1c8775ebe046d93badd4b697a357e",
-        "before": "1a5cd0fd1b3b6b0fae1e1920fa8a0af8862257a4"
-      },
-      "public": true,
-      "created_at": "2026-10-13T06:13:30Z"
-    },
-    {
-      "id": "23960075430",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 46308349307,
-        "ref": "refs/heads/perf/direct-driver-row-values-20261013",
-        "head": "e793827e55b40992cd0c10ec139fbfb05d66d482",
-        "before": "e5e479c0a2916fe3f26968301915641c4c0241aa"
-      },
-      "public": true,
-      "created_at": "2026-10-13T05:48:48Z"
-    },
-    {
-      "id": "23943148031",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 46231143564,
-        "ref": "refs/heads/fix/scan-nil-destinations-main-sync",
-        "head": "db8c4a22f0b2e8c60f273c5e9e01669dd1050536",
-        "before": "302253f4eea70cc9c16ff5a3ef49239dd36087cf"
-      },
-      "public": true,
-      "created_at": "2026-10-12T12:57:29Z"
-    },
-    {
-      "id": "17167909013",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "action": "merged",
-        "number": 24,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi/pulls/24",
-          "id": 4852972183,
-          "number": 24,
-          "head": {
-            "ref": "feature/typed-sqlite-errors-20261014",
-            "sha": "f87d40ef21582d1c6e932530ba305fd50dd969e5",
-            "repo": {
-              "id": 1413965738,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi",
-              "name": "gosqlite-ffi"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "eed441d21a28b562a129a74e919052b9a700c792",
-            "repo": {
-              "id": 1413965738,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi",
-              "name": "gosqlite-ffi"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-10-14T04:39:50Z"
     }
   ],
   "releases": [
     {
       "name": "Chest",
-      "tag": "v0.8.1",
-      "date": "2026-10-19T09:37:12Z",
-      "url": "https://github.com/Aswanidev-vs/Chest/releases/tag/v0.8.1"
+      "tag": "v0.8.2",
+      "date": "2026-10-19T14:50:18Z",
+      "url": "https://github.com/Aswanidev-vs/Chest/releases/tag/v0.8.2"
     },
     {
       "name": "Predator",
@@ -5331,7 +5351,7 @@
     "Batchfile": 807,
     "CSS": 597608,
     "Dockerfile": 875,
-    "Go": 5671926,
+    "Go": 5692882,
     "Go Template": 230517,
     "HTML": 749718,
     "Hack": 1679,
