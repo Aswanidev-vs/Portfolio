@@ -1,5 +1,5 @@
 {
-  "ts": 1792585457180,
+  "ts": 1792603781312,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -17,7 +17,7 @@
       "description": "Mai is a fully offline, voice-driven AI assistant built in Go. It processes everything locally using optimized ONNX models, ensuring complete privacy and fast, customizable performance without any cloud dependency.",
       "html_url": "https://github.com/Aswanidev-vs/Mai",
       "homepage": "https://aswanidev-vs.github.io/Mai/",
-      "pushed_at": "2026-10-21T09:32:49Z",
+      "pushed_at": "2026-10-21T16:14:54Z",
       "created_at": "2026-04-25T16:27:51Z",
       "stargazers_count": 3,
       "forks_count": 0,
@@ -30,14 +30,14 @@
       "languages": {
         "edges": [
           {
-            "size": 888220,
+            "size": 917005,
             "node": {
               "name": "Go",
               "color": "#00ADD8"
             }
           },
           {
-            "size": 3033,
+            "size": 4716,
             "node": {
               "name": "Makefile",
               "color": "#427819"
@@ -51,14 +51,14 @@
             }
           },
           {
-            "size": 8515,
+            "size": 10113,
             "node": {
               "name": "HTML",
               "color": "#e34c26"
             }
           },
           {
-            "size": 175909,
+            "size": 239927,
             "node": {
               "name": "JavaScript",
               "color": "#f1e05a"
@@ -75,7 +75,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-10-21T06:38:33Z",
+      "pushed_at": "2026-10-21T12:24:18Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -1182,7 +1182,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Aswanidev-vs",
       "homepage": null,
-      "pushed_at": "2026-10-21T03:07:15Z",
+      "pushed_at": "2026-10-21T16:31:45Z",
       "created_at": "2025-07-06T07:36:50Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -2117,6 +2117,270 @@
     }
   ],
   "activity": [
+    {
+      "id": "24732736832",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1221010957,
+        "name": "Aswanidev-vs/Mai",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
+      },
+      "payload": {
+        "repository_id": 1221010957,
+        "push_id": 47097915100,
+        "ref": "refs/heads/v1",
+        "head": "abc33ca9f9a51d9bbed8923c56546814a7e9cb1d",
+        "before": "4a1fa8662b3ffa5d80d47fd18341db621ea6ceff"
+      },
+      "public": true,
+      "created_at": "2026-10-20T06:45:55Z"
+    },
+    {
+      "id": "24728222560",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1221010957,
+        "name": "Aswanidev-vs/Mai",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
+      },
+      "payload": {
+        "repository_id": 1221010957,
+        "push_id": 47282347165,
+        "ref": "refs/heads/main",
+        "head": "8476dda2aacd1a29f90a15403a5ae0d67edfb732",
+        "before": "91452ed145e83caf97e773a04cc090b8c7033380"
+      },
+      "public": true,
+      "created_at": "2026-10-21T16:14:56Z"
+    },
+    {
+      "id": "17832694606",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1221010957,
+        "name": "Aswanidev-vs/Mai",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 92,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Mai/pulls/92",
+          "id": 4954721949,
+          "number": 92,
+          "head": {
+            "ref": "v1",
+            "sha": "e3168c021f142110d8d2bc01b69fb384bc5de875",
+            "repo": {
+              "id": 1221010957,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
+              "name": "Mai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "91452ed145e83caf97e773a04cc090b8c7033380",
+            "repo": {
+              "id": 1221010957,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
+              "name": "Mai"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-10-21T16:14:54Z"
+    },
+    {
+      "id": "17832676670",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1221010957,
+        "name": "Aswanidev-vs/Mai",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 92,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Mai/pulls/92",
+          "id": 4954721949,
+          "number": 92,
+          "head": {
+            "ref": "v1",
+            "sha": "e3168c021f142110d8d2bc01b69fb384bc5de875",
+            "repo": {
+              "id": 1221010957,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
+              "name": "Mai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "91452ed145e83caf97e773a04cc090b8c7033380",
+            "repo": {
+              "id": 1221010957,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
+              "name": "Mai"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-10-21T16:14:43Z"
+    },
+    {
+      "id": "24719931037",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1357931947,
+        "name": "Aswanidev-vs/Chest",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Chest"
+      },
+      "payload": {
+        "repository_id": 1357931947,
+        "push_id": 46976719676,
+        "ref": "refs/heads/main",
+        "head": "0858cc0cb55572c7edfa7774271455dc90a823b0",
+        "before": "b259e2d496afbfe8b6a24e96e1af06481d0bcf4f"
+      },
+      "public": true,
+      "created_at": "2026-10-19T07:26:05Z"
+    },
+    {
+      "id": "17820571806",
+      "type": "IssuesEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1221010957,
+        "name": "Aswanidev-vs/Mai",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
+      },
+      "payload": {
+        "action": "closed",
+        "issue": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Mai/issues/77",
+          "repository_url": "https://api.github.com/repos/Aswanidev-vs/Mai",
+          "labels_url": "https://api.github.com/repos/Aswanidev-vs/Mai/issues/77/labels{/name}",
+          "comments_url": "https://api.github.com/repos/Aswanidev-vs/Mai/issues/77/comments",
+          "events_url": "https://api.github.com/repos/Aswanidev-vs/Mai/issues/77/events",
+          "html_url": "https://github.com/Aswanidev-vs/Mai/issues/77",
+          "id": 5496790299,
+          "node_id": "I_kwDOSMcmDc8AAAABR6JdGw",
+          "number": 77,
+          "title": "feature",
+          "user": {
+            "login": "Aswanidev-vs",
+            "id": 178192591,
+            "node_id": "U_kgDOCp8Azw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Aswanidev-vs",
+            "html_url": "https://github.com/Aswanidev-vs",
+            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
+            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
+            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
+            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
+            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "labels": [],
+          "state": "closed",
+          "locked": false,
+          "assignees": [],
+          "milestone": null,
+          "comments": 0,
+          "created_at": "2026-09-18T07:13:17Z",
+          "updated_at": "2026-10-21T14:03:03Z",
+          "closed_at": "2026-10-21T14:03:03Z",
+          "assignee": null,
+          "active_lock_reason": null,
+          "sub_issues_summary": {
+            "total": 0,
+            "completed": 0,
+            "percent_completed": 0
+          },
+          "issue_dependencies_summary": {
+            "blocked_by": 0,
+            "total_blocked_by": 0,
+            "blocking": 0,
+            "total_blocking": 0
+          },
+          "body": "new feature that if possible make mai can vrm can overlap or like pip like it caan appear on top of apps without no background the background should be the screen or the app we are currently using and for triigger that also add a new command it makefile like\nmake companion-ar or something like that",
+          "reactions": {
+            "url": "https://api.github.com/repos/Aswanidev-vs/Mai/issues/77/reactions",
+            "total_count": 0,
+            "+1": 0,
+            "-1": 0,
+            "laugh": 0,
+            "hooray": 0,
+            "confused": 0,
+            "heart": 0,
+            "rocket": 0,
+            "eyes": 0
+          },
+          "timeline_url": "https://api.github.com/repos/Aswanidev-vs/Mai/issues/77/timeline",
+          "performed_via_github_app": null,
+          "state_reason": "completed",
+          "pinned_comment": null
+        }
+      },
+      "public": true,
+      "created_at": "2026-10-21T14:03:12Z"
+    },
     {
       "id": "17801410269",
       "type": "IssuesEvent",
@@ -5303,261 +5567,6 @@
       },
       "public": true,
       "created_at": "2026-10-15T03:42:51Z"
-    },
-    {
-      "id": "24064841684",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 46548333666,
-        "ref": "refs/heads/main",
-        "head": "eb8595752f4d1b8482dd63f0b7c498f944678bbf",
-        "before": "9189fcb27ab73ae5474ca23dd1c01ce273424db4"
-      },
-      "public": true,
-      "created_at": "2026-10-15T03:40:34Z"
-    },
-    {
-      "id": "24062145169",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 46547421222,
-        "ref": "refs/heads/feature/driver-ping-validation-20261015",
-        "head": "9ea0d324710dd45ca805899abe09462d606a42c9",
-        "before": "ebec0d07374ff89f5ccf9c1a551bbee9d15b97be"
-      },
-      "public": true,
-      "created_at": "2026-10-15T03:26:44Z"
-    },
-    {
-      "id": "24061470489",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 46547445387,
-        "ref": "refs/heads/feature/driver-ping-validation-20261015",
-        "head": "2e55f8a68b4a4d8bae48fca3beaecb4b20a9189f",
-        "before": "9ea0d324710dd45ca805899abe09462d606a42c9"
-      },
-      "public": true,
-      "created_at": "2026-10-15T03:27:05Z"
-    },
-    {
-      "id": "17268650285",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "action": "merged",
-        "number": 26,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi/pulls/26",
-          "id": 4867852247,
-          "number": 26,
-          "head": {
-            "ref": "docs/matched-benchmark-results-20261015",
-            "sha": "87a716506ea45adf808bc2a48b46e434ba405171",
-            "repo": {
-              "id": 1413965738,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi",
-              "name": "gosqlite-ffi"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "eb8595752f4d1b8482dd63f0b7c498f944678bbf",
-            "repo": {
-              "id": 1413965738,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi",
-              "name": "gosqlite-ffi"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-10-15T03:52:02Z"
-    },
-    {
-      "id": "17268637511",
-      "type": "PullRequestReviewEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "review": {
-          "id": 5527814754,
-          "node_id": "PRR_kwDOVEdnqs8AAAABSXvCYg",
-          "user": {
-            "login": "Aswanidev-vs",
-            "id": 178192591,
-            "node_id": "U_kgDOCp8Azw",
-            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/Aswanidev-vs",
-            "html_url": "https://github.com/Aswanidev-vs",
-            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
-            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
-            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
-            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
-            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
-            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "body": ".",
-          "commit_id": "87a716506ea45adf808bc2a48b46e434ba405171",
-          "state": "commented",
-          "html_url": "https://github.com/Aswanidev-vs/gosqlite-ffi/pull/26#pullrequestreview-5527814754",
-          "pull_request_url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi/pulls/26",
-          "_links": {
-            "html": {
-              "href": "https://github.com/Aswanidev-vs/gosqlite-ffi/pull/26#pullrequestreview-5527814754"
-            },
-            "pull_request": {
-              "href": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi/pulls/26"
-            }
-          },
-          "submitted_at": "2026-10-15T03:51:45Z",
-          "updated_at": "2026-10-15T03:51:45Z"
-        },
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi/pulls/26",
-          "id": 4867852247,
-          "number": 26,
-          "head": {
-            "ref": "docs/matched-benchmark-results-20261015",
-            "sha": "87a716506ea45adf808bc2a48b46e434ba405171",
-            "repo": {
-              "id": 1413965738,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi",
-              "name": "gosqlite-ffi"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "eb8595752f4d1b8482dd63f0b7c498f944678bbf",
-            "repo": {
-              "id": 1413965738,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi",
-              "name": "gosqlite-ffi"
-            }
-          }
-        },
-        "action": "created"
-      },
-      "public": true,
-      "created_at": "2026-10-15T03:51:47Z"
-    },
-    {
-      "id": "17268216305",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "action": "opened",
-        "number": 26,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi/pulls/26",
-          "id": 4867852247,
-          "number": 26,
-          "head": {
-            "ref": "docs/matched-benchmark-results-20261015",
-            "sha": "87a716506ea45adf808bc2a48b46e434ba405171",
-            "repo": {
-              "id": 1413965738,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi",
-              "name": "gosqlite-ffi"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "eb8595752f4d1b8482dd63f0b7c498f944678bbf",
-            "repo": {
-              "id": 1413965738,
-              "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi",
-              "name": "gosqlite-ffi"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-10-15T03:42:36Z"
     }
   ],
   "releases": [
@@ -5638,15 +5647,15 @@
     "Batchfile": 807,
     "CSS": 597608,
     "Dockerfile": 875,
-    "Go": 5716890,
+    "Go": 5745675,
     "Go Template": 230517,
-    "HTML": 749718,
+    "HTML": 751316,
     "Hack": 1679,
     "Inno Setup": 11192,
     "Java": 274119,
-    "JavaScript": 1248839,
+    "JavaScript": 1312857,
     "Lua": 2388,
-    "Makefile": 5851,
+    "Makefile": 7534,
     "NSIS": 77334,
     "Objective-C": 2148,
     "PHP": 74586,
