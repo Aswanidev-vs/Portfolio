@@ -1,5 +1,5 @@
 {
-  "ts": 1792825859017,
+  "ts": 1792843188107,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -13,11 +13,69 @@
   },
   "repos": [
     {
+      "name": "Mai",
+      "description": "Mai is a fully offline, voice-driven AI assistant built in Go. It processes everything locally using optimized ONNX models, ensuring complete privacy and fast, customizable performance without any cloud dependency.",
+      "html_url": "https://github.com/Aswanidev-vs/Mai",
+      "homepage": "https://aswanidev-vs.github.io/Mai/",
+      "pushed_at": "2026-10-24T09:47:54Z",
+      "created_at": "2026-04-25T16:27:51Z",
+      "stargazers_count": 3,
+      "forks_count": 0,
+      "fork": false,
+      "language": "Go",
+      "primaryLanguage": {
+        "name": "Go",
+        "color": "#00ADD8"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 1000177,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          },
+          {
+            "size": 4716,
+            "node": {
+              "name": "Makefile",
+              "color": "#427819"
+            }
+          },
+          {
+            "size": 12753,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          },
+          {
+            "size": 10113,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          },
+          {
+            "size": 259235,
+            "node": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            }
+          }
+        ]
+      },
+      "license": {
+        "spdx_id": "MIT"
+      }
+    },
+    {
       "name": "Portfolio",
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-10-24T02:01:36Z",
+      "pushed_at": "2026-10-24T07:11:00Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -197,64 +255,6 @@
             "node": {
               "name": "Vue",
               "color": "#41b883"
-            }
-          }
-        ]
-      },
-      "license": {
-        "spdx_id": "MIT"
-      }
-    },
-    {
-      "name": "Mai",
-      "description": "Mai is a fully offline, voice-driven AI assistant built in Go. It processes everything locally using optimized ONNX models, ensuring complete privacy and fast, customizable performance without any cloud dependency.",
-      "html_url": "https://github.com/Aswanidev-vs/Mai",
-      "homepage": "https://aswanidev-vs.github.io/Mai/",
-      "pushed_at": "2026-10-23T13:38:04Z",
-      "created_at": "2026-04-25T16:27:51Z",
-      "stargazers_count": 3,
-      "forks_count": 0,
-      "fork": false,
-      "language": "Go",
-      "primaryLanguage": {
-        "name": "Go",
-        "color": "#00ADD8"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 973272,
-            "node": {
-              "name": "Go",
-              "color": "#00ADD8"
-            }
-          },
-          {
-            "size": 4716,
-            "node": {
-              "name": "Makefile",
-              "color": "#427819"
-            }
-          },
-          {
-            "size": 12753,
-            "node": {
-              "name": "CSS",
-              "color": "#663399"
-            }
-          },
-          {
-            "size": 10113,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 259235,
-            "node": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
             }
           }
         ]
@@ -2117,6 +2117,52 @@
     }
   ],
   "activity": [
+    {
+      "id": "18096885162",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1221010957,
+        "name": "Aswanidev-vs/Mai",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 94,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Mai/pulls/94",
+          "id": 4983481049,
+          "number": 94,
+          "head": {
+            "ref": "v1",
+            "sha": "62574de2fd69b05a4f7c656b5aa181dd3c8652b1",
+            "repo": {
+              "id": 1221010957,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
+              "name": "Mai"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "3633167c3fda730df40bda2ffa4366fc9842f88a",
+            "repo": {
+              "id": 1221010957,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
+              "name": "Mai"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-10-24T09:47:54Z"
+    },
     {
       "id": "24951762448",
       "type": "PushEvent",
@@ -6093,32 +6139,6 @@
       },
       "public": true,
       "created_at": "2026-10-15T03:42:29Z"
-    },
-    {
-      "id": "24167766343",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 46547410940,
-        "ref": "refs/heads/feature/driver-ping-validation-20261015",
-        "head": "ebec0d07374ff89f5ccf9c1a551bbee9d15b97be",
-        "before": "9189fcb27ab73ae5474ca23dd1c01ce273424db4"
-      },
-      "public": true,
-      "created_at": "2026-10-15T03:26:34Z"
     }
   ],
   "releases": [
@@ -6199,7 +6219,7 @@
     "Batchfile": 807,
     "CSS": 597608,
     "Dockerfile": 875,
-    "Go": 5801942,
+    "Go": 5828847,
     "Go Template": 230517,
     "HTML": 751316,
     "Hack": 1679,
