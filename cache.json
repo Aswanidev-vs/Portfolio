@@ -1,5 +1,5 @@
 {
-  "ts": 1793408299864,
+  "ts": 1793429356931,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -13,11 +13,111 @@
   },
   "repos": [
     {
+      "name": "Gocut",
+      "description": "Gocut is a fast, lightweight, fully offline video editor for the desktop. Built with a Go backend (Wails) and Vue 3 frontend, it offers a multi-track timeline and other features without uploading footage to the cloud.",
+      "html_url": "https://github.com/Aswanidev-vs/Gocut",
+      "homepage": "",
+      "pushed_at": "2026-10-31T06:47:04Z",
+      "created_at": "2026-06-03T11:10:16Z",
+      "stargazers_count": 9,
+      "forks_count": 0,
+      "fork": false,
+      "language": "Vue",
+      "primaryLanguage": {
+        "name": "Vue",
+        "color": "#41b883"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 13156,
+            "node": {
+              "name": "NSIS",
+              "color": null
+            }
+          },
+          {
+            "size": 274,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          },
+          {
+            "size": 144318,
+            "node": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            }
+          },
+          {
+            "size": 453876,
+            "node": {
+              "name": "Vue",
+              "color": "#41b883"
+            }
+          },
+          {
+            "size": 650,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          },
+          {
+            "size": 23588,
+            "node": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            }
+          },
+          {
+            "size": 169633,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          }
+        ]
+      },
+      "license": {
+        "spdx_id": "AGPL-3.0"
+      }
+    },
+    {
+      "name": "mai-companion",
+      "description": "The mai-companion repository is a calm, intelligent GitHub companion built with Cloudflare Workers and TypeScript that automatically reviews issues, pull requests, and discussions using the Google Gemini API.",
+      "html_url": "https://github.com/Aswanidev-vs/mai-companion",
+      "homepage": "https://aswanidev-vs.github.io/mai-companion/",
+      "pushed_at": "2026-10-31T06:45:57Z",
+      "created_at": "2026-07-10T20:04:25Z",
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "fork": false,
+      "language": "TypeScript",
+      "primaryLanguage": {
+        "name": "TypeScript",
+        "color": "#3178c6"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 33805,
+            "node": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
+    {
       "name": "Portfolio",
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-10-30T21:28:25Z",
+      "pushed_at": "2026-10-31T00:58:20Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -345,78 +445,6 @@
       }
     },
     {
-      "name": "Gocut",
-      "description": "Gocut is a fast, lightweight, fully offline video editor for the desktop. Built with a Go backend (Wails) and Vue 3 frontend, it offers a multi-track timeline and other features without uploading footage to the cloud.",
-      "html_url": "https://github.com/Aswanidev-vs/Gocut",
-      "homepage": "",
-      "pushed_at": "2026-10-23T01:49:07Z",
-      "created_at": "2026-06-03T11:10:16Z",
-      "stargazers_count": 9,
-      "forks_count": 0,
-      "fork": false,
-      "language": "Vue",
-      "primaryLanguage": {
-        "name": "Vue",
-        "color": "#41b883"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 13156,
-            "node": {
-              "name": "NSIS",
-              "color": null
-            }
-          },
-          {
-            "size": 274,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 144318,
-            "node": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            }
-          },
-          {
-            "size": 453876,
-            "node": {
-              "name": "Vue",
-              "color": "#41b883"
-            }
-          },
-          {
-            "size": 650,
-            "node": {
-              "name": "CSS",
-              "color": "#663399"
-            }
-          },
-          {
-            "size": 23588,
-            "node": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            }
-          },
-          {
-            "size": 169633,
-            "node": {
-              "name": "Go",
-              "color": "#00ADD8"
-            }
-          }
-        ]
-      },
-      "license": {
-        "spdx_id": "AGPL-3.0"
-      }
-    },
-    {
       "name": "light",
       "description": "Light is a zero-config, cross-platform file-sharing tool for local networks. Built with Go and Vue 3, it uses UDP beacons for instant device discovery and QR codes for secure pairing. Transfer files instantly with real-time progress, checksum verification, and a privacy-first design. No internet required.",
       "html_url": "https://github.com/Aswanidev-vs/light",
@@ -637,7 +665,7 @@
       "description": "Miku is a feature-rich, native Android application for tracking anime and manga on AniList. Built with Wails 3, it combines a high-performance Go backend with a Vue 3 frontend to deliver a smooth experience.",
       "html_url": "https://github.com/Aswanidev-vs/Miku",
       "homepage": "https://aswanidev-vs.github.io/Miku/",
-      "pushed_at": "2026-10-24T01:42:41Z",
+      "pushed_at": "2026-10-31T01:42:53Z",
       "created_at": "2026-07-11T18:58:55Z",
       "stargazers_count": 2,
       "forks_count": 0,
@@ -1059,34 +1087,6 @@
       "license": null
     },
     {
-      "name": "mai-companion",
-      "description": "The mai-companion repository is a calm, intelligent GitHub companion built with Cloudflare Workers and TypeScript that automatically reviews issues, pull requests, and discussions using the Google Gemini API.",
-      "html_url": "https://github.com/Aswanidev-vs/mai-companion",
-      "homepage": "https://aswanidev-vs.github.io/mai-companion/",
-      "pushed_at": "2026-10-01T18:31:08Z",
-      "created_at": "2026-07-10T20:04:25Z",
-      "stargazers_count": 0,
-      "forks_count": 0,
-      "fork": false,
-      "language": "TypeScript",
-      "primaryLanguage": {
-        "name": "TypeScript",
-        "color": "#3178c6"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 33805,
-            "node": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            }
-          }
-        ]
-      },
-      "license": null
-    },
-    {
       "name": "panda-editor",
       "description": "A modern Terminal User Interface (TUI) text editor written entirely in Go. ",
       "html_url": "https://github.com/Aswanidev-vs/panda-editor",
@@ -1182,7 +1182,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Aswanidev-vs",
       "homepage": null,
-      "pushed_at": "2026-10-30T17:39:40Z",
+      "pushed_at": "2026-10-31T03:52:35Z",
       "created_at": "2025-07-06T07:36:50Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -2117,6 +2117,28 @@
     }
   ],
   "activity": [
+    {
+      "id": "18737442167",
+      "type": "WatchEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1438623288,
+        "name": "heydamir/unslop",
+        "url": "https://api.github.com/repos/heydamir/unslop"
+      },
+      "payload": {
+        "action": "started"
+      },
+      "public": true,
+      "created_at": "2026-10-31T06:45:04Z"
+    },
     {
       "id": "25219663950",
       "type": "PushEvent",
@@ -6112,32 +6134,6 @@
       },
       "public": true,
       "created_at": "2026-10-16T12:48:40Z"
-    },
-    {
-      "id": "24198697679",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1419450481,
-        "name": "Aswanidev-vs/book-tracker",
-        "url": "https://api.github.com/repos/Aswanidev-vs/book-tracker"
-      },
-      "payload": {
-        "repository_id": 1419450481,
-        "push_id": 46628351987,
-        "ref": "refs/heads/feature",
-        "head": "c660a4d249654ccfe8381d54b4a3edb4389a033f",
-        "before": "dd977378c4705c090a05c3de62b13e5c7c8d3294"
-      },
-      "public": true,
-      "created_at": "2026-10-15T18:05:40Z"
     }
   ],
   "releases": [
