@@ -1,5 +1,5 @@
 {
-  "ts": 1793655944205,
+  "ts": 1793675123463,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -12,6 +12,34 @@
     "total_repos": 44
   },
   "repos": [
+    {
+      "name": "Portfolio",
+      "description": null,
+      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
+      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
+      "pushed_at": "2026-11-02T21:45:45Z",
+      "created_at": "2025-09-03T16:31:24Z",
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "fork": false,
+      "language": "HTML",
+      "primaryLanguage": {
+        "name": "HTML",
+        "color": "#e34c26"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 57690,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
     {
       "name": "Miku",
       "description": "Miku is a feature-rich, native Android application for tracking anime and manga on AniList. Built with Wails 3, it combines a high-performance Go backend with a Vue 3 frontend to deliver a smooth experience.",
@@ -104,34 +132,6 @@
       "license": {
         "spdx_id": "MIT"
       }
-    },
-    {
-      "name": "Portfolio",
-      "description": null,
-      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
-      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-11-02T12:15:56Z",
-      "created_at": "2025-09-03T16:31:24Z",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "fork": false,
-      "language": "HTML",
-      "primaryLanguage": {
-        "name": "HTML",
-        "color": "#e34c26"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 57690,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          }
-        ]
-      },
-      "license": null
     },
     {
       "name": "book-tracker",
@@ -2117,6 +2117,163 @@
     }
   ],
   "activity": [
+    {
+      "id": "25992782509",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "repository_id": 1297710346,
+        "push_id": 48561226269,
+        "ref": "refs/heads/main",
+        "head": "ab5aaa8d73159ade37aa63d92076fd85027bf0c6",
+        "before": "12b3e75a1565d2380d346ba0a0c55646dbcb71f2"
+      },
+      "public": true,
+      "created_at": "2026-11-01T10:11:17Z"
+    },
+    {
+      "id": "25983390146",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "repository_id": 1297710346,
+        "push_id": 48561035230,
+        "ref": "refs/heads/fix/dependabot-security-updates",
+        "head": "a3b11e0862d5616be0c807bd330cd6de6cf326ba",
+        "before": "12b3e75a1565d2380d346ba0a0c55646dbcb71f2"
+      },
+      "public": true,
+      "created_at": "2026-11-01T10:08:26Z"
+    },
+    {
+      "id": "25980214671",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1229892522,
+        "name": "Aswanidev-vs/gkport",
+        "url": "https://api.github.com/repos/Aswanidev-vs/gkport"
+      },
+      "payload": {
+        "repository_id": 1229892522,
+        "push_id": 48578087225,
+        "ref": "refs/heads/main",
+        "head": "154cef9d5a1a301155b4e3b158c8440ce4729cde",
+        "before": "69e53b3fe0204635b1a03464f344b056fdb2cec7"
+      },
+      "public": true,
+      "created_at": "2026-11-01T14:11:44Z"
+    },
+    {
+      "id": "25977254854",
+      "type": "CreateEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "ref": "fix/dependabot-security-updates",
+        "ref_type": "branch",
+        "full_ref": "refs/heads/fix/dependabot-security-updates",
+        "master_branch": "main",
+        "description": "Miku is a feature-rich, native Android application for tracking anime and manga on AniList. Built with Wails 3, it combines a high-performance Go backend with a Vue 3 frontend to deliver a smooth experience.",
+        "pusher_type": "user"
+      },
+      "public": true,
+      "created_at": "2026-11-01T10:06:12Z"
+    },
+    {
+      "id": "25977168138",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1395387247,
+        "name": "Aswanidev-vs/mimo-skills",
+        "url": "https://api.github.com/repos/Aswanidev-vs/mimo-skills"
+      },
+      "payload": {
+        "repository_id": 1395387247,
+        "push_id": 48578172471,
+        "ref": "refs/heads/main",
+        "head": "958f7f87d51f630b3238588d6076e12423204e6e",
+        "before": "8cea0a9fb01eaccdbc4eeb7d4900c4d1d1fc45d7"
+      },
+      "public": true,
+      "created_at": "2026-11-01T14:12:52Z"
+    },
+    {
+      "id": "25976961466",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "repository_id": 1297710346,
+        "push_id": 48560586438,
+        "ref": "refs/heads/main",
+        "head": "12b3e75a1565d2380d346ba0a0c55646dbcb71f2",
+        "before": "2df47cf1aceebb4399e0a9231bac68d3dbbaf3ab"
+      },
+      "public": true,
+      "created_at": "2026-11-01T10:01:47Z"
+    },
     {
       "id": "18915227808",
       "type": "IssuesEvent",
@@ -7142,269 +7299,6 @@
       },
       "public": true,
       "created_at": "2026-10-20T05:49:03Z"
-    },
-    {
-      "id": "17665827409",
-      "type": "IssuesEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1357931947,
-        "name": "Aswanidev-vs/Chest",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Chest"
-      },
-      "payload": {
-        "action": "closed",
-        "issue": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Chest/issues/60",
-          "repository_url": "https://api.github.com/repos/Aswanidev-vs/Chest",
-          "labels_url": "https://api.github.com/repos/Aswanidev-vs/Chest/issues/60/labels{/name}",
-          "comments_url": "https://api.github.com/repos/Aswanidev-vs/Chest/issues/60/comments",
-          "events_url": "https://api.github.com/repos/Aswanidev-vs/Chest/issues/60/events",
-          "html_url": "https://github.com/Aswanidev-vs/Chest/issues/60",
-          "id": 5921549687,
-          "node_id": "I_kwDOUPBlq88AAAABYPOtdw",
-          "number": 60,
-          "title": "add a flag for tree which is the give except or avoid",
-          "user": {
-            "login": "Aswanidev-vs",
-            "id": 178192591,
-            "node_id": "U_kgDOCp8Azw",
-            "avatar_url": "https://avatars.githubusercontent.com/u/178192591?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/Aswanidev-vs",
-            "html_url": "https://github.com/Aswanidev-vs",
-            "followers_url": "https://api.github.com/users/Aswanidev-vs/followers",
-            "following_url": "https://api.github.com/users/Aswanidev-vs/following{/other_user}",
-            "gists_url": "https://api.github.com/users/Aswanidev-vs/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/Aswanidev-vs/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/Aswanidev-vs/subscriptions",
-            "organizations_url": "https://api.github.com/users/Aswanidev-vs/orgs",
-            "repos_url": "https://api.github.com/users/Aswanidev-vs/repos",
-            "events_url": "https://api.github.com/users/Aswanidev-vs/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/Aswanidev-vs/received_events",
-            "type": "User",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "labels": [],
-          "state": "closed",
-          "locked": false,
-          "assignees": [],
-          "milestone": null,
-          "comments": 0,
-          "created_at": "2026-10-19T09:44:27Z",
-          "updated_at": "2026-10-20T02:03:56Z",
-          "closed_at": "2026-10-20T02:03:56Z",
-          "assignee": null,
-          "active_lock_reason": null,
-          "sub_issues_summary": {
-            "total": 0,
-            "completed": 0,
-            "percent_completed": 0
-          },
-          "issue_dependencies_summary": {
-            "blocked_by": 0,
-            "total_blocked_by": 0,
-            "blocking": 0,
-            "total_blocking": 0
-          },
-          "body": "add a flag for tree which is the give except or avoid like folder or files \n\nchest flag  ./ --exclude .gitignore \n\nor like \nchest flag ./ --exclude node_modules \n\nalso make this muliple argument support like \nchest flag ./ --exclude node_modules .mimocode .gitignore .testing\n\n\ncan you make it by default .git exclude as implicity so user dont need to always add that as argument and also add 3 new flag where user can use --implict to add files and folder so next run it automatically exclude .same for --explicit to when useer can explicitly show the files and sub folder and others even though they are implicit and alsoo add a new flag where user can remove the file and folder mentioned on either of those flags ",
-          "reactions": {
-            "url": "https://api.github.com/repos/Aswanidev-vs/Chest/issues/60/reactions",
-            "total_count": 0,
-            "+1": 0,
-            "-1": 0,
-            "laugh": 0,
-            "hooray": 0,
-            "confused": 0,
-            "heart": 0,
-            "rocket": 0,
-            "eyes": 0
-          },
-          "timeline_url": "https://api.github.com/repos/Aswanidev-vs/Chest/issues/60/timeline",
-          "performed_via_github_app": null,
-          "state_reason": "completed",
-          "pinned_comment": null
-        }
-      },
-      "public": true,
-      "created_at": "2026-10-20T02:03:58Z"
-    },
-    {
-      "id": "24561172791",
-      "type": "DeleteEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1357931947,
-        "name": "Aswanidev-vs/Chest",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Chest"
-      },
-      "payload": {
-        "ref": "v0.8.1",
-        "ref_type": "tag",
-        "full_ref": "refs/tags/v0.8.1",
-        "pusher_type": "user"
-      },
-      "public": true,
-      "created_at": "2026-10-19T09:29:05Z"
-    },
-    {
-      "id": "24555163729",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1357931947,
-        "name": "Aswanidev-vs/Chest",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Chest"
-      },
-      "payload": {
-        "repository_id": 1357931947,
-        "push_id": 46988078536,
-        "ref": "refs/heads/feature",
-        "head": "6c6e8e98cceb35ef640bb141a3ee416f9c1571e1",
-        "before": "57c800980710dd341ca798af58bfce25fa915985"
-      },
-      "public": true,
-      "created_at": "2026-10-19T09:32:41Z"
-    },
-    {
-      "id": "24550184737",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1357931947,
-        "name": "Aswanidev-vs/Chest",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Chest"
-      },
-      "payload": {
-        "repository_id": 1357931947,
-        "push_id": 46976572209,
-        "ref": "refs/heads/feature",
-        "head": "135ef9ec24caa6e98ab60b7cde8b6b888f1b7110",
-        "before": "884ee4dd8271d64381c8ab772be3a69bcd47c9d8"
-      },
-      "public": true,
-      "created_at": "2026-10-19T07:24:21Z"
-    },
-    {
-      "id": "17621833657",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1357931947,
-        "name": "Aswanidev-vs/Chest",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Chest"
-      },
-      "payload": {
-        "action": "merged",
-        "number": 61,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Chest/pulls/61",
-          "id": 4922788484,
-          "number": 61,
-          "head": {
-            "ref": "feature",
-            "sha": "14992554cd8e3e9d17096afe3cf2eacfff8c6bc0",
-            "repo": {
-              "id": 1357931947,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Chest",
-              "name": "Chest"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "c4410756ab7822422aae1e21034f05c78cdd0daf",
-            "repo": {
-              "id": 1357931947,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Chest",
-              "name": "Chest"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-10-19T14:45:50Z"
-    },
-    {
-      "id": "17608891291",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1357931947,
-        "name": "Aswanidev-vs/Chest",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Chest"
-      },
-      "payload": {
-        "action": "opened",
-        "number": 61,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Chest/pulls/61",
-          "id": 4922788484,
-          "number": 61,
-          "head": {
-            "ref": "feature",
-            "sha": "14992554cd8e3e9d17096afe3cf2eacfff8c6bc0",
-            "repo": {
-              "id": 1357931947,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Chest",
-              "name": "Chest"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "c4410756ab7822422aae1e21034f05c78cdd0daf",
-            "repo": {
-              "id": 1357931947,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Chest",
-              "name": "Chest"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-10-19T14:45:11Z"
     }
   ],
   "releases": [
