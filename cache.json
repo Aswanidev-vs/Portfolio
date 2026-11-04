@@ -1,5 +1,5 @@
 {
-  "ts": 1793789128586,
+  "ts": 1793816086921,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -12,6 +12,106 @@
     "total_repos": 44
   },
   "repos": [
+    {
+      "name": "Gocut",
+      "description": "Gocut is a fast, lightweight, fully offline video editor for the desktop. Built with a Go backend (Wails) and Vue 3 frontend, it offers a multi-track timeline and other features without uploading footage to the cloud.",
+      "html_url": "https://github.com/Aswanidev-vs/Gocut",
+      "homepage": "",
+      "pushed_at": "2026-11-04T13:33:17Z",
+      "created_at": "2026-06-03T11:10:16Z",
+      "stargazers_count": 10,
+      "forks_count": 0,
+      "fork": false,
+      "language": "Vue",
+      "primaryLanguage": {
+        "name": "Vue",
+        "color": "#41b883"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 13156,
+            "node": {
+              "name": "NSIS",
+              "color": null
+            }
+          },
+          {
+            "size": 274,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          },
+          {
+            "size": 144318,
+            "node": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            }
+          },
+          {
+            "size": 453876,
+            "node": {
+              "name": "Vue",
+              "color": "#41b883"
+            }
+          },
+          {
+            "size": 650,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          },
+          {
+            "size": 23588,
+            "node": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            }
+          },
+          {
+            "size": 169633,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          }
+        ]
+      },
+      "license": {
+        "spdx_id": "AGPL-3.0"
+      }
+    },
+    {
+      "name": "Portfolio",
+      "description": null,
+      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
+      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
+      "pushed_at": "2026-11-04T10:45:40Z",
+      "created_at": "2025-09-03T16:31:24Z",
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "fork": false,
+      "language": "HTML",
+      "primaryLanguage": {
+        "name": "HTML",
+        "color": "#e34c26"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 57690,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
     {
       "name": "AnimeArchive",
       "description": null,
@@ -69,34 +169,6 @@
             "node": {
               "name": "JavaScript",
               "color": "#f1e05a"
-            }
-          }
-        ]
-      },
-      "license": null
-    },
-    {
-      "name": "Portfolio",
-      "description": null,
-      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
-      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-11-04T03:01:26Z",
-      "created_at": "2025-09-03T16:31:24Z",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "fork": false,
-      "language": "HTML",
-      "primaryLanguage": {
-        "name": "HTML",
-        "color": "#e34c26"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 57690,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
             }
           }
         ]
@@ -554,78 +626,6 @@
       },
       "license": {
         "spdx_id": "GPL-3.0"
-      }
-    },
-    {
-      "name": "Gocut",
-      "description": "Gocut is a fast, lightweight, fully offline video editor for the desktop. Built with a Go backend (Wails) and Vue 3 frontend, it offers a multi-track timeline and other features without uploading footage to the cloud.",
-      "html_url": "https://github.com/Aswanidev-vs/Gocut",
-      "homepage": "",
-      "pushed_at": "2026-10-31T16:24:56Z",
-      "created_at": "2026-06-03T11:10:16Z",
-      "stargazers_count": 9,
-      "forks_count": 0,
-      "fork": false,
-      "language": "Vue",
-      "primaryLanguage": {
-        "name": "Vue",
-        "color": "#41b883"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 13156,
-            "node": {
-              "name": "NSIS",
-              "color": null
-            }
-          },
-          {
-            "size": 274,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 144318,
-            "node": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            }
-          },
-          {
-            "size": 453876,
-            "node": {
-              "name": "Vue",
-              "color": "#41b883"
-            }
-          },
-          {
-            "size": 650,
-            "node": {
-              "name": "CSS",
-              "color": "#663399"
-            }
-          },
-          {
-            "size": 23588,
-            "node": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            }
-          },
-          {
-            "size": 169633,
-            "node": {
-              "name": "Go",
-              "color": "#00ADD8"
-            }
-          }
-        ]
-      },
-      "license": {
-        "spdx_id": "AGPL-3.0"
       }
     },
     {
@@ -2117,6 +2117,162 @@
     }
   ],
   "activity": [
+    {
+      "id": "26149038252",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "repository_id": 1297710346,
+        "push_id": 48719470390,
+        "ref": "refs/heads/develop",
+        "head": "ebb9561b26a491e49f608e0b9ee35f0607e36ede",
+        "before": "0d0547838929312e5adb08b75a787f7dfec62767"
+      },
+      "public": true,
+      "created_at": "2026-11-02T17:24:37Z"
+    },
+    {
+      "id": "26141784951",
+      "type": "DeleteEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "ref": "v0.13.0",
+        "ref_type": "tag",
+        "full_ref": "refs/tags/v0.13.0",
+        "pusher_type": "user"
+      },
+      "public": true,
+      "created_at": "2026-11-02T16:19:00Z"
+    },
+    {
+      "id": "26134617599",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1390179877,
+        "name": "Aswanidev-vs/AnimeArchive",
+        "url": "https://api.github.com/repos/Aswanidev-vs/AnimeArchive"
+      },
+      "payload": {
+        "repository_id": 1390179877,
+        "push_id": 48943103020,
+        "ref": "refs/heads/main",
+        "head": "816a963a9362594b473e9992a46c94c13600ff3c",
+        "before": "6d4f4f0e4e09639e9f2a03041d54eceb91699be9"
+      },
+      "public": true,
+      "created_at": "2026-11-04T08:45:22Z"
+    },
+    {
+      "id": "26134604503",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1390179877,
+        "name": "Aswanidev-vs/AnimeArchive",
+        "url": "https://api.github.com/repos/Aswanidev-vs/AnimeArchive"
+      },
+      "payload": {
+        "repository_id": 1390179877,
+        "push_id": 48943089119,
+        "ref": "refs/heads/dependabot/npm_and_yarn/multi-f90e8c6475",
+        "head": "efecd2c0baac5eb2636b1fb06fa12197af6e7fcf",
+        "before": "3ced992ffcb399e26c141459193a3eca730d9ccd"
+      },
+      "public": true,
+      "created_at": "2026-11-04T08:45:13Z"
+    },
+    {
+      "id": "26133083717",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "repository_id": 1297710346,
+        "push_id": 48712436706,
+        "ref": "refs/heads/develop",
+        "head": "9af886bea98046aff6233778ebc243409eaa03c7",
+        "before": "d7f83d195f241c324997b54dd8b321876ce5c9f3"
+      },
+      "public": true,
+      "created_at": "2026-11-02T16:22:13Z"
+    },
+    {
+      "id": "26132068420",
+      "type": "CreateEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1297710346,
+        "name": "Aswanidev-vs/Miku",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
+      },
+      "payload": {
+        "ref": "fix/minimatch-dependabot",
+        "ref_type": "branch",
+        "full_ref": "refs/heads/fix/minimatch-dependabot",
+        "master_branch": "main",
+        "description": "Miku is a feature-rich, native Android application for tracking anime and manga on AniList. Built with Wails 3, it combines a high-performance Go backend with a Vue 3 frontend to deliver a smooth experience.",
+        "pusher_type": "user"
+      },
+      "public": true,
+      "created_at": "2026-11-02T16:29:38Z"
+    },
     {
       "id": "26126579133",
       "type": "PushEvent",
@@ -6903,205 +7059,6 @@
       },
       "public": true,
       "created_at": "2026-10-22T11:29:47Z"
-    },
-    {
-      "id": "17905251618",
-      "type": "WatchEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1173725696,
-        "name": "codacy/codacy-skills",
-        "url": "https://api.github.com/repos/codacy/codacy-skills"
-      },
-      "payload": {
-        "action": "started"
-      },
-      "public": true,
-      "created_at": "2026-10-22T10:43:34Z",
-      "org": {
-        "id": 1834093,
-        "login": "codacy",
-        "gravatar_id": "",
-        "url": "https://api.github.com/orgs/codacy",
-        "avatar_url": "https://avatars.githubusercontent.com/u/1834093?"
-      }
-    },
-    {
-      "id": "17904256809",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "action": "opened",
-        "number": 93,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Mai/pulls/93",
-          "id": 4965907176,
-          "number": 93,
-          "head": {
-            "ref": "v1",
-            "sha": "51eda8ad2e4d27d0c8845e5a639646671726f091",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "8476dda2aacd1a29f90a15403a5ae0d67edfb732",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-10-22T10:29:47Z"
-    },
-    {
-      "id": "24793516695",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "repository_id": 1221010957,
-        "push_id": 47240407909,
-        "ref": "refs/heads/main",
-        "head": "91452ed145e83caf97e773a04cc090b8c7033380",
-        "before": "c40bad92d605b044ebef6da230caf449aca5ce4d"
-      },
-      "public": true,
-      "created_at": "2026-10-21T09:32:43Z"
-    },
-    {
-      "id": "24732736832",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "repository_id": 1221010957,
-        "push_id": 47097915100,
-        "ref": "refs/heads/v1",
-        "head": "abc33ca9f9a51d9bbed8923c56546814a7e9cb1d",
-        "before": "4a1fa8662b3ffa5d80d47fd18341db621ea6ceff"
-      },
-      "public": true,
-      "created_at": "2026-10-20T06:45:55Z"
-    },
-    {
-      "id": "24728222560",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "repository_id": 1221010957,
-        "push_id": 47282347165,
-        "ref": "refs/heads/main",
-        "head": "8476dda2aacd1a29f90a15403a5ae0d67edfb732",
-        "before": "91452ed145e83caf97e773a04cc090b8c7033380"
-      },
-      "public": true,
-      "created_at": "2026-10-21T16:14:56Z"
-    },
-    {
-      "id": "17832694606",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1221010957,
-        "name": "Aswanidev-vs/Mai",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Mai"
-      },
-      "payload": {
-        "action": "merged",
-        "number": 92,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Mai/pulls/92",
-          "id": 4954721949,
-          "number": 92,
-          "head": {
-            "ref": "v1",
-            "sha": "e3168c021f142110d8d2bc01b69fb384bc5de875",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "91452ed145e83caf97e773a04cc090b8c7033380",
-            "repo": {
-              "id": 1221010957,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Mai",
-              "name": "Mai"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-10-21T16:14:54Z"
     }
   ],
   "releases": [
