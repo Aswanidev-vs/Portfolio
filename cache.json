@@ -1,5 +1,5 @@
 {
-  "ts": 1794052584169,
+  "ts": 1794072588219,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -12,6 +12,76 @@
     "total_repos": 44
   },
   "repos": [
+    {
+      "name": "AnimeArchive",
+      "description": "A premium, private anime screenshot archive built with Nuxt 4. Preserve moments, organise memories, and revisit frames with collaborative collections.",
+      "html_url": "https://github.com/Aswanidev-vs/AnimeArchive",
+      "homepage": "",
+      "pushed_at": "2026-11-07T13:32:59Z",
+      "created_at": "2026-09-27T05:23:24Z",
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "fork": false,
+      "language": "Vue",
+      "primaryLanguage": {
+        "name": "Vue",
+        "color": "#41b883"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 79288,
+            "node": {
+              "name": "Vue",
+              "color": "#41b883"
+            }
+          },
+          {
+            "size": 2830,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          },
+          {
+            "size": 18798,
+            "node": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
+    {
+      "name": "Portfolio",
+      "description": null,
+      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
+      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
+      "pushed_at": "2026-11-07T11:56:25Z",
+      "created_at": "2025-09-03T16:31:24Z",
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "fork": false,
+      "language": "HTML",
+      "primaryLanguage": {
+        "name": "HTML",
+        "color": "#e34c26"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 57690,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
     {
       "name": "Miku",
       "description": "Miku is a feature-rich, native Android application for tracking anime and manga on AniList. Built with Wails 3, it combines a high-performance Go backend with a Vue 3 frontend to deliver a smooth experience.",
@@ -106,34 +176,6 @@
       }
     },
     {
-      "name": "Portfolio",
-      "description": null,
-      "html_url": "https://github.com/Aswanidev-vs/Portfolio",
-      "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-11-07T05:46:36Z",
-      "created_at": "2025-09-03T16:31:24Z",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "fork": false,
-      "language": "HTML",
-      "primaryLanguage": {
-        "name": "HTML",
-        "color": "#e34c26"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 57690,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          }
-        ]
-      },
-      "license": null
-    },
-    {
       "name": "Gocut",
       "description": "Gocut is a fast, lightweight, fully offline video editor for the desktop. Built with a Go backend (Wails) and Vue 3 frontend, it offers a multi-track timeline and other features without uploading footage to the cloud.",
       "html_url": "https://github.com/Aswanidev-vs/Gocut",
@@ -204,69 +246,6 @@
       "license": {
         "spdx_id": "AGPL-3.0"
       }
-    },
-    {
-      "name": "AnimeArchive",
-      "description": null,
-      "html_url": "https://github.com/Aswanidev-vs/AnimeArchive",
-      "homepage": null,
-      "pushed_at": "2026-11-04T08:45:24Z",
-      "created_at": "2026-09-27T05:23:24Z",
-      "stargazers_count": 0,
-      "forks_count": 0,
-      "fork": false,
-      "language": "TypeScript",
-      "primaryLanguage": {
-        "name": "TypeScript",
-        "color": "#3178c6"
-      },
-      "languages": {
-        "edges": [
-          {
-            "size": 78721,
-            "node": {
-              "name": "Vue",
-              "color": "#41b883"
-            }
-          },
-          {
-            "size": 59145,
-            "node": {
-              "name": "CSS",
-              "color": "#663399"
-            }
-          },
-          {
-            "size": 88939,
-            "node": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            }
-          },
-          {
-            "size": 24948,
-            "node": {
-              "name": "HTML",
-              "color": "#e34c26"
-            }
-          },
-          {
-            "size": 7596,
-            "node": {
-              "name": "PowerShell",
-              "color": "#012456"
-            }
-          },
-          {
-            "size": 57353,
-            "node": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            }
-          }
-        ]
-      },
-      "license": null
     },
     {
       "name": "book-tracker",
@@ -1240,7 +1219,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Aswanidev-vs",
       "homepage": null,
-      "pushed_at": "2026-11-07T04:25:43Z",
+      "pushed_at": "2026-11-07T17:21:00Z",
       "created_at": "2025-07-06T07:36:50Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -2117,6 +2096,98 @@
     }
   ],
   "activity": [
+    {
+      "id": "19423122099",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1390179877,
+        "name": "Aswanidev-vs/AnimeArchive",
+        "url": "https://api.github.com/repos/Aswanidev-vs/AnimeArchive"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 19,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/AnimeArchive/pulls/19",
+          "id": 5202011153,
+          "number": 19,
+          "head": {
+            "ref": "feature",
+            "sha": "02530a404b41301d06ce24949a3354e1288d4690",
+            "repo": {
+              "id": 1390179877,
+              "url": "https://api.github.com/repos/Aswanidev-vs/AnimeArchive",
+              "name": "AnimeArchive"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "816a963a9362594b473e9992a46c94c13600ff3c",
+            "repo": {
+              "id": 1390179877,
+              "url": "https://api.github.com/repos/Aswanidev-vs/AnimeArchive",
+              "name": "AnimeArchive"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-11-07T13:33:01Z"
+    },
+    {
+      "id": "19422681773",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1390179877,
+        "name": "Aswanidev-vs/AnimeArchive",
+        "url": "https://api.github.com/repos/Aswanidev-vs/AnimeArchive"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 19,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/AnimeArchive/pulls/19",
+          "id": 5202011153,
+          "number": 19,
+          "head": {
+            "ref": "feature",
+            "sha": "02530a404b41301d06ce24949a3354e1288d4690",
+            "repo": {
+              "id": 1390179877,
+              "url": "https://api.github.com/repos/Aswanidev-vs/AnimeArchive",
+              "name": "AnimeArchive"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "816a963a9362594b473e9992a46c94c13600ff3c",
+            "repo": {
+              "id": 1390179877,
+              "url": "https://api.github.com/repos/Aswanidev-vs/AnimeArchive",
+              "name": "AnimeArchive"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-11-07T13:22:12Z"
+    },
     {
       "id": "26356292992",
       "type": "PushEvent",
@@ -6354,54 +6425,6 @@
       },
       "public": true,
       "created_at": "2026-10-31T08:08:18Z"
-    },
-    {
-      "id": "18737442167",
-      "type": "WatchEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1438623288,
-        "name": "heydamir/unslop",
-        "url": "https://api.github.com/repos/heydamir/unslop"
-      },
-      "payload": {
-        "action": "started"
-      },
-      "public": true,
-      "created_at": "2026-10-31T06:45:04Z"
-    },
-    {
-      "id": "25219663950",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1413965738,
-        "name": "Aswanidev-vs/gosqlite-ffi",
-        "url": "https://api.github.com/repos/Aswanidev-vs/gosqlite-ffi"
-      },
-      "payload": {
-        "repository_id": 1413965738,
-        "push_id": 47717898588,
-        "ref": "refs/heads/main",
-        "head": "98a675697be7755c5f4aee93ea1b0eeb1750b4a9",
-        "before": "221e37a77fc4ab6723196e93ee9ba5861fde56b0"
-      },
-      "public": true,
-      "created_at": "2026-10-25T13:25:35Z"
     }
   ],
   "releases": [
@@ -6480,25 +6503,25 @@
   ],
   "languageBytes": {
     "Batchfile": 807,
-    "CSS": 609515,
+    "CSS": 553200,
     "Dockerfile": 875,
     "Go": 5849388,
     "Go Template": 230517,
-    "HTML": 751329,
+    "HTML": 726381,
     "Hack": 1679,
     "Inno Setup": 11192,
     "Java": 274119,
-    "JavaScript": 1332536,
+    "JavaScript": 1275183,
     "Lua": 2388,
     "Makefile": 7534,
     "NSIS": 77334,
     "Objective-C": 2148,
     "PHP": 74586,
     "Perl": 438,
-    "PowerShell": 16031,
+    "PowerShell": 8435,
     "Python": 37383,
     "Shell": 15494,
-    "TypeScript": 429123,
-    "Vue": 991672
+    "TypeScript": 358982,
+    "Vue": 992239
   }
 }
