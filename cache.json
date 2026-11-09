@@ -1,12 +1,12 @@
 {
-  "ts": 1794213831161,
+  "ts": 1794251560242,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
     "avatar_url": "https://avatars.githubusercontent.com/u/178192591?u=79d563fbffb07f8ee8a2ee6fa68fb9b506a3a290&v=4",
     "bio": "",
     "location": "India ",
-    "followers": 13,
+    "followers": 12,
     "public_repos": 37,
     "forked_repos": 7,
     "total_repos": 44
@@ -17,7 +17,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-11-09T01:49:12Z",
+      "pushed_at": "2026-11-09T08:43:52Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -2096,6 +2096,28 @@
     }
   ],
   "activity": [
+    {
+      "id": "19539520460",
+      "type": "WatchEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1269918955,
+        "name": "shivarya/clear-mic-router",
+        "url": "https://api.github.com/repos/shivarya/clear-mic-router"
+      },
+      "payload": {
+        "action": "started"
+      },
+      "public": true,
+      "created_at": "2026-11-09T09:47:08Z"
+    },
     {
       "id": "26613852971",
       "type": "PushEvent",
@@ -6121,52 +6143,6 @@
       },
       "public": true,
       "created_at": "2026-11-01T10:11:15Z"
-    },
-    {
-      "id": "18800652042",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "action": "opened",
-        "number": 119,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Miku/pulls/119",
-          "id": 5106380792,
-          "number": 119,
-          "head": {
-            "ref": "fix/dependabot-security-updates",
-            "sha": "a3b11e0862d5616be0c807bd330cd6de6cf326ba",
-            "repo": {
-              "id": 1297710346,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
-              "name": "Miku"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "12b3e75a1565d2380d346ba0a0c55646dbcb71f2",
-            "repo": {
-              "id": 1297710346,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
-              "name": "Miku"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-11-01T10:10:56Z"
     }
   ],
   "releases": [
