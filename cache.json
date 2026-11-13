@@ -1,5 +1,5 @@
 {
-  "ts": 1794532575528,
+  "ts": 1794557238434,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -7,17 +7,79 @@
     "bio": "",
     "location": "India ",
     "followers": 12,
-    "public_repos": 37,
+    "public_repos": 39,
     "forked_repos": 7,
-    "total_repos": 44
+    "total_repos": 46
   },
   "repos": [
+    {
+      "name": "devops-app",
+      "description": null,
+      "html_url": "https://github.com/Aswanidev-vs/devops-app",
+      "homepage": null,
+      "pushed_at": "2026-11-13T08:04:32Z",
+      "created_at": "2026-11-13T07:05:31Z",
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "fork": false,
+      "language": "Python",
+      "primaryLanguage": {
+        "name": "Python",
+        "color": "#3572A5"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 521,
+            "node": {
+              "name": "Python",
+              "color": "#3572A5"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
+    {
+      "name": "Aswanidev-vs",
+      "description": null,
+      "html_url": "https://github.com/Aswanidev-vs/Aswanidev-vs",
+      "homepage": null,
+      "pushed_at": "2026-11-13T04:51:27Z",
+      "created_at": "2025-07-06T07:36:50Z",
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "fork": false,
+      "language": null,
+      "primaryLanguage": null,
+      "languages": {
+        "edges": []
+      },
+      "license": null
+    },
+    {
+      "name": "Gitakure",
+      "description": null,
+      "html_url": "https://github.com/Aswanidev-vs/Gitakure",
+      "homepage": null,
+      "pushed_at": "2026-11-13T02:55:26Z",
+      "created_at": "2026-11-13T02:17:07Z",
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "fork": false,
+      "language": null,
+      "primaryLanguage": null,
+      "languages": {
+        "edges": []
+      },
+      "license": null
+    },
     {
       "name": "Portfolio",
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-11-12T20:22:39Z",
+      "pushed_at": "2026-11-13T01:16:16Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -1215,23 +1277,6 @@
       "license": null
     },
     {
-      "name": "Aswanidev-vs",
-      "description": null,
-      "html_url": "https://github.com/Aswanidev-vs/Aswanidev-vs",
-      "homepage": null,
-      "pushed_at": "2026-11-12T19:29:03Z",
-      "created_at": "2025-07-06T07:36:50Z",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "fork": false,
-      "language": null,
-      "primaryLanguage": null,
-      "languages": {
-        "edges": []
-      },
-      "license": null
-    },
-    {
       "name": "fyne-x",
       "description": "Community extensions to the cross platform GUI in Go based on Material Design",
       "html_url": "https://github.com/Aswanidev-vs/fyne-x",
@@ -2096,6 +2141,32 @@
     }
   ],
   "activity": [
+    {
+      "id": "26993338536",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1014679271,
+        "name": "Aswanidev-vs/Aswanidev-vs",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Aswanidev-vs"
+      },
+      "payload": {
+        "repository_id": 1014679271,
+        "push_id": 50095987006,
+        "ref": "refs/heads/main",
+        "head": "6675fef399a21a98b3083374b7fecfe142d18a23",
+        "before": "053ccf9e4bc87da7c77200f317b84cd37cde69ae"
+      },
+      "public": true,
+      "created_at": "2026-11-13T01:49:48Z"
+    },
     {
       "id": "19892268700",
       "type": "WatchEvent",
@@ -6062,32 +6133,6 @@
       },
       "public": true,
       "created_at": "2026-11-01T19:53:53Z"
-    },
-    {
-      "id": "25861752093",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1296864739,
-        "name": "Aswanidev-vs/mai-companion",
-        "url": "https://api.github.com/repos/Aswanidev-vs/mai-companion"
-      },
-      "payload": {
-        "repository_id": 1296864739,
-        "push_id": 48454515595,
-        "ref": "refs/heads/main",
-        "head": "eb7f64a2d8aeb306183cd89dca50d3f54d3b9183",
-        "before": "23ab9f33845302d383d7d1e5f9b68af04965aa72"
-      },
-      "public": true,
-      "created_at": "2026-10-31T06:45:59Z"
     }
   ],
   "releases": [
@@ -6182,7 +6227,7 @@
     "PHP": 74586,
     "Perl": 438,
     "PowerShell": 8435,
-    "Python": 37383,
+    "Python": 37904,
     "Shell": 15494,
     "TypeScript": 359233,
     "Vue": 992239
