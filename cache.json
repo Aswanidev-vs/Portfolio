@@ -1,5 +1,5 @@
 {
-  "ts": 1794670965162,
+  "ts": 1794686749734,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -14,12 +14,12 @@
   "repos": [
     {
       "name": "Gitakure",
-      "description": null,
+      "description": "Peaceful low-poly 3D countryside in the browser — explore a village, sit by a river, watch the rain. Japanese + Kerala influences. Three.js, Vue 3, Pinia, Dexie. No backend, no CDNs.",
       "html_url": "https://github.com/Aswanidev-vs/Gitakure",
       "homepage": "https://aswanidev-vs.github.io/Gitakure/",
-      "pushed_at": "2026-11-14T10:59:05Z",
+      "pushed_at": "2026-11-14T18:41:06Z",
       "created_at": "2026-11-13T02:17:07Z",
-      "stargazers_count": 0,
+      "stargazers_count": 1,
       "forks_count": 0,
       "fork": false,
       "language": "TypeScript",
@@ -30,28 +30,28 @@
       "languages": {
         "edges": [
           {
-            "size": 1100,
+            "size": 1663,
             "node": {
               "name": "HTML",
               "color": "#e34c26"
             }
           },
           {
-            "size": 149413,
+            "size": 159777,
             "node": {
               "name": "TypeScript",
               "color": "#3178c6"
             }
           },
           {
-            "size": 62312,
+            "size": 26753,
             "node": {
               "name": "Vue",
               "color": "#41b883"
             }
           },
           {
-            "size": 2610,
+            "size": 430,
             "node": {
               "name": "CSS",
               "color": "#663399"
@@ -101,7 +101,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Aswanidev-vs",
       "homepage": null,
-      "pushed_at": "2026-11-14T04:44:46Z",
+      "pushed_at": "2026-11-14T17:37:06Z",
       "created_at": "2025-07-06T07:36:50Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -118,7 +118,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-11-14T08:59:09Z",
+      "pushed_at": "2026-11-14T15:42:46Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -2180,6 +2180,212 @@
     }
   ],
   "activity": [
+    {
+      "id": "20132759549",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1456054748,
+        "name": "Aswanidev-vs/Gitakure",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 2,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure/pulls/2",
+          "id": 5314927717,
+          "number": 2,
+          "head": {
+            "ref": "dev",
+            "sha": "a7025b9548de0e394560e227b5fe68049e0e11e2",
+            "repo": {
+              "id": 1456054748,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure",
+              "name": "Gitakure"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "7eb6fb01520d0d11051a6496c2da77c49df868a3",
+            "repo": {
+              "id": 1456054748,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure",
+              "name": "Gitakure"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-11-14T18:41:06Z"
+    },
+    {
+      "id": "20132747039",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1456054748,
+        "name": "Aswanidev-vs/Gitakure",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 2,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure/pulls/2",
+          "id": 5314927717,
+          "number": 2,
+          "head": {
+            "ref": "dev",
+            "sha": "a7025b9548de0e394560e227b5fe68049e0e11e2",
+            "repo": {
+              "id": 1456054748,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure",
+              "name": "Gitakure"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "7eb6fb01520d0d11051a6496c2da77c49df868a3",
+            "repo": {
+              "id": 1456054748,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure",
+              "name": "Gitakure"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-11-14T18:40:54Z"
+    },
+    {
+      "id": "20127464970",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1456054748,
+        "name": "Aswanidev-vs/Gitakure",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 1,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure/pulls/1",
+          "id": 5313912792,
+          "number": 1,
+          "head": {
+            "ref": "dev",
+            "sha": "c3e74d33f1703730082aced08fc0623daf934bc6",
+            "repo": {
+              "id": 1456054748,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure",
+              "name": "Gitakure"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "3a2ec7d82107621c1171be174c5aa001f351f6f9",
+            "repo": {
+              "id": 1456054748,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure",
+              "name": "Gitakure"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-11-14T16:59:22Z"
+    },
+    {
+      "id": "20127413195",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1456054748,
+        "name": "Aswanidev-vs/Gitakure",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 1,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure/pulls/1",
+          "id": 5313912792,
+          "number": 1,
+          "head": {
+            "ref": "dev",
+            "sha": "c3e74d33f1703730082aced08fc0623daf934bc6",
+            "repo": {
+              "id": 1456054748,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure",
+              "name": "Gitakure"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "3a2ec7d82107621c1171be174c5aa001f351f6f9",
+            "repo": {
+              "id": 1456054748,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure",
+              "name": "Gitakure"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-11-14T16:58:27Z"
+    },
+    {
+      "id": "20126936375",
+      "type": "WatchEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1456054748,
+        "name": "Aswanidev-vs/Gitakure",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure"
+      },
+      "payload": {
+        "action": "started"
+      },
+      "public": true,
+      "created_at": "2026-11-14T16:49:22Z"
+    },
     {
       "id": "20115282915",
       "type": "WatchEvent",
@@ -5181,216 +5387,6 @@
       },
       "public": true,
       "created_at": "2026-11-02T18:05:16Z"
-    },
-    {
-      "id": "18915168144",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "action": "merged",
-        "number": 124,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Miku/pulls/124",
-          "id": 5124945318,
-          "number": 124,
-          "head": {
-            "ref": "develop",
-            "sha": "ebaa36df769f67789f5aa5068ee120cffb2dfbde",
-            "repo": {
-              "id": 1297710346,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
-              "name": "Miku"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "0c69acbb8e0bd3e4fb821d9b1587e6667f63d9fa",
-            "repo": {
-              "id": 1297710346,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
-              "name": "Miku"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-11-02T18:04:47Z"
-    },
-    {
-      "id": "18914545247",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "action": "opened",
-        "number": 124,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Miku/pulls/124",
-          "id": 5124945318,
-          "number": 124,
-          "head": {
-            "ref": "develop",
-            "sha": "ebaa36df769f67789f5aa5068ee120cffb2dfbde",
-            "repo": {
-              "id": 1297710346,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
-              "name": "Miku"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "0c69acbb8e0bd3e4fb821d9b1587e6667f63d9fa",
-            "repo": {
-              "id": 1297710346,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
-              "name": "Miku"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-11-02T17:57:36Z"
-    },
-    {
-      "id": "25956184961",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "repository_id": 1297710346,
-        "push_id": 48720102845,
-        "ref": "refs/heads/main",
-        "head": "0c69acbb8e0bd3e4fb821d9b1587e6667f63d9fa",
-        "before": "3831ee31820ac3ca475bcfb8f4c3bf7bada722c3"
-      },
-      "public": true,
-      "created_at": "2026-11-02T17:30:27Z"
-    },
-    {
-      "id": "18912326283",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "action": "merged",
-        "number": 123,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Miku/pulls/123",
-          "id": 5124512079,
-          "number": 123,
-          "head": {
-            "ref": "develop",
-            "sha": "ebb9561b26a491e49f608e0b9ee35f0607e36ede",
-            "repo": {
-              "id": 1297710346,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
-              "name": "Miku"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "3831ee31820ac3ca475bcfb8f4c3bf7bada722c3",
-            "repo": {
-              "id": 1297710346,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
-              "name": "Miku"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-11-02T17:30:26Z"
-    },
-    {
-      "id": "18911866838",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1297710346,
-        "name": "Aswanidev-vs/Miku",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Miku"
-      },
-      "payload": {
-        "action": "opened",
-        "number": 123,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Miku/pulls/123",
-          "id": 5124512079,
-          "number": 123,
-          "head": {
-            "ref": "develop",
-            "sha": "ebb9561b26a491e49f608e0b9ee35f0607e36ede",
-            "repo": {
-              "id": 1297710346,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
-              "name": "Miku"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "3831ee31820ac3ca475bcfb8f4c3bf7bada722c3",
-            "repo": {
-              "id": 1297710346,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Miku",
-              "name": "Miku"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-11-02T17:25:20Z"
     }
   ],
   "releases": [
@@ -5469,11 +5465,11 @@
   ],
   "languageBytes": {
     "Batchfile": 807,
-    "CSS": 555810,
+    "CSS": 553630,
     "Dockerfile": 2044,
     "Go": 5849471,
     "Go Template": 230517,
-    "HTML": 727481,
+    "HTML": 728044,
     "Hack": 1679,
     "Inno Setup": 11192,
     "Java": 274958,
@@ -5487,7 +5483,7 @@
     "PowerShell": 8435,
     "Python": 37904,
     "Shell": 15494,
-    "TypeScript": 508646,
-    "Vue": 1054551
+    "TypeScript": 519010,
+    "Vue": 1018992
   }
 }
