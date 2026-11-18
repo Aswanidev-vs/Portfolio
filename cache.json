@@ -1,5 +1,5 @@
 {
-  "ts": 1794994274535,
+  "ts": 1795025986256,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -190,7 +190,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-11-18T01:53:20Z",
+      "pushed_at": "2026-11-18T09:31:15Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -2180,6 +2180,32 @@
     }
   ],
   "activity": [
+    {
+      "id": "27534832280",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1456054748,
+        "name": "Aswanidev-vs/Gitakure",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure"
+      },
+      "payload": {
+        "repository_id": 1456054748,
+        "push_id": 50721814447,
+        "ref": "refs/heads/main",
+        "head": "f01cf4528f2933cead006ca8ad402c7ca41d7235",
+        "before": "f395ac94055a9df713cc1b98c2ec5c49306ef2b5"
+      },
+      "public": true,
+      "created_at": "2026-11-17T18:12:40Z"
+    },
     {
       "id": "20424437342",
       "type": "PullRequestEvent",
@@ -4993,32 +5019,6 @@
       },
       "public": true,
       "created_at": "2026-11-02T16:19:00Z"
-    },
-    {
-      "id": "26134617599",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1390179877,
-        "name": "Aswanidev-vs/AnimeArchive",
-        "url": "https://api.github.com/repos/Aswanidev-vs/AnimeArchive"
-      },
-      "payload": {
-        "repository_id": 1390179877,
-        "push_id": 48943103020,
-        "ref": "refs/heads/main",
-        "head": "816a963a9362594b473e9992a46c94c13600ff3c",
-        "before": "6d4f4f0e4e09639e9f2a03041d54eceb91699be9"
-      },
-      "public": true,
-      "created_at": "2026-11-04T08:45:22Z"
     }
   ],
   "releases": [
