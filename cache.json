@@ -1,5 +1,5 @@
 {
-  "ts": 1795225659251,
+  "ts": 1795251106438,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -7,11 +7,81 @@
     "bio": "",
     "location": "India ",
     "followers": 12,
-    "public_repos": 39,
+    "public_repos": 40,
     "forked_repos": 7,
-    "total_repos": 46
+    "total_repos": 47
   },
   "repos": [
+    {
+      "name": "RateGuard",
+      "description": null,
+      "html_url": "https://github.com/Aswanidev-vs/RateGuard",
+      "homepage": null,
+      "pushed_at": "2026-11-21T05:41:58Z",
+      "created_at": "2026-11-21T05:39:50Z",
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "fork": false,
+      "language": "Go",
+      "primaryLanguage": {
+        "name": "Go",
+        "color": "#00ADD8"
+      },
+      "languages": {
+        "edges": [
+          {
+            "size": 2247,
+            "node": {
+              "name": "Dockerfile",
+              "color": "#384d54"
+            }
+          },
+          {
+            "size": 188112,
+            "node": {
+              "name": "Go",
+              "color": "#00ADD8"
+            }
+          },
+          {
+            "size": 25719,
+            "node": {
+              "name": "HCL",
+              "color": "#844FBA"
+            }
+          },
+          {
+            "size": 3296,
+            "node": {
+              "name": "Shell",
+              "color": "#89e051"
+            }
+          },
+          {
+            "size": 28484,
+            "node": {
+              "name": "CSS",
+              "color": "#663399"
+            }
+          },
+          {
+            "size": 11024,
+            "node": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            }
+          },
+          {
+            "size": 37516,
+            "node": {
+              "name": "HTML",
+              "color": "#e34c26"
+            }
+          }
+        ]
+      },
+      "license": null
+    },
     {
       "name": "Gocut",
       "description": "Gocut is a fast, lightweight, fully offline video editor for the desktop. Built with a Go backend (Wails) and Vue 3 frontend, it offers a multi-track timeline and other features without uploading footage to the cloud.",
@@ -173,7 +243,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Aswanidev-vs",
       "homepage": null,
-      "pushed_at": "2026-11-20T19:33:50Z",
+      "pushed_at": "2026-11-21T05:26:08Z",
       "created_at": "2025-07-06T07:36:50Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -190,7 +260,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-11-20T20:45:31Z",
+      "pushed_at": "2026-11-21T01:47:40Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -5262,15 +5332,16 @@
   ],
   "languageBytes": {
     "Batchfile": 807,
-    "CSS": 555662,
-    "Dockerfile": 2044,
-    "Go": 5855158,
+    "CSS": 584146,
+    "Dockerfile": 4291,
+    "Go": 6043270,
     "Go Template": 230517,
-    "HTML": 728044,
+    "HCL": 25719,
+    "HTML": 765560,
     "Hack": 1679,
     "Inno Setup": 11192,
     "Java": 274958,
-    "JavaScript": 1280722,
+    "JavaScript": 1291746,
     "Lua": 2388,
     "Makefile": 7534,
     "NSIS": 77334,
@@ -5279,7 +5350,7 @@
     "Perl": 438,
     "PowerShell": 8435,
     "Python": 37904,
-    "Shell": 15494,
+    "Shell": 18790,
     "TypeScript": 625696,
     "Vue": 1099792
   }
