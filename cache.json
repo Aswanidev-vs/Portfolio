@@ -1,5 +1,5 @@
 {
-  "ts": 1795837595239,
+  "ts": 1795868839985,
   "user": {
     "login": "Aswanidev-vs",
     "name": "Aswanidev vs",
@@ -294,7 +294,7 @@
       "description": "Gocut is a fast, lightweight, fully offline video editor for the desktop. Built with a Go backend (Wails) and Vue 3 frontend, it offers a multi-track timeline and other features without uploading footage to the cloud.",
       "html_url": "https://github.com/Aswanidev-vs/Gocut",
       "homepage": "https://aswanidev-vs.github.io/Gocut/",
-      "pushed_at": "2026-11-17T16:47:58Z",
+      "pushed_at": "2026-11-28T07:29:34Z",
       "created_at": "2026-06-03T11:10:16Z",
       "stargazers_count": 10,
       "forks_count": 0,
@@ -314,28 +314,28 @@
             }
           },
           {
-            "size": 274,
+            "size": 493,
             "node": {
               "name": "HTML",
               "color": "#e34c26"
             }
           },
           {
-            "size": 150228,
+            "size": 156814,
             "node": {
               "name": "JavaScript",
               "color": "#f1e05a"
             }
           },
           {
-            "size": 461577,
+            "size": 393858,
             "node": {
               "name": "Vue",
               "color": "#41b883"
             }
           },
           {
-            "size": 2279,
+            "size": 10863,
             "node": {
               "name": "CSS",
               "color": "#663399"
@@ -366,7 +366,7 @@
       "description": "Peaceful low-poly 3D countryside in the browser — explore a village, sit by a river, watch the rain. Japanese + Kerala influences. Three.js, Vue 3, Pinia, Dexie. No backend, no CDNs.",
       "html_url": "https://github.com/Aswanidev-vs/Gitakure",
       "homepage": "https://aswanidev-vs.github.io/Gitakure/",
-      "pushed_at": "2026-11-19T00:54:03Z",
+      "pushed_at": "2026-11-28T11:53:05Z",
       "created_at": "2026-11-13T02:17:07Z",
       "stargazers_count": 2,
       "forks_count": 0,
@@ -450,7 +450,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Aswanidev-vs",
       "homepage": null,
-      "pushed_at": "2026-11-27T20:37:33Z",
+      "pushed_at": "2026-11-28T06:04:15Z",
       "created_at": "2025-07-06T07:36:50Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -467,7 +467,7 @@
       "description": null,
       "html_url": "https://github.com/Aswanidev-vs/Portfolio",
       "homepage": "https://aswanidev-vs.github.io/Portfolio/",
-      "pushed_at": "2026-11-27T21:57:52Z",
+      "pushed_at": "2026-11-28T03:46:36Z",
       "created_at": "2025-09-03T16:31:24Z",
       "stargazers_count": 1,
       "forks_count": 0,
@@ -2457,6 +2457,316 @@
     }
   ],
   "activity": [
+    {
+      "id": "28518968766",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1049887423,
+        "name": "Aswanidev-vs/Portfolio",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Portfolio"
+      },
+      "payload": {
+        "repository_id": 1049887423,
+        "push_id": 51987225731,
+        "ref": "refs/heads/main",
+        "head": "769361179ea4fc49ecee976159529173be6a7071",
+        "before": "4fe91e0cdbff1637b56f79c0a72a37820c1b0284"
+      },
+      "public": true,
+      "created_at": "2026-11-26T14:29:17Z"
+    },
+    {
+      "id": "21573190680",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1456054748,
+        "name": "Aswanidev-vs/Gitakure",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 6,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure/pulls/6",
+          "id": 5539838803,
+          "number": 6,
+          "head": {
+            "ref": "dev",
+            "sha": "df17d497f2588b4b5ff62a127466946e75a8e505",
+            "repo": {
+              "id": 1456054748,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure",
+              "name": "Gitakure"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "52a8cb4902786bb35044bcdea92b22d8b10e99ff",
+            "repo": {
+              "id": 1456054748,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure",
+              "name": "Gitakure"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-11-28T11:53:05Z"
+    },
+    {
+      "id": "21573151862",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1456054748,
+        "name": "Aswanidev-vs/Gitakure",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 6,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure/pulls/6",
+          "id": 5539838803,
+          "number": 6,
+          "head": {
+            "ref": "dev",
+            "sha": "df17d497f2588b4b5ff62a127466946e75a8e505",
+            "repo": {
+              "id": 1456054748,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure",
+              "name": "Gitakure"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "52a8cb4902786bb35044bcdea92b22d8b10e99ff",
+            "repo": {
+              "id": 1456054748,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure",
+              "name": "Gitakure"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-11-28T11:52:19Z"
+    },
+    {
+      "id": "28501551737",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1471420929,
+        "name": "Aswanidev-vs/Promiseland",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Promiseland"
+      },
+      "payload": {
+        "repository_id": 1471420929,
+        "push_id": 51937496573,
+        "ref": "refs/heads/main",
+        "head": "d1044b5264dbef2d0b0491ef1195d306fdf786b5",
+        "before": "66a07d9af20f8647e16662743cc1eb26c90b73bb"
+      },
+      "public": true,
+      "created_at": "2026-11-26T07:22:21Z"
+    },
+    {
+      "id": "21561079177",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1258201172,
+        "name": "Aswanidev-vs/Gocut",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Gocut"
+      },
+      "payload": {
+        "action": "merged",
+        "number": 45,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Gocut/pulls/45",
+          "id": 5537887174,
+          "number": 45,
+          "head": {
+            "ref": "feature",
+            "sha": "43804ee13044ce50ee7db7fc8530406b757a78e9",
+            "repo": {
+              "id": 1258201172,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Gocut",
+              "name": "Gocut"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "a081d6aaf1180684feee3925673c44c20448ff68",
+            "repo": {
+              "id": 1258201172,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Gocut",
+              "name": "Gocut"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-11-28T07:29:34Z"
+    },
+    {
+      "id": "21561057270",
+      "type": "PullRequestEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1258201172,
+        "name": "Aswanidev-vs/Gocut",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Gocut"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 45,
+        "pull_request": {
+          "url": "https://api.github.com/repos/Aswanidev-vs/Gocut/pulls/45",
+          "id": 5537887174,
+          "number": 45,
+          "head": {
+            "ref": "feature",
+            "sha": "43804ee13044ce50ee7db7fc8530406b757a78e9",
+            "repo": {
+              "id": 1258201172,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Gocut",
+              "name": "Gocut"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "a081d6aaf1180684feee3925673c44c20448ff68",
+            "repo": {
+              "id": 1258201172,
+              "url": "https://api.github.com/repos/Aswanidev-vs/Gocut",
+              "name": "Gocut"
+            }
+          }
+        }
+      },
+      "public": true,
+      "created_at": "2026-11-28T07:29:08Z"
+    },
+    {
+      "id": "28493981355",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1049887423,
+        "name": "Aswanidev-vs/Portfolio",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Portfolio"
+      },
+      "payload": {
+        "repository_id": 1049887423,
+        "push_id": 51985677950,
+        "ref": "refs/heads/main",
+        "head": "4fe91e0cdbff1637b56f79c0a72a37820c1b0284",
+        "before": "3ec2b2c424357fc394ef2bffdce3a8c8d210882f"
+      },
+      "public": true,
+      "created_at": "2026-11-26T14:17:03Z"
+    },
+    {
+      "id": "28493913109",
+      "type": "PushEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1049887423,
+        "name": "Aswanidev-vs/Portfolio",
+        "url": "https://api.github.com/repos/Aswanidev-vs/Portfolio"
+      },
+      "payload": {
+        "repository_id": 1049887423,
+        "push_id": 51985610628,
+        "ref": "refs/heads/main",
+        "head": "3ec2b2c424357fc394ef2bffdce3a8c8d210882f",
+        "before": "625e80d9739a4d61c8a59dd0ff732513a2804846"
+      },
+      "public": true,
+      "created_at": "2026-11-26T14:16:31Z"
+    },
+    {
+      "id": "21557186645",
+      "type": "WatchEvent",
+      "actor": {
+        "id": 178192591,
+        "login": "Aswanidev-vs",
+        "display_login": "Aswanidev-vs",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Aswanidev-vs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
+      },
+      "repo": {
+        "id": 1229774092,
+        "name": "elementalsouls/Claude-BugHunter",
+        "url": "https://api.github.com/repos/elementalsouls/Claude-BugHunter"
+      },
+      "payload": {
+        "action": "started"
+      },
+      "public": true,
+      "created_at": "2026-11-28T06:01:42Z"
+    },
     {
       "id": "28469861444",
       "type": "PushEvent",
@@ -5418,319 +5728,6 @@
       },
       "public": true,
       "created_at": "2026-11-13T01:40:36Z"
-    },
-    {
-      "id": "27178574853",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1014679271,
-        "name": "Aswanidev-vs/Aswanidev-vs",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Aswanidev-vs"
-      },
-      "payload": {
-        "repository_id": 1014679271,
-        "push_id": 50094670697,
-        "ref": "refs/heads/main",
-        "head": "4985bc551c69a900cfe2e7f2f1ead903446d93ea",
-        "before": "9e909d1a9b584c70cc44691b48634354b71a7e2d"
-      },
-      "public": true,
-      "created_at": "2026-11-13T01:34:07Z"
-    },
-    {
-      "id": "20132759549",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1456054748,
-        "name": "Aswanidev-vs/Gitakure",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure"
-      },
-      "payload": {
-        "action": "merged",
-        "number": 2,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure/pulls/2",
-          "id": 5314927717,
-          "number": 2,
-          "head": {
-            "ref": "dev",
-            "sha": "a7025b9548de0e394560e227b5fe68049e0e11e2",
-            "repo": {
-              "id": 1456054748,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure",
-              "name": "Gitakure"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "7eb6fb01520d0d11051a6496c2da77c49df868a3",
-            "repo": {
-              "id": 1456054748,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure",
-              "name": "Gitakure"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-11-14T18:41:06Z"
-    },
-    {
-      "id": "20132747039",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1456054748,
-        "name": "Aswanidev-vs/Gitakure",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure"
-      },
-      "payload": {
-        "action": "opened",
-        "number": 2,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure/pulls/2",
-          "id": 5314927717,
-          "number": 2,
-          "head": {
-            "ref": "dev",
-            "sha": "a7025b9548de0e394560e227b5fe68049e0e11e2",
-            "repo": {
-              "id": 1456054748,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure",
-              "name": "Gitakure"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "7eb6fb01520d0d11051a6496c2da77c49df868a3",
-            "repo": {
-              "id": 1456054748,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure",
-              "name": "Gitakure"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-11-14T18:40:54Z"
-    },
-    {
-      "id": "20127464970",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1456054748,
-        "name": "Aswanidev-vs/Gitakure",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure"
-      },
-      "payload": {
-        "action": "merged",
-        "number": 1,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure/pulls/1",
-          "id": 5313912792,
-          "number": 1,
-          "head": {
-            "ref": "dev",
-            "sha": "c3e74d33f1703730082aced08fc0623daf934bc6",
-            "repo": {
-              "id": 1456054748,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure",
-              "name": "Gitakure"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "3a2ec7d82107621c1171be174c5aa001f351f6f9",
-            "repo": {
-              "id": 1456054748,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure",
-              "name": "Gitakure"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-11-14T16:59:22Z"
-    },
-    {
-      "id": "20127413195",
-      "type": "PullRequestEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1456054748,
-        "name": "Aswanidev-vs/Gitakure",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure"
-      },
-      "payload": {
-        "action": "opened",
-        "number": 1,
-        "pull_request": {
-          "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure/pulls/1",
-          "id": 5313912792,
-          "number": 1,
-          "head": {
-            "ref": "dev",
-            "sha": "c3e74d33f1703730082aced08fc0623daf934bc6",
-            "repo": {
-              "id": 1456054748,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure",
-              "name": "Gitakure"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "3a2ec7d82107621c1171be174c5aa001f351f6f9",
-            "repo": {
-              "id": 1456054748,
-              "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure",
-              "name": "Gitakure"
-            }
-          }
-        }
-      },
-      "public": true,
-      "created_at": "2026-11-14T16:58:27Z"
-    },
-    {
-      "id": "20126936375",
-      "type": "WatchEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1456054748,
-        "name": "Aswanidev-vs/Gitakure",
-        "url": "https://api.github.com/repos/Aswanidev-vs/Gitakure"
-      },
-      "payload": {
-        "action": "started"
-      },
-      "public": true,
-      "created_at": "2026-11-14T16:49:22Z"
-    },
-    {
-      "id": "20115282915",
-      "type": "WatchEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 658928958,
-        "name": "ollama/ollama",
-        "url": "https://api.github.com/repos/ollama/ollama"
-      },
-      "payload": {
-        "action": "started"
-      },
-      "public": true,
-      "created_at": "2026-11-14T13:11:50Z",
-      "org": {
-        "id": 151674099,
-        "login": "ollama",
-        "gravatar_id": "",
-        "url": "https://api.github.com/orgs/ollama",
-        "avatar_url": "https://avatars.githubusercontent.com/u/151674099?"
-      }
-    },
-    {
-      "id": "27125188195",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1456594464,
-        "name": "Aswanidev-vs/devops-app",
-        "url": "https://api.github.com/repos/Aswanidev-vs/devops-app"
-      },
-      "payload": {
-        "repository_id": 1456594464,
-        "push_id": 50164841355,
-        "ref": "refs/heads/develop",
-        "head": "6457cd625603577095575fef2adf33e9393a5d39",
-        "before": "aa32a32f5a43da8e68a7e881fb339f87e86ff900"
-      },
-      "public": true,
-      "created_at": "2026-11-13T13:53:57Z"
-    },
-    {
-      "id": "27118039240",
-      "type": "PushEvent",
-      "actor": {
-        "id": 178192591,
-        "login": "Aswanidev-vs",
-        "display_login": "Aswanidev-vs",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Aswanidev-vs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178192591?"
-      },
-      "repo": {
-        "id": 1456594464,
-        "name": "Aswanidev-vs/devops-app",
-        "url": "https://api.github.com/repos/Aswanidev-vs/devops-app"
-      },
-      "payload": {
-        "repository_id": 1456594464,
-        "push_id": 50157882691,
-        "ref": "refs/heads/main",
-        "head": "30a792a6c826e9adcc0913e1730649ed8c5a584e",
-        "before": "b1b05dad2d94f947c8edd6d76738097c148729d1"
-      },
-      "public": true,
-      "created_at": "2026-11-13T12:51:46Z"
     }
   ],
   "releases": [
@@ -5809,16 +5806,16 @@
   ],
   "languageBytes": {
     "Batchfile": 807,
-    "CSS": 592203,
+    "CSS": 600787,
     "Dockerfile": 8813,
     "Go": 6945979,
     "Go Template": 230517,
     "HCL": 25719,
-    "HTML": 766656,
+    "HTML": 766875,
     "Hack": 1679,
     "Inno Setup": 11192,
     "Java": 274958,
-    "JavaScript": 1334417,
+    "JavaScript": 1341003,
     "Lua": 2388,
     "Makefile": 7798,
     "NSIS": 77334,
@@ -5829,6 +5826,6 @@
     "Python": 37904,
     "Shell": 22717,
     "TypeScript": 879941,
-    "Vue": 1711141
+    "Vue": 1643422
   }
 }
